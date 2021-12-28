@@ -1,0 +1,29 @@
+{
+  "name": "june_architecture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "gulp prepare",
+    "assets": "gulp assets",
+    "build": "gulp build",
+    "live": "gulp live",
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.15.3",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.41.1"
+  }
+}
