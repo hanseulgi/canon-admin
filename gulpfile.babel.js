@@ -51,7 +51,8 @@ function clean(done) {
         DEST_PATH.HTML,
         DEST_PATH.ASSETS.STYLE,
         DEST_PATH.ASSETS.JS,
-        DEST_PATH.ASSETS.IMAGES
+        DEST_PATH.ASSETS.IMAGES,
+        '!dist/assets/fonts/**'
     ]);
     done();
 }

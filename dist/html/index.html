@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text./html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <link rel="shortcut icon" href="../assets/img/common/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>캐논 CIS 퍼블리싱 가이드</title>
+    <style>
+        *{box-sizing: border-box;}
+        html, body {width:100%;height: 100%;-webkit-user-select:inherit;}
+        body.hidden {overflow: hidden;}
+
+        .guide-wrap > .header {position:relative;border-bottom: 1px solid #ccc;}
+        .guide-wrap > .header h1 {padding:15px;}
+        .guide-wrap > .header h1 img {width:100px;}
+        .guide-wrap > .header .gnb .navi-btn {position:absolute;width:50px;height:30px;right:15px;top:9px; background-color:#df121a; color:#fff; border-radius:10%; cursor:pointer;}
+        .guide-wrap > .header .list {display: none;}
+        .guide-wrap > .header .list li a {display: block;padding: 10px 15px;font-size:1.4rem;font-weight: 300;}
+        .guide-wrap > .header .list li.on a {background-color:rgba(223,18,26,.2);font-weight: 500;}
+        .guide-wrap.navi-opened > .header .list {display: block;}
+
+        .guide-wrap .component {display: none;}
+        .guide-wrap .component.on {display: block;}
+
+        .guide-wrap .component {padding:20px 15px;}
+        .guide-wrap .component h2 {}
+        
+        .guide-wrap .component-warp {padding-top: 50px;}
+        .guide-wrap .component-warp h2 {font-size:2rem;margin-bottom:10px;padding-bottom:5px; font-weight: 500; border-bottom:1px solid #666;}
+        .guide-wrap .component-warp .sub-tit {font-size: 1.8rem; margin-bottom: 5px;}
+        .guide-wrap .component-warp .btn-more {padding:3px 6px;font-size:12px;color:#fff;background-color:#df121a;}
+        .guide-wrap .component-warp .code {display:none; margin-top:10px;}
+        /* .guide-wrap .component-warp xmp{display:block;margin:20px 0;font-family:tahoma;font-weight:400;font-size:11px;line-height:15px;color:#555;background:#f1f0f0;} */
+
+
+
+        .code{display:none;margin:0;}
+        .font-infor {margin-bottom:20px;}
+        .font-infor dt {font-size:2rem;margin-bottom:5px;}
+        .font-infor dd {padding-left:10px;}
+        .font-infor .txt {font-size:1.4rem;}
+        .font-infor .letter {color:#df121a;}
+
+        .pub-list .colum:first-child {margin-top:0px;}
+        .pub-list .colum {margin-top:25px;}
+        .pub-list .colum h3 {margin-bottom:10px;font-size:1.7rem;border-bottom:1px solid #efefef;}
+        .pub-list .colum h3 a {position:relative;display:block;padding:10px 20px;background-color:#df121a;color:#fff;}
+        .pub-list .colum h3 .ico-arrow {display:block;position:absolute;font-size:0px;right:20px;top:50%;width:15px;height:15px;margin-top:-7px; }
+        .pub-list .colum h3 .ico-arrow img {width:100%;}
+
+        .pub-list .colum.close .ico-arrow {transform: rotate(180deg);}
+        .pub-list .colum.close .depth {display: none;}
+
+        .pub-list .colum .tbl-area .thead {display:none;}
+        .pub-list .colum .tbl-area .tbody .tr {position:relative; display: flex;justify-content: space-between;align-items: center;padding:5px 10px;}
+        .pub-list .colum .tbl-area .tbody .th { width:12%;}
+        .pub-list .colum .tbl-area .tbody .td {display:inline-block;font-size:1.4rem;}
+        .pub-list .colum .tbl-area .tbody .td a {font-size:1.2rem;color:#666;}
+        .pub-list .colum .tbl-area .tbody .td a:hover {text-decoration: underline;}
+        .pub-list .colum .tbl-area .tbody .td.url {display: none;}
+        .pub-list .colum .tbl-area .tbody .td.date {font-style: italic; font-size: 1.2rem; color:#e3047f; padding-right:18px;}
+        .pub-list .colum .tbl-area .tbody .td.desc {position:absolute;right:0px;top:1px;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-btn {display:block;width:28px;height:28px;text-indent: -9999px;background:url("/guide/images/icon_point.svg") no-repeat 50%;background-size:14px 14px;}
+
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap {display: none;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap.modal {display:flex;justify-content: center; align-items: center; position:fixed;top:0px;left:0px;z-index:100;width:100%;height:100%;background-color:rgba(0,0,0,0.2);padding:15px;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap.modal .desc-list {width:100%;padding:20px;border-radius:10px; background-color: #fff;box-shadow: 0px 0px 10px rgba(0,0,0,0.5);}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap.modal .desc-list .tit {display:block; margin-bottom:10px;font-size:1.6rem;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap.modal .desc-list li {margin-bottom:5px;font-size:1.4rem;}
+
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-list {position:relative;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-list li {font-size:1.2rem;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-list li::before {content:" - "}
+        .pub-list .colum .tbl-area .sub-path li {position: relative;display:inline-block;padding:0 15px 0 0;font-size:1.2rem; color:#666; margin-right: 10px; margin-bottom: 0px;}
+        .pub-list .colum .tbl-area .sub-path li::after {display:block;position:absolute;right:0px;top:0px; content:">";}
+        .pub-list .colum .tbl-area .sub-path li:last-child {padding:0px;margin-right:0px;}
+        .pub-list .colum .tbl-area .sub-path li:last-child::after {display: none;}
+        .pub-list .colum .tbl-area .tr.title .td.depth {width: 100%;}
+        .pub-list .colum .tbl-area .tr.title .td.depth .sub-path li.on {font-size: 1.2rem;}
+        .pub-list .colum .tbl-area .tbody .td.desc .desc-list .close {position:absolute; right:15px; top:20px; background-color:#efefef;padding:5px;} 
+
+
+        .state:before {font-weight:bold;}
+        .state.wait:before {content: "대기중";}
+        .state.finish:before {content: "완료"; color:#e30101 ;}
+        .state.del:before {content: "취소"; color: #999;}
+        .state.ing:before {content: "진행중"; color: blue;}
+        .state.ing2:before {content: "추가"; color:#9622d2;}
+        
+        .color-infor li {margin-bottom:15px;}
+        .color-infor .color-box {padding:20px;}
+
+        .guide-btn-area {margin-bottom:10px; padding:30px 20px;}
+        .guide-btn-area h3 {margin-top:15px; margin-bottom: 8px;font-size:16px;font-weight: bold;}
+
+        .tit-code {display:block;font-size:1.4rem;margin-bottom:10px;font-weight: 400;}
+        .guide-code {}
+        .guide-code * {font-size:1.4rem;font-weight: 400; overflow-x:auto; padding:15px 10px; border:1px solid #efefef; border-left:3px solid rgb(255, 138, 5);
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #1E1E1E;
+            color: #DCDCDC;
+        }
+
+
+        @media screen and (min-width: 768px){
+            .guide-wrap {position:relative;height:100%;}
+            .guide-wrap > .header {position:absolute;top:0px;left:0px;z-index:10;width:100%;height:50px;padding:15px 30px;border-bottom:1px solid #ccc;background-color: #fff;}
+            .guide-wrap > .header h1 {padding:0px;}
+            .guide-wrap .container {position: relative;padding:50px 0 0 0;height:100%;}
+            .guide-wrap.navi-opened .container {padding-left: 220px;}
+            .guide-wrap > .header .gnb .list {position: fixed;left:0px;top:50px;width:220px;height:100%;padding-top:55px;}
+            .guide-wrap .content {height:100%;overflow-y: auto;border-left: 1px solid #ccc;}
+            .guide-wrap .component {padding:60px 30px;}
+            .guide-wrap .component h2 {font-size:3rem;font-weight: 500; margin-bottom:30px;}
+
+            .pub-list .colum {margin-bottom:50px;}
+            .pub-list .colum h3 {margin-bottom:10px;font-size:2rem;border-bottom:none;}
+            .pub-list .colum .tbl-area .tbody td {padding:12px 20px;}
+            .ui-list {overflow:hidden;margin-top:30px;}
+            .ui-list li {float: left;}
+            .ui-list li a {font-size:1.4rem;}
+            
+            .pub-list .colum .tbl-area {border-top:1px solid #333;}
+            .pub-list .colum .tbl-area .thead {display: table;width:100%;}
+            .pub-list .colum .tbl-area .thead .th {display: table-cell;width:12%;padding:12px 20px;font-size:1.2rem;text-align:center;background-color: rgba(223,18,26,.1);}
+            .pub-list .colum .tbl-area .thead .th.depth {width:30%;}
+            .pub-list .colum .tbl-area .thead .th.id {width:6%;}
+            .pub-list .colum .tbl-area .thead .th.url {width:20%;}
+            .pub-list .colum .tbl-area .thead .th.date {width:6%;}
+            .pub-list .colum .tbl-area .thead .th.name {width:6%;}
+            .pub-list .colum .tbl-area .thead .th.state {width:6%;}
+            .pub-list .colum .tbl-area .thead .th.desc {width:20%;}
+            .pub-list .colum .tbl-area .tbody .tr {display: table;width:100%;padding:0px;border-bottom:1px solid #efefef;}
+            .pub-list .colum .tbl-area .tbody .tr:hover {background-color: rgba(223,18,26,.2); transition:all .1s ease-in-out;}
+            .pub-list .colum .tbl-area .tbody .td {display: table-cell;width:12%;padding:12px 20px;vertical-align: middle;font-size:1.2rem;border-right:1px solid #efefef; text-align:center;}
+            .pub-list .colum .tbl-area .tbody .td.depth {width:30%; text-align:left;}
+            .pub-list .colum .tbl-area .tbody .td.id {width:6%;}
+            .pub-list .colum .tbl-area .tbody .td.name {width:6%;}
+            .pub-list .colum .tbl-area .tbody .td.state {width:6%;}
+            .pub-list .colum .tbl-area .tbody .td.date {width:6%;} 
+            .pub-list .colum .tbl-area .tbody .td.url {display:table-cell;width:20%; text-align:left;}
+            .pub-list .colum .tbl-area .tbody .td.url a:hover {text-decoration: underline;}
+            .pub-list .colum .tbl-area .tbody .td:last-child {border-right: none;}
+            .pub-list .colum .tbl-area .tbody .td.date {font-style:normal; text-align: center;color:#e3047f;}
+            .pub-list .colum .tbl-area .tbody .td.desc {position: relative; top:0px; display: table-cell;width:20%; text-align:left;}
+            .pub-list .colum .tbl-area .tbody .td.desc .desc-btn {display: none;}
+            .pub-list .colum .tbl-area .tbody .td.desc .desc-wrap {display: block;}
+            .pub-list .colum .tbl-area .tbody .td.desc .desc-list .tit {display: none;}
+            .pub-list .colum .tbl-area .tbody .td a {font-size:1.2rem;text-decoration: underline;color:#000;}
+            .pub-list .colum .tbl-area .sub-path {display: inline-block; overflow: hidden;}
+            .pub-list .colum .tbl-area .sub-path li {display: block; position: relative;float: left;font-size:1.2rem;padding:0 15px 0 0;margin-right:10px;margin-bottom:0px;color:#666;}
+            .pub-list .colum .tbl-area .sub-path li::after {display:block;position:absolute;right:0px;top:0px; content:">";}
+            .pub-list .colum .tbl-area .sub-path li:last-child {padding:0px;margin-right:0px;}
+            .pub-list .colum .tbl-area .sub-path li:last-child::after {display: none;}
+            .pub-list .colum .tbl-area .tr.title {display: none;}
+            .pub-list .colum .tbl-area .tbody .td.desc .desc-list .close {display: none;}
+            
+            .font-infor {overflow:hidden;margin-bottom:50px;}
+            .font-infor dt {float:left;width:30%;font-size:2.5rem;}
+            .font-infor dd {float:left;width:70%;}
+            .font-infor .txt {font-size:2.5rem;}
+            .font-infor .letter {color:#df121a;}
+            .tit-code {font-size:1.8rem;}
+            .guide-btn-area { margin:0 auto 30px;}
+            .guide-btn-area h3 {font-size: 20px;}
+            .guide-wrap .component-warp {padding:40px 0;}
+            .guide-wrap .component-warp h2 {padding-bottom: 15px; font-size: 4rem;}
+            .guide-layout-area {padding: 30px;}
+        }
+
+        /* Style Guide */
+        .tab-list {position:sticky; top:0px; border-top:1px solid #eee; border-left:1px solid #eee; border-bottom:1px solid #eee; z-index: 5;}
+        .tab-list ul {display: flex;}
+        .tab-list li {width: 100%; border-right: 1px solid #eee;}
+        .tab-list li a {height:40px;line-height:40px;font-size:1.5rem;display: block;text-align: center;background-color:#fff;}
+        .tab-list li.on a {background-color:#eee;}
+
+        /* Layout Guide */
+        .guide-wrap .component.layout-guide-wrap {background-color: #eee;}
+        .guide-wrap .component.layout-guide-wrap .component-area {margin-top:20px;margin-bottom: 50px;}
+        .layout-component h2 {font-size: 2rem; padding-bottom:10px; border-bottom:1px solid #111;}
+        .layout-component h3 {font-size: 1.5rem;margin-bottom: 10px;}
+
+        /* basic */
+        .basic-component h2 {font-size: 2rem; padding-bottom:10px; border-bottom:1px solid #111;}
+        .basic-component h3 {font-size: 1.5rem;margin-bottom: 10px;}
+
+        .script-guide-wrap h2 {font-size: 2rem; padding-bottom:10px; border-bottom:1px solid #111;}
+        .script-guide-wrap h3 {font-size: 1.5rem;margin-bottom: 10px;}
+
+        @media screen and (min-width: 768px){
+            .layout-component h2 {font-size: 3rem}
+            .layout-component h3 {font-size: 1.8rem;}
+            .script-guide-wrap h2 {font-size: 3rem}
+            .script-guide-wrap h3 {font-size: 1.8rem;}
+            .guide-wrap .component.layout-guide-wrap .component-area {margin-bottom: 100px;}
+        }
+
+        /* table-step1 */
+        .table-step1 {
+            width:100%;
+        }
+        .table-step1 tbody tr th {
+            padding:7px 20px;
+            font-size:12px;
+            color:#000;
+            text-align:left;
+            vertical-align:middle;
+            border-top:1px solid #e1e1e1;
+            border-bottom:1px solid #e1e1e1;
+            border-right:1px solid #e1e1e1;
+        }
+        .table-step1 tbody tr th.high-step {
+            border-right:1px solid #e1e1e1;
+        }
+        .table-step1 tr th span.folder {
+            width:17px;
+            height:12px;
+            display:inline-block;
+            margin-right:10px;
+            background:url(images/guide/ico_folder.png) no-repeat left top;
+        }
+        .table-step1 tbody tr td {
+            padding:7px 20px;
+            font-size:12px;
+            color:#404040;
+            background:#fff;
+            border-top:1px solid #e1e1e1;
+            border-bottom:1px solid #e1e1e1;
+        }
+        .table-step1 tr td span.folder {
+            width:17px;
+            height:12px;
+            display:inline-block;
+            margin-right:10px;
+            background:url(images/guide/ico_folder.png) no-repeat -22px top;
+        }
+        .table-step1 tr td span.img {
+            width:17px;
+            height:12px;
+            display:inline-block;
+            margin-right:10px;
+            background:url(images/guide/ico_folder.png) no-repeat -44px top;
+        }
+
+
+        /* table-striped */
+        .table-striped {
+            border-bottom:1px solid #e1e1e1;
+        }
+        .table thead tr th {
+            padding:9px 20px;
+            color:#fff;
+            font-size:12px;
+            text-align:center;
+            background-color: #df121a;
+          
+            box-sizing:content-box;
+            -webkit-box-sizing:content-box;
+        }
+        .table-striped tbody tr td {
+            height:35px;
+            padding:0 5px;
+            font-size:12px;
+            color:#404040;
+            text-align:center;
+            vertical-align:middle;
+            border-top:none;
+            box-sizing:content-box;
+            -webkit-box-sizing:content-box;
+        }
+        .table-striped tbody tr td span.name {
+            padding-left:20px;
+            display:inline-block;
+            font-weight:bold;
+            color:#000;
+            background:url(images/guide/ico_person.gif) no-repeat left 50%;
+        }
+        .table-striped tbody tr td span.mail {
+            padding-left:20px;
+            display:inline-block;
+            background:url(images/guide/ico_mail.gif) no-repeat left 70%;
+        }
+        .table-striped tbody tr td span.imp {
+            padding-left:20px;
+            display:inline-block;
+            background:url(images/guide/ico_gray.gif) no-repeat left 2px;
+        }
+        .table-striped tbody tr td span.v-imp {
+            padding-left:20px;
+            display:inline-block;
+            background:url(images/guide/ico_) no-repeat left 2px;
+        }
+        .table-striped tbody tr:nth-child(odd)>td,
+        .table-striped tbody tr:nth-child(odd)>th {
+           
+        }
+        .table-striped tbody tr.bg-red td {
+           
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="guide-wrap">
+        <header class="header">
+            <h1>
+                <a href="index.html"><img alt="canon CIS" src="../assets/img/common/logo.svg"></a>
+            </h1>
+            <nav class="gnb">
+                <button class="navi-btn" type="button">Navi</button>
+                <ul class="list">
+                    <li class="on"><a class="path on" href="#path">Path</a></li>
+                    <li><a class="path" href="#styleGuide">Style Guide</a></li>
+                    <li><a class="path" href="#layoutGuide">Layout Guide</a></li>
+                    <li><a class="path" href="#basic">basic</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <div id="content" class="content">
+
+                <!-- Path -->
+                <div id="path" class="component path-wrap on">
+                    <div class="pub-list">
+                        <dl>
+                            <dt>총 페이지 : </dt>
+                            <dd class="page_total"></dd>
+                            <dt>완료 : </dt>
+                            <dd class="page_finish"></dd>
+                            <dt>진척률 : </dt>
+                            <dd class="page_percent"></dd>
+                         </dl>
+                        <div class="colum">
+                            <h3><a href="#">공통 <span class="ico-arrow"><img src="../assets/img/ico/ico_arrow_up_white.svg" ></span></a></h3>
+                            <div class="depth">
+                                <div class="tbl-area">
+                                    <div class='thead'>
+                                        <div class="th depth">Depth</div>
+                                        <div class="th id">화면ID</div>
+                                        <div class="th url">URL</div>
+                                        <div class="th name">작업자</div>
+                                        <div class="th date">Date</div>
+                                        <div class="th state">state</div>
+                                        <div class="th desc">비고</div>
+                                    </div>
+                                    <div class='tbody'>
+                                        <div class="tr">
+                                            <div class="td depth">
+                                                <ul class="sub-path">
+                                                    <li>팝업</li>
+                                                    <li><a href="./html/common/popup.html" target="_blank">팝업 모음</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="td id"></div>
+                                            <div class="td url">
+                                                <a href="html/common/popup.html" target="_blank">html/common/CO_SP.html</a>
+                                            </div>
+                                            <div class="td name">한슬기</div>
+                                            <div class="td date">2022.01.01</div>
+                                            <div class="td state wait"></div>
+                                            <div class="td desc"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Path -->
+
+                <!-- Style Guide -->
+                <div id="styleGuide" class="component style-guide-wrap">
+                    <div class="tab-list">
+                        <ul>
+                            <li class='on'><a href="#font-wrap"><span>Font</span></a></li>
+                            <li><a href="#color-wrap"><span>Color</span></a></li>
+                            <li><a href="#icon-wrap"><span>Icon</span></a></li>
+                            <li><a href="#button-wrap"><span>Button</span></a></li>
+                            <li><a href="#form-wrap"><span>Form</span></a></li>
+                        </ul>
+                    </div>
+                
+                    <div clsas="guide-content">
+                        <!-- 폰트 -->
+                        <div id="font-wrap" class="component-warp font">
+                            <h2>Font</h2>
+                
+                            <dl class="font-infor">
+                                <dt class="">국문</dt>
+                                <dd>
+                                    <ul>
+                                        <li class="txt bold">Noto Sans KR</li>
+                                        <li class="txt"><span class="bold">Bold</span> / <span class="medium">Medium</span> / <span class="regular">Regular</span></li>
+                                        <li class="txt letter">letter spacing: 0</li>
+                                        <li class="txt">color : <span class="txt-color-black">#111111</span> <span class="txt-color-darkgray">#666666</span> <span class="txt-color-gray">#999999</span> <span class="txt-color-lightgray">#cccccc</span></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                
+                            <dl class="font-infor roboto">
+                                <dt class="">영문/숫자</dt>
+                                <dd>
+                                    <ul>
+                                        <li class="txt bold">Roboto</li>
+                                        <li class="txt"><span class="bold">Bold</span> / <span class="medium">Medium</span> / <span class="regular">Regular</span></li>
+                                        <li class="txt letter">letter spacing: -10</li>
+                                        <li class="txt">color : <span class="txt-color-black">#111111</span> <span class="txt-color-darkgray">#666666</span> <span class="txt-color-gray">#999999</span> <span class="txt-color-lightgray">#cccccc</span></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                
+                            <dl class="font-infor">
+                                <dt class="">Size/Line Height</dt>
+                                <dd>
+                                    <div class="components mb20">
+                                        <h1 class="fs-bst fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-bst fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-bst fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-grt fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-grt fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-grt fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-tit fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-tit fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-tit fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-cm fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-cm fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-cm fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-emp fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-emp fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-emp fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-st fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-st fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-st fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-txt fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-txt fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-txt fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components mb20">
+                                        <h1 class="fs-sb fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-sb fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-sb fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                
+                                    <div class="components">
+                                        <h1 class="fs-sm fs-bold mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-sm fs-medium mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                        <h1 class="fs-sm fs-regular mb5">내가 받을 수 있는 보험금은 어느 정도일까요?</h1>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                
+                        <!-- Color -->
+                        <div id="color-wrap" class="component-warp">
+                            <h2>Color</h2>
+                
+                            <div class="color-infor">
+                                <div class="components">
+                                    <ul>
+                                        <li>
+                                            <div class="color-box bg-color-purple">
+                                                <strong class="txt-color-white">#df121a</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-pink">
+                                                <strong class="txt-color-white">#e3047f</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-blue">
+                                                <strong class="txt-color-white">#003477</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-black">
+                                                <strong class="txt-color-white">#000000</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-gray01">
+                                                <strong>#eeeeee</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-gray02">
+                                                <strong>#f3f3f3</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-gray03">
+                                                <strong>#f6f6f6</strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box bg-color-gray04">
+                                                <strong>#f9f9f9</strong>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Icon -->
+                        <div id="icon-wrap" class="component-warp">
+                            <h2>Icon</h2>
+                            <div class="icon-infor">
+                                <div class="components">
+                
+                                    <h3 class="sub-tit">28x28</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class="ico-important"><span class="hide">중요</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-question"><span class="hide">질문</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-check-small"><span class="hide">체크</span></span>
+                                        </div>
+                                    </div>
+                                    <a href="#none" class="btn-more">소스보기</a>
+                                    <div class="guide-code mb30">
+                                        <xmp class="code">
+                                            <span class="ico-important"><span class="hide">중요</span></span>
+                                            <span class="ico-question"><span class="hide">질문</span></span>
+                                            <span class="ico-check-small"><span class="hide">체크</span></span>
+                                        </xmp>
+                                    </div>
+                                    <h3 class="sub-tit">30x30</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class="ico-arrow-up"><span class="hide">위</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-arrow-down"><span class="hide">아래</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-arrow-view"><span class="hide">링크</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-arrow-view-black"><span class="hide">링크</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-arrow-view-purple"><span class="hide">링크</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class="ico-arrow-view-smail"><span class="hide">링크</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-up"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>위<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-down"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>아래<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-view"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>링크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-view-black"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>링크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-view-purple"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>링크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"ico-arrow-view-smail"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>링크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                                    <h3 class="sub-tit">32x32</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class='ico-go-back'><span class="hide">뒤로</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-go-back-white'><span class="hide">뒤로</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-good'><span class="hide">기쁨</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-sad'><span class="hide">슬픔</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-arrow-circle'><span class="hide">링크</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-photo'><span class="hide">사진</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-camera'><span class="hide">카메라</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-more'><span class="hide">더보기</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-delete'><span class="hide">삭제</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-go-back'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>뒤로<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-go-back-white'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>뒤로<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-good'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>기쁨<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-sad'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>슬픔<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-arrow-circle'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>링크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-photo'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>사진<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-camera'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>카메라<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-more'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>더보기<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-delete'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>삭제<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                                    <h3 class="sub-tit">40x40</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class='ico-alarm'><span class="hide">알람</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-sreach-white'><span class="hide">검색</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-sreach-purple'><span class="hide">검색</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-notice'><span class="hide">중요</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-more-type02'><span class="hide">더보기</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-hash'><span class="hide">해쉬태그</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-dias'><span class="hide">진단</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-oper'><span class="hide">수술</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-plus'><span class="hide">플러스</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-alarm'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>알람<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-sreach-white'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>검색<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-sreach-purple'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>검색<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-notice'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>중요<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-more-type02'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>더보기<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-hash'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>해쉬태그<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-dias'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>진단<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-oper'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>수술<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-plus'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>플러스<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                                    <h3 class="sub-tit">44x44</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class='ico-check-big-purple'><span class="hide">체크</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-check-big-purple'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>체크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                                    <h3 class="sub-tit">50x50</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class='ico-arrow-circle-big'><span class="hide">체크</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-arrow-circle-big'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>체크<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                                    <h3 class="sub-tit">110x110</h3>
+                                    <div style="display: flex; padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <div class="mr10">
+                                            <span class='ico-clear'><span class="hide">완료</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-analyzing'><span class="hide">분석중</span></span>
+                                        </div>
+                                        <div class="mr10">
+                                            <span class='ico-notice-none'><span class="hide">중요</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-clear'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>완료<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-analyzing'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>분석중<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="margin-bottom:10px;padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">'ico-notice-none'</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"hide"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>중요<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                
+                
+                                    <h3 class="sub-tit">Categories</h3>
+                                    <div style="padding:20px;background-color:#eee; margin-bottom:10px;">
+                                        <style>
+                                            .cgres-list {
+                                                display: flex;
+                                                justify-content: space-around;
+                                                flex-wrap: wrap;
+                                            }
+                                            .cgres-list li {
+                                                margin: 5px;
+                                                flex-shrink: 1;
+                                            }
+                                        </style>
+                                        <ul class="cgres-list">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">중증질환</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">근골격계</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">비뇨생식계</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">내분비계</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">소화기계</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">순환기계</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">얼굴</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">피부</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">피부</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon">호흡기계</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="guide-code mb30">
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#066de2">ul</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"cgres-list"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>중증질환<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>근골격계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>비뇨생식계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>내분비계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>소화기계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>순환기계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>얼굴<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>피부<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>피부<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">a</span>&nbsp;<span style="color:#0a9989">href</span>=<span style="color:#df5000">"#"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#066de2">span</span>&nbsp;<span style="color:#0a9989">class</span>=<span style="color:#df5000">"icon"</span><span style="color:#0a9989"></span><span style="color:#010101">&gt;</span>호흡기계<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">span</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">a</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">li</span><span style="color:#010101">&gt;</span></div>
+                                        <div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#066de2">ul</span><span style="color:#010101">&gt;</span></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                
+                        <!-- Button -->
+                        <div id="button-wrap" class="component-warp">
+                            <h2>Button</h2>
+                            <div class="guide-btn-area" style="background-color: #ccc;">
+                                <h3>Btn Default</h3>
+                                <a href="#" class="btn">실손의료비 계산하기</a>
+                                <h3>Btn on</h3>
+                                <button type="button" class="btn active">실손의료비 계산하기</button>
+                                
+                                <h3>Btn Default</h3>
+                                <a href="#" class="btn --disabled">다음</a>
+                                <h3>Btn on</h3>
+                                <button type="button" disabled="disabled" class="btn --disabled active">다음</button>
+
+                                <h3>Btn Default</h3>
+                                <a href="#" class="btn --more">더보기</a>
+                                <h3>Btn on</h3>
+                                <button type="button" class="btn --more active">더보기</button>
+
+                                <h3>Btn Default</h3>
+                                <a href="#" class="btn --line">인증번호 재전송</a>
+                                <h3>Btn on</h3>
+                                <button type="button" class="btn --line active">인증번호 재전송</button>
+                            </div>
+                        </div>
+                            
+                            
+                        
+                        <!-- Form -->
+                        <div id="form-wrap" class="component-warp">
+                            <h2>Form</h2>
+                
+                            <h3 class="sub-tit">Login - Input</h3>
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <div class="form-wrap">
+                                    <div class="input-area">
+                                        <label for="user_name">
+                                            <input type="text" id="user_name" class='input-control' />
+                                            <span class="label-txt">아이디</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="input-area">
+                                        <label for="user_name">
+                                            <input type="password" id="user_name" class='input-control' />
+                                            <span class="label-txt">비밀번호</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="input-area">
+                                            <label for="user_name">
+                                                <input type="text" id="user_name" class='input-control' />
+                                                <span class="label-txt">이메일 ID</span>
+                                            </label>
+                                        </div>
+                                        <div class="select-area">
+                                            <label for="user-domain" class="btn-dialog" data-href="#dialog01">
+                                                <span class="label-txt" id="mailText">도메인 선택</span> 
+                                                <span class="ico-arrow-down"><span class="hide">아래</span></span>
+                                            </label>
+                                            <div class="dialog -harf" id="dialog01">
+                                                <section class="wrapper">
+                                                    <header class="header">
+                                                        <h1>이메일 서비스를 선택해주세요.</h1>
+                                                    </header>
+                                                    <article class="content">
+                                                        <div class="scroll-wrap">
+                                                            <div class="select-box">
+                                                                <select data-label="#mailText">
+                                                                    <option value="">@gmail.com</option>
+                                                                    <option value="">@naver.com</option>
+                                                                    <option value="">@hanmail.com</option>
+                                                                    <option value="">@daum.com</option>
+                                                                    <option value="">@nate.com</option>
+                                                                    <option value="">@kcredit.or.kr</option>
+                                                                    <option value="">@hanmir.com</option>
+                                                                    <option value="">@empal.com</option>
+                                                                    <option value="">@dreamwiz.com</option>
+                                                                    <option value="">@korea.com</option>
+                                                                    <option value="">@lycos.co.kr</option>
+                                                                    <option value="">@yahoo.com</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-code mb30">
+                                
+                            </div>
+                            
+                
+                            <style>
+                                .checkbox {margin-bottom: 20px;}
+                            </style>
+                            <h3 class="sub-tit">Check Box</h3>
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <div class="checkbox">
+                                    <input type='checkbox' id="guide01" class="checkbox-input" />
+                                    <label for="guide01">마케팅 정보 메일, SMS 수신 동의 (선택)</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type='checkbox' checked="checked" id="guide02" class="checkbox-input" />
+                                    <label for="guide02">마케팅 정보 메일, SMS 수신 동의 (선택)</label>
+                                </div>
+                            </div>
+                            <div class="guide-code mb30">
+                                
+                            </div>
+                            
+                            <h3 class="sub-tit">Radio Box button type</h3>
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <div class="btn-area">
+                                    <div class="radiobox -btn">
+                                        <input type='radio' id="s01" name="gender" checked="checked" class="radio-input" />
+                                        <label for="s01">남성</label>
+                                        <input type='radio' id="s02" name="gender" class="radio-input" />
+                                        <label for="s02">여성</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guide-code mb30">
+                            </div>
+
+                            <h3 class="sub-tit">datepicker</h3>    
+                            <!-- https://codepen.io/SaadRegal/pen/ZOABQr -->
+                            <div id="datepicker">
+                                <input type="text" value="2021.04.03" title="시작날짜" class="datepicker">
+                            </div>
+                            
+                        </div>
+                
+                    </div>
+                </div>
+                <!-- // Style Guide -->
+
+                <!-- Layout Guide -->
+                <div id="layoutGuide" class="component layout-guide-wrap">
+                    <div clsas="guide-content">
+                        <div class="layout-component">
+                            <!-- Header -->
+                            <h2 class="">Header</h2>
+                            <style>
+                                .header-component .header {margin-bottom:20px;}
+                            </style>
+                            <div class="component-area header-component">
+                                
+                                <h3>Main</h3>
+                                <header id="header" class='header main'>
+                                    <h1><img alt="Are you sure" src="./images/common/logo.svg" /></h1>
+                                    <a class="btn-alarm" href="#"><span>알림</span></a>
+                                </header>
+                
+                                <h3>Sub</h3>
+                                <header id="header" class='header sub'>
+                                    <a class="btn-go-back" href="#"><span>뒤로가기</span></a>
+                                    <h1>카테고리 검색</h1>
+                                    <a class="btn-alarm" href="#"><span>알림</span></a>
+                                </header>
+                
+                                <h3>Detail</h3>
+                                <header id="header" class='header detail'>
+                                    <a class="btn-go-back" href="#"><span>뒤로가기</span></a>
+                                    <h1>카테고리 검색</h1>
+                                </header>
+                
+                                <h3>Search</h3>
+                                <header id="header" class='header search'>
+                                    <a class="btn-go-back" href="#"><span>뒤로가기</span></a>
+                                    <input placeholder="질병˙수술명 또는 진단코드 입력" type="text">
+                                    <button class="btn-search" type="button">검색</button>
+                                </header>
+                            </div>
+                            <!-- // Header -->
+                
+                            <!-- Toolbar -->
+                            <h2>Toolbar</h2>
+                            <style>
+                                .toobar-component .toolbar-wrap {position: relative; margin-bottom:20px;}
+                            </style>
+                            <div class="component-area toobar-component">
+                
+                                <h3>Toolbar default</h3>
+                                <!-- 하단 툴바 -->
+                                <div class="toolbar-wrap">
+                                    <ul>
+                                        <li><a href="#" class="btn-tool-insce"><span>내보험금</span></a></li>
+                                        <li><a href="#" class="btn-tool-loss"><span>실손청구</span></a></li>
+                                        <li><a href="#" class="btn-tool-alys"><span>보험분석</span></a></li>
+                                        <li><a href="#" class="btn-tool-more"><span>더보기</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- // 하단 툴바 -->
+                
+                                <h3>Toolbar actived</h3>
+                                <!-- 하단 툴바 -->
+                                <div class="toolbar-wrap">
+                                    <ul>
+                                        <li><a href="#" class="btn-tool-insce on"><span>내보험금</span></a></li>
+                                        <li><a href="#" class="btn-tool-loss on"><span>실손청구</span></a></li>
+                                        <li><a href="#" class="btn-tool-alys on"><span>보험분석</span></a></li>
+                                        <li><a href="#" class="btn-tool-more on"><span>더보기</span></a></li>
+                                    </ul>
+                                </div>
+                                <!-- // 하단 툴바 -->
+                            </div>
+                            <!-- // Toolbar -->
+                        </div>
+                    </div>
+                </div>
+                <!-- // Layout Guide -->
+
+                <!-- basic -->
+                <div id="basic" class="component basic-wrap">
+
+                    <div clsas="guide-content">
+                        <div class="basic-component">
+                            <h2>TF</h2>
+                            <table class="table table-striped">
+                                <colgroup>
+                                <!-- <col style="width:8%"> -->
+                                <col style="width:40%">
+                                <!-- <col> -->
+                                <col style="width:30%">
+                                <col style="width:30%">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <!--<th>구분<img src="img/bu/bu-arrow-btm1.gif" alt=""></th>-->
+                                    <th>name</th>
+                                    <th>Responsibilities</th>
+                                    <th>Mail</th>
+                                    <th></th>
+                                    <!-- <th><img src="img/bu/bu-arrow-btm1.gif" alt=""></th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <!-- <td>123456</td> -->
+                                    <td><span class="name">한슬기</span></td>
+                                    <td class="">PL / Markup / Script / CSS</td>
+                                    <td class=""><span class="mail">sghan@frameout.co.kr</span></td>
+                                    <td></td>
+                                    <!-- <td class="al"><span class="imp"></span></td> -->
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <h2 class="mt30">파일 디렉토리 구조</h2>
+                            <table class="table-step1">
+                                <colgroup>
+                                <col width="8%">
+                                <col width="10%">
+                                <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                  <th class="high-step" rowspan="26"><span class="folder"></span>canon</th>
+                                  <th><span class="folder"></span>css</th>
+                                  <td>
+                                      <strong>스타일시트 파일 디렉토리</strong> <br>
+                                        └  base.css ( import ) <br>
+                                        └  common.css ( 공통 요소 ) <br>
+                                        └  font.css ( 폰트 ) <br>
+                                        └  layout.css ( header / footer 등 공통 레이아웃 ) <br>
+                                        └  reset.css ( 스타일 초기화 ) <br>
+                                        └  ui.css ( 컨텐츠 ) <br>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="folder"></span>font</th>
+                                    <td><strong>font 파일 디렉토리</strong></td>
+                                  </tr>
+                                <tr>
+                                  <th><span class="folder"></span>html</th>
+                                  <td><strong>Html 파일 디렉토리</strong></td>
+                                </tr>
+                                <tr>
+                                  <th><span class="folder"></span>images</th>
+                                  <td><strong>이미지 리소스 디렉토리</strong></td>
+                                </tr>
+                                <tr>
+                                  <th><span class="folder"></span>js</th>
+                                  <td><strong>자바스크립트 디렉토리</strong></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- // basic -->
+            </div>
+        </section>
+    </div>
+
+    <script src='../assets/js/jquery-3.6.0.min.js'></script>
+    <script src='../assets/js/ui.js'></script>
+    
+    <script>
+        var $device = $(window);
+        var $guideWrap = $(".guide-wrap");
+        var $naviBtn = $guideWrap.find('.navi-btn');
+        var $path = $guideWrap.find(".gnb");
+        var $linkTarget = $path.find('li > a');
+        var $container = $guideWrap.find(".container");
+        var $content = $container.find("#content");
+        var _url = null
+        var _timer = null
+
+        var isMobile = function(){
+            var _userAgent = navigator.userAgent;
+            if(_userAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || _userAgent.match(/LG|SAMSUNG|Samsung/) != null ){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var deviceResize = function(_device){
+            if(_device.width() >= 768) {
+                $guideWrap.addClass("navi-opened");
+            } else {
+                $guideWrap.removeClass("navi-opened");
+            }
+        };
+        
+        $naviBtn.off('click').on('click', function(e){
+            var _this = $(this);
+            if( _this.closest('.guide-wrap').hasClass('navi-opened') ) _this.closest('.guide-wrap').removeClass('navi-opened');
+            else _this.closest('.guide-wrap').addClass('navi-opened');
+        });
+
+        $path.on('click', ".list .path", function(e){
+            e.preventDefault();
+            var _this = $(this);
+            var _target = _this.attr('href');
+            _this.closest('ul').find('li').removeClass('on');
+            _this.closest('li').addClass('on');
+
+            $content.find('.component').removeClass('on');
+            $(_target).addClass('on');
+
+        });
+
+        $device.on('resize', function(e){
+            var _this = $(this);
+            if( !_timer ){
+                _timer = setTimeout(function(){
+                    _timer = null;
+                    deviceResize( _this );
+                }, 200);
+            }
+        });
+
+        deviceResize( $device );
+
+
+        /* path */
+        var $body = $("body");
+        var $pathWrap = $('.path-wrap');
+        var $descBtn = $pathWrap.find('.desc-btn');
+        var $descWrap = $pathWrap.find('.desc-wrap');
+        var $closeBtn = $descWrap.find('.close');
+        var $colum = $pathWrap.find('.colum');
+        var $accordionBtn = $colum.find('h3 > a');
+        
+        if( isMobile() ){
+            $descBtn.off('click').on('click' , function(){
+                var _this = $(this);
+                var _descWrap = _this.closest('.desc').find('.desc-wrap');
+                $descWrap.removeClass('modal');
+                $body.addClass('hidden');
+                _descWrap.addClass('modal');
+                return false;
+            });
+            $closeBtn.off('click').on('click' , function(){
+                var _this = $(this);
+                _this.closest('.desc-wrap').removeClass('modal');
+                $body.removeClass('hidden');
+                return false;
+            });
+        }
+
+        $accordionBtn.off('click').on('click' , function(){
+            var _this = $(this);
+            var _colum = _this.closest('.colum');
+            if( _colum.hasClass('close') ) _colum.removeClass('close');
+            else _colum.addClass('close');
+            return false;
+        });
+
+        var $doc= $(document);
+        var $tabList= $body.find(".tab-list");
+        var $componentWrap = $body.find(".component-warp");
+
+        $tabList.on('click', 'li > a', function(){
+            var _this = $(this);
+            var _li = _this.closest("li");
+            $tabList.find('li').removeClass('on');
+            _li.addClass('on'); 
+        });
+
+        // $('.guide-code').hide();
+        $('.btn-more').click(function(){
+		    $(this).next('.guide-code').find('.code').stop().slideToggle(200);
+	    });
+
+    </script>
+
+
+</body>
+</html>

@@ -17,7 +17,7 @@ target/
 build
 *.map
 
-dist/
+
 coverage
 local.js
 
