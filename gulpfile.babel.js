@@ -119,7 +119,7 @@ function style(done) {
 function js(done) {
     console.log('js task excuted !');
     return src(PATH.ASSETS.JS + '/**/*.js')
-        .pipe(symlink(DEST_PATH.ASSETS.JS))
+        .pipe(dest(DEST_PATH.ASSETS.JS))
         .pipe(browserSync.reload({
             stream: true
         }));
