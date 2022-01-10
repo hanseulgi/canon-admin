@@ -1,17 +1,22 @@
+@charset "UTF-8";
 
-/* reset */
+//---------------------------------------------------
+// reset : 초기화 스타일
+//---------------------------------------------------
+
+
 html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
 dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {
     margin:0;
     padding:0;
-    font-family:'Roboto', $notosans;
+    // font-family:'Roboto', $notosans;
     font-size:10px;
-    line-height: $txt-lh;
-    letter-spacing: $txt-ls;
+    // line-height: $txt-lh;
+    // letter-spacing: $txt-ls;
     color:#111;
     box-sizing: border-box;
-    font-weight: $font-regular;
-}
+    // font-weight: $font-regular;
+}c
 
 html, body{
     width: 100%;
@@ -200,6 +205,7 @@ textarea {
     height: 1px; 
     margin: -1px; 
     overflow: hidden; 
+    text-indent: -9999px;
     padding: 0; 
     position: absolute; 
     white-space: nowrap;

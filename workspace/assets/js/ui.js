@@ -1,48 +1,58 @@
-var canon = function () {
-	var common = {
-		init: function () {
-            common.datepicker();
-			common.tab.init();
-		},
+var UI = UI || {};
 
-		datepicker : function () {
-			$( "#datepicker" ).datepicker({
-				showOn: "button",
-                changeMonth: true,
-                changeYear: true,
-				dateFormat: 'yy-mm-dd',
-				showMonthAfterYear: true,
-				prevText: '이전 달',
-				nextText: '다음 달',
-				monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
-				monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-				yearSuffix: '.',
-				currentText: "오늘",
-				setToday : false,
-				defaultDate : null,
-			});
+// if(typeof UI === 'undefined') {  위에꺼랑 결국 같은 뜻
+// 	var UI = {}; 
+// } 
+
+UI.window = $(window);
+UI.doc = $(document);
+UI.body = $('body');
+
+
+// 생성자
+UI.a = function() {};
+UI.b = function() {};
+
+UI.c = (function () {
+    const $var1 = '';
+    let _var2 = '';
+
+    return {
+        init: function () { //이걸 실행
+            this.open();   //여기서 this는 UI임
         },
+        
+        open: function ( target ) {
 
-		tab : {
-			init : function () {
-				
-			},
-			open : function(){
-				
-			}
-		},
-	};
-	
-	return common;
-
-}();
-$(function () {
-	canon.init();
-});
+        },
+        close: function ( target ) {
+            
+        }
+    }
+})();  //즉시 실행
 
 
-	
+// 변수
+UI.variable = 0;
 
+// 객체 컨테이너
+UI.modules = {};
+
+// 객체 컨테이너 안에 객체 사용 가능
+UI.modules.module1 = {}; 
+UI.modules.module1.data = { a : 1, b : 2 }; 
+UI.modules.module2 = {};
+
+
+
+/* 실행 선언 */
+UI.init = function(){
+	UI.a();
+	UI.b();
+	UI.c.init();
+};
+
+/* 실행 */
+(function(){
+   UI.init();
+})();

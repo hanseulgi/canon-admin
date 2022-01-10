@@ -1,29 +1,38 @@
+@charset "UTF-8";
+
+//---------------------------------------------------
+// mixin : 재사용 스타일
+//---------------------------------------------------
+
+
 
 /* Mobile */
-// @mixin mobile {
-//     @media (min-width: #{$breakpoint-mobile}) {
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+/* Tablet */
+// @mixin tablet {
+//     @media (min-width: #{$breakpoint-tablet}) {
 //         @content;
 //     }
 // }
 
-/* Tablet */
-@mixin tablet {
-    @media (min-width: #{$breakpoint-tablet}) {
-        @content;
-    }
-}
-
 /* Desktop */
-@mixin desktop {
-    @media (min-width: #{$breakpoint-desktop}) {
-        @content;
-    }
-}
+// @mixin desktop {
+//     @media (min-width: #{$breakpoint-desktop}) {
+//         @content;
+//     }
+// }
 
 
 @mixin transition($value) {
     transition: $value;
 };
+
+// 예) @include transition(all 0.3s cubic-bezier(0.5, 1, 0.89, 1));
 
 @mixin clearfix {
     &::after {
@@ -32,209 +41,213 @@
         clear: both;
     }
 };
+/* 예) @include clearfix; */
 
 @mixin txt-hidden {
     text-indent: -9999px;
     font-size: 0px;
 }
 
-@mixin float-flow ($col) {
-    @include clearfix;
+// @mixin float-flow ($col) {
+//     @include clearfix;
 
-    & > li, 
-    & > div, 
-    & > .item {
-        float: left;   
-    }
+//     & > li, 
+//     & > div, 
+//     & > .item {
+//         float: left;   
+//     }
 
-    @if $col == 2 {
-        & > li, 
-        & > div,
-        & > .item {
-            width: 50%;
-        }
-    } 
-    @else if $col == 3 {
-        & > li, 
-        & > div,
-        & > .item {
-            width: 33.33%;
-        }
-    }
-    @else if $col == 4 {
-        & > li, 
-        & > div,
-        & > .item {
-            width: 25%;
-        }
-    }
+//     @if $col == 2 {
+//         & > li, 
+//         & > div,
+//         & > .item {
+//             width: 50%;
+//         }
+//     } 
+//     @else if $col == 3 {
+//         & > li, 
+//         & > div,
+//         & > .item {
+//             width: 33.33%;
+//         }
+//     }
+//     @else if $col == 4 {
+//         & > li, 
+//         & > div,
+//         & > .item {
+//             width: 25%;
+//         }
+//     }
 
-}
+// }
 
-@mixin ico-txt($ico, $pd: 25px, $w: 20px, $h: 20px) {
-    & {
-        padding-left: $pd;
-        background:url($path-img-ico + $ico) no-repeat 0 0;
-        background-size: $w, $h;
-    }
-}
+// @mixin ico-txt($ico, $pd: 25px, $w: 20px, $h: 20px) {
+//     & {
+//         padding-left: $pd;
+//         background:url($path-img-ico + $ico) no-repeat 0 0;
+//         background-size: $w, $h;
+//     }
+// }
 
-@mixin arrow-ico ($w: 30px, $h: 30px, $bs-x: 15px, $bs-y: 15px){
-    width: $w;
-    height: $h;
-    text-indent: -99999px;
-    background: url($path-img-ico + $img-arrow-view) no-repeat 50% 50%;
-    background-size: 15px 15px;
+// @mixin arrow-ico ($w: 30px, $h: 30px, $bs-x: 15px, $bs-y: 15px){
+//     width: $w;
+//     height: $h;
+//     text-indent: -99999px;
+//     background: url($path-img-ico + $img-arrow-view) no-repeat 50% 50%;
+//     background-size: 15px 15px;
 
-    &.down {
-        background: url($path-img-ico + $img-arrow-down) no-repeat 50% 50%;
-    }
+//     &.down {
+//         background: url($path-img-ico + $img-arrow-down) no-repeat 50% 50%;
+//     }
     
-    @content;
-}
+//     @content;
+// }
 
-@mixin ico-arrow($px, $img){
-    position: relative;
+// @mixin ico-arrow($px, $img){
+//     position: relative;
 
-    .ico,
-    &::before {
-        display: block;
-        width: $px;
-        height: $px;
-        display: block;
-        background-image: url($path-img-ico + $img);
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        text-indent: -99999px;
-        background-size: 100% auto;
-        content: "";
-    }
-}
+//     .ico,
+//     &::before {
+//         display: block;
+//         width: $px;
+//         height: $px;
+//         display: block;
+//         background-image: url($path-img-ico + $img);
+//         background-position: 0 0;
+//         background-repeat: no-repeat;
+//         text-indent: -99999px;
+//         background-size: 100% auto;
+//         content: "";
+//     }
+// }
 
-@mixin each-icons {
+// @mixin each-icons {
 
-    $categories-icons: ($ico_category1, $ico_category2, $ico_category3, $ico_category4, $ico_category5, $ico_category6, $ico_category7, $ico_category8, $ico_category9, $ico_category10);
-    $categories-on-icons: ($ico_category1_on, $ico_category2_on, $ico_category3_on, $ico_category4_on, $ico_category5_on, $ico_category6_on, $ico_category7_on, $ico_category8_on, $ico_category9_on, $ico_category10_on);
+//     $categories-icons: ($ico_category1, $ico_category2, $ico_category3, $ico_category4, $ico_category5, $ico_category6, $ico_category7, $ico_category8, $ico_category9, $ico_category10);
+//     $categories-on-icons: ($ico_category1_on, $ico_category2_on, $ico_category3_on, $ico_category4_on, $ico_category5_on, $ico_category6_on, $ico_category7_on, $ico_category8_on, $ico_category9_on, $ico_category10_on);
 
-    & > li {
-        .icon {
-            @include fs($sm-fs);
+//     & > li {
+//         .icon {
+//             @include fs($sm-fs);
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             width: 100%;
+//             height: 100%;
 
-            &::before {
-                display: block;
-                width: 32px;
-                height: 32px;
-                content: "";
-            }
-        }
-    }
+//             &::before {
+//                 display: block;
+//                 width: 32px;
+//                 height: 32px;
+//                 content: "";
+//             }
+//         }
+//     }
 
-    @each $icon in $categories-icons {
-        $i: index($categories-icons, $icon);
-        & > li:nth-of-type(#{$i}) {
-            .icon::before {
-                background: url($path-img-ico + $icon) no-repeat 0 0;
-                background-size:32px 32px;
-            }
-        }
-    }
+//     @each $icon in $categories-icons {
+//         $i: index($categories-icons, $icon);
+//         & > li:nth-of-type(#{$i}) {
+//             .icon::before {
+//                 background: url($path-img-ico + $icon) no-repeat 0 0;
+//                 background-size:32px 32px;
+//             }
+//         }
+//     }
 
-    @each $icon_on in $categories-on-icons {
-        $i: index($categories-on-icons, $icon_on);
-        & > li.on:nth-of-type(#{$i}) {
-            .icon::before {
-                background: url($path-img-ico + $icon_on) no-repeat 0 0;
-                background-size:32px 32px;
-            }
-        }
-    }
-}
+//     @each $icon_on in $categories-on-icons {
+//         $i: index($categories-on-icons, $icon_on);
+//         & > li.on:nth-of-type(#{$i}) {
+//             .icon::before {
+//                 background: url($path-img-ico + $icon_on) no-repeat 0 0;
+//                 background-size:32px 32px;
+//             }
+//         }
+//     }
+// }
 
 @mixin flex-flow ($justify: space-between, $align: center){
     display: flex;
     justify-content: $justify;
     align-items: $align;
 }
+/* 예) @include flex-flow; */
 
 @mixin border-radius($radius : 10px){
     border-radius: $radius;
 };
+/* 예) @include border-radius(20px); */
 
 @mixin fs-type ($size, $line: $txt-lh, $letter: $txt-ls){
-    font-size: $size;
+    font-size: $size;   
     line-height: $line;
     letter-spacing: $letter;
 }
+/* 예) @include fs-type( $fs20, $lh32, $ls30 ); */
 
-@mixin fs ($size){
+@mixin fs ($size){  /* 예) @include fs( $fs50 ); */
     /* 50px */
-    @if $size == $bst-fs {
-        font-size: $bst-fs;
-        line-height: $bst-lh;
-        letter-spacing: $bst-ls;
+    @if $size == $fs50 {
+        font-size: $fs50;
+        line-height: $lh50;
+        letter-spacing: $ls50;
     }
 
     /* 40px */
-    @if $size == $grt-fs {
-        font-size: $grt-fs;
-        line-height: $grt-lh;
-        letter-spacing: $grt-ls;
+    @if $size == $fs40 {
+        font-size: $fs40;
+        line-height: $lh40;
+        letter-spacing: $ls40;
     }
 
     /* 36px */
-    @if $size == $tit-fs {
-        font-size: $tit-fs;
-        line-height: $tit-lh;
-        letter-spacing: $tit-ls;
+    @if $size == $fs36 {
+        font-size: $fs36;
+        line-height: $lh36;
+        letter-spacing: $ls36;
     }
 
     /* 34px */
-    @if $size == $cm-fs {
-        font-size: $cm-fs;
-        line-height: $cm-lh;
-        letter-spacing: $cm-ls;
+    @if $size == $fs34 {
+        font-size: $fs34;
+        line-height: $lh34;
+        letter-spacing: $ls34;
     }
 
     /* 32px */
-    @if $size == $emp-fs {
-        font-size: $emp-fs;
-        line-height: $emp-lh;
-        letter-spacing: $emp-ls;
+    @if $size == $fs32 {
+        font-size: $fs32;
+        line-height: $lh32;
+        letter-spacing: $ls32;
     }
 
     /* 30px */
-    @if $size == $st-fs {
-        font-size: $st-fs;
-        line-height: $st-lh;
-        letter-spacing: $st-ls;
+    @if $size == $fs30 {
+        font-size: $fs30;
+        line-height: $lh30;
+        letter-spacing: $ls30;
     }
 
     /* 28px */
-    @if $size == $txt-fs {
-        font-size: $txt-fs;
-        line-height: $txt-lh;
-        letter-spacing: $txt-ls;
+    @if $size == $fs28 {
+        font-size: $fs28;
+        line-height: $lh28;
+        letter-spacing: $ls28;
     }
 
     /* 26px */
-    @if $size == $sb-fs {
-        font-size: $sb-fs;
-        line-height: $sb-lh;
-        letter-spacing: $sb-ls;
+    @if $size == $fs26 {
+        font-size: $fs26;
+        line-height: $lh26;
+        letter-spacing: $ls26;
     }
 
     /* 24px */
-    @if $size == $sm-fs {
-        font-size: $sm-fs;
-        line-height: $sm-lh;
-        letter-spacing: $sm-ls;
+    @if $size == $fs24 {
+        font-size: $fs24;
+        line-height: $lh24;
+        letter-spacing: $ls24;
     }
 }
 

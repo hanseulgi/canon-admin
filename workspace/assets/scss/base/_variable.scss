@@ -1,5 +1,9 @@
-
 @charset "UTF-8";
+
+//---------------------------------------------------
+// variable : 기본 재사용 선언 스타일
+//---------------------------------------------------
+
 
 $notosans: 'NotoSansKR', Arial, AppleGothic, verdana, sans-serif;
 $roboto: 'Roboto', Arial, AppleGothic, verdana, sans-serif;
@@ -23,110 +27,51 @@ $font-medium: 500;
 $font-regular: 400;
 
 // Breakpoints
-$breakpoint-mobile: 335px;
-$breakpoint-tablet: 758px;
-$breakpoint-desktop: 1024px;
-
-
-/* 
-    .fs-bst: 50 ==> $bst-fs
-    .fs-grt: 40 ==> $grt-fs
-    .fs-tit: 36 ==> $tit-fs
-    .fs-cm: 34  ==> $cm-fs
-    .fs-emp: 32 ==> $emp-fs
-    .fs-st: 30  ==> $st-fs
-    .fs-txt: 28 ==> $txt-fs
-    .fs-sb: 26  ==> $sb-fs
-    .fs-sm: 24  ==> $sm-fs
-*/
+$breakpoint-mobile: 1024px;
+// $breakpoint-tablet: 758px;
+// $breakpoint-desktop: 1024px;
 
 
 
 /* 50px */
-$bst-fs: 2.5rem;
-$bst-lh: 1.4;
-$bst-ls: -0.5px;
+$fs50: 5rem;
+$lh50: 1.4;
+$ls50: -0.5px;
 
 /* 40px */
-$grt-fs: 2rem;
-$grt-lh: 1.5;
-$grt-ls: -0.4px;
+$fs40: 4rem;
+$lh40: 1.5;
+$ls40: -0.4px;
 
-/* 36px */ 
-$tit-fs: 1.8rem;
-$tit-lh: 1.42;
-$tit-ls: -0.36px;
 
-/* 34px */
-$cm-fs: 1.7rem;
-$cm-lh: 1.44;
-$cm-ls: -0.34px;
+/* color */
+$color-red: #df121a;
+$color-fff: #fff;
+$color-000: #000;
+$color-111: #111;
+$color-666: #666;
+$color-ccc: #ccc;
 
-/* 32px */
-$emp-fs: 1.6rem;
-$emp-lh: 1.47;
-$emp-ls: -0.32px;
 
-/* 30px */
-$st-fs: 1.5rem;
-$st-lh: 1.5;
-$st-ls: -0.3px;
+// $ico_category1: 'ico_category1.svg';
+// $ico_category2: 'ico_category2.svg';
+// $ico_category3: 'ico_category3.svg';
+// $ico_category4: 'ico_category4.svg';
+// $ico_category5: 'ico_category5.svg';
+// $ico_category6: 'ico_category6.svg';
+// $ico_category7: 'ico_category7.svg';
+// $ico_category8: 'ico_category8.svg';
+// $ico_category9: 'ico_category9.svg';
+// $ico_category10: 'ico_category10.svg';
 
-/* 28px */
-$txt-fs: 1.4rem;
-$txt-lh: 1.54;
-$txt-ls: -0.28px;
-
-/* 26px */
-$sb-fs: 1.3rem;
-$sb-lh: 1.5;
-$sb-ls: -0.26px;
-
-/* 24px */
-$sm-fs: 1.2rem;
-$sm-lh: 1.63;
-$sm-ls: -0.24px;
-
-$txt-b-color: #111;
-$txt-dg-color: #666;
-$txt-g-color: #999;
-$txt-lg-color: #ccc;
-$txt-w-color: #fff;
-$txt-p-color: #3f1294;
-$txt-p-color-on: #391085;
-
-$bg-color-purple: #3f1294;
-$bg-color-purple-on: #391085;
-$bg-color-pink: #e3047f;
-$bg-color-blue: #003477;
-$bg-color-black: #000;
-$bg-color-gray01: #eee;
-$bg-color-gray02: #f3f3f3;
-$bg-color-gray03: #f6f6f6;
-$bg-color-gray04: #f9f9f9;
-$bg-color-gray05: #ccc;
-$bg-color-gray06: #999;
-$bg-color-white: #fff;
-
-$ico_category1: 'ico_category1.svg';
-$ico_category2: 'ico_category2.svg';
-$ico_category3: 'ico_category3.svg';
-$ico_category4: 'ico_category4.svg';
-$ico_category5: 'ico_category5.svg';
-$ico_category6: 'ico_category6.svg';
-$ico_category7: 'ico_category7.svg';
-$ico_category8: 'ico_category8.svg';
-$ico_category9: 'ico_category9.svg';
-$ico_category10: 'ico_category10.svg';
-
-$ico_category1_on: 'ico_category1_on.svg';
-$ico_category2_on: 'ico_category2_on.svg';
-$ico_category3_on: 'ico_category3_on.svg';
-$ico_category4_on: 'ico_category4_on.svg';
-$ico_category5_on: 'ico_category5_on.svg';
-$ico_category6_on: 'ico_category6_on.svg';
-$ico_category7_on: 'ico_category7_on.svg';
-$ico_category8_on: 'ico_category8_on.svg';
-$ico_category9_on: 'ico_category9_on.svg';
-$ico_category10_on: 'ico_category10_on.svg';
+// $ico_category1_on: 'ico_category1_on.svg';
+// $ico_category2_on: 'ico_category2_on.svg';
+// $ico_category3_on: 'ico_category3_on.svg';
+// $ico_category4_on: 'ico_category4_on.svg';
+// $ico_category5_on: 'ico_category5_on.svg';
+// $ico_category6_on: 'ico_category6_on.svg';
+// $ico_category7_on: 'ico_category7_on.svg';
+// $ico_category8_on: 'ico_category8_on.svg';
+// $ico_category9_on: 'ico_category9_on.svg';
+// $ico_category10_on: 'ico_category10_on.svg';
 
