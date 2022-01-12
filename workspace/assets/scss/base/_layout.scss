@@ -1,23 +1,64 @@
 @charset "UTF-8";
 
 //---------------------------------------------------
-// layout : 헤더 푸터 제외한 기본 레이아웃 style
+// layout : 헤더 푸터 제외한 공통된 레이아웃 style ( 퀵메뉴)
 //---------------------------------------------------
 
-/* ios safe area */
-:root {
-	--safeTop:env(safe-area-inset-top);
-	--safeBtm:env(safe-area-inset-bottom);
-}
+.skip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 
-body {
-    padding:var(--safeTop) 0 var(--safeBtm) !important;
-
-    &.hidden {
+    a {
+        display: block;
         overflow: hidden;
+        width: 1px;
+        height: 1px;
+        margin-bottom: -1px;
+
+        &:focus,
+        &:active {
+            @include fs ($fs24);
+            text-align: center;
+            color:#000;
+            width:100%;
+            height: auto;
+            padding: 2rem 0;
+            background-color:#ccc;
+        }
     }
 }
 
+
+
+
+.dim {
+    position:fixed;
+    display: none;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    height:100%;
+    overflow:hidden;
+
+    & > .inner {
+        position:fixed;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        background-color:rgba(0,0,0,.6);
+        overflow:hidden;
+        z-index:100;
+    }
+
+    &.on {
+        display: block;
+    }
+}
 
 
 // /* Layout */

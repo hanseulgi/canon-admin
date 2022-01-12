@@ -1,5 +1,10 @@
 #header{
+
+    position: relative;
+    z-index: 100;
     @include wh(100%, 12rem);
+    background-color: #fff;
+
 
     .inner {
         @include flex-flow;
@@ -33,37 +38,34 @@
 }
 
 .nav {
-    position: relative;
     flex: 0 0 50%;
+    height: 100%;
+
+    &:hover {
+        .nav-content {
+            opacity: 1;
+        }
+    }
 
     &-menu {
         display: flex;
-
-        &:hover + .nav-content {
-            opacity: 1;
-            
-        }
+        align-items:center;
+        height: 100%;
 
         li {
-            a {
-                &:hover {
-
-                }
-            }
+            a{ padding: 0 20px; }
         }
-
     }
 
     &-content {
         position: absolute;
         left: 0;
-        bottom: -25rem;
+        bottom: -12rem;
         background-color:#ccc;
         opacity: 0;
-        @include wh(100%, 25rem);
-        @include transition(all .5s ease-in);
-        
-        
+        @include wh(100%, 12rem);
+        //@include transition(all .3s ease-in);
     }
 
 }
+

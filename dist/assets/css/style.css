@@ -270,17 +270,58 @@ textarea:focus {
     box-sizing: border-box;
 }
 
-/* ios safe area */
-:root {
-    --safeTop:env(safe-area-inset-top);
-    --safeBtm:env(safe-area-inset-bottom);
+.skip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.skip a {
+    display: block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin-bottom: -1px;
+}
+.skip a:focus, .skip a:active {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 24px */
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: #000;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    background-color: #ccc;
 }
 
-body {
-    padding: var(--safeTop) 0 var(--safeBtm) !important;
-}
-body.hidden {
+.dim {
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
     overflow: hidden;
+}
+.dim > .inner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    z-index: 100;
+}
+.dim.on {
+    display: block;
 }
 
 /* main */
@@ -308,7 +349,17 @@ main {
 /* checkbox */
 /* radio */
 /* 아코디언 */
+/* ios safe area */
+:root {
+    --safeTop:env(safe-area-inset-top);
+    --safeBtm:env(safe-area-inset-bottom);
+}
+
+body {
+    padding: var(--safeTop) 0 var(--safeBtm) !important;
+}
 .wrap {
+    position: relative;
     min-width: 108rem;
     /* 예) @include fs( $fs50 ); */
     /* 50px */
@@ -328,8 +379,11 @@ main {
 /* library */
 /* layout */
 #header {
+    position: relative;
+    z-index: 100;
     width: 100%;
     height: 12rem;
+    background-color: #fff;
 }
 #header .inner {
     display: flex;
@@ -355,23 +409,27 @@ main {
 }
 
 .nav {
-    position: relative;
     flex: 0 0 50%;
+    height: 100%;
+}
+.nav:hover .nav-content {
+    opacity: 1;
 }
 .nav-menu {
     display: flex;
+    align-items: center;
+    height: 100%;
 }
-.nav-menu:hover + .nav-content {
-    opacity: 1;
+.nav-menu li a {
+    padding: 0 20px;
 }
 .nav-content {
     position: absolute;
     left: 0;
-    bottom: -25rem;
+    bottom: -12rem;
     background-color: #ccc;
     opacity: 0;
     width: 100%;
-    height: 25rem;
-    transition: all 0.5s ease-in;
+    height: 12rem;
 }
 /*# sourceMappingURL=map/style.css.map */
