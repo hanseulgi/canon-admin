@@ -1,0 +1,69 @@
+#header{
+    @include wh(100%, 12rem);
+
+    .inner {
+        @include flex-flow;
+        position: relative;
+        width: 108rem;
+        height: 100%;
+        margin: 0 auto;
+
+        .header-logo {
+
+            a::after {
+                content: "";
+                display: inline-block;
+                @include wh(10rem, 3rem);
+                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                background-size: 100%;
+            }
+        }
+        .header-util {
+        //    [class^=btn] {
+        //       @include fs ($fs24);
+        //    }
+        }
+        .header-user {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+    }
+}
+
+.nav {
+    position: relative;
+    flex: 0 0 50%;
+
+    &-menu {
+        display: flex;
+
+        &:hover + .nav-content {
+            opacity: 1;
+            
+        }
+
+        li {
+            a {
+                &:hover {
+
+                }
+            }
+        }
+
+    }
+
+    &-content {
+        position: absolute;
+        left: 0;
+        bottom: -25rem;
+        background-color:#ccc;
+        opacity: 0;
+        @include wh(100%, 25rem);
+        @include transition(all .5s ease-in);
+        
+        
+    }
+
+}

@@ -2,20 +2,48 @@
 /* base */
 /* 50px */
 /* 40px */
+/* 24px */
 /* color */
+/*
+responsive
+*/
 /* Mobile */
 /* Tablet */
 /* Desktop */
+/*
+transition
+*/
+/* clearfix */
 /* 예) @include clearfix; */
+/*
+blind
+*/
+/*
+flex
+*/
 /* 예) @include flex-flow; */
+/*
+transform
+*/
+/* 예) @include transform */
+/*
+border
+*/
 /* 예) @include border-radius(20px); */
+/*
+font
+*/
 /* 예) @include fs-type( $fs20, $lh32, $ls30 ); */
-/* 불릿 */
+/*
+bullet
+*/
 /* 말줄임 */
-/* margin, padding */
-/* Header */
-/* common contents */
-/* media query */
+/*
+margin, padding
+*/
+/*
+width, height
+*/
 /* NotoSans */
 @font-face {
     font-family: "NotoSansKR";
@@ -134,6 +162,12 @@ a {
     text-decoration: none;
 }
 
+button {
+    margin: 0;
+    padding: 0;
+    background: 0;
+}
+
 /* Form */
 select {
     height: 32px;
@@ -236,17 +270,17 @@ textarea:focus {
     box-sizing: border-box;
 }
 
-body.hidden {
-    overflow: hidden;
+/* ios safe area */
+:root {
+    --safeTop:env(safe-area-inset-top);
+    --safeBtm:env(safe-area-inset-bottom);
 }
 
-/* Layout */
-.wrap {
-    position: relative;
-    min-height: 100%;
+body {
+    padding: var(--safeTop) 0 var(--safeBtm) !important;
 }
-.wrap.bg-gray {
-    background-color: #f3f3f3;
+body.hidden {
+    overflow: hidden;
 }
 
 /* main */
@@ -260,343 +294,31 @@ main {
 /* logo */
 /* Modal */
 /* Font Roboto */
-/* Text color */
+/* color */
 /* BG color */
 /* font-style */
 /* Font Weight */
 /* text */
 /* bullit */
 /* icon */
-/* 말줄임 */
-.ellipsis {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.ellipsis-line02 {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-.ellipsis-line05 {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-}
-
-/* margin-top */
-.mt0 {
-    margin-top: 0px !important;
-}
-.mt5 {
-    margin-top: 5px !important;
-}
-.mt10 {
-    margin-top: 10px !important;
-}
-.mt15 {
-    margin-top: 15px !important;
-}
-.mt20 {
-    margin-top: 20px !important;
-}
-.mt25 {
-    margin-top: 25px !important;
-}
-.mt30 {
-    margin-top: 30px !important;
-}
-.mt35 {
-    margin-top: 35px !important;
-}
-.mt40 {
-    margin-top: 40px !important;
-}
-.mt45 {
-    margin-top: 45px !important;
-}
-.mt50 {
-    margin-top: 50px !important;
-}
-.mt55 {
-    margin-top: 55px !important;
-}
-.mt60 {
-    margin-top: 60px !important;
-}
-.mt65 {
-    margin-top: 65px !important;
-}
-.mt70 {
-    margin-top: 70px !important;
-}
-.mt75 {
-    margin-top: 75px !important;
-}
-.mt80 {
-    margin-top: 80px !important;
-}
-
-/* margin-bottom */
-.mb5 {
-    margin-bottom: 5px !important;
-}
-.mb10 {
-    margin-bottom: 10px !important;
-}
-.mb15 {
-    margin-bottom: 15px !important;
-}
-.mb20 {
-    margin-bottom: 20px !important;
-}
-.mb25 {
-    margin-bottom: 25px !important;
-}
-.mb30 {
-    margin-bottom: 30px !important;
-}
-.mb35 {
-    margin-bottom: 35px !important;
-}
-.mb40 {
-    margin-bottom: 40px !important;
-}
-.mb45 {
-    margin-bottom: 45px !important;
-}
-.mb50 {
-    margin-bottom: 50px !important;
-}
-
-/* margin-left */
-.ml5 {
-    margin-left: 5px !important;
-}
-.ml10 {
-    margin-left: 10px !important;
-}
-.ml15 {
-    margin-left: 15px !important;
-}
-.ml20 {
-    margin-left: 20px !important;
-}
-.ml25 {
-    margin-left: 25px !important;
-}
-.ml30 {
-    margin-left: 30px !important;
-}
-.ml35 {
-    margin-left: 35px !important;
-}
-.ml40 {
-    margin-left: 40px !important;
-}
-.ml45 {
-    margin-left: 45px !important;
-}
-.ml50 {
-    margin-left: 50px !important;
-}
-
-/* margin-right */
-.mr5 {
-    margin-right: 5px !important;
-}
-.mr10 {
-    margin-right: 10px !important;
-}
-.mr15 {
-    margin-right: 15px !important;
-}
-.mr20 {
-    margin-right: 20px !important;
-}
-.mr25 {
-    margin-right: 25px !important;
-}
-.mr30 {
-    margin-right: 30px !important;
-}
-.mr35 {
-    margin-right: 35px !important;
-}
-.mr40 {
-    margin-right: 40px !important;
-}
-.mr45 {
-    margin-right: 45px !important;
-}
-.mr50 {
-    margin-right: 50px !important;
-}
-
-/* padding-top */
-.pt5 {
-    padding-top: 5px;
-}
-.pt10 {
-    padding-top: 10px;
-}
-.pt15 {
-    padding-top: 15px;
-}
-.pt20 {
-    padding-top: 20px;
-}
-.pt25 {
-    padding-top: 25px;
-}
-.pt30 {
-    padding-top: 30px;
-}
-.pt35 {
-    padding-top: 35px;
-}
-.pt40 {
-    padding-top: 40px;
-}
-.pt45 {
-    padding-top: 45px;
-}
-.pt50 {
-    padding-top: 50px;
-}
-
-/* padding-bottom */
-.pb0 {
-    padding-bottom: 0px;
-}
-.pb5 {
-    padding-bottom: 5px;
-}
-.pb10 {
-    padding-bottom: 10px;
-}
-.pb15 {
-    padding-bottom: 15px;
-}
-.pb20 {
-    padding-bottom: 20px;
-}
-.pb25 {
-    padding-bottom: 25px;
-}
-.pb30 {
-    padding-bottom: 30px;
-}
-.pb35 {
-    padding-bottom: 35px;
-}
-.pb40 {
-    padding-bottom: 40px;
-}
-.pb45 {
-    padding-bottom: 45px;
-}
-.pb50 {
-    padding-bottom: 50px;
-}
-
-/* padding-left */
-.pl5 {
-    padding-left: 5px;
-}
-.pl10 {
-    padding-left: 10px;
-}
-.pl15 {
-    padding-left: 15px;
-}
-.pl20 {
-    padding-left: 20px;
-}
-.pl25 {
-    padding-left: 25px;
-}
-.pl30 {
-    padding-left: 30px;
-}
-.pl35 {
-    padding-left: 35px;
-}
-.pl40 {
-    padding-left: 40px;
-}
-.pl45 {
-    padding-left: 45px;
-}
-.pl50 {
-    padding-left: 50px;
-}
-
-/* padding-right */
-.pr5 {
-    padding-right: 5px;
-}
-.pr10 {
-    padding-right: 10px;
-}
-.pr15 {
-    padding-right: 15px;
-}
-.pr20 {
-    padding-right: 20px;
-}
-.pr25 {
-    padding-right: 25px;
-}
-.pr30 {
-    padding-right: 30px;
-}
-.pr35 {
-    padding-right: 35px;
-}
-.pr40 {
-    padding-right: 40px;
-}
-.pr45 {
-    padding-right: 45px;
-}
-.pr50 {
-    padding-right: 50px;
-}
-
-/* align */
-.al-l {
-    text-align: left;
-}
-.al-r {
-    text-align: right;
-}
-.al-c {
-    text-align: center;
-}
-
-.fl-l {
-    float: left;
-}
-.fl-r {
-    float: right;
-}
-
 /* Btn */
 /* 탭 */
-/* container */
 /* toolbar */
 /* Form */
 /* checkbox */
 /* radio */
 /* 아코디언 */
+.wrap {
+    min-width: 108rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 24px */
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+}
+
 /* 0부터 1024 까지 스타일 */
 @media (max-width: 1024px) {
     .img-card {
@@ -605,4 +327,51 @@ main {
 }
 /* library */
 /* layout */
+#header {
+    width: 100%;
+    height: 12rem;
+}
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 108rem;
+    height: 100%;
+    margin: 0 auto;
+}
+#header .inner .header-logo a::after {
+    content: "";
+    display: inline-block;
+    width: 10rem;
+    height: 3rem;
+    background: url("../img/common/logo.svg") no-repeat 0 0;
+    background-size: 100%;
+}
+#header .inner .header-user {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nav {
+    position: relative;
+    flex: 0 0 50%;
+}
+.nav-menu {
+    display: flex;
+}
+.nav-menu:hover + .nav-content {
+    opacity: 1;
+}
+.nav-content {
+    position: absolute;
+    left: 0;
+    bottom: -25rem;
+    background-color: #ccc;
+    opacity: 0;
+    width: 100%;
+    height: 25rem;
+    transition: all 0.5s ease-in;
+}
 /*# sourceMappingURL=map/style.css.map */

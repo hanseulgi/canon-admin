@@ -7,10 +7,13 @@
 
 $notosans: 'NotoSansKR', Arial, AppleGothic, verdana, sans-serif;
 $roboto: 'Roboto', Arial, AppleGothic, verdana, sans-serif;
-$path-img: '../images/';
+$path-img: '../img/';
 $path-img-common: $path-img + 'common/';
 $path-img-ico: $path-img + 'ico/';
 $path-img-btn: $path-img + 'btn/';
+
+
+
 
 $img-notice-up: 'ico_notice.svg';
 $img-arrow-up: 'ico_arrow_up.svg';
@@ -42,6 +45,12 @@ $ls50: -0.5px;
 $fs40: 4rem;
 $lh40: 1.5;
 $ls40: -0.4px;
+
+/* 24px */
+$fs24: 2.4rem;
+$lh24: 1.5;
+$ls24: -0.4px;
+
 
 
 /* color */

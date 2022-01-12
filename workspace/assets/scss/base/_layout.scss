@@ -4,23 +4,31 @@
 // layout : 헤더 푸터 제외한 기본 레이아웃 style
 //---------------------------------------------------
 
+/* ios safe area */
+:root {
+	--safeTop:env(safe-area-inset-top);
+	--safeBtm:env(safe-area-inset-bottom);
+}
 
 body {
+    padding:var(--safeTop) 0 var(--safeBtm) !important;
+
     &.hidden {
         overflow: hidden;
     }
 }
 
 
-/* Layout */
-.wrap {
-    position: relative;
-    min-height: 100%;
 
-    &.bg-gray {
-        background-color: #f3f3f3;
-    }
-}
+// /* Layout */
+// .wrap {
+//     position: relative;
+//     min-height: 100%;
+
+//     &.bg-gray {
+//         background-color: #f3f3f3;
+//     }
+// }
 
 
 /* main */
@@ -30,7 +38,7 @@ main {
     section {
 
         .title {
-           
+
         }
 
     }
@@ -56,24 +64,102 @@ main {
     }
 }
 
-/* Text color */
+/* color */
+// .color {
+
+//     &-black {
+//         color: $txt-b-color !important;
+//     }
+
+//     &-darkgray {
+//         color: $txt-dg-color !important;
+//     }
+
+//     &-gray {
+//         color: $txt-g-color !important;
+//     }
+
+//     &-lightgray {
+//         color: $txt-lg-color !important;
+//     }
+
+//     &-white {
+//         color: $txt-w-color !important;
+//     }
+
+//     &-purple {
+//         color: $txt-p-color !important;
+//     }
+
+// }
 
 /* BG color */
+// .bg-color {
+
+//     &-purple {
+//         background-color: $bg-color-purple !important;
+//     }
+
+//     &-pink {
+//         background-color: $bg-color-pink !important;
+//     }
+
+//     &-blue {
+//         background-color: $bg-color-blue !important;
+//     }
+
+//     &-black {
+//         background-color: $bg-color-black !important;
+//     }
+
+//     &-white {
+//         background-color: $bg-color-white !important;
+//     }
+
+//     &-gray {
+
+//         $gray-colors: ( $bg-color-gray01, $bg-color-gray02, $bg-color-gray03, $bg-color-gray04 );
+
+//         @each $gray in $gray-colors{
+//             $i: index($gray-colors, $gray);
+//             &0#{$i} {
+//                 background-color: #{$gray} !important;
+//             }
+//         }
+//     }
+// }
 
 /* font-style */
+// .fs {
+//     $bst: (bst, $bst-fs, $bst-lh, $bst-ls);
+//     $grt : (grt, $grt-fs, $grt-lh, $grt-ls);
+//     $tit : (tit, $tit-fs, $tit-lh, $tit-ls);
+//     $cm : (cm, $cm-fs, $cm-lh, $cm-ls);
+//     $emp : (emp, $emp-fs, $emp-lh, $emp-ls);
+//     $st : (st, $st-fs, $st-lh, $st-ls);
+//     $txt : (txt, $txt-fs, $txt-lh, $txt-ls);
+//     $sb : (sb, $sb-fs, $sb-lh, $sb-ls);
+//     $sm : (sm, $sm-fs, $sm-lh, $sm-ls);
+
+//     @each $css, $fs, $lh, $ls in $bst, $grt, $tit, $cm, $emp, $st, $txt ,$sb, $sm {
+//         &-#{$css} {
+//             @include fs-type($fs, $lh, $ls);
+//         }
+//     }
+// }
 
 /* Font Weight */
-.fs-bold {
-  
-}
+// .fs-bold {
+//     font-weight: $font-bold !important;
+// }
 
-.fs-medium {
-    
-}
+// .fs-medium {
+//     font-weight: $font-medium !important;
+// }
 
-.fs-regular {
-  
-}
+// .fs-regular {
+//     font-weight: $font-regular !important;
+// }
 
 /* text */
 
@@ -81,143 +167,139 @@ main {
 
 /* icon */
 
-/* 말줄임 */
-.ellipsis {
-    @include ellipsis(1);
+// /* 말줄임 */
+// .ellipsis {
+//     @include ellipsis(1);
 
-    &-line02 {
-        @include ellipsis(2);
-    }
+//     &-line02 {
+//         @include ellipsis(2);
+//     }
     
-    &-line05 {
-        @include ellipsis(5);
-    }
+//     &-line05 {
+//         @include ellipsis(5);
+//     }
 
-}
+// }
 
-/* margin-top */
-.mt {
-    @for $i from 0 through 80 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                margin-top: #{$i}px !important;
-            }
-        }
-    }
-}
+// /* margin-top */
+// .mt {
+//     @for $i from 0 through 80 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 margin-top: #{$i}px !important;
+//             }
+//         }
+//     }
+// }
 
-/* margin-bottom */
-.mb {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                margin-bottom: #{$i}px !important;
-            }
-        }
-    }
-}
+// /* margin-bottom */
+// .mb {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 margin-bottom: #{$i}px !important;
+//             }
+//         }
+//     }
+// }
 
-/* margin-left */
-.ml {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                margin-left: #{$i}px !important;
-            }
-        }
-    }
-}
+// /* margin-left */
+// .ml {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 margin-left: #{$i}px !important;
+//             }
+//         }
+//     }
+// }
 
-/* margin-right */
-.mr {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                margin-right: #{$i}px !important;
-            }
-        }
-    }
-}
+// /* margin-right */
+// .mr {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 margin-right: #{$i}px !important;
+//             }
+//         }
+//     }
+// }
 
 
-/* padding-top */
-.pt {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                padding-top: #{$i}px;
-            }
-        }
-    }
-}
+// /* padding-top */
+// .pt {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 padding-top: #{$i}px;
+//             }
+//         }
+//     }
+// }
 
-/* padding-bottom */
-.pb {
-    @for $i from 0 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                padding-bottom: #{$i}px;
-            }
-        }
-    }
-}
+// /* padding-bottom */
+// .pb {
+//     @for $i from 0 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 padding-bottom: #{$i}px;
+//             }
+//         }
+//     }
+// }
 
-/* padding-left */
-.pl {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                padding-left: #{$i}px;
-            }
-        }
-    }
-}
+// /* padding-left */
+// .pl {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 padding-left: #{$i}px;
+//             }
+//         }
+//     }
+// }
 
-/* padding-right */
-.pr {
-    @for $i from 1 through 50 {
-        @if( $i%5 == 0 ){
-            &#{$i} {
-                padding-right: #{$i}px;
-            }
-        }
-    }
-}
+// /* padding-right */
+// .pr {
+//     @for $i from 1 through 50 {
+//         @if( $i%5 == 0 ){
+//             &#{$i} {
+//                 padding-right: #{$i}px;
+//             }
+//         }
+//     }
+// }
 
-/* align */
-.al {
+// /* align */
+// .al {
 
-    &-l {
-        text-align: left;
-    }
+//     &-l {
+//         text-align: left;
+//     }
 
-    &-r {
-        text-align: right;
-    }
+//     &-r {
+//         text-align: right;
+//     }
 
-    &-c {
-        text-align: center;
-    }
+//     &-c {
+//         text-align: center;
+//     }
 
-}
+// }
 
-.fl {
-    &-l {
-        float: left;
-    }
-    &-r {
-        float: right;
-    }
-}
+// .fl {
+//     &-l {
+//         float: left;
+//     }
+//     &-r {
+//         float: right;
+//     }
+// }
 
 /* Btn */
 
 /* 탭 */
 
-/* container */
-#container {
-
-}
 
 /* toolbar */
 
