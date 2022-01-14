@@ -1756,7 +1756,7 @@
                 <!-- // Path -->
 
                 <!-- Path -->
-                <div id="path2" class="component path-wrap on">
+                <div id="path2" class="component path-wrap">
                     <h2>ADMIN (IA TBD)</h2>
                     <div class="pub-list" style="display:none">
                         <dl>
@@ -3305,15 +3305,17 @@
 
 
         /* 값 구하기 */
-        let $total = $('.pub-list').find('.tr').length; //총 페이지 갯수
-        let $finish = $('.pub-list').find('.finish').length; //완료 갯수
-        let $percent = Math.floor($finish / $total * 100); // 진척률
+        $('.path-wrap').each(function () {
 
-        $('.pub-list').find('.page_total').text($total);
-        $('.pub-list').find('.page_finish').text($finish);
-        $('.pub-list').find('.page_percent').text(`${$percent} %`);
-        
-        
+            let $total = $(this).find('.pub-list').find('.tr').length; //총 페이지 갯수
+            let $finish = $(this).find('.pub-list').find('.finish').length; //완료 갯수
+            let $percent = Math.floor($finish / $total * 100); // 진척률
+
+            $(this).find('.pub-list').find('.page_total').text($total);
+            $(this).find('.pub-list').find('.page_finish').text($finish);
+            $(this).find('.pub-list').find('.page_percent').text(`${$percent} %`);
+
+        });
         // $(".tab-list li a").on("click", function (e) {
         //     e.preventDefault();
         //     let $target = $(this).attr('href');
