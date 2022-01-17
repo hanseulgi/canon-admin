@@ -1,4 +1,4 @@
-#header{
+#header {
 
     position: relative;
     z-index: 100;
@@ -23,16 +23,47 @@
                 background-size: 100%;
             }
         }
+
         .header-util {
-        //    [class^=btn] {
-        //       @include fs ($fs24);
-        //    }
+            //    [class^=btn] {
+            //       @include fs ($fs24);
+            //    }
         }
+
         .header-user {
             position: absolute;
             top: 0;
             right: 0;
 
+        }
+
+        .nav-toggle {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 101;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            .hamburger{
+                @include position (0, 1rem);
+                @include wh(2.4rem, .2rem);
+                background-color: #000;
+                &:before {
+                    content: "";
+                    @include position (0, -.7rem);
+                    @include wh(2.4rem, .2rem);
+                    background-color: #000;
+                }
+                &:after {
+                    content: "";
+                    @include position (0, .7rem);
+                    @include wh(2.4rem, .2rem);
+                    background-color: #000;
+                }
+            }
         }
     }
 }
@@ -42,30 +73,97 @@
     height: 100%;
 
     &:hover {
-        .nav-content {
+        .sub-menu {
             opacity: 1;
         }
     }
 
-    &-menu {
-        display: flex;
-        align-items:center;
+    &-wrap {
+
         height: 100%;
 
-        li {
-            a{ padding: 0 20px; }
-        }
-    }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            height: 100%;
 
-    &-content {
-        position: absolute;
-        left: 0;
-        bottom: -12rem;
-        background-color:#ccc;
-        opacity: 0;
-        @include wh(100%, 12rem);
-        //@include transition(all .3s ease-in);
+            > li {
+                position: relative;
+                > a {
+                    padding: 0 20px;
+                }
+            }
+        }
+
+        .sub-menu {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 6.7rem;
+            background-color: #fff;
+            opacity: 0;
+            @include wh(100%, 12rem);
+            // @include transition(all .1s ease-in);
+        }
     }
 
 }
 
+/*
+Mobile
+*/
+
+/* 0부터 1024 까지 스타일 */
+@include mobile {
+
+    .wrap {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    #header {
+
+        .inner {
+            flex-wrap: wrap;
+            width: 100%;
+
+            .header-logo {
+                margin:0 auto;
+            }
+            .header-util {
+                width: 100%;
+            }
+
+            .nav-toggle {
+                display: inline-block;
+            }
+        }
+
+        .nav {
+            display: none;
+            overflow:hidden;
+            @include position (0, .0);
+            @include wh(100%, 100vh);
+            background-color: #ccc;
+
+            &.on {
+                display: block;
+            }
+
+            &-wrap {
+                .nav-menu {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+
+                .sub-menu {
+
+                }
+            }
+
+        }
+
+    }
+}

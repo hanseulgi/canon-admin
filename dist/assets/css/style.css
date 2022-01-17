@@ -23,6 +23,9 @@ flex
 */
 /* 예) @include flex-flow; */
 /*
+position
+*/
+/*
 transform
 */
 /* 예) @include transform */
@@ -370,12 +373,6 @@ body {
     letter-spacing: -0.4px;
 }
 
-/* 0부터 1024 까지 스타일 */
-@media (max-width: 1024px) {
-    .img-card {
-        width: 100px;
-    }
-}
 /* library */
 /* layout */
 #header {
@@ -407,29 +404,116 @@ body {
     top: 0;
     right: 0;
 }
+#header .inner .nav-toggle {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 101;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+#header .inner .nav-toggle .hamburger {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: #000;
+}
+#header .inner .nav-toggle .hamburger:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.7rem;
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: #000;
+}
+#header .inner .nav-toggle .hamburger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 2.4rem;
+    height: 0.2rem;
+    background-color: #000;
+}
 
 .nav {
     flex: 0 0 50%;
     height: 100%;
 }
-.nav:hover .nav-content {
+.nav:hover .sub-menu {
     opacity: 1;
 }
-.nav-menu {
+.nav-wrap {
+    height: 100%;
+}
+.nav-wrap .nav-menu {
     display: flex;
     align-items: center;
     height: 100%;
 }
-.nav-menu li a {
+.nav-wrap .nav-menu > li {
+    position: relative;
+}
+.nav-wrap .nav-menu > li > a {
     padding: 0 20px;
 }
-.nav-content {
+.nav-wrap .sub-menu {
+    overflow: hidden;
     position: absolute;
     left: 0;
-    bottom: -12rem;
-    background-color: #ccc;
+    top: 6.7rem;
+    background-color: #fff;
     opacity: 0;
     width: 100%;
     height: 12rem;
+}
+
+/*
+Mobile
+*/
+/* 0부터 1024 까지 스타일 */
+@media (max-width: 1024px) {
+    .wrap {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    #header .inner {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #header .inner .header-logo {
+        margin: 0 auto;
+    }
+    #header .inner .header-util {
+        width: 100%;
+    }
+    #header .inner .nav-toggle {
+        display: inline-block;
+    }
+    #header .nav {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ccc;
+    }
+    #header .nav.on {
+        display: block;
+    }
+    #header .nav-wrap .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: baseline;
+    }
 }
 /*# sourceMappingURL=map/style.css.map */

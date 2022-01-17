@@ -85,6 +85,15 @@ flex
 /* 예) @include flex-flow; */
 
 /*
+position
+*/
+@mixin position ($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+};
+
+/*
 transform
 */
 

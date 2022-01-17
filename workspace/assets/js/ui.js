@@ -24,6 +24,22 @@ UI.dim = function () {
 
 };
 
+UI.navToggle = function () {
+
+    const $el =  $('.nav-toggle');
+    const $target = $el.next('.nav');
+
+    $el.off("click").on("click", function() {
+        $target.toggleClass('on');
+    });
+
+    // $el.off("").on("", function() {
+    //     $('').removeClass('');
+    // });
+
+};
+
+
 // 생성자
 UI.a = function() {};
 UI.b = function() {};
@@ -66,6 +82,7 @@ UI.init = function(){
 	UI.b();
 	UI.c.init();
     UI.dim();
+    UI.navToggle();
 };
 
 /* 실행 */
