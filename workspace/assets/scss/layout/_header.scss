@@ -47,21 +47,47 @@
             height: 24px;
             cursor: pointer;
 
-            .hamburger{
+            .hamburger {
+
                 @include position (0, 1rem);
                 @include wh(2.4rem, .2rem);
                 background-color: #000;
-                &:before {
+
+                &:before,
+                &:after {
                     content: "";
-                    @include position (0, -.7rem);
                     @include wh(2.4rem, .2rem);
                     background-color: #000;
                 }
+
+                &:before {
+                    @include position (0, -.7rem);
+                }
+
                 &:after {
                     content: "";
                     @include position (0, .7rem);
-                    @include wh(2.4rem, .2rem);
-                    background-color: #000;
+                }
+            }
+
+            &.on {
+                .hamburger {
+
+                    background-color: transparent;
+
+                    &:before,
+                    &:after {
+                        top: 0;
+                        transition: all .2s ease-in-out;
+                    }
+
+                    &:before {
+                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        transform: rotate(135deg);
+                    }
                 }
             }
         }
@@ -74,7 +100,7 @@
 
     &:hover {
         .sub-menu {
-            opacity: 1;
+            display: block;
         }
     }
 
@@ -87,21 +113,24 @@
             align-items: center;
             height: 100%;
 
-            > li {
+            >li {
                 position: relative;
-                > a {
+
+                >a {
                     padding: 0 20px;
+
+             
                 }
             }
         }
 
         .sub-menu {
+            display: none;
             overflow: hidden;
             position: absolute;
             left: 0;
             top: 6.7rem;
             background-color: #fff;
-            opacity: 0;
             @include wh(100%, 12rem);
             // @include transition(all .1s ease-in);
         }
@@ -129,8 +158,9 @@ Mobile
             width: 100%;
 
             .header-logo {
-                margin:0 auto;
+                margin: 0 auto;
             }
+
             .header-util {
                 width: 100%;
             }
@@ -142,13 +172,19 @@ Mobile
 
         .nav {
             display: none;
-            overflow:hidden;
+            overflow: hidden;
             @include position (0, .0);
             @include wh(100%, 100vh);
             background-color: #ccc;
 
             &.on {
                 display: block;
+
+                &:hover {
+                    .sub-menu {
+                        display: none;
+                    }
+                }
             }
 
             &-wrap {
@@ -156,14 +192,23 @@ Mobile
                     width: 100%;
                     flex-direction: column;
                     align-items: baseline;
+                    margin-top: 10rem;
                 }
 
-                .sub-menu {
-
-                }
+                .sub-menu {}
             }
 
         }
 
     }
 }
+
+.active {
+    background: #a5cd4e;
+      background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a));
+      background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+      background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+      background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+      background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+  }
