@@ -1,4 +1,4 @@
-@@include('./include/head.html', {"title": "main", cssArr: ['style']})
+@@include('./include/head.html', {"title": "sub", cssArr: ['style']})
 
 <body>
     <div class="wrap">
@@ -7,6 +7,9 @@
         @@include('./include/components/location.html')
         <section id="container">
             <section class="contents">
+
+                @@include('./include/components/search.html')
+
                 컨텐츠 영역 test<br>
                 컨텐츠 영역<br>
                 컨텐츠 영역<br>

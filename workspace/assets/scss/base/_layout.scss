@@ -66,9 +66,42 @@
     .contents {
         width: 120rem;
         margin: 0 auto;
-        background-color: #eee;
     }
 }
+
+
+/* search box */
+.search-box-wrap {
+    margin-top: 4rem;
+
+    > .inner {
+        background-color: #f6f6f6;
+        padding: 3.5rem 14.3rem;
+        
+        .table-col {
+            display: table;
+            width: 100%; 
+
+            .th {
+                @include fs($fs18);
+                font-weight: $fw-b;
+                padding-right: 5rem;
+            }
+
+            .td {
+                & [class*='-wrap'] {
+                    display: inline-block;
+                }
+            }
+            .th,.td { 
+                display: table-cell;
+                vertical-align: middle; 
+            }
+
+        }
+    }
+}
+
 
 /* location */
 .location-wrap {
@@ -118,7 +151,7 @@
 /* font-style */
 $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
-@each $f-size in $f-sizes {
+@each $f-size in $f-sizes{
     .fs#{$f-size} {
         font-size: ($f-size + px)
     }
@@ -136,6 +169,12 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 .fw-r {
     font-weight: $fw-r !important;
 }
+
+/* flex */
+.flex {
+    @include flex-flow();
+}
+
 
 /* color */
 .color {
@@ -195,11 +234,12 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
 }
 
+
 /* button */
 [class^='btn-'] {
     display:inline-block;
     padding:0 10px;
-    font-weight:400;
+    font-weight: $fw-m;
     text-align:center;
     white-space:nowrap;
     vertical-align:middle;
@@ -237,6 +277,30 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 }
 
 
+/* select box */
+
+
+.select {
+    @include wh (100%, 4.5rem);
+    @include fs($fs14);
+    padding: 12px 10px;
+    color: $color-111;
+    background-color: $bg-fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    background:#fff url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / auto;
+    appearance:none;
+}
+
+.input {
+    @include wh (100%, 4.5rem);
+    @include fs($fs14);
+    padding: 12px 10px;
+    color: $color-111;
+    background-color: $bg-fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+}
 
 
 /* radio */
@@ -349,6 +413,19 @@ main {
     }
 
 }
+
+/* width */
+.w {
+    @for $i from 0 through 800 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                width: #{$i}px !important;
+            }
+        }
+    }
+}
+
+
 
 /* margin-top */
 .mt {

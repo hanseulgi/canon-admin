@@ -97,16 +97,15 @@ button {
 
 /* Form */
 select {
-    height:32px;
-    font-size: 13px;
-    color:#111;
-    border:1px solid #e9e9e9;
-    background:#fff;
-    border-radius:5px;
-
-    &:focus {
-        border: 1px solid #111;
-    }
+    @include wh (100%, 4.5rem);
+    @include fs($fs14);
+    padding: 12px 10px;
+    color: $color-111;
+    background-color: $bg-fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    background:#fff url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / auto;
+    appearance:none;
 }
 
 input {
@@ -120,15 +119,13 @@ input {
     &[type=url],
     &[type=number],
     &[type=date] {
-        width:100%; 
-        height:30px; 
-        font-size:1.5rem; 
-        color:#111; 
-        border:1px solid #eee; 
-        background:#fff; 
-        -webkit-appearance: none; 
-        -webkit-border-radius: 0; 
-        border-radius:5px;
+        @include wh (100%, 4.5rem);
+        @include fs($fs14);
+        padding: 12px 10px;
+        color: $color-111;
+        background-color: $bg-fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
         vertical-align:middle;
     }
     
