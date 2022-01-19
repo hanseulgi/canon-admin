@@ -48,6 +48,7 @@ UI.dim = function () {
 
 };
 
+// nav
 UI.navToggle = function () {
 
     const $el =  $('.nav-toggle');
@@ -60,6 +61,7 @@ UI.navToggle = function () {
 
 };
 
+// dropDown
 UI.dropDown = function () {
 
     $('.nav-menu > li > a').off("click").on("click", function(e) {
@@ -73,6 +75,21 @@ UI.dropDown = function () {
 
 };
 
+// modal
+UI.modal = (function () {
+
+    return {
+        init: function() {
+
+        },
+        open: function() {
+
+        },
+        close: function() {
+
+        },
+    }
+})();
 
 
 /* 실행 선언 */
@@ -81,8 +98,10 @@ UI.init = function(){
 	// UI.b();
 	// UI.c.init();
     UI.dim();
+    UI.modal.init();
     UI.navToggle();
     UI.dropDown();
+
 };
 
 /* 실행 */

@@ -140,12 +140,46 @@ font
         line-height: $lh40;
         letter-spacing: $ls40;
     }
-    
+
+    /* 30px */
+    @if $size == $fs30 {
+        font-size: $fs30;
+        line-height: $lh30;
+        letter-spacing: $ls30;
+    }
+
     /* 24px */
     @if $size == $fs24 {
         font-size: $fs24;
         line-height: $lh24;
         letter-spacing: $ls24;
+    }
+
+    /* 18px */
+    @if $size == $fs18 {
+        font-size: $fs18;
+        line-height: $lh18;
+        letter-spacing: $ls18;
+    }
+
+    /* 15px */
+    @if $size == $fs15 {
+        font-size: $fs15;
+        line-height: $lh15;
+        letter-spacing: $ls15;
+    }
+    /* 14px */
+    @if $size == $fs14 {
+        font-size: $fs14;
+        line-height: $lh14;
+        letter-spacing: $ls14;
+    }
+
+    /* 12px */
+    @if $size == $fs12 {
+        font-size: $fs12;
+        line-height: $lh12;
+        letter-spacing: $ls12;
     }
 }
 

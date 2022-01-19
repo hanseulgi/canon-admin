@@ -4,6 +4,7 @@
 // layout : 헤더 푸터 제외한 공통된 레이아웃 style ( 퀵메뉴)
 //---------------------------------------------------
 
+/* skip */
 .skip {
     position: absolute;
     left: 0;
@@ -33,7 +34,7 @@
 
 
 
-
+/* dim */
 .dim {
     position:fixed;
     display: none;
@@ -59,6 +60,134 @@
         display: block;
     }
 }
+
+/* container */
+#container {
+    .contents {
+        width: 120rem;
+        margin: 0 auto;
+        background-color: #eee;
+    }
+}
+
+/* location */
+.location-wrap {
+    background-color: #373d45;
+    height: 12rem;
+
+    .inner {
+        @include flex-flow;
+        height: 100%;
+        width: 120rem;
+        margin: 0 auto;
+
+        .location-title {
+            color: #fff;
+            font-size:30px;
+            font-weight: $fw-m;
+        }
+
+        .location-list {
+            font-size: 0;
+
+            li {
+                position: relative;
+                display: inline-block;
+                @include fs ($fs14);
+                color: $color-fff;
+
+                & + li {
+                    padding-left: 2.4rem;
+                    &:before {
+                        content:"";
+                        @include position (7px, 4px);
+                        @include wh (1.2rem, 1.2rem);
+                        background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// .location-wrap  li + li {padding-left:24px;}
+// .location-wrap  li + li:before{}
+
+
+
+/* Font Weight */
+.fw-b {
+    font-weight: $fw-b !important;
+}
+
+.fw-m {
+    font-weight: $fw-m !important;
+}
+
+.fw-r {
+    font-weight: $fw-r !important;
+}
+
+/* color */
+.color {
+
+    &-red {
+        color: $color-red !important;
+    }
+
+    &-fff {
+        color: $color-fff !important;
+    }
+
+    &-000 {
+        color: $color-000 !important;
+    }
+
+    &-111 {
+        color: $color-111 !important;
+    }
+
+    &-666 {
+        color: $color-666 !important;
+    }
+
+    &-ccc {
+        color: $color-ccc !important;
+    }
+
+}
+
+/* bg color */
+.bg {
+
+    &-red {
+        color: $bg-red !important;
+    }
+
+    &-fff {
+        color: $bg-fff !important;
+    }
+
+    &-000 {
+        color: $bg-000 !important;
+    }
+
+    &-111 {
+        color: $bg-111 !important;
+    }
+
+    &-666 {
+        color: $bg-666 !important;
+    }
+
+    &-ccc {
+        color: $bg-ccc !important;
+    }
+
+}
+
 
 
 // /* Layout */
@@ -189,18 +318,7 @@ main {
 //     }
 // }
 
-/* Font Weight */
-// .fs-bold {
-//     font-weight: $font-bold !important;
-// }
 
-// .fs-medium {
-//     font-weight: $font-medium !important;
-// }
-
-// .fs-regular {
-//     font-weight: $font-regular !important;
-// }
 
 /* text */
 

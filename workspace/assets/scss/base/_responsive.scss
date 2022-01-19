@@ -17,3 +17,174 @@
 // }
 
 
+
+
+
+/* 레이어 모달 */
+[class^="modal"] {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#000, 0.6);
+    padding: 100px 30px;
+    opacity: 0;
+    z-index: 1;
+
+    &.on {
+        display: flex;
+    }
+
+    &.has-sticky-bottom {
+        .wrap {
+            padding-bottom: 95px !important;
+        }
+    }
+
+    .wrap {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 24px;
+        background-color: #ccc;
+        border-radius: 5px;
+        min-height: 158px;
+
+        > [class*="tit"] {
+            padding-right: 37px;
+            color: #ccc;
+        }
+
+        button.close {
+            position: absolute;
+            display: inline-block;
+            right: 16px;
+            top: 15px;
+            background: url(../img/icons/32x32/ico_gnb_close.svg) center center no-repeat;
+            font-size: 0;
+        }
+
+        .content {
+            box-sizing: border-box;
+            padding: 20px 0 34px 0;
+
+            &.has-line {
+                margin-top: 15px;
+                border-top: 1px solid #ccc;
+                padding: 20px 0 0 0;
+            }
+
+            .content-tit {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+/* 풀 모달 */
+[class^="modal"][class*="full"] {
+    padding: 0;
+    //display: flex;
+    opacity: 1;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 20px;
+
+        [class*="tit"] {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1;
+        }
+    }
+
+    .wrap {
+        border-radius: 0;
+        height: 100%;
+        padding: 0 24px 34px 24px;
+
+        &.wide {
+            padding: 20px 0 0;
+        }
+
+        button.close {
+            top: 9px;
+            right: 14px;
+        }
+    }
+
+    .inner {
+        height: calc(100% - 50px);
+    }
+
+    .content {
+        height: 100%;
+        padding: 20px 0 0;
+        overflow-y: auto;
+
+        
+    }
+
+    .review-img-wrap {
+        width: 100%;
+    }
+
+    .swiper-pagination {
+        width: 100vw;
+    }
+}
+
+/* 하단 모달 */
+[class^="modal"].bottom {
+    //display: flex;
+    //opacity: 1;
+    padding: 0;
+
+    .wrap {
+        position: absolute;
+        bottom: 0;
+        padding: 20px 24px 34px 24px;
+        border-radius: 20px 20px 0 0;
+        transform: translateY(100%);
+        min-height: auto;
+        max-height: 594px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background: url(../img/icons/etc/ico_madal_bar.svg) 0 0 / cover no-repeat;
+        }
+    }
+
+    .content {
+        padding: 20px 0 0 0;
+        overflow-y: auto;
+    }
+
+    .scroll-wrap {
+        max-height: 385px;
+        overflow-y: auto;
+    }
+
+    .btn-box.sticky-bottom {
+        border-top: none;
+    }
+}

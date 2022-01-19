@@ -2,14 +2,14 @@
 
     position: relative;
     z-index: 100;
-    @include wh(100%, 12rem);
+    @include wh(100%, 11rem);
     background-color: #fff;
 
 
     .inner {
         @include flex-flow;
         position: relative;
-        width: 108rem;
+        width: 120rem;
         height: 100%;
         margin: 0 auto;
 
@@ -18,7 +18,7 @@
             a::after {
                 content: "";
                 display: inline-block;
-                @include wh(10rem, 3rem);
+                @include wh(16.2rem, 6rem);
                 background: url($path-img-common + 'logo.svg') no-repeat 0 0;
                 background-size: 100%;
             }
@@ -32,9 +32,25 @@
 
         .header-user {
             position: absolute;
-            top: 0;
+            top: 1.5rem;
             right: 0;
+            display: flex;
 
+            .account {
+                @include fs ($fs15);
+                font-weight: $fw-m;
+            }
+            .my {
+                @include fs ($fs12);
+                color: $color-666;
+
+                span + span:before {
+                    content:"";
+                    display: inline-block;
+                    @include wh(1px, 10px);
+                    background-color: #999;
+                }
+            }
         }
 
         .nav-toggle {
@@ -117,9 +133,8 @@
                 position: relative;
 
                 >a {
-                    padding: 0 20px;
+                    font-size: 1.8rem;
 
-             
                 }
             }
         }
@@ -203,12 +218,6 @@ Mobile
     }
 }
 
-.active {
-    background: #a5cd4e;
-      background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a));
-      background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
-      background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
-      background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
-      background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
-  }
+
+
+

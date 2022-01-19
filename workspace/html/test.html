@@ -1,0 +1,44 @@
+@@include('./include/head.html', {"title": "main", cssArr: ['style']})
+
+<body id="main" class="main">
+    <div class="wrap">
+       
+        <button class="btn-ty2-color1" type="button" data-modalid="testmodal1"><span>팝업 버튼</span></button>
+        <!--
+          **  레이어 모달
+          **  모달 아이디와 모달 버튼의 모달 아이디가 일치해야 함
+        -->
+        <div class="modal" data-modalid="testmodal1">
+            <div class="wrap">
+                <button class="close area-32" type="button">닫기</button>
+                <div class="header">
+                    <p class="s-tit16">타이틀</p>
+                </div>
+                <div class="inner">
+                    <!-- 위에 라인이 있는 경우 has-line추가 -->
+                    <div class="content has-line">
+                        <ul class="list-number">
+                            <li>
+                                <span class="num">1. 상품등록</span>
+                                <p>상품검색 또는 직접 입력하여 건강식품 등록이
+                                    가능하며, 알림 받을 시간과 요일을 설정합니다.</p>
+                            </li>
+                            <li>
+                                <span class="num">2. 상품등록</span>
+                                <p>상품검색 또는 직접 입력하여 건강식품 등록이
+                                    가능하며, 알림 받을 시간과 요일을 설정합니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /레이어 모달 -->
+        
+    </div>
+
+
+        @@include('./include/script.html')
+
+</body>
+</html>
