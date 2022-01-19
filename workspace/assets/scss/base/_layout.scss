@@ -115,7 +115,14 @@
 // .location-wrap  li + li {padding-left:24px;}
 // .location-wrap  li + li:before{}
 
+/* font-style */
+$f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
+@each $f-size in $f-sizes {
+    .fs#{$f-size} {
+        font-size: ($f-size + px)
+    }
+}
 
 /* Font Weight */
 .fw-b {
@@ -163,32 +170,117 @@
 .bg {
 
     &-red {
-        color: $bg-red !important;
+        background-color: $bg-red !important;
     }
 
     &-fff {
-        color: $bg-fff !important;
+        background-color: $bg-fff !important;
     }
 
     &-000 {
-        color: $bg-000 !important;
+        background-color: $bg-000 !important;
     }
 
     &-111 {
-        color: $bg-111 !important;
+        background-color: $bg-111 !important;
     }
 
     &-666 {
-        color: $bg-666 !important;
+        background-color: $bg-666 !important;
     }
 
     &-ccc {
-        color: $bg-ccc !important;
+        background-color: $bg-ccc !important;
     }
 
 }
 
+/* button */
+[class^='btn-'] {
+    display:inline-block;
+    padding:0 10px;
+    font-weight:400;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    border:1px solid transparent;
+    box-sizing:border-box;
+    border-radius:6px;
 
+    &[class*='white'][class*='line'] {color:#111; background-color:#fff; border-color:#111;}
+    &[class*='red'] {color: #fff; background-color:#dc000c; border-color: #dc000c;}
+    &[class*='red'][class*='line'] {background-color:#fff; color:#dc000c;}
+    &[class*='gray'] {color: #fff; background-color:#666; border-color:#666;}
+
+    &[class*='white']:disabled,
+    &[class^='btn-white'].disabled {background-color:#fff; color:#bfbfbf; border-color:#bfbfbf;}
+
+    &[class*='sm'] {min-width: 100px; height:45px; line-height:43px; padding:0 20px; font-size:13px;}
+    &[class*='md'] {height:44px; line-height:42px; padding:0 35px; font-size:14px;}
+    &[class*='lg'] {height:54px; line-height:52px; padding:0 55px; font-size:15px;}
+}
+
+.row-btns {
+    display:flex; justify-content:center; width:100%; box-sizing:border-box;
+
+    [class^='btn'] {
+        width:100%; 
+        padding:0 20px;
+    }
+    .col {
+        margin:0;
+
+        & + .col {
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+
+
+/* radio */
+.radio {
+    position:relative;
+    display:inline-block;
+    height:20px;
+    font-size: 1.4rem;
+
+    input[type='radio'] {
+        display:inline-block; 
+        width:20px; 
+        height:20px; 
+        margin-right:5px; 
+        vertical-align:top; 
+        border:1px solid #e1e1e1;
+        border-radius:50%; 
+        cursor:pointer; 
+        -webkit-appearance:none;
+
+        &:checked {
+            background-color:transparent; border-color:#dc000c;
+            & + i {position:absolute; left:5px; top:5px; display:inline-block; width:10px; height:10px; background-color:#dc000c; border-radius:50%;}
+        }
+        &:disabled {
+            background-color:#eee; border:1px solid #e1e1e1;
+            & + i,
+            &:checked + i {display:inline-block; background-color:#d9d9d9;}
+        }
+        
+    }
+    &.txt + .txt { margin-left: 30px; }
+}
+
+
+/* checkbox */
+.checkbox {position:relative; display:inline-block; height:20px; font-size: 1.4rem;}
+.checkbox i {position:absolute; left:6px; top:7px; display:inline-block; width:8px; height:6px; background: url($path-img-ico + 'ico_checked.svg') no-repeat center center;}
+.checkbox input[type='checkbox'] {display:inline-block; width:20px; height:20px; margin-right:5px; vertical-align:top; border:1px solid #e1e1e1; border-radius:50%; cursor:pointer; -webkit-appearance:none;}
+.checkbox input[type='checkbox']:checked {background-color:#dc000c; border-color:#dc000c;}
+.checkbox input[type='checkbox']:checked + i {}
+.checkbox input[type='checkbox']:disabled {background-color:#eee; border:1px solid #e1e1e1;}
+.checkbox input[type='checkbox']:disabled + i {display:none;}
+.checkbox input[type='checkbox']:disabled:checked + i {display:inline-block; background-position:-105px -95px;}
 
 // /* Layout */
 // .wrap {
@@ -234,89 +326,7 @@ main {
     }
 }
 
-/* color */
-// .color {
 
-//     &-black {
-//         color: $txt-b-color !important;
-//     }
-
-//     &-darkgray {
-//         color: $txt-dg-color !important;
-//     }
-
-//     &-gray {
-//         color: $txt-g-color !important;
-//     }
-
-//     &-lightgray {
-//         color: $txt-lg-color !important;
-//     }
-
-//     &-white {
-//         color: $txt-w-color !important;
-//     }
-
-//     &-purple {
-//         color: $txt-p-color !important;
-//     }
-
-// }
-
-/* BG color */
-// .bg-color {
-
-//     &-purple {
-//         background-color: $bg-color-purple !important;
-//     }
-
-//     &-pink {
-//         background-color: $bg-color-pink !important;
-//     }
-
-//     &-blue {
-//         background-color: $bg-color-blue !important;
-//     }
-
-//     &-black {
-//         background-color: $bg-color-black !important;
-//     }
-
-//     &-white {
-//         background-color: $bg-color-white !important;
-//     }
-
-//     &-gray {
-
-//         $gray-colors: ( $bg-color-gray01, $bg-color-gray02, $bg-color-gray03, $bg-color-gray04 );
-
-//         @each $gray in $gray-colors{
-//             $i: index($gray-colors, $gray);
-//             &0#{$i} {
-//                 background-color: #{$gray} !important;
-//             }
-//         }
-//     }
-// }
-
-/* font-style */
-// .fs {
-//     $bst: (bst, $bst-fs, $bst-lh, $bst-ls);
-//     $grt : (grt, $grt-fs, $grt-lh, $grt-ls);
-//     $tit : (tit, $tit-fs, $tit-lh, $tit-ls);
-//     $cm : (cm, $cm-fs, $cm-lh, $cm-ls);
-//     $emp : (emp, $emp-fs, $emp-lh, $emp-ls);
-//     $st : (st, $st-fs, $st-lh, $st-ls);
-//     $txt : (txt, $txt-fs, $txt-lh, $txt-ls);
-//     $sb : (sb, $sb-fs, $sb-lh, $sb-ls);
-//     $sm : (sm, $sm-fs, $sm-lh, $sm-ls);
-
-//     @each $css, $fs, $lh, $ls in $bst, $grt, $tit, $cm, $emp, $st, $txt ,$sb, $sm {
-//         &-#{$css} {
-//             @include fs-type($fs, $lh, $ls);
-//         }
-//     }
-// }
 
 
 
@@ -327,133 +337,133 @@ main {
 /* icon */
 
 // /* 말줄임 */
-// .ellipsis {
-//     @include ellipsis(1);
+.ellipsis {
+    @include ellipsis(1);
 
-//     &-line02 {
-//         @include ellipsis(2);
-//     }
+    &-line02 {
+        @include ellipsis(2);
+    }
     
-//     &-line05 {
-//         @include ellipsis(5);
-//     }
+    &-line05 {
+        @include ellipsis(5);
+    }
 
-// }
+}
 
-// /* margin-top */
-// .mt {
-//     @for $i from 0 through 80 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 margin-top: #{$i}px !important;
-//             }
-//         }
-//     }
-// }
+/* margin-top */
+.mt {
+    @for $i from 0 through 80 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                margin-top: #{$i}px !important;
+            }
+        }
+    }
+}
 
-// /* margin-bottom */
-// .mb {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 margin-bottom: #{$i}px !important;
-//             }
-//         }
-//     }
-// }
+/* margin-bottom */
+.mb {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                margin-bottom: #{$i}px !important;
+            }
+        }
+    }
+}
 
-// /* margin-left */
-// .ml {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 margin-left: #{$i}px !important;
-//             }
-//         }
-//     }
-// }
+/* margin-left */
+.ml {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                margin-left: #{$i}px !important;
+            }
+        }
+    }
+}
 
-// /* margin-right */
-// .mr {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 margin-right: #{$i}px !important;
-//             }
-//         }
-//     }
-// }
+/* margin-right */
+.mr {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                margin-right: #{$i}px !important;
+            }
+        }
+    }
+}
 
 
-// /* padding-top */
-// .pt {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 padding-top: #{$i}px;
-//             }
-//         }
-//     }
-// }
+/* padding-top */
+.pt {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                padding-top: #{$i}px;
+            }
+        }
+    }
+}
 
-// /* padding-bottom */
-// .pb {
-//     @for $i from 0 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 padding-bottom: #{$i}px;
-//             }
-//         }
-//     }
-// }
+/* padding-bottom */
+.pb {
+    @for $i from 0 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                padding-bottom: #{$i}px;
+            }
+        }
+    }
+}
 
-// /* padding-left */
-// .pl {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 padding-left: #{$i}px;
-//             }
-//         }
-//     }
-// }
+/* padding-left */
+.pl {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                padding-left: #{$i}px;
+            }
+        }
+    }
+}
 
-// /* padding-right */
-// .pr {
-//     @for $i from 1 through 50 {
-//         @if( $i%5 == 0 ){
-//             &#{$i} {
-//                 padding-right: #{$i}px;
-//             }
-//         }
-//     }
-// }
+/* padding-right */
+.pr {
+    @for $i from 1 through 50 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                padding-right: #{$i}px;
+            }
+        }
+    }
+}
 
-// /* align */
-// .al {
+/* align */
+.al {
 
-//     &-l {
-//         text-align: left;
-//     }
+    &-l {
+        text-align: left;
+    }
 
-//     &-r {
-//         text-align: right;
-//     }
+    &-r {
+        text-align: right;
+    }
 
-//     &-c {
-//         text-align: center;
-//     }
+    &-c {
+        text-align: center;
+    }
 
-// }
+}
 
-// .fl {
-//     &-l {
-//         float: left;
-//     }
-//     &-r {
-//         float: right;
-//     }
-// }
+.fl {
+    &-l {
+        float: left;
+    }
+    &-r {
+        float: right;
+    }
+}
 
 /* Btn */
 
@@ -472,7 +482,7 @@ main {
 //             &::before {
 //                 border: none;
 //                 background-image: url($path-img-ico + 'icon_check.svg');
-//                 background-color: $bg-color-purple;
+//                 background-color: $bg-red;
 //             }
 //         }
 //     }
