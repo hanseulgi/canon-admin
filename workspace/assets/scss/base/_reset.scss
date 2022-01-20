@@ -87,12 +87,14 @@ main, header, section, nav, footer, aside, article, figure{
 a{
     color:#111;
     text-decoration:none;
+    cursor: pointer;
 }
 
 button {
     margin:0;
     padding:0;
     background:0;
+    cursor: pointer;
 }
 
 /* Form */
@@ -119,9 +121,9 @@ input {
     &[type=url],
     &[type=number],
     &[type=date] {
-        @include wh (100%, 4.5rem);
+        height: 4.5rem;
         @include fs($fs14);
-        padding: 12px 10px;
+        padding: 12px 20px;
         color: $color-111;
         background-color: $bg-fff;
         border: 1px solid #e6e6e6;
@@ -139,13 +141,14 @@ input {
     &[type=password][disabled],
     &[type=search][disabled],
     &[type=email][disabled]{
-        background:#f9f9f9;
-        border-color:#eee;
-        color:#111;
-        -webkit-appearance:none;
-        appearance:none;
-        border-radius:0px;
-        font-size:1.6rem;
+        @include wh (100%, 4.5rem);
+        @include fs($fs14);
+        padding: 12px 20px;
+        color: $color-111;
+        background-color: $bg-f6f6f6;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        vertical-align:middle;
     }
 
     &::-webkit-input-placeholder {

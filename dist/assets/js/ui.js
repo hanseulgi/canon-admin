@@ -48,6 +48,33 @@ UI.dim = function () {
 
 };
 
+/* file remove */
+UI.file  = function () {
+
+    const $target = $('.table-edit .add-file-names').find('.name');
+
+    $target.off("click").on("click", function() {
+        $(this).hide();
+    });
+};
+
+/* textarea */
+UI.textarea  = function () {
+
+    $('.comment-wrap textarea').off('keyup').on('keyup', function() {
+        //const $this = $(this);
+        const $counter = $('.counter');
+        let _target = $(this).val();
+        let _max = _target.length;
+
+        $counter.html(_max + ' <span>/ 200</span>');
+
+        if ( _max >= 200 ) {
+            alert( '글자 입력 수 초과' )
+        };
+    });
+};
+
 // nav
 UI.navToggle = function () {
 
@@ -143,6 +170,8 @@ UI.init = function(){
     UI.navToggle();
     UI.dropDown();
     UI.search();
+    UI.file();
+    UI.textarea();
 
 };
 

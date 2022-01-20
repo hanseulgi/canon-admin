@@ -7,6 +7,7 @@ font-size
 /* 40px */
 /* 30px */
 /* 24px */
+/* 20px */
 /* 18px */
 /* 15px */
 /* 14px */
@@ -176,12 +177,14 @@ main, header, section, nav, footer, aside, article, figure {
 a {
     color: #111;
     text-decoration: none;
+    cursor: pointer;
 }
 
 button {
     margin: 0;
     padding: 0;
     background: 0;
+    cursor: pointer;
 }
 
 /* Form */
@@ -193,6 +196,7 @@ select {
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -210,13 +214,13 @@ select {
 }
 
 input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], input[type=number], input[type=date] {
-    width: 100%;
     height: 4.5rem;
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -224,7 +228,7 @@ input[type=tel], input[type=time], input[type=text], input[type=password], input
     line-height: 1.43;
     letter-spacing: -0.14px;
     /* 12px */
-    padding: 12px 10px;
+    padding: 12px 20px;
     color: #111;
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -232,13 +236,27 @@ input[type=tel], input[type=time], input[type=text], input[type=password], input
     vertical-align: middle;
 }
 input[type=tel][readonly], input[type=text][readonly], input[type=password][readonly], input[type=search][readonly], input[type=email][readonly], input[type=tel][disabled], input[type=text][disabled], input[type=password][disabled], input[type=search][disabled], input[type=email][disabled] {
-    background: #f9f9f9;
-    border-color: #eee;
+    width: 100%;
+    height: 4.5rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    padding: 12px 20px;
     color: #111;
-    -webkit-appearance: none;
-    appearance: none;
-    border-radius: 0px;
-    font-size: 1.6rem;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    vertical-align: middle;
 }
 input::-webkit-input-placeholder {
     color: #b5b5b5;
@@ -332,6 +350,7 @@ textarea:focus {
     font-size: 2.4rem;
     line-height: 1.5;
     letter-spacing: -0.4px;
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -393,6 +412,7 @@ textarea:focus {
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
@@ -475,6 +495,7 @@ table
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     font-size: 1.5rem;
@@ -484,14 +505,390 @@ table
     /* 12px */
 }
 
+/* table edit */
+.table-wrap .edit-title {
+    margin-top: 6rem;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    border-top: 2px solid #000;
+}
+.table-wrap .edit-title ul {
+    width: 100%;
+    display: flex;
+    padding: 2.5rem 0;
+}
+.table-wrap .edit-title ul li {
+    display: flex;
+}
+.table-wrap .edit-title ul li + li {
+    margin-left: 3rem;
+}
+.table-wrap .edit-title ul li p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    line-height: 10px;
+}
+.table-wrap .edit-title ul li p.tit {
+    font-weight: 500;
+    color: #666;
+}
+.table-wrap .edit-title ul li p + p {
+    border-left: 1px solid #ccc;
+    margin-left: 8px;
+    padding-left: 8px;
+}
+.table-wrap [class$=-edit] {
+    width: 100%;
+    text-align: left;
+}
+.table-wrap [class$=-edit] .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-wrap [class$=-edit] .tr .th {
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+.table-wrap [class$=-edit] .tr .td {
+    flex: 1 1 auto;
+    padding: 1.5rem 0;
+}
+.table-wrap [class$=-edit] .tr .td.w600 {
+    display: block;
+}
+.table-wrap [class$=-edit] .tr .td .ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.table-wrap [class$=-edit] .tr p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    /* 14px */
+    /* 12px */
+}
+
+/* table detail */
+.table-wrap .detail-title {
+    margin-top: 6rem;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    border-top: 2px solid #000;
+}
+.table-wrap .detail-title .detail-name {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    font-size: 2rem;
+    line-height: 1.75;
+    letter-spacing: -0.2px;
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    margin-top: 2.5rem;
+}
+.table-wrap .detail-title ul {
+    width: 100%;
+    display: flex;
+    padding: 1rem 0 2.5rem;
+}
+.table-wrap .detail-title ul li {
+    display: flex;
+}
+.table-wrap .detail-title ul li + li {
+    margin-left: 3rem;
+}
+.table-wrap .detail-title ul li p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    line-height: 10px;
+}
+.table-wrap .detail-title ul li p.tit {
+    font-weight: 500;
+    color: #666;
+}
+.table-wrap .detail-title ul li p + p {
+    border-left: 1px solid #ccc;
+    margin-left: 8px;
+    padding-left: 8px;
+}
+.table-wrap [class$=-detail] {
+    width: 100%;
+    text-align: left;
+}
+.table-wrap [class$=-detail] .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+.table-wrap [class$=-detail] .tr .th {
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+.table-wrap [class$=-detail] .tr .td {
+    flex: 1 1 auto;
+    padding: 1.5rem 0;
+}
+.table-wrap [class$=-detail] .tr .td.w600 {
+    display: block;
+}
+.table-wrap [class$=-detail] .tr .td .ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.table-wrap [class$=-detail] .tr p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    /* 14px */
+    /* 12px */
+}
+
+.input-none {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* input file */
+.input-file .file-label {
+    display: inline-block;
+    min-width: auto;
+    padding: 5px 10px 7px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    letter-spacing: -0.05em;
+    border: 1px solid #555;
+    background: #555;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.input-file .file-name {
+    width: calc(100% - 11rem) !important;
+}
+
+/* add-file */
+.add-file.view .add-file-names {
+    width: 100% !important;
+    border: 0;
+    padding-left: 0;
+}
+.add-file.view .add-file-names .name:before {
+    content: none;
+}
+.add-file.flex {
+    align-items: start;
+}
+.add-file .add-file-names {
+    width: calc(100% - 11rem) !important;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    padding: 2rem;
+}
+.add-file .add-file-names .inner {
+    display: inline-block;
+}
+.add-file .add-file-names .name {
+    display: block;
+    position: relative;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+}
+.add-file .add-file-names .name:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 3px 0 0 5px;
+    background: url("../img/common/ico_cancel_1.svg") no-repeat 0 0;
+}
+.add-file .add-file-names .name + .name {
+    margin-top: 5px;
+}
+
 /* table bottom button */
 .right-btn {
     text-align: right;
-    margin-top: 2rem;
+    margin-top: 1rem;
     /* 페이징이 있는 경우 */
 }
 .right-btn + .paging {
-    margin-top: -2rem;
+    margin-top: -1rem;
+}
+
+/* comment */
+.comment-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 2rem;
+}
+.comment-wrap .title {
+    width: 8rem;
+}
+.comment-wrap .title em {
+    font-weight: 500;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+}
+.comment-wrap .counter {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+    color: #666;
+}
+.comment-wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.comment-wrap .inner {
+    flex: 1 1 100%;
+    height: 10rem;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-color: transparent;
+}
+.comment-wrap textarea {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+    padding: 0;
+    border: 0;
+    resize: none;
+}
+.comment-wrap textarea::-webkit-input-placeholder {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+}
+.comment-wrap .comment-register {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 /*
@@ -499,7 +896,7 @@ filter
 */
 .filter-wrap .inner {
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .filter-wrap ul {
     display: flex;
@@ -510,6 +907,7 @@ filter
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -518,6 +916,7 @@ filter
     letter-spacing: -0.14px;
     /* 12px */
     line-height: 1.2rem;
+    color: #666;
 }
 .filter-wrap ul li + li {
     border-left: 1px solid #ccc;
@@ -599,6 +998,7 @@ paging
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -636,6 +1036,10 @@ paging
 
 .fs18 {
     font-size: 18px;
+}
+
+.fs20 {
+    font-size: 20px;
 }
 
 .fs24 {
@@ -693,6 +1097,9 @@ paging
 .color-f6f6f6 {
     color: #f6f6f6 !important;
 }
+.color-e6e6e6 {
+    color: #e6e6e6 !important;
+}
 .color-ccc {
     color: #ccc !important;
 }
@@ -715,6 +1122,9 @@ paging
 }
 .bg-f6f6f6 {
     background-color: #f6f6f6 !important;
+}
+.bg-e6e6e6 {
+    background-color: #e6e6e6 !important;
 }
 .bg-ccc {
     background-color: #ccc !important;
@@ -802,6 +1212,7 @@ paging
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -826,6 +1237,7 @@ paging
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -1841,6 +2253,7 @@ body {
     font-size: 2.4rem;
     line-height: 1.5;
     letter-spacing: -0.4px;
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -2000,10 +2413,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: end;
     position: relative;
     width: 120rem;
     height: 100%;
     margin: 0 auto;
+    padding: 1.5rem 0;
 }
 #header .inner .header-logo a::after {
     content: "";
@@ -2012,6 +2427,21 @@ body {
     height: 6rem;
     background: url("../img/common/logo.svg") no-repeat 0 0;
     background-size: 100%;
+}
+#header .inner .header-util button {
+    font-size: 1.6rem;
+    padding: 0 0;
+    padding-left: 2.8rem;
+    line-height: 2.4rem;
+}
+#header .inner .header-util button + button {
+    margin-left: 3rem;
+}
+#header .inner .header-util .btn-search {
+    background: url("../img/common/ico_search_1.svg") no-repeat;
+}
+#header .inner .header-util .btn-qsearch {
+    background: url("../img/common/ico_quick_searh.svg") no-repeat;
 }
 #header .inner .header-user {
     position: absolute;
@@ -2025,6 +2455,7 @@ body {
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     font-size: 1.5rem;
@@ -2033,6 +2464,8 @@ body {
     /* 14px */
     /* 12px */
     font-weight: 500;
+    margin-right: 4rem;
+    line-height: inherit;
 }
 #header .inner .header-user .my {
     /* 예) @include fs( $fs50 ); */
@@ -2040,6 +2473,7 @@ body {
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -2047,10 +2481,18 @@ body {
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
+    line-height: 2.2rem;
     color: #666;
 }
-#header .inner .header-user .my span + span:before {
+#header .inner .header-user .my a {
+    padding-right: 6px;
+}
+#header .inner .header-user .my a:last-child {
+    padding-right: 0;
+}
+#header .inner .header-user .my a + a:before {
     content: "";
+    margin-right: 8px;
     display: inline-block;
     width: 1px;
     height: 10px;
@@ -2106,7 +2548,7 @@ body {
 }
 
 .nav {
-    flex: 0 0 50%;
+    flex: 0 0 auto;
     height: 100%;
 }
 .nav:hover .sub-menu {
@@ -2122,6 +2564,7 @@ body {
 }
 .nav-wrap .nav-menu > li {
     position: relative;
+    padding-right: 65px;
 }
 .nav-wrap .nav-menu > li > a {
     font-size: 1.8rem;
@@ -2136,7 +2579,6 @@ body {
     width: 100%;
     height: 12rem;
 }
-
 /*
 Mobile
 */
@@ -2157,6 +2599,12 @@ Mobile
     }
     #header .inner .header-util {
         width: 100%;
+    }
+    #header .inner .header-util .btn-search {
+        background: url("../img/common/ico_search_1.svg") no-repeat 0 0;
+    }
+    #header .inner .header-util .btn-qsearch {
+        background: url("../img/common/ico_quick_searh.svg") no-repeat 0 0;
     }
     #header .inner .nav-toggle {
         display: inline-block;
@@ -2204,6 +2652,7 @@ Mobile
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */
@@ -2219,6 +2668,7 @@ Mobile
     /* 40px */
     /* 30px */
     /* 24px */
+    /* 20px */
     /* 18px */
     /* 15px */
     /* 14px */

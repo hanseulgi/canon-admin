@@ -8,10 +8,12 @@
 
     .inner {
         @include flex-flow;
+        align-items: end;
         position: relative;
         width: 120rem;
         height: 100%;
         margin: 0 auto;
+        padding: 1.5rem 0;
 
         .header-logo {
 
@@ -25,9 +27,22 @@
         }
 
         .header-util {
-            //    [class^=btn] {
-            //       @include fs ($fs24);
-            //    }
+
+            button {
+                font-size: 1.6rem;
+                padding: 0 0;
+                padding-left: 2.8rem;
+                line-height: 2.4rem;
+                
+                & + button { margin-left: 3rem; }
+
+            }
+            .btn-search {
+                background: url($path-img-common + 'ico_search_1.svg') no-repeat;
+            }
+            .btn-qsearch {
+                background: url($path-img-common + 'ico_quick_searh.svg') no-repeat;
+            }
         }
 
         .header-user {
@@ -39,16 +54,26 @@
             .account {
                 @include fs ($fs15);
                 font-weight: $fw-m;
+                margin-right: 4rem;
+                line-height: inherit;
             }
             .my {
                 @include fs ($fs12);
+                line-height: 2.2rem;
                 color: $color-666;
 
-                span + span:before {
-                    content:"";
-                    display: inline-block;
-                    @include wh(1px, 10px);
-                    background-color: #999;
+                a { 
+                    padding-right: 6px;
+
+                    &:last-child { padding-right: 0; }
+
+                    & + a:before {
+                        content:"";
+                        margin-right: 8px;
+                        display: inline-block;
+                        @include wh(1px, 10px);
+                        background-color: #999;
+                    }
                 }
             }
         }
@@ -111,7 +136,7 @@
 }
 
 .nav {
-    flex: 0 0 50%;
+    flex: 0 0 auto;
     height: 100%;
 
     &:hover {
@@ -128,12 +153,18 @@
             display: flex;
             align-items: center;
             height: 100%;
+           
 
             >li {
                 position: relative;
+                padding-right: 65px;
+
+                & + li { }
 
                 >a {
                     font-size: 1.8rem;
+
+                 
 
                 }
             }
@@ -148,6 +179,10 @@
             background-color: #fff;
             @include wh(100%, 12rem);
             // @include transition(all .1s ease-in);
+
+            li {
+               
+            }
         }
     }
 
@@ -178,6 +213,13 @@ Mobile
 
             .header-util {
                 width: 100%;
+
+                .btn-search {
+                    background: url($path-img-common + 'ico_search_1.svg') no-repeat 0 0;
+                }
+                .btn-qsearch {
+                    background: url($path-img-common + 'ico_quick_searh.svg') no-repeat 0 0;
+                }
             }
 
             .nav-toggle {

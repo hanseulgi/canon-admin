@@ -155,6 +155,13 @@ font
         letter-spacing: $ls24;
     }
 
+    /* 20px */
+    @if $size == $fs20 {
+        font-size: $fs20;
+        line-height: $lh20;
+        letter-spacing: $ls20;
+    }
+
     /* 18px */
     @if $size == $fs18 {
         font-size: $fs18;

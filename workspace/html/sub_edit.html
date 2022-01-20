@@ -1,0 +1,25 @@
+@@include('./include/head.html', {"title": "sub", cssArr: ['style']})
+
+<body>
+    <div class="wrap">
+        @@include('./include/header.html')
+
+        @@include('./include/components/location.html')
+        <section id="container">
+            <section class="contents">
+
+               
+                @@include('./include/components/table/edit.html')
+
+
+
+            </section>
+        </section>
+
+        @@include('./include/footer.html')
+        @@include('./include/script.html')
+        @@include('./include/components/dim.html')
+
+    </div>
+</body>
+</html>

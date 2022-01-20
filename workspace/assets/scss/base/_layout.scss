@@ -178,15 +178,344 @@ table
     }
 }
 
+/* table edit */
+.table-wrap {
+
+    .edit-title {
+        margin-top: 6rem;
+        border-bottom: 1px solid $color-e6e6e6;
+        width: 100%;
+        border-top: 2px solid $color-000;
+
+        ul {
+            width: 100%;
+            display: flex;
+            padding: 2.5rem 0;
+
+            li {
+                display: flex;
+                
+                
+
+                & + li {
+                    margin-left: 3rem;
+                }
+
+                p {
+                    @include fs($fs14);
+                    line-height: 10px;
+
+                    &.tit {
+                        font-weight: $fw-m;
+                        color: $color-666;
+                    }
+
+                    & + p {
+                        border-left: 1px solid $color-ccc;
+                        margin-left: 8px;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    [class$='-edit'] {
+
+        width: 100%;
+        text-align: left;
+
+
+        .tr {
+            @include flex-flow;
+
+            .th {
+                font-weight: $fw-m;
+                padding: 1.5rem 0;
+                p {
+                    // color: $color-666;
+                }
+            }
+            .td {
+                flex: 1 1 auto;
+                padding: 1.5rem 0;
+
+                &.w600 {
+                    display: block;
+                }
+
+                & {
+                    .ellipsis {
+                        @include ellipsis(1);
+                        width: calc(100% - 100px);
+                        margin: 0 auto;
+                        padding: 0 5px;
+                    }
+                }
+
+            }
+            .th,.td {
+                
+            }
+
+            p {
+                @include fs($fs15);
+
+            }
+
+        }
+    }
+}
+
+/* table detail */
+.table-wrap {
+
+    .detail-title {
+        margin-top: 6rem;
+        border-bottom: 1px solid $color-e6e6e6;
+        width: 100%;
+        border-top: 2px solid $color-000;
+    
+        .detail-name {
+            @include fs($fs20);
+            margin-top: 2.5rem;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            padding: 1rem 0 2.5rem;
+
+            li {
+                display: flex;
+
+                & + li {
+                    margin-left: 3rem;
+                }
+
+                p {
+                    @include fs($fs14);
+                    line-height: 10px;
+
+                    &.tit {
+                        font-weight: $fw-m;
+                        color: $color-666;
+                    }
+
+                    & + p {
+                        border-left: 1px solid $color-ccc;
+                        margin-left: 8px;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    [class$='-detail'] {
+
+        width: 100%;
+        text-align: left;
+
+
+        .tr {
+            @include flex-flow;
+            border-bottom: 1px solid $color-e6e6e6;
+
+            .th {
+                font-weight: $fw-m;
+                padding: 1.5rem 0;
+                p {
+                    // color: $color-666;
+                }
+            }
+            .td {
+                flex: 1 1 auto;
+                padding: 1.5rem 0;
+
+                &.w600 {
+                    display: block;
+                }
+
+                & {
+                    .ellipsis {
+                        @include ellipsis(1);
+                        width: calc(100% - 100px);
+                        margin: 0 auto;
+                        padding: 0 5px;
+                    }
+                }
+
+            }
+            .th,.td {
+            }
+
+            p {
+                @include fs($fs15);
+
+            }
+
+        }
+    }
+}
+
+
+
+.input-none {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* input file */
+
+.input-file{
+    .file-label{
+        display:inline-block;
+        min-width:auto;
+        padding:5px 10px 7px;
+        font-size:12px;
+        line-height:1;
+        color:#fff;
+        text-align:center;
+        letter-spacing:-0.05em;
+        border:1px solid #555;
+        background:#555;
+        vertical-align:middle;
+        box-sizing:border-box;
+    }
+    .file-name{
+        width: calc(100% - 11rem) !important;
+    }
+}
+
+
+/* add-file */
+.add-file {
+
+    // 상세페이지 스타일 s
+    &.view {
+        .add-file-names {
+            width: 100% !important;
+            border: 0;
+            padding-left: 0;
+
+            .name {
+                &:before {
+                    content:none;
+                }
+            }
+        }
+    }
+    // 상세페이지 스타일 e
+
+    &.flex {
+        align-items: start;
+    }
+    .add-file-names {
+       
+        width: calc(100% - 11rem) !important;
+        border: 1px solid $color-e6e6e6;
+        border-radius: 6px;
+        padding: 2rem;
+
+        .inner {
+            display: inline-block;
+        }
+
+        .name{
+            display: block;
+            position: relative;
+            @include fs($fs12);
+
+            &:before {
+                content: "";
+                @include position (100%, 0);
+                @include wh(1.2rem,1.2rem);
+                margin: 3px 0 0 5px;
+                background: url($path-img-common + 'ico_cancel_1.svg') no-repeat 0 0;
+            }
+            & + .name { margin-top: 5px; }
+        }
+    }
+}
+
+
+
 /* table bottom button */
 .right-btn {
     text-align: right;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     /* 페이징이 있는 경우 */
     & + .paging {
-        margin-top: -2rem;
+        margin-top: -1rem;
     }
+}
+
+/* comment */
+.comment-wrap {
+    @include flex-flow;
+    background-color: $bg-f6f6f6;
+    padding: 2rem;
+
+    .title {
+        width: 8rem;
+
+        em {
+            font-weight: $fw-m;
+            @include fs($fs14);
+        }
+    }
+
+    .counter {
+        @include fs($fs12);
+        color:$color-666;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .inner{
+        flex: 1 1 100%;
+        height: 10rem;
+        padding: 20px;
+        border-radius: 6px;
+        background-color: $color-fff;
+        border:1px solid $color-e6e6e6;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right-color: transparent;
+    }
+
+    textarea{
+        @include fs($fs12);
+        padding: 0;
+        border: 0;
+        resize: none;
+
+        &::-webkit-input-placeholder {
+            @include fs($fs12);
+        }
+    }
+
+    .comment-register {
+        @include wh(100px, 100px);
+        background-color: $bg-fff;
+        border:1px solid $color-ccc;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
 }
 
 /*
@@ -195,13 +524,14 @@ filter
 .filter-wrap {
     .inner {
         margin-top: 5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     ul {
         display: flex;
         li {
             @include fs($fs14);
             line-height: 1.2rem;
+            color: $color-666;
 
             & + li {
                 border-left: 1px solid #ccc;
@@ -291,7 +621,7 @@ paging
 // .location-wrap  li + li:before{}
 
 /* font-style */
-$f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
+$f-sizes: 12, 14, 15, 18, 20, 24, 30, 40, 50;
 
 @each $f-size in $f-sizes{
     .fs#{$f-size} {
@@ -345,6 +675,10 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
         color: $color-f6f6f6 !important;
     }
 
+    &-e6e6e6 {
+        color: $color-e6e6e6 !important;
+    }
+
     &-ccc {
         color: $color-ccc !important;
     }
@@ -376,6 +710,10 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
     &-f6f6f6 {
         background-color: $color-f6f6f6 !important;
+    }
+
+    &-e6e6e6 {
+        background-color: $color-e6e6e6 !important;
     }
 
     &-ccc {
@@ -846,3 +1184,8 @@ main {
 //     }
 
 // }
+
+
+
+
+
