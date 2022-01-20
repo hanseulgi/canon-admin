@@ -69,8 +69,8 @@ UI.textarea  = function () {
 
         $counter.html(_max + ' <span>/ 200</span>');
 
-        if ( _max >= 200 ) {
-            alert( '글자 입력 수 초과' )
+        if ( _max >= 300 ) {
+            console.log('글자 입력 수 초과')
         };
     });
 };
@@ -84,6 +84,15 @@ UI.navToggle = function () {
     $el.off("click").on("click", function() {
         $(this).toggleClass('on');
         $target.toggleClass('on');
+    });
+
+};
+
+// commentDel
+UI.commentDel = function () {
+
+    $('.comment-item').find('.del').off("click").on("click", function() {
+        $(this).closest('.comment-item').hide();
     });
 
 };
@@ -172,6 +181,7 @@ UI.init = function(){
     UI.search();
     UI.file();
     UI.textarea();
+    UI.commentDel();
 
 };
 

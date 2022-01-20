@@ -9,6 +9,7 @@ font-size
 /* 24px */
 /* 20px */
 /* 18px */
+/* 16px */
 /* 15px */
 /* 14px */
 /* 12px */
@@ -198,6 +199,7 @@ select {
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -222,6 +224,7 @@ input[type=tel], input[type=time], input[type=text], input[type=password], input
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -245,6 +248,7 @@ input[type=tel][readonly], input[type=text][readonly], input[type=password][read
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -352,6 +356,7 @@ textarea:focus {
     letter-spacing: -0.4px;
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -417,6 +422,7 @@ textarea:focus {
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -426,7 +432,8 @@ textarea:focus {
 .search-box-wrap > .inner .table-col .td [class*=-wrap] {
     display: inline-block;
 }
-.search-box-wrap > .inner .table-col .th, .search-box-wrap > .inner .table-col .td {
+.search-box-wrap > .inner .table-col .th,
+.search-box-wrap > .inner .table-col .td {
     display: table-cell;
     vertical-align: middle;
 }
@@ -486,7 +493,8 @@ table
     margin: 0 auto;
     padding: 0 5px;
 }
-.table-wrap [class$=-list] .tr .th, .table-wrap [class$=-list] .tr .td {
+.table-wrap [class$=-list] .tr .th,
+.table-wrap [class$=-list] .tr .td {
     display: table-cell;
 }
 .table-wrap [class$=-list] .tr p {
@@ -497,6 +505,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
@@ -531,6 +540,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -585,6 +595,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
@@ -611,6 +622,7 @@ table
     line-height: 1.75;
     letter-spacing: -0.2px;
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -635,6 +647,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -690,6 +703,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
@@ -759,6 +773,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -810,6 +825,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -825,6 +841,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -857,6 +874,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -875,6 +893,7 @@ table
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -889,6 +908,88 @@ table
     border: 1px solid #ccc;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+}
+
+.comment-lists .length {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    padding-bottom: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e6e6e6;
+}
+.comment-lists .length em {
+    font-weight: 500 !important;
+}
+.comment-lists .comment-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6rem 2rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.comment-lists .comment-item .info span {
+    display: inline-block;
+    line-height: 1rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.comment-lists .comment-item .info span + span {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #ccc;
+}
+.comment-lists .comment-item .txt {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    margin-top: 1rem;
+}
+.comment-lists .comment-item .date {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+    margin-top: 0.5rem;
+}
+.comment-lists .comment-item .del {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    text-decoration: underline;
+    color: #666;
 }
 
 /*
@@ -909,6 +1010,7 @@ filter
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -1000,6 +1102,7 @@ paging
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -1032,6 +1135,10 @@ paging
 
 .fs15 {
     font-size: 15px;
+}
+
+.fs16 {
+    font-size: 16px;
 }
 
 .fs18 {
@@ -1214,6 +1321,7 @@ paging
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -1239,6 +1347,7 @@ paging
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -2255,6 +2364,7 @@ body {
     letter-spacing: -0.4px;
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -2457,6 +2567,7 @@ body {
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
@@ -2475,6 +2586,7 @@ body {
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     /* 12px */
@@ -2654,6 +2766,7 @@ Mobile
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;
@@ -2670,6 +2783,7 @@ Mobile
     /* 24px */
     /* 20px */
     /* 18px */
+    /* 16px */
     /* 15px */
     /* 14px */
     font-size: 1.4rem;

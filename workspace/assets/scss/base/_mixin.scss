@@ -169,6 +169,13 @@ font
         letter-spacing: $ls18;
     }
 
+    /* 16px */
+    @if $size == $fs16 {
+        font-size: $fs16;
+        line-height: $lh16;
+        letter-spacing: $ls16;
+    }
+
     /* 15px */
     @if $size == $fs15 {
         font-size: $fs15;
