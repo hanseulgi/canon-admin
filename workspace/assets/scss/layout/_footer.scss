@@ -1,5 +1,6 @@
 #footer {
-    background-color: #f6f6f6;
+    margin-top: 7rem;
+    background-color: $bg-f6f6f6;
     height: 8rem;
 
     .inner {
@@ -17,7 +18,7 @@
         .footer-util {
             @include fs($fs14);
             a {
-                
+
                 text-decoration: underline;
                 color: $color-666;
 

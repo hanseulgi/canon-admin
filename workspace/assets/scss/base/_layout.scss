@@ -75,7 +75,7 @@
     margin-top: 4rem;
 
     > .inner {
-        background-color: #f6f6f6;
+        background-color: $bg-f6f6f6;
         padding: 3.5rem 14.3rem;
         
         .table-col {
@@ -98,8 +98,150 @@
                 vertical-align: middle; 
             }
 
+            .loop {
+                & + .loop {
+                    margin-top: 1rem;
+                }
+            }
+
+            .ico-search {
+                display: inline-block;
+                @include wh(2.6rem, 2.6rem);
+                margin-left: 1rem;
+                background: url($path-img-ico + 'ico_plus.svg') no-repeat center center;
+                vertical-align: middle;
+
+                &.plus {
+                    background: url($path-img-ico + 'ico_plus.svg') no-repeat center center;
+                }
+                &.minus {
+                    background: url($path-img-ico + 'ico_minus.svg') no-repeat center center;
+                }
+            }
+
         }
     }
+}
+
+/*
+table
+*/
+/* table list */
+.table-wrap {
+    [class$='-list'] {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        border-top: 2px solid $color-000;
+
+        .tr {
+            display: table-row;
+            border-bottom: 1px solid $bg-f6f6f6;
+
+
+            .th {
+                font-weight: $fw-m;
+                padding: 1.5rem 1.5rem;
+                background-color: $bg-f6f6f6;
+                p {
+                    color: $color-666;
+                }
+            }
+            .td {
+                padding: 1.5rem 1.5rem;
+
+                &.w600 {
+                    display: block;
+                }
+
+                & {
+                    .ellipsis {
+                        @include ellipsis(1);
+                        width: calc(100% - 100px);
+                        margin: 0 auto;
+                        padding: 0 5px;
+                    }
+                }
+
+            }
+            .th,.td {
+                display: table-cell;
+            }
+
+            p {
+                @include fs($fs15);
+
+            }
+
+        }
+    }
+}
+
+/* table bottom button */
+.right-btn {
+    text-align: right;
+    margin-top: 2rem;
+
+    /* 페이징이 있는 경우 */
+    & + .paging {
+        margin-top: -2rem;
+    }
+}
+
+/*
+filter
+*/
+.filter-wrap {
+    .inner {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    ul {
+        display: flex;
+        li {
+            @include fs($fs14);
+            line-height: 1.2rem;
+
+            & + li {
+                border-left: 1px solid #ccc;
+                margin-left: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+/*
+paging
+*/
+.paging{
+    margin-top:40px;
+    text-align:center;
+    font-size:0;
+    line-height:0;
+    a {
+        position:relative;
+        display:inline-block;
+        width: 3rem;
+        height: 3rem; 
+        font-size:18px;
+        line-height: 3rem;
+        color:$color-666;
+        vertical-align:top;
+        padding-top:1px;
+
+        &.on {font-weight: $fw-b; color:$color-red;}
+    }
+    .first{background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center top;}
+    .prev{background: url($path-img-common + 'ico_arrow_doble2.svg') no-repeat center top;}
+    .last{background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center top;transform:rotate(180deg);}
+    .next{background: url($path-img-common + 'ico_arrow_doble2.svg') no-repeat center top;transform:rotate(180deg);}
+
+    .first.disabled,
+    .prev.disabled,
+    .last.disabled,
+    .next.disabled { background-position: center center; }
 }
 
 
@@ -199,6 +341,10 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
         color: $color-666 !important;
     }
 
+    &-f6f6f6 {
+        color: $color-f6f6f6 !important;
+    }
+
     &-ccc {
         color: $color-ccc !important;
     }
@@ -226,6 +372,10 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
     &-666 {
         background-color: $bg-666 !important;
+    }
+
+    &-f6f6f6 {
+        background-color: $color-f6f6f6 !important;
     }
 
     &-ccc {
@@ -278,8 +428,6 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
 
 /* select box */
-
-
 .select {
     @include wh (100%, 4.5rem);
     @include fs($fs14);
@@ -305,32 +453,38 @@ $f-sizes: 12, 14, 15, 18, 24, 30, 40, 50;
 
 /* radio */
 .radio {
-    position:relative;
-    display:inline-block;
-    height:20px;
+    position: relative;
+    display: inline-block;
+    height: 2rem;
     font-size: 1.4rem;
 
     input[type='radio'] {
-        display:inline-block; 
-        width:20px; 
-        height:20px; 
-        margin-right:5px; 
-        vertical-align:top; 
+        display: inline-block;
+        @include wh(2rem, 2rem);
+        margin-right: 5px;
+        vertical-align: top;
         border:1px solid #e1e1e1;
-        border-radius:50%; 
-        cursor:pointer; 
-        -webkit-appearance:none;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
 
         &:checked {
-            background-color:transparent; border-color:#dc000c;
-            & + i {position:absolute; left:5px; top:5px; display:inline-block; width:10px; height:10px; background-color:#dc000c; border-radius:50%;}
+            background-color: transparent;
+            border-color: $color-red;
+
+            & + i {
+                @include position (.5rem, .5rem);
+                @include wh(1rem, 1rem);
+                display: inline-block;
+                background-color: $bg-red;
+                border-radius:50%;
+            }
         }
         &:disabled {
             background-color:#eee; border:1px solid #e1e1e1;
             & + i,
             &:checked + i {display:inline-block; background-color:#d9d9d9;}
         }
-        
     }
     &.txt + .txt { margin-left: 30px; }
 }
@@ -425,6 +579,15 @@ main {
     }
 }
 
+.wp {
+    @for $i from 5 through 100 {
+        @if( $i%5 == 0 ){
+            &#{$i} {
+                width: #{$i}+'%' !important;
+            }
+        }
+    }
+}
 
 
 /* margin-top */
