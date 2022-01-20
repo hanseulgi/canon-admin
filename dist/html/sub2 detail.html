@@ -134,6 +134,8 @@
         </header>
 
 
+        
+        <!-- location -->
         <div class="location-wrap">
             <div class="inner">
                 <h2 class="location-title">기술정보 공유</h2>
@@ -144,17 +146,58 @@
                 </ol>
             </div>
         </div>
+        <!-- //location -->
         <section id="container">
             <section class="contents">
 
-               
+
+                <!-- sub top search box -->
+                <div class="search-box-wrap">
+                    <div class="inner">
+                        <div class="table-col result">
+                            <div class="th">처리결과</div>
+                            <div class="td">
+                                <div class="select-wrap w130">
+                                    <select class="select">
+                                        <option>전체</option>
+                                        <option>ENG</option>
+                                        <option>CHN</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-col">
+                            <div class="th">검색어</div>
+                            <div class="td add">
+                                <div class="loop">
+                                    <div class="select-wrap w130">
+                                        <select class="select">
+                                            <option>전체</option>
+                                            <option>ENG</option>
+                                            <option>CHN</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap w370 ml10">
+                                        <input type="text" class="input">
+                                    </div>
+                                    <button type="button" class="ico-search plus"><em class="blind">플러스 마이너스 아이콘</em> </button>
+                                </div>
+                            </div>
+                            <div class="td">
+                                <div class="row-btns al-r">
+                                    <span class="col"><button type="button" class="btn-gray-sm">초기화</button></span>
+                                    <span class="col"><button type="button" class="btn-red-sm">검색</button></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //sub top search box  -->
+                <!-- table : detail page -->
                 <div class="table-wrap">
-                    <div class="edit-title">
+                    <div class="detail-title">
+                        <div class="detail-name ellipsis">[IRC3226/IRC3222]"INNER FINISHER" 설치 가이드</div>
                         <ul>
-                            <li>
-                                <p class="tit">구분</p>
-                                <p class="txt">전체</p>
-                            </li>
                             <li>
                                 <p class="tit">등록자</p>
                                 <p class="txt">홍길동</p>
@@ -167,93 +210,61 @@
                                 <p class="tit">등록일자</p>
                                 <p class="txt">2022.10.01</p>
                             </li>
+                            <li>
+                                <p class="tit">대상모델</p>
+                                <p class="txt">IRC3226</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="table-edit">
-                            <div class="tr">
-                                <div class="th w90">
-                                    <p class="tit">대상모델</p>
-                                </div>
-                                <div class="td">
-                                    <div class="input-file flex">
-                                        <input type="text" readonly="readonly" title="파일명" class="file-name" value="RC1003" disabled>
-                                        <label for="upload01" class="btn-white-sm line">모델검색</label>
-                                        <input type="file" id="upload01" class="file-upload input-none">
-                                    </div>
-                                </div>
+                    <div class="table-detail">
+                        <div class="tr">
+                            <div class="td">
+                                <p class="detail-txt">
+                                    "INNER FINISHER” 설치 가이드(영문) 입니다.<br>
+                                    설치시 참고 바랍니다.
+                                </p>
                             </div>
-                            <div class="tr">
-                                <div class="th w90">
-                                    <p class="tit">제목</p>
-                                </div>
-                                <div class="td">
-                                    <input type="text" class="wp100">
-                                </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th w90">
+                                <p class="tit">첨부파일</p>
                             </div>
-                            <div class="tr">
-                                <div class="th w90">
-                                    <p class="tit">내용</p>
-                                </div>
-                                <div class="td">
-                                    <div class="edit-wrap" style="padding:10px; height:180px; border:1px solid #e6e6e6; border-radius:6px; font-size:20px;">
-                                        EDIT 영역
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tr">
-                                <div class="th w90">
-                                    <p class="tit">첨부파일</p>
-                                </div>
-                                <div class="td">
-                                    <div class="add-file flex">
-                                        <div class="add-file-names">
-                                            <div class="inner">
-                                                <a class="name" href="#">테스트 정산파일.xls</a>
-                                                <a class="name" href="#">테스트 정산파일.xls</a>
-                                                <a class="name" href="#">테스트 정산파일.xls</a>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label for='file-add'>
-                                                <span class="btn-white-sm line">파일 찾기</span>
-                                            </label>
-                                            <input type="file" id="file-add" class="input-none" name="" title="">
+                            <div class="td">
+                                <div class="add-file view">
+                                    <div class="add-file-names">
+                                        <div class="inner">
+                                            <span class="name" href="#">INNER FINISHER_가이드A.PDF</span>
+                                            <span class="name" href="#">INNER FINISHER_가이드A.PDF</span>
+                                            <span class="name" href="#">INNER FINISHER_가이드A.PDF</span>
                                         </div>
                                     </div>
+                    
                                 </div>
                             </div>
-                            <div class="tr">
-                                <div class="th w90">
-                                    <p class="tit">사용여부</p>
-                                </div>
-                                <div class="td">
-                                    <label class="radio txt">
-                                        <input type="radio" name="radio1" checked="">
-                                        <i></i>
-                                        활성
-                                    </label>
-                                    <label class="radio txt">
-                                        <input type="radio" name="radio1">
-                                        <i></i>
-                                        비활성
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th w90">
+                                <p class="tit">사용여부</p>
                             </div>
-
+                            <div class="td">
+                                <p>활성</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- 목록 페이지 테이블 아래 버튼 있는 경우 추가 -->
+                <!-- //table : detail page -->
+
+                <!-- 상세 페이지 버튼 -->
                 <div class="row-btns mt35">
-                    <span class="col"><button type="button" class="btn-gray-sm">취소</button></span>
-                    <span class="col"><button type="button" class="btn-red-sm">저장</button></span>
+                    <span class="col"><button type="button" class="btn-gray-sm">삭제</button></span>
+                    <span class="col"><button type="button" class="btn-white-sm line">수정</button></span>
                     <span class="col"><button type="button" class="btn-red-sm line">목록</button></span>
                 </div>
-                <!-- //목록 페이지 테이블 아래 버튼 있는 경우 추가 -->
-
+                <!-- //상세 페이지 버튼 -->
 
 
             </section>
         </section>
-
         <footer id="footer">
             <div class="inner">
                 <p class="footer-copyright">
@@ -269,9 +280,11 @@
         <script type="text/javascript" src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="../assets/js/vendor/library.js"></script>
         <script type="text/javascript" src="../assets/js/ui.js"></script>
+        <!-- dim -->
         <div class="dim">
             <div class="inner"></div>
         </div>
+        <!-- //dim -->
 
     </div>
 </body>

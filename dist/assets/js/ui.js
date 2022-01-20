@@ -119,8 +119,8 @@ UI.search = function () {
 
         $(this).find('.ico-search').off("click").on("click", function() {
 
-            
             let _class = 'plus';
+            //let _null = '';
 
             let _target= `<div class="loop">
                             <div class="select-wrap w130">
@@ -130,7 +130,7 @@ UI.search = function () {
                                     <option>CHN</option>
                                 </select>
                             </div>
-                            <div class="input-wrap w370">
+                            <div class="input-wrap w370 ml10">
                                 <input type="text" class="input">
                             </div>
                             <button type="button" class="ico-search ${_class}"><em class="blind">플러스 마이너스 아이콘</em></button>

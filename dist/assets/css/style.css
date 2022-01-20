@@ -406,10 +406,17 @@ textarea:focus {
 .search-box-wrap > .inner {
     background-color: #f6f6f6;
     padding: 3.5rem 14.3rem;
+    border-radius: 12px;
 }
 .search-box-wrap > .inner .table-col {
     display: table;
     width: 100%;
+}
+.search-box-wrap > .inner .table-col.result {
+    display: flex !important;
+    align-items: center;
+    justify-content: baseline;
+    margin-bottom: 10px;
 }
 .search-box-wrap > .inner .table-col .th {
     /* 예) @include fs( $fs50 ); */
@@ -428,6 +435,8 @@ textarea:focus {
     /* 12px */
     font-weight: 700;
     padding-right: 5rem;
+    width: 10.6rem;
+    white-space: nowrap;
 }
 .search-box-wrap > .inner .table-col .td [class*=-wrap] {
     display: inline-block;
@@ -695,6 +704,16 @@ table
     margin: 0 auto;
     padding: 0 5px;
 }
+.table-wrap [class$=-detail] .tr .td .video-play {
+    margin-top: 2rem;
+    width: 100%;
+    height: 67.5rem;
+    overflow: hidden;
+}
+.table-wrap [class$=-detail] .tr .td .video-play img {
+    width: 100%;
+    height: 100%;
+}
 .table-wrap [class$=-detail] .tr p {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
@@ -710,6 +729,90 @@ table
     letter-spacing: -0.15px;
     /* 14px */
     /* 12px */
+}
+
+/* table list */
+.table-wrap .video-list-wrap {
+    border-top: 2px solid #000;
+}
+.table-wrap .video-list-wrap ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+.table-wrap .video-list-wrap ul li {
+    width: calc(50% - 10px);
+}
+.table-wrap .video-list-wrap ul li:nth-child(n+3) {
+    margin-top: 2rem;
+}
+.table-wrap .video-list-wrap ul li .item {
+    display: flex;
+}
+.table-wrap .video-list-wrap ul li .item .area {
+    overflow: hidden;
+    width: 25rem;
+    height: 14rem;
+}
+.table-wrap .video-list-wrap ul li .item .area img {
+    width: 100%;
+}
+.table-wrap .video-list-wrap ul li .item .info {
+    margin-left: 1.5rem;
+}
+.table-wrap .video-list-wrap ul li .item .info .tit {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    word-break: keep-all;
+}
+.table-wrap .video-list-wrap ul li .item .info .dsc {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    margin-top: 1.5rem;
+}
+.table-wrap .video-list-wrap ul li .item .info .dsc2 {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    margin-top: 0.5rem;
+    color: #666;
 }
 
 .input-none {
@@ -2188,133 +2291,133 @@ main {
 
 /* padding-top */
 .pt5 {
-    padding-top: 5px;
+    padding-top: 5px !important;
 }
 .pt10 {
-    padding-top: 10px;
+    padding-top: 10px !important;
 }
 .pt15 {
-    padding-top: 15px;
+    padding-top: 15px !important;
 }
 .pt20 {
-    padding-top: 20px;
+    padding-top: 20px !important;
 }
 .pt25 {
-    padding-top: 25px;
+    padding-top: 25px !important;
 }
 .pt30 {
-    padding-top: 30px;
+    padding-top: 30px !important;
 }
 .pt35 {
-    padding-top: 35px;
+    padding-top: 35px !important;
 }
 .pt40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
 }
 .pt45 {
-    padding-top: 45px;
+    padding-top: 45px !important;
 }
 .pt50 {
-    padding-top: 50px;
+    padding-top: 50px !important;
 }
 
 /* padding-bottom */
 .pb0 {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
 }
 .pb5 {
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
 }
 .pb10 {
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
 }
 .pb15 {
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
 }
 .pb20 {
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
 }
 .pb25 {
-    padding-bottom: 25px;
+    padding-bottom: 25px !important;
 }
 .pb30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important;
 }
 .pb35 {
-    padding-bottom: 35px;
+    padding-bottom: 35px !important;
 }
 .pb40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
 }
 .pb45 {
-    padding-bottom: 45px;
+    padding-bottom: 45px !important;
 }
 .pb50 {
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
 }
 
 /* padding-left */
 .pl5 {
-    padding-left: 5px;
+    padding-left: 5px !important;
 }
 .pl10 {
-    padding-left: 10px;
+    padding-left: 10px !important;
 }
 .pl15 {
-    padding-left: 15px;
+    padding-left: 15px !important;
 }
 .pl20 {
-    padding-left: 20px;
+    padding-left: 20px !important;
 }
 .pl25 {
-    padding-left: 25px;
+    padding-left: 25px !important;
 }
 .pl30 {
-    padding-left: 30px;
+    padding-left: 30px !important;
 }
 .pl35 {
-    padding-left: 35px;
+    padding-left: 35px !important;
 }
 .pl40 {
-    padding-left: 40px;
+    padding-left: 40px !important;
 }
 .pl45 {
-    padding-left: 45px;
+    padding-left: 45px !important;
 }
 .pl50 {
-    padding-left: 50px;
+    padding-left: 50px !important;
 }
 
 /* padding-right */
 .pr5 {
-    padding-right: 5px;
+    padding-right: 5px !important;
 }
 .pr10 {
-    padding-right: 10px;
+    padding-right: 10px !important;
 }
 .pr15 {
-    padding-right: 15px;
+    padding-right: 15px !important;
 }
 .pr20 {
-    padding-right: 20px;
+    padding-right: 20px !important;
 }
 .pr25 {
-    padding-right: 25px;
+    padding-right: 25px !important;
 }
 .pr30 {
-    padding-right: 30px;
+    padding-right: 30px !important;
 }
 .pr35 {
-    padding-right: 35px;
+    padding-right: 35px !important;
 }
 .pr40 {
-    padding-right: 40px;
+    padding-right: 40px !important;
 }
 .pr45 {
-    padding-right: 45px;
+    padding-right: 45px !important;
 }
 .pr50 {
-    padding-right: 50px;
+    padding-right: 50px !important;
 }
 
 /* align */
@@ -2333,6 +2436,10 @@ main {
 }
 .fl-r {
     float: right;
+}
+
+.border-none {
+    border: 0 !important;
 }
 
 /* Btn */
