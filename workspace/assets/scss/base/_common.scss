@@ -463,10 +463,10 @@ button
     }
 
     &[class*='lg'] {
-        height: 54px;
-        line-height: 52px;
+        height: 60px;
+        line-height: 58px;
         padding: 0 55px;
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
@@ -629,6 +629,7 @@ table
     /* 리스트 table */
     [class$='-list'] {
         display: table;
+        table-layout: fixed;
         border-collapse: collapse;
         width: 100%;
         text-align: center;
@@ -637,6 +638,8 @@ table
         .tr {
             display: table-row;
             border-bottom: 1px solid $bg-f6f6f6;
+
+            .title { width: 60rem; }
 
 
             .th {
@@ -1020,6 +1023,7 @@ comment
 */
 
 .comment-wrap {
+    margin-top: 7rem;
     @include flex-flow;
     background-color: $bg-f6f6f6;
     padding: 2rem;
@@ -1078,6 +1082,7 @@ comment
 }
 
 .comment-lists {
+    margin-top: 4rem;
 
     .length {
         em {

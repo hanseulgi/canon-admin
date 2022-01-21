@@ -218,6 +218,7 @@ select {
 }
 
 input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], input[type=number], input[type=date] {
+    width: 100%;
     height: 4.5rem;
     /* 예) @include fs( $fs50 ); */
     /* 50px */
@@ -1555,10 +1556,10 @@ button
     font-size: 14px;
 }
 [class^=btn-][class*=lg] {
-    height: 54px;
-    line-height: 52px;
+    height: 60px;
+    line-height: 58px;
     padding: 0 55px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .row-btns {
@@ -1739,6 +1740,7 @@ table
 }
 .table-wrap [class$=-list] {
     display: table;
+    table-layout: fixed;
     border-collapse: collapse;
     width: 100%;
     text-align: center;
@@ -1747,6 +1749,9 @@ table
 .table-wrap [class$=-list] .tr {
     display: table-row;
     border-bottom: 1px solid #f6f6f6;
+}
+.table-wrap [class$=-list] .tr .title {
+    width: 60rem;
 }
 .table-wrap [class$=-list] .tr .th {
     font-weight: 500;
@@ -2185,6 +2190,7 @@ file
 comment
 */
 .comment-wrap {
+    margin-top: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2288,6 +2294,9 @@ comment
     border-bottom-right-radius: 6px;
 }
 
+.comment-lists {
+    margin-top: 4rem;
+}
 .comment-lists .length {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
@@ -2727,10 +2736,17 @@ search box
 LOGIN 
 */
 /* 로그인 */
-.log-wrap {
-    border: 1px solid red;
+.log {
+    width: 100%;
 }
-.log-wrap .logo a::after {
+.log .inner {
+    margin: 0 auto;
+    padding: 13rem 0 5rem;
+}
+.log .inner .logo {
+    text-align: center;
+}
+.log .inner .logo a::after {
     content: "";
     display: inline-block;
     width: 23rem;
@@ -2738,10 +2754,12 @@ LOGIN
     background: url("../img/common/logo.svg") no-repeat 0 0;
     background-size: 100%;
 }
-.log-wrap .box-gray {
+.log .inner .box-gray {
+    width: 80rem;
+    margin: 6rem auto 0;
     padding: 3rem;
 }
-.log-wrap .box-gray p {
+.log .inner .box-gray p {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
@@ -2758,10 +2776,31 @@ LOGIN
     /* 12px */
     color: #666;
 }
-.log-wrap .box-gray p + p {
+.log .inner .box-gray p + p {
     margin-top: 1rem;
 }
-.log-wrap .agree {
+.log .inner .flex {
+    width: 108rem;
+    margin: 0 auto;
+}
+.log .inner .flex .box-gray {
+    width: 52rem;
+    margin: 12rem 0 0;
+    padding: 5rem;
+}
+.log .inner .login-wrap {
+    margin: 5rem auto 0;
+    width: 40rem;
+}
+.log .inner .input-wrap {
+    margin-top: 1.5rem;
+}
+.log .inner .input-wrap input + input {
+    margin-top: 1rem;
+}
+.log .inner .agree {
+    width: 80rem;
+    margin: 2rem auto 0;
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
@@ -2776,6 +2815,63 @@ LOGIN
     line-height: 1.43;
     letter-spacing: -0.14px;
     /* 12px */
+}
+.log .inner .log-search {
+    margin-top: 1.5rem;
+    text-align: center;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+}
+.log .inner .log-search a {
+    position: relative;
+}
+.log .inner .log-search a + a {
+    margin-left: 20px;
+}
+.log .inner .log-search a + a:before {
+    position: absolute;
+    left: -1.2rem;
+    top: 5px;
+    width: 1px;
+    height: 1rem;
+    background-color: #ccc;
+    content: "";
+}
+.log .inner .btn-red-lg {
+    width: 100%;
+    margin-top: 3.5rem;
+    font-weight: 500;
+}
+.log .inner .comment {
+    text-align: center;
+    margin-top: 3rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    color: #666;
 }
 
 /* library */

@@ -7,33 +7,94 @@ LOGIN
 */
 
 /* 로그인 */
-.log-wrap {
-    border:1px solid red;
+.log {
+    width: 100%;
 
-    .logo {
+    .inner {
 
-        a::after {
-            content: "";
-            display: inline-block;
-            @include wh(23rem, 8.7rem);
-            background: url($path-img-common + 'logo.svg') no-repeat 0 0;
-            background-size: 100%;
-        }
-    }
-    .box-gray {
-        padding: 3rem;
-
-        p {
-            @include fs($fs14);
-            color: $color-666;
-
-            & + p {
-                margin-top: 1rem;
+        margin:0 auto;
+        padding:13rem 0 5rem;
+        .logo {
+            text-align: center;
+            a::after {
+                content: "";
+                display: inline-block;
+                @include wh(23rem, 8.7rem);
+                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                background-size: 100%;
             }
         }
-    }
-    .agree {
-        @include fs($fs14);
+       
+        .box-gray {
+            width: 80rem;
+            margin: 6rem auto 0;
+            padding: 3rem;
+
+            p {
+                @include fs($fs14);
+                color: $color-666;
+
+                & + p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .flex {
+            width: 108rem;
+            margin: 0 auto;
+            .box-gray {
+                width: 52rem;
+                margin: 12rem 0 0;
+                padding: 5rem;
+            }
+        }
+        .login-wrap {
+            margin: 5rem auto 0;
+            width: 40rem;
+        }
+        .input-wrap {
+            margin-top: 1.5rem;
+            input + input { margin-top: 1rem; }
+        }
+        .agree {
+            width: 80rem;
+            margin:2rem auto 0;
+            @include fs($fs14);
+        }
+        .log-search {
+            margin-top: 1.5rem;
+            text-align: center;
+            @include fs($fs14);
+
+            a {
+                position: relative;
+
+                & + a {
+                    margin-left: 20px;
+                }
+
+                & + a:before {
+                    @include position (-1.2rem, 5px);
+                    @include wh(1px, 1rem);
+                    background-color: $bg-ccc;
+                    content:"";
+
+                }
+            }
+        }
+        .btn-red-lg {
+            width: 100%;
+            margin-top: 3.5rem;
+            font-weight: $fw-m;
+        }
+
+        .comment {
+            text-align: center;
+            margin-top: 3rem;
+            @include fs($fs14);
+            color: $color-666;
+        }
     }
 }
 
