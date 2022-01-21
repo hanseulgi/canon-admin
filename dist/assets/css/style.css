@@ -216,6 +216,11 @@ select {
     background: #fff url("../img/ico/ico_arrow_select.svg") no-repeat right 10px top 50%/auto;
     appearance: none;
 }
+select[readonly], select[disabled] {
+    color: #111;
+    background-color: #f6f6f6;
+    border: 1px solid #e6e6e6;
+}
 
 input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], input[type=number], input[type=date] {
     width: 100%;
@@ -367,6 +372,7 @@ body {
     padding: var(--safeTop) 0 var(--safeBtm) !important;
 }
 .wrap {
+    overflow: hidden;
     position: relative;
     min-width: 108rem;
     /* 예) @include fs( $fs50 ); */
@@ -1504,6 +1510,15 @@ border
     border: 0 !important;
 }
 
+/**/
+.hr {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border: 0;
+    background-color: #000;
+}
+
 /*
 button
 */
@@ -1739,6 +1754,57 @@ table
     /* 상세 table */
     /* 동영상 리스트 table */
 }
+.table-wrap .top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+.table-wrap .top-wrap .txt {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    color: #666;
+}
+.table-wrap .top-wrap .txt span {
+    color: #dc000c;
+}
+.table-wrap .top-wrap .hr {
+    margin-top: 1rem;
+    width: 100%;
+}
+.table-wrap .top-title {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+}
+.table-wrap .required:after {
+    content: " *";
+    color: #dc000c;
+}
 .table-wrap [class$=-list] {
     display: table;
     table-layout: fixed;
@@ -1840,27 +1906,28 @@ table
     margin-left: 8px;
     padding-left: 8px;
 }
-.table-wrap [class$=-edit] {
+.table-wrap > [class*=-edit] {
     width: 100%;
     text-align: left;
 }
-.table-wrap [class$=-edit] .tr {
+.table-wrap > [class*=-edit] .tr {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.table-wrap [class$=-edit] .tr .th {
+.table-wrap > [class*=-edit] .tr .th {
     font-weight: 500;
     padding: 1.5rem 0;
+    flex: 0 0 8rem;
 }
-.table-wrap [class$=-edit] .tr .td {
+.table-wrap > [class*=-edit] .tr .td {
     flex: 1 1 auto;
     padding: 1.5rem 0;
 }
-.table-wrap [class$=-edit] .tr .td.w600 {
+.table-wrap > [class*=-edit] .tr .td.w600 {
     display: block;
 }
-.table-wrap [class$=-edit] .tr .td .ellipsis {
+.table-wrap > [class*=-edit] .tr .td .ellipsis {
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -1869,7 +1936,62 @@ table
     margin: 0 auto;
     padding: 0 5px;
 }
-.table-wrap [class$=-edit] .tr p {
+.table-wrap > [class*=-edit] .tr p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    /* 14px */
+    /* 12px */
+}
+.table-wrap > [class*=-edit].type2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.table-wrap > [class*=-edit].type2 .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 100%;
+}
+.table-wrap > [class*=-edit].type2 .tr .th {
+    flex: 0 0 11rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+.table-wrap > [class*=-edit].type2 .tr .th ~ .th {
+    margin-left: 3rem;
+}
+.table-wrap > [class*=-edit].type2 .tr .td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: start;
+    flex: 1 1 33.3%;
+}
+.table-wrap > [class*=-edit].type2 .tr .td [class^=btn] {
+    margin-left: 10px;
+}
+.table-wrap > [class*=-edit].type2 .tr .td .ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.table-wrap > [class*=-edit].type2 .tr p {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
@@ -1945,28 +2067,29 @@ table
     margin-left: 8px;
     padding-left: 8px;
 }
-.table-wrap [class$=-detail] {
+.table-wrap > [class*=-detail] {
     width: 100%;
     text-align: left;
 }
-.table-wrap [class$=-detail] .tr {
+.table-wrap > [class*=-detail] .tr {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e6e6e6;
 }
-.table-wrap [class$=-detail] .tr .th {
+.table-wrap > [class*=-detail] .tr .th {
+    width: 9rem;
     font-weight: 500;
     padding: 1.5rem 0;
 }
-.table-wrap [class$=-detail] .tr .td {
+.table-wrap > [class*=-detail] .tr .td {
     flex: 1 1 auto;
     padding: 1.5rem 0;
 }
-.table-wrap [class$=-detail] .tr .td.w600 {
+.table-wrap > [class*=-detail] .tr .td.w600 {
     display: block;
 }
-.table-wrap [class$=-detail] .tr .td .ellipsis {
+.table-wrap > [class*=-detail] .tr .td .ellipsis {
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -1975,17 +2098,17 @@ table
     margin: 0 auto;
     padding: 0 5px;
 }
-.table-wrap [class$=-detail] .tr .td .video-play {
+.table-wrap > [class*=-detail] .tr .td .video-play {
     margin-top: 2rem;
     width: 100%;
     height: 67.5rem;
     overflow: hidden;
 }
-.table-wrap [class$=-detail] .tr .td .video-play img {
+.table-wrap > [class*=-detail] .tr .td .video-play img {
     width: 100%;
     height: 100%;
 }
-.table-wrap [class$=-detail] .tr p {
+.table-wrap > [class*=-detail] .tr p {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
@@ -2000,6 +2123,48 @@ table
     letter-spacing: -0.15px;
     /* 14px */
     /* 12px */
+}
+.table-wrap > [class*=-detail].type2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.table-wrap > [class*=-detail].type2 .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 100%;
+}
+.table-wrap > [class*=-detail].type2 .tr .th {
+    flex: 0 0 13rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+.table-wrap > [class*=-detail].type2 .tr .th ~ .th {
+    margin-left: 3rem;
+}
+.table-wrap > [class*=-detail].type2 .tr .th .tit {
+    font-weight: 500;
+    color: #666;
+}
+.table-wrap > [class*=-detail].type2 .tr .td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: start;
+    flex: 1 1 33.3%;
+}
+.table-wrap > [class*=-detail].type2 .tr .td [class^=btn] {
+    margin-left: 10px;
+}
+.table-wrap > [class*=-detail].type2 .tr .td .ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 5px;
 }
 .table-wrap .video-list-wrap {
     border-top: 2px solid #000;

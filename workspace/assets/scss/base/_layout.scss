@@ -19,6 +19,7 @@ body {
 }
 
 .wrap {
+    overflow: hidden;
     position: relative;
     min-width: 108rem;
     @include fs ($fs24);
