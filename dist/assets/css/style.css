@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* base */
 /*
-font-size
+font
 */
 /* 50px */
 /* 40px */
@@ -28,7 +28,9 @@ responsive
 /*
 transition
 */
-/* clearfix */
+/*
+clearfix
+*/
 /* 예) @include clearfix; */
 /*
 blind
@@ -368,7 +370,9 @@ body {
 main {
     /* 공통 */
 }
-/* skip */
+/*
+skip
+*/
 .skip {
     position: absolute;
     left: 0;
@@ -406,7 +410,9 @@ main {
     background-color: #ccc;
 }
 
-/* dim */
+/*
+dim
+*/
 .dim {
     position: fixed;
     display: none;

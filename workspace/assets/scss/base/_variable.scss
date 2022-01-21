@@ -13,6 +13,12 @@ $path-img-ico: $path-img + 'ico/';
 $path-img-btn: $path-img + 'btn/';
 
 
+// Breakpoints
+$breakpoint-mobile: 1024px;
+// $breakpoint-tablet: 758px;
+// $breakpoint-desktop: 1024px;
+
+
 // $img-notice-up: 'ico_notice.svg';
 // $img-arrow-up: 'ico_arrow_up.svg';
 // $img-arrow-down: 'ico_arrow_down.svg';
@@ -20,22 +26,39 @@ $path-img-btn: $path-img + 'btn/';
 // $img-arrow-circle: 'ico_arrow_circle.svg';
 // $img-arrow-question: 'ico_question.svg';
 // $img-arrow-purple: 'ico_arrow_purple.svg';
-
 // $img-rating-edit: 'ioc_rating_edit.svg';
+
+// $ico_category1: 'ico_category1.svg';
+// $ico_category2: 'ico_category2.svg';
+// $ico_category3: 'ico_category3.svg';
+// $ico_category4: 'ico_category4.svg';
+// $ico_category5: 'ico_category5.svg';
+// $ico_category6: 'ico_category6.svg';
+// $ico_category7: 'ico_category7.svg';
+// $ico_category8: 'ico_category8.svg';
+// $ico_category9: 'ico_category9.svg';
+// $ico_category10: 'ico_category10.svg';
+
+// $ico_category1_on: 'ico_category1_on.svg';
+// $ico_category2_on: 'ico_category2_on.svg';
+// $ico_category3_on: 'ico_category3_on.svg';
+// $ico_category4_on: 'ico_category4_on.svg';
+// $ico_category5_on: 'ico_category5_on.svg';
+// $ico_category6_on: 'ico_category6_on.svg';
+// $ico_category7_on: 'ico_category7_on.svg';
+// $ico_category8_on: 'ico_category8_on.svg';
+// $ico_category9_on: 'ico_category9_on.svg';
+// $ico_category10_on: 'ico_category10_on.svg';
+
+
+/*
+font
+*/
 
 $fw-b: 700;
 $fw-m: 500;
 $fw-r: 400;
 
-// Breakpoints
-$breakpoint-mobile: 1024px;
-// $breakpoint-tablet: 758px;
-// $breakpoint-desktop: 1024px;
-
-
-/*
-font-size
-*/
 
 /* 50px */
 $fs50: 5rem;
@@ -116,27 +139,4 @@ $bg-666: #666;
 $bg-f6f6f6: #f6f6f6;
 $bg-e6e6e6: #e6e6e6;
 $bg-ccc: #ccc;
-
-
-// $ico_category1: 'ico_category1.svg';
-// $ico_category2: 'ico_category2.svg';
-// $ico_category3: 'ico_category3.svg';
-// $ico_category4: 'ico_category4.svg';
-// $ico_category5: 'ico_category5.svg';
-// $ico_category6: 'ico_category6.svg';
-// $ico_category7: 'ico_category7.svg';
-// $ico_category8: 'ico_category8.svg';
-// $ico_category9: 'ico_category9.svg';
-// $ico_category10: 'ico_category10.svg';
-
-// $ico_category1_on: 'ico_category1_on.svg';
-// $ico_category2_on: 'ico_category2_on.svg';
-// $ico_category3_on: 'ico_category3_on.svg';
-// $ico_category4_on: 'ico_category4_on.svg';
-// $ico_category5_on: 'ico_category5_on.svg';
-// $ico_category6_on: 'ico_category6_on.svg';
-// $ico_category7_on: 'ico_category7_on.svg';
-// $ico_category8_on: 'ico_category8_on.svg';
-// $ico_category9_on: 'ico_category9_on.svg';
-// $ico_category10_on: 'ico_category10_on.svg';
 
