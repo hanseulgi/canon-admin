@@ -1,0 +1,47 @@
+@@include('./include/head.html', {"title": "sub", cssArr: ['style']})
+
+<body>
+    <div class="wrap">
+
+        <section id="container">
+            <section class="contents log">
+
+                <!-- 비밀번호 변경 -->
+                <div class="log-wrap">
+                    <div class="inner">
+                        <h1 class="logo">
+                            <a href="#">
+                                <span class="blind">CANON</span>
+                            </a>
+                        </h1>
+                        <div class="flex pwc">
+                            <div class="box-gray">
+                                <p class="title">비밀번호 변경</p>
+                                <div class="input-wrap">
+                                    <input type="password" id="userPw" class="lg" placeholder="기존 비밀번호를 입력해 주십시오.">
+                                    <input type="password" id="userNewPw" class="lg" placeholder="신규 비밀번호를 입력해 주십시오.">
+                                    <input type="email" id="userEmail" class="lg" placeholder="신규 비밀번호를 재입력하여 주십시오.">
+                                    <div class="row-btns">
+                                        <span class="col">
+                                            <a href="#" class="btn-gray-lg">취소</a>
+                                        </span>
+                                        <span class="col">
+                                            <a href="#" class="btn-red-lg">확인</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 비밀번호 변경 -->
+
+            </section>
+        </section>
+        @@include('./include/footer.html')
+        @@include('./include/script.html')
+
+
+    </div>
+</body>
+</html>

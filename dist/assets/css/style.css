@@ -1556,6 +1556,7 @@ button
     font-size: 14px;
 }
 [class^=btn-][class*=lg] {
+    min-width: 205px;
     height: 60px;
     line-height: 58px;
     padding: 0 55px;
@@ -2759,7 +2760,7 @@ LOGIN
     margin: 6rem auto 0;
     padding: 3rem;
 }
-.log .inner .box-gray p {
+.log .inner .box-gray .b-item {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */
@@ -2776,17 +2777,47 @@ LOGIN
     /* 12px */
     color: #666;
 }
-.log .inner .box-gray p + p {
+.log .inner .box-gray .b-item + .b-item {
     margin-top: 1rem;
+}
+.log .inner .title {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    font-weight: 500;
+    color: initial;
 }
 .log .inner .flex {
     width: 108rem;
     margin: 0 auto;
+    align-items: start;
+}
+.log .inner .flex.pwc {
+    margin-bottom: 5rem;
+    justify-content: center;
 }
 .log .inner .flex .box-gray {
     width: 52rem;
+    height: 44rem;
     margin: 12rem 0 0;
     padding: 5rem;
+}
+.log .inner .flex .box-gray.id a {
+    margin-top: 9.5rem;
+}
+.log .inner .flex .box-gray a {
+    margin-top: 2.5rem;
 }
 .log .inner .login-wrap {
     margin: 5rem auto 0;

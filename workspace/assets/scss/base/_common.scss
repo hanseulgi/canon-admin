@@ -463,6 +463,7 @@ button
     }
 
     &[class*='lg'] {
+        min-width: 205px;
         height: 60px;
         line-height: 58px;
         padding: 0 55px;
