@@ -2118,6 +2118,22 @@ file
     border: 0;
     padding-left: 0;
 }
+.add-file.view .add-file-names .name {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+}
 .add-file.view .add-file-names .name:before {
     content: none;
 }

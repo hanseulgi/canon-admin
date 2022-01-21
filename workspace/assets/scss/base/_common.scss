@@ -969,6 +969,7 @@ file
             padding-left: 0;
 
             .name {
+                @include fs($fs14);
                 &:before {
                     content: none;
                 }
