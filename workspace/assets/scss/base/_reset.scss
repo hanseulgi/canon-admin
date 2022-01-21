@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 //---------------------------------------------------
 // reset : 초기화 스타일
 //---------------------------------------------------
@@ -159,6 +157,29 @@ input {
 
     &:focus { 
         border: 1px solid #111; 
+    }
+}
+
+input {
+    &[type=text][class*='lg'],
+    &[type=tel][class*='lg'],
+    &[type=time][class*='lg'],
+    &[type=text][class*='lg'],
+    &[type=password][class*='lg'],
+    &[type=search][class*='lg'],
+    &[type=email][class*='lg'],
+    &[type=file][class*='lg'],
+    &[type=url][class*='lg'],
+    &[type=number][class*='lg'],
+    &[type=date][class*='lg'] {
+        height: 6rem;
+        @include fs($fs16);
+        padding: 18px 20px;
+        color: $color-111;
+        background-color: $bg-fff;
+        border: 1px solid $color-ccc;
+        border-radius: 12px;
+        vertical-align:middle;
     }
 }
 

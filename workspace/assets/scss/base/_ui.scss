@@ -1,0 +1,40 @@
+//---------------------------------------------------
+// common : 스타일
+//---------------------------------------------------
+
+/** 
+LOGIN 
+*/
+
+/* 로그인 */
+.log-wrap {
+    border:1px solid red;
+
+    .logo {
+
+        a::after {
+            content: "";
+            display: inline-block;
+            @include wh(23rem, 8.7rem);
+            background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+            background-size: 100%;
+        }
+    }
+    .box-gray {
+        padding: 3rem;
+
+        p {
+            @include fs($fs14);
+            color: $color-666;
+
+            & + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+    .agree {
+        @include fs($fs14);
+    }
+}
+
+

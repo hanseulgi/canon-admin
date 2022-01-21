@@ -273,6 +273,30 @@ input:focus {
     border: 1px solid #111;
 }
 
+input[type=text][class*=lg], input[type=tel][class*=lg], input[type=time][class*=lg], input[type=text][class*=lg], input[type=password][class*=lg], input[type=search][class*=lg], input[type=email][class*=lg], input[type=file][class*=lg], input[type=url][class*=lg], input[type=number][class*=lg], input[type=date][class*=lg] {
+    height: 6rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    padding: 18px 20px;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    vertical-align: middle;
+}
+
 textarea {
     width: 100%;
     font-size: 1.6rem;
@@ -435,6 +459,21 @@ dim
 }
 .dim.on {
     display: block;
+}
+
+/*
+box
+*/
+[class^=box-] {
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+[class^=box-][class*=gray] {
+    background-color: #f6f6f6;
+}
+[class^=box-][class*=gray][class*=line] {
+    border-color: #f6f6f6;
+    background-color: #fff;
 }
 
 /* modal */
@@ -2666,6 +2705,61 @@ search box
 }
 [class^=modal].bottom .btn-box.sticky-bottom {
     border-top: none;
+}
+
+/** 
+LOGIN 
+*/
+/* 로그인 */
+.log-wrap {
+    border: 1px solid red;
+}
+.log-wrap .logo a::after {
+    content: "";
+    display: inline-block;
+    width: 23rem;
+    height: 8.7rem;
+    background: url("../img/common/logo.svg") no-repeat 0 0;
+    background-size: 100%;
+}
+.log-wrap .box-gray {
+    padding: 3rem;
+}
+.log-wrap .box-gray p {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    color: #666;
+}
+.log-wrap .box-gray p + p {
+    margin-top: 1rem;
+}
+.log-wrap .agree {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
 }
 
 /* library */
