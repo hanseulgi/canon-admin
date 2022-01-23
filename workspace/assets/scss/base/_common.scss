@@ -424,6 +424,7 @@ button
     border: 1px solid transparent;
     box-sizing: border-box;
     border-radius: 6px;
+    cursor: pointer;
 
     &[class*='white'][class*='line'] {
         color: #111;
@@ -636,7 +637,7 @@ table
 
 .table-wrap {
 
-    
+    .td > .td { padding: 0 0 !important; }
     
     .top-wrap {
         @include flex-flow;

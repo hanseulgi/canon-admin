@@ -156,6 +156,22 @@ input {
         vertical-align:middle;
     }
 
+    &[type=tel].disabled,
+    &[type=text].disabled,
+    &[type=password].disabled,
+    &[type=search].disabled,
+    &[type=email].disabled{
+        @include wh (100%, 4.5rem);
+        @include fs($fs14);
+        padding: 12px 20px;
+        color: $color-111;
+        background-color: $bg-f6f6f6;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        vertical-align:middle;
+    }
+
+
     &::-webkit-input-placeholder {
         color:#b5b5b5;
         font-size:1.6rem;
