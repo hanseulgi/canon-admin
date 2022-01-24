@@ -123,8 +123,6 @@ UI.dropDown = function () {
 };
 
 
-
-
 UI.search = function () {
 
     $('.loop').each(function(){

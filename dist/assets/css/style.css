@@ -295,8 +295,8 @@ input[type=tel].disabled, input[type=text].disabled, input[type=password].disabl
     vertical-align: middle;
 }
 input::-webkit-input-placeholder {
-    color: #b5b5b5;
-    font-size: 1.6rem;
+    color: #898989;
+    font-size: 1.4rem;
     line-height: 100%;
 }
 input:focus {
@@ -2125,6 +2125,7 @@ table
     width: 9rem;
     font-weight: 500;
     padding: 1.5rem 0;
+    word-break: keep-all;
 }
 .table-wrap > [class*=-detail] .tr .td {
     flex: 1 1 auto;
@@ -2843,7 +2844,7 @@ search box
     box-sizing: border-box;
     background-color: #dc000c;
 }
-.modal .modal-wrap .modal-header h2 {
+.modal .modal-wrap .modal-header .modal-title {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
     /* 40px */

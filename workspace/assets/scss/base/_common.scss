@@ -917,6 +917,7 @@ table
                 width: 9rem;
                 font-weight: $fw-m;
                 padding: 1.5rem 0;
+                word-break: keep-all;
 
                 p {
                     // color: $color-666;
@@ -978,6 +979,7 @@ table
                     flex: 0 0 13rem;
                     font-weight: $fw-m;
                     padding: 1.5rem 0;
+                    
 
                     & ~ .th {
                         margin-left: 3rem;
@@ -1514,7 +1516,7 @@ search box
             box-sizing: border-box;
             background-color: $bg-red;
 
-            h2{
+            .modal-title{
                 @include fs($fs18);
                 color: $color-fff;
             }

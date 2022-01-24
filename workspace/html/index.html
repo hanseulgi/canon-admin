@@ -28,10 +28,13 @@
 
         .guide-wrap .component {padding:20px 15px;}
         .guide-wrap .component h2 {font-size:24px; font-weight:700;}
-        
+
         .guide-wrap .component-warp {padding-top: 50px;}
         .guide-wrap .component-warp h2 {font-size:2rem;margin-bottom:10px;padding-bottom:5px; font-weight: 500; border-bottom:1px solid #666;}
+
+        .guide-wrap .component-warp h2 {font-size:2rem;margin-bottom:10px;padding-bottom:5px; font-weight: 500; border-bottom:1px solid #666;}
         .guide-wrap .component-warp .sub-tit {font-size: 1.8rem; margin-bottom: 5px;}
+        .guide-wrap .component-warp h4.sub-tit {padding:20px 0 15px; font-size: 1.5rem; margin-bottom: 5px;}
         .guide-wrap .component-warp .btn-more {padding:3px 6px;font-size:12px;color:#fff;background-color:#df121a;}
         .guide-wrap .component-warp .code {display:none; margin-top:10px;}
         /* .guide-wrap .component-warp xmp{display:block;margin:20px 0;font-family:tahoma;font-weight:400;font-size:11px;line-height:15px;color:#555;background:#f1f0f0;} */
@@ -101,7 +104,7 @@
         .state.del:before {content: "취소"; color: #999;}
         .state.ing:before {content: "진행중"; color: blue;}
         .state.ing2:before {content: "추가"; color:#9622d2;}
-        
+
         .color-infor li {margin-bottom:15px;}
         .color-infor .color-box {padding:20px;}
 
@@ -136,7 +139,7 @@
             .ui-list {overflow:hidden;margin-top:30px;}
             .ui-list li {float: left;}
             .ui-list li a {font-size:1.4rem;}
-            
+
             .pub-list .colum .tbl-area {border-top:1px solid #333;}
             .pub-list .colum .tbl-area .thead {display: table;width:100%;}
             .pub-list .colum .tbl-area .thead .th {display: table-cell;width:12%;padding:12px 20px;font-size:1.2rem;text-align:center;background-color: rgba(223,18,26,.1);}
@@ -171,7 +174,7 @@
             .pub-list .colum .tbl-area .sub-path li:last-child::after {display: none;}
             .pub-list .colum .tbl-area .tr.title {display: none;}
             .pub-list .colum .tbl-area .tbody .td.desc .desc-list .close {display: none;}
-            
+
             .font-infor {overflow:hidden;margin-bottom:50px;}
             .font-infor dt {float:left;width:30%;font-size:2.5rem;}
             .font-infor dd {float:left;width:70%;}
@@ -271,7 +274,6 @@
             font-size:12px;
             text-align:center;
             background-color: #df121a;
-          
             box-sizing:content-box;
             -webkit-box-sizing:content-box;
         }
@@ -310,10 +312,10 @@
         }
         .table-striped tbody tr:nth-child(odd)>td,
         .table-striped tbody tr:nth-child(odd)>th {
-           
+
         }
         .table-striped tbody tr.bg-red td {
-           
+
         }
 
 
@@ -343,8 +345,8 @@
         </header>
         <section class="container">
             <div id="content" class="content">
-                <!-- 
-                    .colum에 .close 추가 시 닫힘 상태 
+                <!--
+                    .colum에 .close 추가 시 닫힘 상태
                 -->
                 <!-- front -->
                 <div id="path1" class="component path-wrap on">
@@ -4294,9 +4296,10 @@
                             <!-- <li><a href="#icon-wrap"><span>Icon</span></a></li> -->
                             <li><a href="#button-wrap"><span>Button</span></a></li>
                             <li><a href="#form-wrap"><span>Form</span></a></li>
+                            <li><a href="#modal-wrap"><span>Modal</span></a></li>
                         </ul>
                     </div>
-                
+
                     <div clsas="guide-content">
                         <!-- 폰트 -->
                         <div id="font-wrap" class="component-warp font">
@@ -4379,7 +4382,7 @@
                                 </dd>
                             </dl>
                         </div>
-                
+
                         <!-- Color -->
                         <div id="color-wrap" class="component-warp">
                             <h2>Color</h2>
@@ -4416,7 +4419,7 @@
                                 </div>
                             </div>
                         </div>
-                
+
                         <!-- Icon -->
                         <!-- <div id="icon-wrap" class="component-warp">
                             <h2>Icon</h2>
@@ -4476,7 +4479,7 @@
                             </div>
                             
                         </div> -->
-                
+
                         <!-- Button -->
                         <div id="button-wrap" class="component-warp">
                             <h2>Button</h2>
@@ -4537,8 +4540,29 @@
                             <h2>Form</h2>
                 
                             <h3 class="sub-tit">Input</h3>
+                            <h4 class="sub-tit">default</h4>
+                            <input type="text" placeholder="아이디를 입력해 주세요.">
+                            <input type="password" placeholder="비밀번호를 입력해 주세요.">
+                            <h4 class="sub-tit">disabled</h4>
+                            <input type="password" class="disabled" placeholder="비밀번호를 입력해 주세요." disabled>
+                            <h4 class="sub-tit">large</h4>
+                            <input type="text" class="lg" placeholder="아이디를 입력해 주세요.">
+                            <input type="password" class="lg" placeholder="비밀번호를 입력해 주세요.">
+                            <h4 class="sub-tit">select</h4>
+                            <select class="select">
+                                <option>-선택-</option>
+                                <option>ENG</option>
+                                <option>CHN</option>
+                            </select>
+                            <h4 class="sub-tit">datepicker</h4>
                             <div style="margin-top:15px;margin-bottom:30px;">
-                              
+                                <label class="td" for="picker">
+                                    <input type="text" id="picker" class="disabled datepicker" value="2022-01-02">
+                                    <div class="btn-red-sm line">날짜선택</div>
+                                </label>
+                            </div>
+                            <div class="guide-code mb30">
+                                
                             </div>
                             <div class="guide-code mb30">
                                 
@@ -4609,34 +4633,7 @@
                                 
                             </div>
                             
-                            <h3 class="sub-tit">dat</h3>
-                            <div style="margin-top:15px;margin-bottom:30px;">
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <i></i>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" checked="">
-                                    <i></i>
-                                </label>
-                                <label class="checkbox disabled">
-                                    <input type="checkbox" disabled="">
-                                    <i></i>
-                                </label>
-                                <label class="checkbox disabled">
-                                    <input type="checkbox" checked="" disabled="">
-                                    <i></i>
-                                </label>
-                                <br><br>
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <i></i>
-                                    체크박스명
-                                </label>
-                            </div>
-                            <div class="guide-code mb30">
-                                
-                            </div>
+                            
 
                             <!-- <h3 class="sub-tit">Radio Box button type</h3>
                             <div style="margin-top:15px;margin-bottom:30px;">
@@ -4657,6 +4654,45 @@
                             <!-- <div id="datepicker">
                                 <input type="text" value="2021.04.03" title="시작날짜" class="datepicker">
                             </div> -->
+                            
+                        </div>
+
+                        <!-- Form -->
+                        <div id="modal-wrap" class="component-warp">
+                            <h2>Modal</h2>
+                            <h3 class="sub-tit">Alert Type</h3>
+
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <a href="javascript:open('#modaltest');" class="btn-red-sm">팝업오픈</a>
+
+                                <div class="modal" id="modaltest">
+                                    <div class="modal-wrap" type="alert">
+                                        <div class="modal-header">
+                                            <h2 class="modal-title">레이어팝업</h2>
+                                            <a href="javascript:void(0);" class="modal-close"></a>
+                                        </div>
+                                        <div class="modal-content">
+                                            내용이 들어갑니다.
+                                            <div class="btns">
+                                                <a href="javascript:close('#modaltest');">확인</a>
+                                                <a href="javascript:close('#modaltest');">취소</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <style>
+                                .modal-title {
+                                    padding-bottom: 0 !important;
+                                    border: 0 !important;
+                                    margin-bottom: 0 !important;
+                                }
+                            </style>
+                            <div class="guide-code mb30">
+                                
+                            </div>
+
                             
                         </div>
                 
@@ -4754,24 +4790,24 @@
                                 <col style="width:30%">
                                 </colgroup>
                                 <thead>
-                                  <tr>
+                                    <tr>
                                     <!--<th>구분<img src="img/bu/bu-arrow-btm1.gif" alt=""></th>-->
-                                    <th>name</th>
-                                    <th>Responsibilities</th>
-                                    <th>Mail</th>
-                                    <th></th>
-                                    <!-- <th><img src="img/bu/bu-arrow-btm1.gif" alt=""></th> -->
-                                  </tr>
+                                        <th>name</th>
+                                        <th>Responsibilities</th>
+                                        <th>Mail</th>
+                                        <th></th>
+                                        <!-- <th><img src="img/bu/bu-arrow-btm1.gif" alt=""></th> -->
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <!-- <td>123456</td> -->
-                                    <td><span class="name">한슬기</span></td>
-                                    <td class="">PL / Markup / Script / CSS</td>
-                                    <td class=""><span class="mail">sghan@frameout.co.kr</span></td>
-                                    <td></td>
-                                    <!-- <td class="al"><span class="imp"></span></td> -->
-                                  </tr>
+                                    <tr>
+                                        <!-- <td>123456</td> -->
+                                        <td><span class="name">한슬기</span></td>
+                                        <td class="">PL / Markup / Script / CSS</td>
+                                        <td class=""><span class="mail">sghan@frameout.co.kr</span></td>
+                                        <td></td>
+                                        <!-- <td class="al"><span class="imp"></span></td> -->
+                                    </tr>
                                 </tbody>
                             </table>
                             <h2 style="margin-top:30px">파일 디렉토리 구조</h2>
@@ -4783,38 +4819,37 @@
                                 </colgroup>
                                 <tbody>
                                 <tr>
-                                  <th class="high-step" rowspan="26"><span class="folder"></span>canon</th>
-                                  <th><span class="folder"></span>css</th>
-                                  <td>
-                                      <strong>스타일시트 파일 디렉토리</strong> <br>
-                                        <!-- └  base.css ( import ) <br>
-                                        └  common.css ( 공통 요소 ) <br>
-                                        └  font.css ( 폰트 ) <br>
-                                        └  layout.css ( header / footer 등 공통 레이아웃 ) <br>
-                                        └  reset.css ( 스타일 초기화 ) <br>
-                                        └  ui.css ( 컨텐츠 ) <br> -->
-                                </td>
+                                    <th class="high-step" rowspan="26"><span class="folder"></span>canon</th>
+                                    <th><span class="folder"></span>css</th>
+                                    <td>
+                                        <strong>스타일시트 파일 디렉토리</strong> <br>
+                                            <!-- └  base.css ( import ) <br>
+                                            └  common.css ( 공통 요소 ) <br>
+                                            └  font.css ( 폰트 ) <br>
+                                            └  layout.css ( header / footer 등 공통 레이아웃 ) <br>
+                                            └  reset.css ( 스타일 초기화 ) <br>
+                                            └  ui.css ( 컨텐츠 ) <br> -->
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th><span class="folder"></span>fonts</th>
                                     <td><strong>font 파일 디렉토리</strong></td>
-                                  </tr>
-                                <tr>
-                                  <th><span class="folder"></span>html</th>
-                                  <td><strong>Html 파일 디렉토리</strong></td>
                                 </tr>
                                 <tr>
-                                  <th><span class="folder"></span>img</th>
-                                  <td><strong>이미지 리소스 디렉토리</strong></td>
+                                    <th><span class="folder"></span>html</th>
+                                    <td><strong>Html 파일 디렉토리</strong></td>
                                 </tr>
                                 <tr>
-                                  <th><span class="folder"></span>js</th>
-                                  <td><strong>자바스크립트 디렉토리</strong></td>
+                                    <th><span class="folder"></span>img</th>
+                                    <td><strong>이미지 리소스 디렉토리</strong></td>
+                                </tr>
+                                <tr>
+                                    <th><span class="folder"></span>js</th>
+                                    <td><strong>자바스크립트 디렉토리</strong></td>
                                 </tr>
                                 </tbody>
                             </table>
 
-                            
                         </div>
                     </div>
                 </div>
@@ -4823,9 +4858,11 @@
         </section>
     </div>
 
-    <script src='../assets/js/vendor/jquery-3.6.0.min.js'></script>
-    <script src='../assets/js/ui.js'></script>
-    
+
+    <script type="text/javascript" src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../assets/js/vendor/library.js"></script>
+    <script type="text/javascript" src="../assets/js/ui.js"></script>
+
     <script>
         var $device = $(window);
         var $guideWrap = $(".guide-wrap");
@@ -4853,7 +4890,7 @@
                 $guideWrap.removeClass("navi-opened");
             }
         };
-        
+
         $naviBtn.off('click').on('click', function(e){
             var _this = $(this);
             if( _this.closest('.guide-wrap').hasClass('navi-opened') ) _this.closest('.guide-wrap').removeClass('navi-opened');
@@ -4893,7 +4930,7 @@
         var $closeBtn = $descWrap.find('.close');
         var $colum = $pathWrap.find('.colum');
         var $accordionBtn = $colum.find('h3 > a');
-        
+
         if( isMobile() ){
             $descBtn.off('click').on('click' , function(){
                 var _this = $(this);
@@ -4932,8 +4969,8 @@
 
         // $('.guide-code').hide();
         $('.btn-more').click(function(){
-		    $(this).next('.guide-code').find('.code').stop().slideToggle(200);
-	    });
+            $(this).next('.guide-code').find('.code').stop().slideToggle(200);
+        });
 
 
         /* 값 구하기 */
@@ -4953,7 +4990,7 @@
         //     let $target = $(this).attr('href');
         //     let	$position = $($target).offset().top;
         //     $("html, body").animate({scrollTop: $position}, '500');
-  
+
         // });
 
     </script>
