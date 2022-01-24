@@ -76,26 +76,6 @@ function include(done) {
     done();
 }
 
-/* function style(done) {
-    console.log('style excute');
-    const options = {
-        outputStyle: 'expanded', //nested, expanded, compact, compressed
-        indentType: 'space', //space , tab 
-        indentWidth: 4, //outputStyle 이 nested, expanded 인 경우에 사용
-        precision: 8, //컴파일 된 CSS 의 소수점 자리수 : default 5
-        sourceComments: true //컴파일 된 CSS 에 원본소스의 위치와 줄수 주석표시
-    };
-    return src(PATH.ASSETS.STYLE + '/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass(options).on('error', sass.logError))
-        .pipe(sourcemaps.write('./map'))
-        .pipe(dest(DEST_PATH.ASSETS.STYLE))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
-    done();
-} */
-
 function style(done) {
     console.log('style excute');
     const options = {
