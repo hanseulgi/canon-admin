@@ -823,7 +823,7 @@ table
                 .td {
                     @include flex-flow;
                     justify-content: start;
-                    flex: 1 1 33.3%;
+                    flex: 1 1 50%;
                     padding: .5rem 0;
                         [class^='btn'] {
                             margin-left: 10px;
@@ -1067,6 +1067,8 @@ file
 */
 
 .input-file {
+    width: 100%;
+    
     .file-label {
         display: inline-block;
         min-width: auto;

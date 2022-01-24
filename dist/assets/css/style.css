@@ -2017,7 +2017,7 @@ table
     justify-content: space-between;
     align-items: center;
     justify-content: start;
-    flex: 1 1 33.3%;
+    flex: 1 1 50%;
     padding: 0.5rem 0;
 }
 .table-wrap > [class*=-edit].type2 .tr .td [class^=btn] {
@@ -2298,6 +2298,9 @@ table
 input
 file
 */
+.input-file {
+    width: 100%;
+}
 .input-file .file-label {
     display: inline-block;
     min-width: auto;
