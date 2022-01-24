@@ -425,6 +425,12 @@ body {
 main {
     /* 공통 */
 }
+@media (max-width: 1024px) {
+    /* container */
+    #container .contents {
+        width: 100%;
+    }
+}
 /*
 skip
 */
@@ -2294,6 +2300,81 @@ table
     color: #666;
 }
 
+/* 0부터 1024 까지 스타일 */
+@media (max-width: 1024px) {
+    .table-wrap {
+        /* 리스트 table */
+    }
+    .table-wrap [class$=-list] {
+        width: 100%;
+        text-align: center;
+        border-top: 2px solid #000;
+    }
+    .table-wrap [class$=-list] .tr:first-child {
+        display: none;
+    }
+    .table-wrap [class$=-list] .tr {
+        position: relative;
+        height: 8rem;
+    }
+    .table-wrap [class$=-list] .tr .hidden {
+        display: none !important;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-] {
+        position: absolute;
+        top: 3rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-top] {
+        left: 0;
+        top: 0;
+        width: 90%;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom1] {
+        left: 0;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom2] {
+        left: 10rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
+        left: 20rem;
+    }
+    .table-wrap [class$=-list] .tr .th {
+        font-weight: 500;
+        padding: 1.5rem 1.5rem;
+        background-color: #f6f6f6;
+    }
+    .table-wrap [class$=-list] .tr .th p {
+        color: #666;
+    }
+    .table-wrap [class$=-list] .tr .td {
+        padding: 1.5rem 1.5rem;
+    }
+    .table-wrap [class$=-list] .tr .td .ellipsis {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: auto;
+        margin: 0 auto;
+        padding: 0 0;
+    }
+    .table-wrap [class$=-list] .tr p {
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        /* 14px */
+        /* 12px */
+    }
+}
 /*
 input
 file
@@ -2652,17 +2733,17 @@ paging
     color: #dc000c;
 }
 .paging .first {
-    background: url("../img/common/ico_arrow_doble.svg") no-repeat center top;
+    background: url("../img/common/ico_arrow_doble.svg") no-repeat center;
 }
 .paging .prev {
-    background: url("../img/common/ico_arrow_doble2.svg") no-repeat center top;
+    background: url("../img/common/ico_arrow_single.svg") no-repeat center;
 }
 .paging .last {
-    background: url("../img/common/ico_arrow_doble.svg") no-repeat center top;
+    background: url("../img/common/ico_arrow_doble.svg") no-repeat center;
     transform: rotate(180deg);
 }
 .paging .next {
-    background: url("../img/common/ico_arrow_doble2.svg") no-repeat center top;
+    background: url("../img/common/ico_arrow_single.svg") no-repeat center;
     transform: rotate(180deg);
 }
 .paging .first.disabled,

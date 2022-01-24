@@ -50,7 +50,16 @@ main {
 
 
 
+@include mobile {
+    /* container */
+    #container {
+        .contents {
+            width: 100%;
+        }
+    }
 
+
+}
 
 
 

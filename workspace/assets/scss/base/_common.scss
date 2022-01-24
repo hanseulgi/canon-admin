@@ -1061,6 +1061,71 @@ table
     }
 }
 
+/* 0부터 1024 까지 스타일 */
+@include mobile {
+    .table-wrap {
+        /* 리스트 table */
+        [class$='-list'] {
+            width: 100%;
+            text-align: center;
+            border-top: 2px solid $color-000;
+
+            .tr:first-child {
+                display: none;
+            }
+
+            .tr {
+                position: relative;
+                height: 8rem;
+
+                .hidden { 
+                    display: none !important;
+                }
+
+                & [class*='show-'] {
+                    position: absolute; top:3rem;
+
+                    &[class*='-top'] { left: 0; top:0; width:90%; }
+                    &[class*='-bottom1'] { left:0; }
+                    &[class*='-bottom2'] { left:10rem; }
+                    &[class*='-bottom3'] { left:20rem; }
+                }
+
+                .th {
+                    font-weight: $fw-m;
+                    padding: 1.5rem 1.5rem;
+                    background-color: $bg-f6f6f6;
+
+                    p {
+                        color: $color-666;
+                    }
+                }
+
+                .td {
+                    padding: 1.5rem 1.5rem;
+
+
+                    & {
+                        .ellipsis {
+                            @include ellipsis(1);
+                            width:auto;
+                            margin: 0 auto;
+                            padding: 0 0;
+                        }
+                    }
+
+                }
+
+                p {
+                    @include fs($fs15);
+
+                }
+
+            }
+        }
+    }
+}
+
 /*
 input
 file
@@ -1068,7 +1133,7 @@ file
 
 .input-file {
     width: 100%;
-    
+
     .file-label {
         display: inline-block;
         min-width: auto;
@@ -1333,20 +1398,20 @@ paging
     }
 
     .first {
-        background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center top;
+        background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center;
     }
 
     .prev {
-        background: url($path-img-common + 'ico_arrow_doble2.svg') no-repeat center top;
+        background: url($path-img-common + 'ico_arrow_single.svg') no-repeat center;
     }
 
     .last {
-        background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center top;
+        background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center;
         transform: rotate(180deg);
     }
 
     .next {
-        background: url($path-img-common + 'ico_arrow_doble2.svg') no-repeat center top;
+        background: url($path-img-common + 'ico_arrow_single.svg') no-repeat center;
         transform: rotate(180deg);
     }
 
