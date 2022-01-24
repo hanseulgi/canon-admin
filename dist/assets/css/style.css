@@ -2010,7 +2010,7 @@ table
     padding: 0.5rem 0;
 }
 .table-wrap > [class*=-edit].type2 .tr .th ~ .th {
-    margin-left: 5rem;
+    margin-left: 14rem;
 }
 .table-wrap > [class*=-edit].type2 .tr .td {
     display: flex;
