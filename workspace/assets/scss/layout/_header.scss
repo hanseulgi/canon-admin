@@ -1,7 +1,7 @@
 #header {
 
     position: relative;
-    z-index: 100;
+    z-index: -1;
     @include wh(100%, 11rem);
     background-color: #fff;
 

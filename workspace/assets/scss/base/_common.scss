@@ -48,17 +48,8 @@ dim
     bottom: 0;
     height: 100%;
     overflow: hidden;
-
-    &>.inner {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, .6);
-        overflow: hidden;
-        z-index: 100;
-    }
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 101;
 
     &.on {
         display: block;
@@ -534,7 +525,7 @@ radio
     position: relative;
     display: inline-block;
     height: 2rem;
-    font-size: 1.4rem;
+    @include fs($fs14);
 
     input[type='radio'] {
         display: inline-block;
@@ -583,51 +574,48 @@ checkbox
 .checkbox {
     position: relative;
     display: inline-block;
-    height: 20px;
-    font-size: 1.4rem;
-}
+    height: 2rem;
+    @include fs($fs14);
 
-.checkbox i {
-    position: absolute;
-    left: 6px;
-    top: 7px;
-    display: inline-block;
-    width: 8px;
-    height: 6px;
-    background: url($path-img-ico + 'ico_checked.svg') no-repeat center center;
-}
+    i {
+        @include position (0,0);
+        display: inline-block;
+        @include wh(2.4rem, 2.4rem);
+        background: url($path-img-ico + 'ico_check.svg') no-repeat center center;
+    }
 
-.checkbox input[type='checkbox'] {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    vertical-align: top;
-    border: 1px solid #e1e1e1;
-    border-radius: 50%;
-    cursor: pointer;
-    -webkit-appearance: none;
-}
+    input[type='checkbox'] {
+        display: inline-block;
+        @include wh(2.4rem, 2.4rem);
+        margin-right: 5px;
+        vertical-align: top;
+        border: 1px solid #e1e1e1;
+        border-radius: 6px;
+        cursor: pointer;
+        -webkit-appearance: none;
 
-.checkbox input[type='checkbox']:checked {
-    background-color: #dc000c;
-    border-color: #dc000c;
-}
+        &:checked {
+            background-color: #dc000c;
+            border-color: #dc000c;
 
-.checkbox input[type='checkbox']:checked+i {}
+            &+i {}
 
-.checkbox input[type='checkbox']:disabled {
-    background-color: #eee;
-    border: 1px solid #e1e1e1;
-}
+        }
 
-.checkbox input[type='checkbox']:disabled+i {
-    display: none;
-}
+        &:disabled {
+            background-color: #eee;
+            border: 1px solid #e1e1e1;
 
-.checkbox input[type='checkbox']:disabled:checked+i {
-    display: inline-block;
-    background-position: -105px -95px;
+            &:checked+i {
+                display: inline-block;
+                background-position: -105px -95px;
+            }
+
+            &+i {
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -823,12 +811,12 @@ table
                 flex: 1 1 100%;
 
                 .th {
-                    flex: 0 0 11rem;
+                    flex: 0 0 13rem;
                     font-weight: $fw-m;
-                    padding: 1.5rem 0;
+                    padding: .5rem 0;
 
                     & ~ .th {
-                        margin-left: 3rem;
+                        margin-left: 5rem;
                     }
                 }
 
@@ -836,9 +824,10 @@ table
                     @include flex-flow;
                     justify-content: start;
                     flex: 1 1 33.3%;
+                    padding: .5rem 0;
+                        [class^='btn'] {
+                            margin-left: 10px;
 
-                    [class^='btn'] {
-                        margin-left: 10px;
                     }
 
                     & {
@@ -848,6 +837,8 @@ table
                             margin: 0 auto;
                             padding: 0 5px;
                         }
+
+                        
                     }
 
                 }
@@ -858,6 +849,10 @@ table
                 p {
                     @include fs($fs15);
 
+                }
+
+                .radio-group {
+                    height: 4.5rem;
                 }
 
             }
@@ -1491,4 +1486,55 @@ search box
         }
     }
 }
+
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    @include wh(100%,100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index:11;
+
+    /* alert */
+    .modal-wrap{
+        @include position (50%,50%);
+        transform: translate(-50%,-50%);
+        @include fs($fs14);
+        background-color: $bg-fff;
+
+        &[type='alert'] {
+            width: 40rem;
+        }
+
+        .modal-header{
+            position:relative;
+            padding: 1rem;
+            box-sizing: border-box;
+            background-color: $bg-red;
+
+            h2{
+                @include fs($fs18);
+                color: $color-fff;
+            }
+
+            .modal-close{
+                @include position (1rem,1rem);
+            }
+        }
+
+        .modal-content{
+            box-sizing:border-box;
+            padding: 1rem;
+        }
+    }
+
+    .modal-close{
+        display: block;
+        @include wh(2rem,2rem);
+        background:url();
+    }
+}
+
 

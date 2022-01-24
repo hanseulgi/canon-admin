@@ -150,88 +150,32 @@
             <section class="contents">
 
 
-                <!-- sub top search box -->
-                <div class="search-box-wrap">
-                    <div class="inner">
-                        <div class="table-col result">
-                            <div class="th">처리결과</div>
-                            <div class="td">
-                                <div class="select-wrap w130">
-                                    <select class="select">
-                                        <option>전체</option>
-                                        <option>ENG</option>
-                                        <option>CHN</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-col">
-                            <div class="th">검색어</div>
-                            <div class="td add">
-                                <div class="loop">
-                                    <div class="select-wrap w130">
-                                        <select class="select">
-                                            <option>전체</option>
-                                            <option>ENG</option>
-                                            <option>CHN</option>
-                                        </select>
-                                    </div>
-                                    <div class="input-wrap w370 ml10">
-                                        <input type="text" class="input">
-                                    </div>
-                                    <button type="button" class="ico-search plus"><em class="blind">플러스 마이너스 아이콘</em> </button>
-                                </div>
-                            </div>
-                            <div class="td">
-                                <div class="row-btns al-r">
-                                    <span class="col"><button type="button" class="btn-gray-sm">초기화</button></span>
-                                    <span class="col"><button type="button" class="btn-red-sm">검색</button></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //sub top search box  -->
-                <!-- table : detail page -->
-                <div class="table-wrap">
-                    <div class="detail-title">
-                        <div class="detail-name ellipsis">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:15)</div>
-                        <ul>
-                            <li>
-                                <p class="tit">등록자</p>
-                                <p class="txt">홍길동</p>
-                            </li>
-                            <li>
-                                <p class="tit">부서</p>
-                                <p class="txt">C&C 지원담당</p>
-                            </li>
-                            <li>
-                                <p class="tit">등록일자</p>
-                                <p class="txt">2022.10.01</p>
-                            </li>
-                            <li>
-                                <p class="tit">대상모델</p>
-                                <p class="txt">IRC3226</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="table-detail">
-                        <div class="tr border-none">
-                            <div class="td pb0">
-                                <p class="detail-txt">
-                                    iR-ADV DX C38 & iRC32 동영상 교육 영상 입니다.<br>
-                                    많은 시청 바랍니다.
-                                </p>
-                                <div class="video-play" style="background-color: #eee;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //table : detail page -->
+                <!-- popup -->
+                <a href="javascript:open('#modaltest');" class="btn-red-sm">팝업오픈</a>
 
-                <div class="row-btns mt50">
-                    <span class="col"><button type="button" class="btn-red-sm line">목록</button></span>
+
+                <div class="modal" id="modaltest">
+                    <div class="modal-wrap" type="alert">
+                        <div class="modal-header">
+                            <h2>레이어팝업</h2>
+                            <a href="javascript:void(0);" class="modal-close"></a>
+                        </div>
+                        <div class="modal-content">
+                            내용이 들어갑니다.
+                            <div class="btns">
+                                <a href="javascript:close('#modaltest');" class="btn_ty">확인</a>
+                                <a href="javascript:close('#modaltest');" class="btn_ty02 p_cancle">취소</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- //popup -->
+
+                <!-- <script type="text/javascript">
+                    $(function(){
+                        open('#modaltest');
+                    });
+                </script> -->
 
 
 

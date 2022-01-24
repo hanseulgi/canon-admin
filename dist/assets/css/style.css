@@ -477,16 +477,8 @@ dim
     bottom: 0;
     height: 100%;
     overflow: hidden;
-}
-.dim > .inner {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-    z-index: 100;
+    z-index: 101;
 }
 .dim.on {
     display: block;
@@ -1534,7 +1526,7 @@ border
     border: 0 !important;
 }
 
-/**/
+/* hr */
 .hr {
     display: block;
     width: 100%;
@@ -1680,7 +1672,20 @@ radio
     position: relative;
     display: inline-block;
     height: 2rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
     font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
 }
 .radio input[type=radio] {
     display: inline-block;
@@ -1725,49 +1730,56 @@ checkbox
 .checkbox {
     position: relative;
     display: inline-block;
-    height: 20px;
+    height: 2rem;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
     font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
 }
-
 .checkbox i {
     position: absolute;
-    left: 6px;
-    top: 7px;
+    left: 0;
+    top: 0;
     display: inline-block;
-    width: 8px;
-    height: 6px;
-    background: url("../img/ico/ico_checked.svg") no-repeat center center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../img/ico/ico_check.svg") no-repeat center center;
 }
-
 .checkbox input[type=checkbox] {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 2.4rem;
+    height: 2.4rem;
     margin-right: 5px;
     vertical-align: top;
     border: 1px solid #e1e1e1;
-    border-radius: 50%;
+    border-radius: 6px;
     cursor: pointer;
     -webkit-appearance: none;
 }
-
 .checkbox input[type=checkbox]:checked {
     background-color: #dc000c;
     border-color: #dc000c;
 }
-
 .checkbox input[type=checkbox]:disabled {
     background-color: #eee;
     border: 1px solid #e1e1e1;
 }
-
-.checkbox input[type=checkbox]:disabled + i {
-    display: none;
-}
-
 .checkbox input[type=checkbox]:disabled:checked + i {
     display: inline-block;
     background-position: -105px -95px;
+}
+.checkbox input[type=checkbox]:disabled + i {
+    display: none;
 }
 
 /*
@@ -1993,12 +2005,12 @@ table
     flex: 1 1 100%;
 }
 .table-wrap > [class*=-edit].type2 .tr .th {
-    flex: 0 0 11rem;
+    flex: 0 0 13rem;
     font-weight: 500;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
 }
 .table-wrap > [class*=-edit].type2 .tr .th ~ .th {
-    margin-left: 3rem;
+    margin-left: 5rem;
 }
 .table-wrap > [class*=-edit].type2 .tr .td {
     display: flex;
@@ -2006,6 +2018,7 @@ table
     align-items: center;
     justify-content: start;
     flex: 1 1 33.3%;
+    padding: 0.5rem 0;
 }
 .table-wrap > [class*=-edit].type2 .tr .td [class^=btn] {
     margin-left: 10px;
@@ -2034,6 +2047,9 @@ table
     letter-spacing: -0.15px;
     /* 14px */
     /* 12px */
+}
+.table-wrap > [class*=-edit].type2 .tr .radio-group {
+    height: 4.5rem;
 }
 .table-wrap .detail-title {
     margin-top: 6rem;
@@ -2786,144 +2802,78 @@ search box
     background: url("../img/ico/ico_minus.svg") no-repeat center center;
 }
 
-/* 레이어 모달 */
-[class^=modal] {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    box-sizing: border-box;
+.modal {
     display: none;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 100px 30px;
-    opacity: 0;
-    z-index: 1;
+    z-index: 11;
+    /* alert */
 }
-[class^=modal].on {
-    display: flex;
-}
-[class^=modal].has-sticky-bottom .wrap {
-    padding-bottom: 95px !important;
-}
-[class^=modal] .wrap {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px 24px;
-    background-color: #ccc;
-    border-radius: 5px;
-    min-height: 158px;
-}
-[class^=modal] .wrap > [class*=tit] {
-    padding-right: 37px;
-    color: #ccc;
-}
-[class^=modal] .wrap button.close {
+.modal .modal-wrap {
     position: absolute;
-    display: inline-block;
-    right: 16px;
-    top: 15px;
-    background: url(../img/icons/32x32/ico_gnb_close.svg) center center no-repeat;
-    font-size: 0;
-}
-[class^=modal] .wrap .content {
-    box-sizing: border-box;
-    padding: 20px 0 34px 0;
-}
-[class^=modal] .wrap .content.has-line {
-    margin-top: 15px;
-    border-top: 1px solid #ccc;
-    padding: 20px 0 0 0;
-}
-[class^=modal] .wrap .content .content-tit {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* 풀 모달 */
-[class^=modal][class*=full] {
-    padding: 0;
-    opacity: 1;
-}
-[class^=modal][class*=full] .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0 20px;
-}
-[class^=modal][class*=full] .header [class*=tit] {
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 1;
-}
-[class^=modal][class*=full] .wrap {
-    border-radius: 0;
-    height: 100%;
-    padding: 0 24px 34px 24px;
-}
-[class^=modal][class*=full] .wrap.wide {
-    padding: 20px 0 0;
-}
-[class^=modal][class*=full] .wrap button.close {
-    top: 9px;
-    right: 14px;
-}
-[class^=modal][class*=full] .inner {
-    height: calc(100% - 50px);
-}
-[class^=modal][class*=full] .content {
-    height: 100%;
-    padding: 20px 0 0;
-    overflow-y: auto;
-}
-[class^=modal][class*=full] .review-img-wrap {
-    width: 100%;
-}
-[class^=modal][class*=full] .swiper-pagination {
-    width: 100vw;
-}
-
-/* 하단 모달 */
-[class^=modal].bottom {
-    padding: 0;
-}
-[class^=modal].bottom .wrap {
-    position: absolute;
-    bottom: 0;
-    padding: 20px 24px 34px 24px;
-    border-radius: 20px 20px 0 0;
-    transform: translateY(100%);
-    min-height: auto;
-    max-height: 594px;
-}
-[class^=modal].bottom .wrap::before {
-    content: "";
-    position: absolute;
-    top: 13px;
     left: 50%;
-    transform: translateX(-50%);
-    display: inline-block;
-    width: 30px;
-    height: 3px;
-    background: url(../img/icons/etc/ico_madal_bar.svg) 0 0/cover no-repeat;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    background-color: #fff;
 }
-[class^=modal].bottom .content {
-    padding: 20px 0 0 0;
-    overflow-y: auto;
+.modal .modal-wrap[type=alert] {
+    width: 40rem;
 }
-[class^=modal].bottom .scroll-wrap {
-    max-height: 385px;
-    overflow-y: auto;
+.modal .modal-wrap .modal-header {
+    position: relative;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #dc000c;
 }
-[class^=modal].bottom .btn-box.sticky-bottom {
-    border-top: none;
+.modal .modal-wrap .modal-header h2 {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    color: #fff;
+}
+.modal .modal-wrap .modal-header .modal-close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+.modal .modal-wrap .modal-content {
+    box-sizing: border-box;
+    padding: 1rem;
+}
+.modal .modal-close {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url();
 }
 
 /*! jQuery UI - v1.12.1 - 2016-09-14
@@ -5068,8 +5018,8 @@ a.ui-button:active,
     background-image: linear-gradient(bottom, #dc000c 0%, #cd300c 100%);
 }
 
-/** 
-LOGIN 
+/**
+LOGIN
 */
 /* 로그인 */
 .log {
@@ -5243,7 +5193,7 @@ LOGIN
 /* layout */
 #header {
     position: relative;
-    z-index: 100;
+    z-index: -1;
     width: 100%;
     height: 11rem;
     background-color: #fff;
