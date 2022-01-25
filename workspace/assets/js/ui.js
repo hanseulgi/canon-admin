@@ -216,7 +216,7 @@ UI.datepicker = function () {
 
 
 
-
+// 2022-01-25 작업중
 UI.sticky = function () {
 
     const $target = $('.result-aside');
