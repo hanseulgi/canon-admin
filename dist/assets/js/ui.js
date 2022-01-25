@@ -99,6 +99,16 @@ UI.navToggle = function () {
 
 };
 
+//tableM
+UI.tableM = function () {
+
+    if ( $('.show-right').length == 0 ){
+        $('.show-top').css('width','100%');
+    } else {
+        $('.show-top').css('width','85%');
+    }
+};
+
 // commentDel
 UI.commentDel = function () {
 
@@ -218,7 +228,8 @@ UI.init = function(){
     UI.textarea();
     UI.commentDel();
     UI.datepicker();
-    //UI.popup.init();
+    UI.tableM();
+    //UI.modal.init();
 };
 
 /* 실행 */

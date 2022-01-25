@@ -1113,7 +1113,7 @@ table
                     &[class*='-top'] {
                         left: 0;
                         top: 1.5rem;
-                        width: 90%;
+                        width: 85%;
                         @include fs($fs15);
 
                         p {
@@ -1124,7 +1124,8 @@ table
                     }
                     &[class*='-bottom1'] { left:0; }
                     &[class*='-bottom2'] { left:7.5rem; }
-                    &[class*='-bottom3'] { left:16.5rem; }
+                    &[class*='-bottom3'] { left:14.5rem; }
+                    &[class*='-right'] { right: 2rem; top: 50%; transform: translateY(-50%); }
 
 
                     // &[class*='-bottom'] ~ [class*='-bottom'] {

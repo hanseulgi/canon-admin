@@ -3850,7 +3850,7 @@ table
     .table-wrap [class$=-list] .tr [class*=show-][class*=-top] {
         left: 0;
         top: 1.5rem;
-        width: 90%;
+        width: 85%;
         /* 예) @include fs( $fs50 ); */
         /* 50px */
         /* 40px */
@@ -3890,7 +3890,12 @@ table
         left: 7.5rem;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
-        left: 16.5rem;
+        left: 14.5rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] {
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .table-wrap [class$=-list] .tr .th {
         font-weight: 500;
