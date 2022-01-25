@@ -351,6 +351,21 @@ padding-right
 }
 
 /*
+left
+*/
+.left {
+    @for $i from 1 through 500 {
+        @if($i%1==0) {
+            &#{$i} {
+                left: #{$i}px !important;
+            }
+        }
+    }
+}
+
+
+
+/*
 align
 */
 .al {
@@ -1064,6 +1079,8 @@ table
 /* 0부터 1024 까지 스타일 */
 @include mobile {
     .table-wrap {
+        padding: 0 20px;
+
         /* 리스트 table */
         [class$='-list'] {
             width: 100%;
@@ -1071,7 +1088,7 @@ table
             border-top: 2px solid $color-000;
 
             .tr:first-child {
-                display: none;
+               display: none;
             }
 
             .tr {
@@ -1082,13 +1099,49 @@ table
                     display: none !important;
                 }
 
-                & [class*='show-'] {
-                    position: absolute; top:3rem;
 
-                    &[class*='-top'] { left: 0; top:0; width:90%; }
+                & [class*='show-'] {
+                    position: absolute; 
+                    top: 4rem;
+                    text-align:left;
+          
+                    p {
+                        @include fs($fs14);
+                        color: $color-666;
+                    }
+
+                    &[class*='-top'] {
+                        left: 0;
+                        top: 1.5rem;
+                        width: 90%;
+                        @include fs($fs15);
+
+                        p {
+                            @include fs($fs15);
+                            color: $color-111;
+                        }
+                    
+                    }
                     &[class*='-bottom1'] { left:0; }
-                    &[class*='-bottom2'] { left:10rem; }
-                    &[class*='-bottom3'] { left:20rem; }
+                    &[class*='-bottom2'] { left:7.5rem; }
+                    &[class*='-bottom3'] { left:16.5rem; }
+
+
+                    // &[class*='-bottom'] ~ [class*='-bottom'] {
+                    //     border-left: 1px solid green;
+                    //     padding-left: 2rem;
+                    // }
+                    // &[class*='-bottom'] ~ [class*='-bottom']:before {
+                    //     content:"";
+                    //     position: absolute;
+                    //     left: -15px;
+                    //     top: 5px;
+                    //     border-left: 1px solid red;
+                    //     height: 1rem;
+                    //     width: 1px;
+                    //     background-color:#ccc;
+                    //     display: inline-block;
+                    // }
                 }
 
                 .th {
@@ -1102,7 +1155,7 @@ table
                 }
 
                 .td {
-                    padding: 1.5rem 1.5rem;
+                    padding: 0 0;
 
 
                     & {
@@ -1370,6 +1423,12 @@ filter
     }
 }
 
+@include mobile {
+    .filter-wrap {
+        padding:0 20px;
+    }
+}
+
 /*
 paging
 */
@@ -1486,7 +1545,46 @@ location
 }
 
 
+@include mobile {
+    .location-wrap {
+        padding:0 20px;
+        background-color: #373d45;
+        height: 5rem;
+    
+        .inner {
+            width: 100%;
 
+            .location-title {
+                color: #fff;
+                font-size: 16px;
+                font-weight: $fw-m;
+            }
+    
+            .location-list {
+                font-size: 0;
+    
+                li {
+                    position: relative;
+                    display: inline-block;
+                    @include fs ($fs14);
+                    color: $color-fff;
+    
+                    &+li {
+                        padding-left: 2.4rem;
+    
+                        &:before {
+                            content: "";
+                            @include position (7px, 4px);
+                            @include wh (1.2rem, 1.2rem);
+                            background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
 
 /*
 search box
@@ -1556,7 +1654,19 @@ search box
     }
 }
 
+@include mobile {
+    .search-box-wrap {
+        margin-top: 0;
 
+        .inner {
+            padding: 2rem;
+        }
+    }
+}
+
+/*
+modal
+*/
 .modal{
     display: none;
     position: fixed;
