@@ -66,7 +66,7 @@ LOGIN
                 }
 
                 a {
-                  margin-top: 2.5rem;
+                    margin-top: 2.5rem;
                 }
             }
         }
@@ -118,8 +118,6 @@ LOGIN
         }
     }
 }
-
-
 
 
 .search-wrap {
@@ -202,3 +200,178 @@ LOGIN
     }
 }
 
+/*
+검색 결과
+*/
+.result {
+    width: 120rem;
+    @include flex-flow;
+    align-items: start;
+    position:relative;
+
+    .result-wrap {
+        width: 90rem;
+    }
+
+    .result-aside {
+        position: absolute;
+        margin-top: 19rem;
+        display: inline-block;
+        width: 25rem;
+        flex: 0 0 25rem;
+
+        background-color: #ff0;
+        font-size: 20px;
+        padding: 2rem;
+
+
+        &.fixed {
+            position: fixed;
+            margin-top: 0;
+        }
+    }
+
+}
+
+.result-wrap {
+    .filter-wrap {
+        ul {
+            li {
+                @include fs($fs16);
+                color: inherit;
+
+                & + li {
+                    border: 0;
+                    margin-left: .6rem;
+                    padding-left: 0;
+
+                }
+                span {
+                    color: $color-red;
+                }
+            }
+        }
+        .select-wrap {
+            & + .select-wrap {
+                margin-left: 1rem;
+            }
+
+        }
+    }
+}
+
+/* 퀵서치 */
+.result-quicksearch {
+
+    & > .title {
+        @include fs($fs20);
+        font-weight: $fw-m;
+        margin-bottom: 1rem;
+    }
+    dl.list {
+        margin-top: 6rem;
+
+        dt {
+            @include fs($fs16);
+            font-weight: $fw-m;
+            border-bottom: 1px solid $color-e6e6e6;
+            padding-bottom: 1rem;
+        }
+        dd {
+            @include flex-flow;
+            @include fs($fs15);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid $color-e6e6e6;
+
+            .tit { flex: 0 1 70%; }
+
+        }
+    }
+}
+
+/* 통합검색 */
+.result-integrate-search {
+    margin-top: 1rem;
+    .result-lists {
+        margin-top: 6rem;
+        > .title {
+            border-bottom: 1px solid $color-e6e6e6;
+            padding-bottom: 1rem;
+            span {
+                @include fs($fs16);
+
+                & + span {
+                    &:before {
+                        content:"";
+                        display: inline-block;
+                        @include wh(1.2rem, 1.2rem);
+                        background: url($path-img-ico + 'ico_next_1_black.svg') no-repeat 0 0 / 12px 12px;
+                        margin: 0 5px 0 3px;
+                    }
+                }
+            }
+        }
+        dl.list {
+            padding: 3rem 0;
+            dt {
+                @include fs($fs16);
+            }
+            dd {
+                @include fs($fs14);
+
+
+                .tit {
+                    @include fs($fs14);
+                    margin-top: 1rem;
+                    max-width: 80%;
+                    
+                }
+                .file-link {
+                    display: block;
+                    @include fs($fs14);
+                    margin-top: 1rem;
+                    vertical-align:middle;
+                }
+
+                .file-icon {
+                }
+                
+                .desc {
+                    margin-top: 2rem;
+                    .sub-title {
+                        span {
+                            @include fs($fs14);
+                            color: $color-666;
+                            & + span {
+                                &:before {
+                                    content:"";
+                                    display: inline-block;
+                                    @include wh(1.2rem, 1.2rem);
+                                    background: url($path-img-ico + 'ico_next_1.svg') no-repeat 0 0 / 12px 12px;
+                                    margin: 0 5px 0 3px;
+                                }
+                            }
+                        }
+                    }
+                    .date {
+                        @include fs($fs14);
+                        color: $color-666;
+                    }
+                }
+            }
+            & + dl.list {
+                
+                border-top: 1px solid $color-e6e6e6;
+            }
+        }
+
+        [class^='btn'] {
+            @include wh(100%, 5rem);
+            @include fs($fs14);
+            line-height: 4.8rem;
+            border-color: $color-e6e6e6;
+            color: $color-666;
+            font-weight: $fw-r;
+        }
+    }
+}

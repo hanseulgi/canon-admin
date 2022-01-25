@@ -226,7 +226,7 @@ width
 */
 .w {
     @for $i from 0 through 800 {
-        @if($i%5==0) {
+        @if($i%1==0) {
             &#{$i} {
                 width: #{$i}px !important;
             }
@@ -276,7 +276,7 @@ margin-left
 */
 .ml {
     @for $i from 1 through 50 {
-        @if($i%5==0) {
+        @if($i%1==0) {
             &#{$i} {
                 margin-left: #{$i}px !important;
             }
@@ -683,8 +683,8 @@ table
             display: table-row;
             border-bottom: 1px solid $bg-f6f6f6;
 
-            .title { width: 60rem; }
-
+            .title { width: 55rem; }
+            .category { width: 20rem; }
 
             .th {
                 font-weight: $fw-m;
@@ -1102,7 +1102,7 @@ table
 
                 & [class*='show-'] {
                     position: absolute; 
-                    top: 4rem;
+                    top: 6rem;
                     text-align:left;
           
                     p {
@@ -1120,8 +1120,8 @@ table
                             @include fs($fs15);
                             color: $color-111;
                         }
-                    
                     }
+                    &[class*='-top2'] { left:0; top: 4rem; }
                     &[class*='-bottom1'] { left:0; }
                     &[class*='-bottom2'] { left:7.5rem; }
                     &[class*='-bottom3'] { left:14.5rem; }
@@ -1422,6 +1422,9 @@ filter
             }
         }
     }
+    .select-wrap {
+        width: 13rem;
+    }
 }
 
 @include mobile {
@@ -1484,7 +1487,34 @@ paging
 }
 
 
+/* file icon */
+.file-icon {
+    @include wh(2rem, 2rem);
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
 
+    &[type*='pdf'] {
+        background-image: url($path-img-ico + 'ico_pdf.svg');
+    }
+    &[type*='word'] {
+        background-image: url($path-img-ico + 'ico_word.svg');
+    }
+    &[type*='excel'] {
+        background-image: url($path-img-ico + 'ico_excel.svg');
+    }
+    &[type*='html'] {
+        background-image: url($path-img-ico + 'ico_html.svg');
+    }
+
+    & + span {
+        vertical-align: middle;
+        margin-left: .3rem;
+    }
+
+}
 
 /*
 table bottom button
@@ -1620,6 +1650,8 @@ search box
             .td {
                 & [class*='-wrap'] {
                     display: inline-block;
+
+                    & + [class*='-wrap'] { margin-left: 6px; }
                 }
             }
 

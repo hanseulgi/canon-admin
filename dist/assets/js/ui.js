@@ -103,9 +103,9 @@ UI.navToggle = function () {
 UI.tableM = function () {
 
     if ( $('.show-right').length == 0 ){
-        $('.show-top').css('width','100%');
+        $('.show-top2').css('width','100%');
     } else {
-        $('.show-top').css('width','85%');
+        $('.show-top2').css('width','85%');
     }
 };
 
@@ -152,7 +152,7 @@ UI.search = function () {
                                     <option>CHN</option>
                                 </select>
                             </div>
-                            <div class="input-wrap w370 ml10">
+                            <div class="input-wrap w370 ml6">
                                 <input type="text" class="input">
                             </div>
                             <button type="button" class="ico-search ${_class}"><em class="blind">플러스 마이너스 아이콘</em></button>
@@ -215,6 +215,35 @@ UI.datepicker = function () {
 };
 
 
+
+
+UI.sticky = function () {
+
+    const $target = $('.result-aside');
+    const $foot = $('footer');
+    const $top = 20;
+    let _offsetTop = $target.offset().top - $top;
+    let _offsetBottom = $foot.offset().top - ( $top*2 + $target.height() );
+
+    $(window).scroll(function () {
+        let _scrollTop = $(window).scrollTop();
+
+        if ( _scrollTop > _offsetTop && $target.hasClass('default') ) {
+            $target.removeClass('default').addClass('fixed').css('top', $top);
+        }
+        if ( _offsetTop > _scrollTop && $target.hasClass('fixed') ) {
+            $target.removeClass('fixed').addClass('default').css('top', 'auto');
+        }
+        if ( _scrollTop > _offsetBottom && $target.hasClass('fixed') ) {
+            $target.removeClass('fixed').css('top', _offsetBottom + $top);
+        }
+        if ( _offsetBottom > _scrollTop && $target.hasClass('bottom') ) {
+            $target.addClass('fixed').css('top', $top);
+        }
+    });
+
+};
+
 /* 실행 선언 */
 UI.init = function(){
 	// UI.a();
@@ -229,6 +258,7 @@ UI.init = function(){
     UI.commentDel();
     UI.datepicker();
     UI.tableM();
+    UI.sticky();
     //UI.modal.init();
 };
 
