@@ -120,3 +120,85 @@ LOGIN
 }
 
 
+
+
+.search-wrap {
+    @include flex-flow;
+    @include wh(100%, 28rem);
+    background: url($path-img-main + 'bg_keyvisual.png') no-repeat left top / cover;
+
+    .inner {
+        position: relative;
+        width: 120rem;
+        margin: 0 auto;
+        padding: 2rem 0;
+
+        .tab {
+            &:nth-child(1) {
+                label {
+                    p {
+                        margin-top: 60px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                label {
+                    p {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            label {
+                @include wh(20rem, 12rem);
+                display: inline-block;
+                background-color: #315bb7;
+                cursor: pointer;
+
+                p {
+                    @include fs($fs24);
+                    color: $color-fff;
+                    margin-left: 5.5rem;
+                }
+            }
+
+            .content {
+                display: none;
+                @include position (24rem,0);
+                right: 0;
+                bottom: 0;
+                color: $color-fff;
+                font-size: 20px;
+                margin: 2rem 0;
+                padding: 2rem;
+                border: 1px solid #ccc; //임시
+            }
+
+            [type=radio] {
+                display: none;
+
+                &:checked ~ label {
+
+                    & ~ .content {
+                        display: block;
+                        z-index: 1;
+                    }
+
+                    p {
+                        position:relative;
+                    }
+                    p:after {
+                        content:"";
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        bottom: -4px;
+                        @include wh (11.2rem, 4px);
+                        background-color: $bg-fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
