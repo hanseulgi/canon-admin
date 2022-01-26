@@ -2,7 +2,6 @@
 // layout : 헤더 푸터 제외한 공통된 레이아웃 style
 //---------------------------------------------------
 
-
 //ios safe area
 :root {
 	--safeTop:env(safe-area-inset-top);
@@ -25,8 +24,6 @@ body {
         max-width: 100%;
     }
 }
-
-
 
 //container
 #container {
