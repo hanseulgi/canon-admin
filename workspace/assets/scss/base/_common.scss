@@ -1632,17 +1632,17 @@ search box
             display: table;
             width: 100%;
 
-            &.result {
-                display: flex !important;
-                align-items: center;
-                justify-content: baseline;
-                margin-bottom: 10px;
-            }
+            // &.result {
+            //     display: flex !important;
+            //     align-items: center;
+            //     justify-content: baseline;
+            //     margin-bottom: 10px;
+            // }
 
             .th {
                 @include fs($fs18);
                 font-weight: $fw-b;
-                padding-right: 5rem;
+                //padding-right: 5rem;
                 width: 10.6rem;
                 white-space: nowrap;
             }

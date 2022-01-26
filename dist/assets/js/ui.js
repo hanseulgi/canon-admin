@@ -132,7 +132,7 @@ UI.dropDown = function () {
 
 };
 
-
+// search
 UI.search = function () {
 
     $('.loop').each(function(){
@@ -190,7 +190,7 @@ UI.modal = (function () {
     }
 })();
 
-
+// datepicker
 UI.datepicker = function () {
     $.datepicker.setDefaults({
        dateFormat: 'yy-mm-dd' //Input Display Format 변경
@@ -216,7 +216,7 @@ UI.datepicker = function () {
 
 
 
-// 2022-01-25 작업중
+// sticky
 UI.sticky = function () {
 
     const $target = $('.result-aside');

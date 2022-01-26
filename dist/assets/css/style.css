@@ -6525,12 +6525,6 @@ search box
     display: table;
     width: 100%;
 }
-.search-box-wrap > .inner .table-col.result {
-    display: flex !important;
-    align-items: center;
-    justify-content: baseline;
-    margin-bottom: 10px;
-}
 .search-box-wrap > .inner .table-col .th {
     /* 예) @include fs( $fs50 ); */
     /* 50px */
@@ -6547,7 +6541,6 @@ search box
     /* 14px */
     /* 12px */
     font-weight: 700;
-    padding-right: 5rem;
     width: 10.6rem;
     white-space: nowrap;
 }
@@ -9063,28 +9056,28 @@ LOGIN
 */
 .result {
     width: 120rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: start;
     position: relative;
 }
 .result .result-wrap {
+    float: left;
     width: 90rem;
 }
 .result .result-aside {
-    position: absolute;
-    margin-top: 19rem;
+    float: left;
     display: inline-block;
     width: 25rem;
-    flex: 0 0 25rem;
-    background-color: #ff0;
-    font-size: 20px;
-    padding: 2rem;
+    margin-left: 5rem;
+    margin-top: 19rem;
+    border: 1px solid red;
 }
 .result .result-aside.fixed {
     position: fixed;
     margin-top: 0;
+}
+.result::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .result-wrap .filter-wrap ul li {
