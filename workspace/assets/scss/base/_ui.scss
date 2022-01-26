@@ -12,10 +12,12 @@ LOGIN
 
     .inner {
 
-        margin:0 auto;
-        padding:13rem 0 5rem;
+        margin: 0 auto;
+        padding: 13rem 0 5rem;
+
         .logo {
             text-align: center;
+
             a::after {
                 content: "";
                 display: inline-block;
@@ -34,7 +36,7 @@ LOGIN
                 @include fs($fs14);
                 color: $color-666;
 
-                & + .b-item {
+                &+.b-item {
                     margin-top: 1rem;
                 }
             }
@@ -57,12 +59,14 @@ LOGIN
             }
 
             .box-gray {
-                @include wh(52rem,44rem);
+                @include wh(52rem, 44rem);
                 margin: 12rem 0 0;
                 padding: 5rem;
 
                 &.id {
-                    a { margin-top: 9.5rem; }
+                    a {
+                        margin-top: 9.5rem;
+                    }
                 }
 
                 a {
@@ -70,19 +74,26 @@ LOGIN
                 }
             }
         }
+
         .login-wrap {
             margin: 5rem auto 0;
             width: 40rem;
         }
+
         .input-wrap {
             margin-top: 1.5rem;
-            input + input { margin-top: 1rem; }
+
+            input+input {
+                margin-top: 1rem;
+            }
         }
+
         .agree {
             width: 80rem;
-            margin:2rem auto 0;
+            margin: 2rem auto 0;
             @include fs($fs14);
         }
+
         .log-search {
             margin-top: 1.5rem;
             text-align: center;
@@ -91,19 +102,20 @@ LOGIN
             a {
                 position: relative;
 
-                & + a {
+                &+a {
                     margin-left: 20px;
                 }
 
-                & + a:before {
+                &+a:before {
                     @include position (-1.2rem, 5px);
                     @include wh(1px, 1rem);
                     background-color: $bg-ccc;
-                    content:"";
+                    content: "";
 
                 }
             }
         }
+
         .btn-red-lg {
             width: 100%;
             margin-top: 3.5rem;
@@ -139,6 +151,7 @@ LOGIN
                     }
                 }
             }
+
             &:nth-child(2) {
                 label {
                     p {
@@ -162,7 +175,7 @@ LOGIN
 
             .content {
                 display: none;
-                @include position (24rem,0);
+                @include position (24rem, 0);
                 right: 0;
                 bottom: 0;
                 color: $color-fff;
@@ -175,18 +188,19 @@ LOGIN
             [type=radio] {
                 display: none;
 
-                &:checked ~ label {
+                &:checked~label {
 
-                    & ~ .content {
+                    &~.content {
                         display: block;
                         z-index: 1;
                     }
 
                     p {
-                        position:relative;
+                        position: relative;
                     }
+
                     p:after {
-                        content:"";
+                        content: "";
                         display: inline-block;
                         position: absolute;
                         left: 0;
@@ -207,10 +221,10 @@ LOGIN
     width: 120rem;
     // @include flex-flow;
     // align-items: start;
-    position:relative;
+    position: relative;
 
     .result-wrap {
-        float:left;
+        float: left;
         width: 90rem;
     }
 
@@ -225,8 +239,9 @@ LOGIN
             position: fixed;
             margin-top: 0;
         }
-        & > div {
-            & + div {
+
+        &>div {
+            &+div {
                 margin-top: 3rem;
             }
         }
@@ -240,17 +255,18 @@ LOGIN
                 font-weight: $fw-m;
 
             }
+
             dd {
                 a {
                     display: block;
                     @include fs($fs14);
-                    
-                    & + a {
+
+                    &+a {
                         margin-top: 1rem;
                     }
                 }
             }
-            
+
         }
     }
 
@@ -261,6 +277,7 @@ LOGIN
     .tab-wrap {
         margin-top: 8rem;
     }
+
     .filter-wrap {
         .inner {
             margin-top: 6.8rem;
@@ -271,19 +288,21 @@ LOGIN
                 @include fs($fs16);
                 color: inherit;
 
-                & + li {
+                &+li {
                     border: 0;
                     margin-left: .6rem;
                     padding-left: 0;
 
                 }
+
                 span {
                     color: $color-red;
                 }
             }
         }
+
         .select-wrap {
-            & + .select-wrap {
+            &+.select-wrap {
                 margin-left: 1rem;
             }
 
@@ -294,11 +313,13 @@ LOGIN
 /* 퀵서치 */
 .result-quicksearch {
 
-    & > .title {
+    &>.title {
         @include fs($fs20);
         font-weight: $fw-m;
+        margin-top: 8rem;
         margin-bottom: 1rem;
     }
+
     dl.list {
         margin-top: 6rem;
 
@@ -308,13 +329,16 @@ LOGIN
             border-bottom: 1px solid $color-e6e6e6;
             padding-bottom: 1rem;
         }
+
         dd {
             @include flex-flow;
             @include fs($fs15);
             padding: 1.5rem 0;
             border-bottom: 1px solid $color-e6e6e6;
 
-            .tit { flex: 0 1 70%; }
+            .tit {
+                flex: 0 1 70%;
+            }
 
         }
     }
@@ -323,17 +347,20 @@ LOGIN
 /* 통합검색 */
 .result-integrate-search {
     margin-top: 1rem;
+
     .result-lists {
         margin-top: 6rem;
-        > .title {
+
+        >.title {
             border-bottom: 1px solid $color-e6e6e6;
             padding-bottom: 1rem;
+
             span {
                 @include fs($fs16);
 
-                & + span {
+                &+span {
                     &:before {
-                        content:"";
+                        content: "";
                         display: inline-block;
                         @include wh(1.2rem, 1.2rem);
                         background: url($path-img-ico + 'ico_next_1_black.svg') no-repeat 0 0 / 12px 12px;
@@ -342,11 +369,14 @@ LOGIN
                 }
             }
         }
+
         dl.list {
             padding: 3rem 0;
+
             dt {
                 @include fs($fs16);
             }
+
             dd {
                 @include fs($fs14);
 
@@ -355,27 +385,28 @@ LOGIN
                     @include fs($fs14);
                     margin-top: 1rem;
                     max-width: 80%;
-                    
                 }
+
                 .file-link {
                     display: block;
                     @include fs($fs14);
                     margin-top: 1rem;
-                    vertical-align:middle;
+                    vertical-align: middle;
                 }
 
-                .file-icon {
-                }
-                
+                .file-icon {}
+
                 .desc {
                     margin-top: 2rem;
+
                     .sub-title {
                         span {
                             @include fs($fs14);
                             color: $color-666;
-                            & + span {
+
+                            &+span {
                                 &:before {
-                                    content:"";
+                                    content: "";
                                     display: inline-block;
                                     @include wh(1.2rem, 1.2rem);
                                     background: url($path-img-ico + 'ico_next_1.svg') no-repeat 0 0 / 12px 12px;
@@ -384,14 +415,15 @@ LOGIN
                             }
                         }
                     }
+
                     .date {
                         @include fs($fs14);
                         color: $color-666;
                     }
                 }
             }
-            & + dl.list {
-                
+
+            &+dl.list {
                 border-top: 1px solid $color-e6e6e6;
             }
         }

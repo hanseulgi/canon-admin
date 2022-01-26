@@ -16,8 +16,6 @@ body {
 
     }
 
-    
-
 }
 
 .wrap {
@@ -27,7 +25,10 @@ body {
     @include fs ($fs24);
 }
 
-/* container */
+/*
+container
+*/
+
 #container {
     .contents {
         width: 120rem;
@@ -36,7 +37,10 @@ body {
 }
 
 
-/* main */
+/*
+main
+*/
+
 main {
 
     /* 공통 */
@@ -49,9 +53,15 @@ main {
 
 
 
+//---------------------------------------------------
+// responsive : ~ 1024 style
+//---------------------------------------------------
+
+/*
+container
+*/
 
 @include mobile {
-    /* container */
     #container {
         .contents {
             width: 100%;

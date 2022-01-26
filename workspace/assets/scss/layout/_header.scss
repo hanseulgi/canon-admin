@@ -33,7 +33,7 @@
                 padding: 0 0;
                 padding-left: 2.8rem;
                 line-height: 2.4rem;
-                
+
                 & + button { margin-left: 3rem; }
 
             }
@@ -62,7 +62,7 @@
                 line-height: 2.2rem;
                 color: $color-666;
 
-                a { 
+                a {
                     padding-right: 6px;
 
                     &:last-child { padding-right: 0; }
@@ -188,11 +188,11 @@
 
 }
 
-/*
-Mobile
-*/
+//---------------------------------------------------
+// responsive : ~ 1024 style
+//---------------------------------------------------
 
-/* 0부터 1024 까지 스타일 */
+
 @include mobile {
 
     .wrap {

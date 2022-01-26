@@ -415,18 +415,24 @@ body {
     /* 12px */
 }
 
-/* container */
+/*
+container
+*/
 #container .contents {
     width: 120rem;
     margin: 0 auto;
 }
 
-/* main */
+/*
+main
+*/
 main {
     /* 공통 */
 }
+/*
+container
+*/
 @media (max-width: 1024px) {
-    /* container */
     #container .contents {
         width: 100%;
     }
@@ -5854,140 +5860,6 @@ table
     color: #666;
 }
 
-/* 0부터 1024 까지 스타일 */
-@media (max-width: 1024px) {
-    .table-wrap {
-        padding: 0 20px;
-        /* 리스트 table */
-    }
-    .table-wrap [class$=-list] {
-        width: 100%;
-        text-align: center;
-        border-top: 2px solid #000;
-    }
-    .table-wrap [class$=-list] .tr:first-child {
-        display: none;
-    }
-    .table-wrap [class$=-list] .tr {
-        position: relative;
-        height: 8rem;
-    }
-    .table-wrap [class$=-list] .tr .hidden {
-        display: none !important;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-] {
-        position: absolute;
-        top: 6rem;
-        text-align: left;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-] p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        /* 14px */
-        font-size: 1.4rem;
-        line-height: 1.43;
-        letter-spacing: -0.14px;
-        /* 12px */
-        color: #666;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-top] {
-        left: 0;
-        top: 1.5rem;
-        width: 85%;
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-top] p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
-        color: #111;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-top2] {
-        left: 0;
-        top: 4rem;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom1] {
-        left: 0;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom2] {
-        left: 7.5rem;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
-        left: 14.5rem;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] {
-        right: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .table-wrap [class$=-list] .tr .th {
-        font-weight: 500;
-        padding: 1.5rem 1.5rem;
-        background-color: #f6f6f6;
-    }
-    .table-wrap [class$=-list] .tr .th p {
-        color: #666;
-    }
-    .table-wrap [class$=-list] .tr .td {
-        padding: 0 0;
-    }
-    .table-wrap [class$=-list] .tr .td .ellipsis {
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: auto;
-        margin: 0 auto;
-        padding: 0 0;
-    }
-    .table-wrap [class$=-list] .tr p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
-    }
-}
 /*
 input
 file
@@ -6324,11 +6196,6 @@ filter
     width: 13rem;
 }
 
-@media (max-width: 1024px) {
-    .filter-wrap {
-        padding: 0 20px;
-    }
-}
 /*
 paging
 */
@@ -6468,55 +6335,6 @@ location
     background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
 }
 
-@media (max-width: 1024px) {
-    .location-wrap {
-        padding: 0 20px;
-        background-color: #373d45;
-        height: 5rem;
-    }
-    .location-wrap .inner {
-        width: 100%;
-    }
-    .location-wrap .inner .location-title {
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .location-wrap .inner .location-list {
-        font-size: 0;
-    }
-    .location-wrap .inner .location-list li {
-        position: relative;
-        display: inline-block;
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        /* 14px */
-        font-size: 1.4rem;
-        line-height: 1.43;
-        letter-spacing: -0.14px;
-        /* 12px */
-        color: #fff;
-    }
-    .location-wrap .inner .location-list li + li {
-        padding-left: 2.4rem;
-    }
-    .location-wrap .inner .location-list li + li:before {
-        content: "";
-        position: absolute;
-        left: 7px;
-        top: 4px;
-        width: 1.2rem;
-        height: 1.2rem;
-        background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
-    }
-}
 /*
 search box
 */
@@ -6580,14 +6398,6 @@ search box
     background: url("../img/ico/ico_minus.svg") no-repeat center center;
 }
 
-@media (max-width: 1024px) {
-    .search-box-wrap {
-        margin-top: 0;
-    }
-    .search-box-wrap .inner {
-        padding: 2rem;
-    }
-}
 /*
 modal
 */
@@ -6737,6 +6547,213 @@ modal
     font-weight: 500;
 }
 
+/*
+table
+*/
+@media (max-width: 1024px) {
+    .table-wrap {
+        padding: 0 20px;
+        /* 리스트 table */
+    }
+    .table-wrap [class$=-list] {
+        width: 100%;
+        text-align: center;
+        border-top: 2px solid #000;
+    }
+    .table-wrap [class$=-list] .tr:first-child {
+        display: none;
+    }
+    .table-wrap [class$=-list] .tr {
+        position: relative;
+        height: 8rem;
+    }
+    .table-wrap [class$=-list] .tr .hidden {
+        display: none !important;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-] {
+        position: absolute;
+        top: 6rem;
+        text-align: left;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-] p {
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        /* 14px */
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        /* 12px */
+        color: #666;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-top] {
+        left: 0;
+        top: 1.5rem;
+        width: 85%;
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        /* 14px */
+        /* 12px */
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-top] p {
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        /* 14px */
+        /* 12px */
+        color: #111;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-top2] {
+        left: 0;
+        top: 4rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom1] {
+        left: 0;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom2] {
+        left: 7.5rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
+        left: 14.5rem;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] {
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .table-wrap [class$=-list] .tr .th {
+        font-weight: 500;
+        padding: 1.5rem 1.5rem;
+        background-color: #f6f6f6;
+    }
+    .table-wrap [class$=-list] .tr .th p {
+        color: #666;
+    }
+    .table-wrap [class$=-list] .tr .td {
+        padding: 0 0;
+    }
+    .table-wrap [class$=-list] .tr .td .ellipsis {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: auto;
+        margin: 0 auto;
+        padding: 0 0;
+    }
+    .table-wrap [class$=-list] .tr p {
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        /* 14px */
+        /* 12px */
+    }
+}
+/*
+filter
+*/
+@media (max-width: 1024px) {
+    .filter-wrap {
+        padding: 0 20px;
+    }
+}
+/*
+location
+*/
+@media (max-width: 1024px) {
+    .location-wrap {
+        padding: 0 20px;
+        background-color: #373d45;
+        height: 5rem;
+    }
+    .location-wrap .inner {
+        width: 100%;
+    }
+    .location-wrap .inner .location-title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .location-wrap .inner .location-list {
+        font-size: 0;
+    }
+    .location-wrap .inner .location-list li {
+        position: relative;
+        display: inline-block;
+        /* 예) @include fs( $fs50 ); */
+        /* 50px */
+        /* 40px */
+        /* 30px */
+        /* 24px */
+        /* 20px */
+        /* 18px */
+        /* 16px */
+        /* 15px */
+        /* 14px */
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        /* 12px */
+        color: #fff;
+    }
+    .location-wrap .inner .location-list li + li {
+        padding-left: 2.4rem;
+    }
+    .location-wrap .inner .location-list li + li:before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 4px;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
+    }
+}
+/*
+search-box
+*/
+@media (max-width: 1024px) {
+    .search-box-wrap {
+        margin-top: 0;
+    }
+    .search-box-wrap .inner {
+        padding: 2rem;
+    }
+}
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, draggable.css, resizable.css, progressbar.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -9254,6 +9271,7 @@ LOGIN
     /* 14px */
     /* 12px */
     font-weight: 500;
+    margin-top: 8rem;
     margin-bottom: 1rem;
 }
 .result-quicksearch dl.list {
@@ -9663,10 +9681,6 @@ LOGIN
     width: 100%;
     height: 12rem;
 }
-/*
-Mobile
-*/
-/* 0부터 1024 까지 스타일 */
 @media (max-width: 1024px) {
     .wrap {
         width: 100%;
