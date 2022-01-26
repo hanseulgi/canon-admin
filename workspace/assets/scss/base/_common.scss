@@ -1756,5 +1756,61 @@ modal
     }
 }
 
+/* 검색결과 다중 tab */
+.tab-wrap {
+    .tab-title {
+        .depth1 {
+            .inner {
+                @include flex-flow;
+
+                a {
+                    flex: 1 0 128px;
+                    height: 4.8rem;
+                    border-top: 1px solid $color-e6e6e6;
+                    border-bottom: 1px solid $color-e6e6e6;
+                    @include fs($fs15);
+                    color: $color-666;
+                    background-color: $bg-f6f6f6;
+                    text-align: center;
+                    line-height: 4.6rem;
+
+                    &:first-child {
+                        border-left: 1px solid $color-e6e6e6;
+                    }
+
+                    &:last-child {
+                        border-right: 1px solid $color-e6e6e6;
+                    }
+                    &.on {
+                        border-bottom: 1px solid transparent;
+                        border-left: 1px solid $color-e6e6e6;
+                        font-weight: $fw-m;
+                        color: inherit;
+                        background-color: $bg-fff;
+                    }
+                }
+            }
+            .depth2 {
+                @include flex-flow;
+                margin-top: 2rem;
+                justify-content: center;
+
+                li {
+                    a {
+                        @include fs($fs14);
+                        padding: 0 1.5rem;
+
+                        &.on {
+                            color: $color-red;
+                            font-weight: $fw-m;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
 
 

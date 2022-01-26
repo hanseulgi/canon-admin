@@ -6665,6 +6665,78 @@ modal
     background: url();
 }
 
+/* 검색결과 다중 tab */
+.tab-wrap .tab-title .depth1 .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab-wrap .tab-title .depth1 .inner a {
+    flex: 1 0 128px;
+    height: 4.8rem;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    /* 14px */
+    /* 12px */
+    color: #666;
+    background-color: #f6f6f6;
+    text-align: center;
+    line-height: 4.6rem;
+}
+.tab-wrap .tab-title .depth1 .inner a:first-child {
+    border-left: 1px solid #e6e6e6;
+}
+.tab-wrap .tab-title .depth1 .inner a:last-child {
+    border-right: 1px solid #e6e6e6;
+}
+.tab-wrap .tab-title .depth1 .inner a.on {
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #e6e6e6;
+    font-weight: 500;
+    color: inherit;
+    background-color: #fff;
+}
+.tab-wrap .tab-title .depth1 .depth2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.tab-wrap .tab-title .depth1 .depth2 li a {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+    padding: 0 1.5rem;
+}
+.tab-wrap .tab-title .depth1 .depth2 li a.on {
+    color: #dc000c;
+    font-weight: 500;
+}
+
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, draggable.css, resizable.css, progressbar.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -9130,6 +9202,12 @@ LOGIN
     clear: both;
 }
 
+.result-wrap .tab-wrap {
+    margin-top: 8rem;
+}
+.result-wrap .filter-wrap .inner {
+    margin-top: 6.8rem;
+}
 .result-wrap .filter-wrap ul li {
     /* 예) @include fs( $fs50 ); */
     /* 50px */

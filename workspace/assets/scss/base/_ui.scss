@@ -258,7 +258,14 @@ LOGIN
 }
 
 .result-wrap {
+    .tab-wrap {
+        margin-top: 8rem;
+    }
     .filter-wrap {
+        .inner {
+            margin-top: 6.8rem;
+        }
+
         ul {
             li {
                 @include fs($fs16);
