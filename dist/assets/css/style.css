@@ -9406,7 +9406,6 @@ LOGIN
 /* layout */
 #header {
     position: relative;
-    z-index: -1;
     width: 100%;
     height: 11rem;
     background-color: #fff;
@@ -9421,6 +9420,9 @@ LOGIN
     height: 100%;
     margin: 0 auto;
     padding: 1.5rem 0;
+}
+#header .inner .header-logo a {
+    display: block;
 }
 #header .inner .header-logo a::after {
     content: "";
