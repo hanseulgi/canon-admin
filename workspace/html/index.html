@@ -189,7 +189,7 @@
         }
 
         /* Style Guide */
-        .tab-list {position:sticky; top:0px; border-top:1px solid #eee; border-left:1px solid #eee; border-bottom:1px solid #eee; z-index: 5;}
+        .tab-list {position:sticky; top:20px; border-top:1px solid #eee; border-left:1px solid #eee; border-bottom:1px solid #eee; z-index: 5;}
         .tab-list ul {display: flex;}
         .tab-list li {width: 100%; border-right: 1px solid #eee;}
         .tab-list li a {height:40px;line-height:40px;font-size:1.5rem;display: block;text-align: center;background-color:#fff;}
@@ -4297,6 +4297,7 @@
                             <li><a href="#button-wrap"><span>Button</span></a></li>
                             <li><a href="#form-wrap"><span>Form</span></a></li>
                             <li><a href="#modal-wrap"><span>Modal</span></a></li>
+                            <li><a href="#table-wrap"><span>Table</span></a></li>
                         </ul>
                     </div>
 
@@ -4538,7 +4539,6 @@
                         <!-- Form -->
                         <div id="form-wrap" class="component-warp">
                             <h2>Form</h2>
-                
                             <h3 class="sub-tit">Input</h3>
                             <h4 class="sub-tit">default</h4>
                             <input type="text" placeholder="아이디를 입력해 주세요.">
@@ -4657,7 +4657,7 @@
                             
                         </div>
 
-                        <!-- Form -->
+                        <!-- modal -->
                         <div id="modal-wrap" class="component-warp">
                             <h2>Modal</h2>
                             <h3 class="sub-tit">Alert Type</h3>
@@ -4695,7 +4695,349 @@
 
                             
                         </div>
-                
+
+                        <!-- table -->
+                        <div id="table-wrap" class="component-warp">
+                            <h2>Table</h2>
+                            <h3 class="sub-tit">list type 1</h3>
+
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <div class="table-wrap">
+                                    <div class="table-list">
+                                        <div class="tr">
+                                            <div class="th hidden">
+                                                <p>번호</p>
+                                            </div>
+                                            <div class="th category hidden">
+                                                <p>제품 카테고리</p>
+                                            </div>
+                                            <div class="th title hidden">
+                                                <p>제목</p>
+                                            </div>
+                                            <div class="th hidden">
+                                                <p>자료형태</p>
+                                            </div>
+                                            <div class="th hidden">
+                                                <p>등록자</p>
+                                            </div>
+                                            <div class="th hidden">
+                                                <p>등록일</p>
+                                            </div>
+                                            <div class="th hidden">
+                                                <p>조회수</p>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td hidden">
+                                                <p>100</p>
+                                            </div>
+                                            <div class="td category show-top1">
+                                                <p>1depth > 2depth > 3depth</p>
+                                            </div>
+                                            <div class="td title show-top2">
+                                                <p class="ellipsis">
+                                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045</a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-right al-l"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
+                                                <p>
+                                                    <a href="#" class="file-link">
+                                                        <i class="file-icon" type="excel"></i>
+                                                        <span>excel</span>
+                                                    </a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-bottom1">
+                                                <p>홍길동</p>
+                                            </div>
+                                            <div class="td show-bottom2">
+                                                <p>2021.05.13</p>
+                                            </div>
+                                            <div class="td hidden">
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td hidden">
+                                                <p>100</p>
+                                            </div>
+                                            <div class="td category show-top1">
+                                                <p>1depth > 2depth > 3depth</p>
+                                            </div>
+                                            <div class="td title show-top2">
+                                                <p class="ellipsis">
+                                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045</a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-right al-l"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
+                                                <p>
+                                                    <a href="#" class="file-link">
+                                                        <i class="file-icon" type="pdf"></i>
+                                                        <span>pdf</span>
+                                                    </a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-bottom1">
+                                                <p>홍길동</p>
+                                            </div>
+                                            <div class="td show-bottom2">
+                                                <p>2021.05.13</p>
+                                            </div>
+                                            <div class="td hidden">
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td hidden">
+                                                <p>100</p>
+                                            </div>
+                                            <div class="td category show-top1">
+                                                <p>1depth > 2depth > 3depth</p>
+                                            </div>
+                                            <div class="td title show-top2">
+                                                <p class="ellipsis">
+                                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045</a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-right al-l"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
+                                                <p>
+                                                    <a href="#" class="file-link">
+                                                        <i class="file-icon" type="word"></i>
+                                                        <span>word</span>
+                                                    </a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-bottom1">
+                                                <p>홍길동</p>
+                                            </div>
+                                            <div class="td show-bottom2">
+                                                <p>2021.05.13</p>
+                                            </div>
+                                            <div class="td hidden">
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td hidden">
+                                                <p>100</p>
+                                            </div>
+                                            <div class="td category show-top1">
+                                                <p>1depth > 2depth > 3depth</p>
+                                            </div>
+                                            <div class="td title show-top2">
+                                                <p class="ellipsis">
+                                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045</a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-right al-l"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
+                                                <p>
+                                                    <a href="#" class="file-link">
+                                                        <i class="file-icon" type="html"></i>
+                                                        <span>html</span>
+                                                    </a>
+                                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                                </p>
+                                            </div>
+                                            <div class="td show-bottom1">
+                                                <p>홍길동</p>
+                                            </div>
+                                            <div class="td show-bottom2">
+                                                <p>2021.05.13</p>
+                                            </div>
+                                            <div class="td hidden">
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-code mb30">
+                            </div>
+
+                            <h3 class="sub-tit">list type 2</h3>
+
+                            <div style="margin-top:15px;margin-bottom:30px;">
+                                <div class="table-wrap">
+                                    <div class="video-list-wrap">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="item">
+                                                    <div class="area" style="background-color:#eee;"></div>
+                                                    <div class="info">
+                                                        <p class="tit">iR-ADV DX C38 & iRC32 동영상 교육 영상 (32:36)</p>
+                                                        <p class="dsc">
+                                                            <span>홍길동</span>
+                                                            <span>2022.01.22</span>
+                                                        </p>
+                                                        <p class="dsc2">
+                                                            <span>모델 : 공통</span>
+                                                            <span>조회수 : 1,250회</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+
+                            <div class="guide-code mb30">
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <!-- // Style Guide -->
@@ -4710,13 +5052,12 @@
                                 .header-component .header {margin-bottom:20px;}
                             </style>
                             <div class="component-area header-component">
-                                
                                 <h3>Main</h3>
                                 <header id="header" class='header main'>
                                     <h1><img alt="Are you sure" src="../assets/img/common/logo.svg" /></h1>
                                     <a class="btn-alarm" href="#"><span>알림</span></a>
                                 </header>
-                
+
                                 <h3>Sub</h3>
                                 <header id="header" class='header sub'>
                                     <a class="btn-go-back" href="#"><span>뒤로가기</span></a>

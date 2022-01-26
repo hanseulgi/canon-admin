@@ -204,9 +204,9 @@
 
 
 //margin, padding
-@mixin mp($pd, $mg) {
-    padding: $pd;
+@mixin mp($mg,$pd) {
     margin: $mg;
+    padding: $pd;
 }
 
 //width, height
