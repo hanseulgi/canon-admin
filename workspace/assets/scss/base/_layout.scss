@@ -18,7 +18,14 @@ body {
     overflow: hidden;
     position: relative;
     min-width: 108rem;
+
+    @include mobile {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
 }
+
 
 
 //container
@@ -26,33 +33,9 @@ body {
     .contents {
         width: 120rem;
         margin: 0 auto;
-    }
-}
 
-
-//main
-main {
-
-    //공통
-    section {
-
-    }
-}
-
-
-//---------------------------------------------------
-// responsive : ~ 1024 style
-//---------------------------------------------------
-
-//container
-@include mobile {
-    #container {
-        .contents {
+        @include mobile {
             width: 100%;
         }
     }
 }
-
-
-
-

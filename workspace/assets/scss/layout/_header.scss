@@ -12,7 +12,16 @@
         margin: 0 auto;
         padding: 1.5rem 0;
 
+        @include mobile {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
         .header-logo {
+
+            @include mobile {
+                margin: 0 auto;
+            }
 
             a { display: block; }
 
@@ -26,6 +35,10 @@
         }
 
         .header-util {
+
+            @include mobile {
+                width: 100%;
+            }
 
             button {
                 font-size: 1.6rem;
@@ -89,6 +102,10 @@
             height: 24px;
             cursor: pointer;
 
+            @include mobile {
+                display: inline-block;
+            }
+
             .hamburger {
 
                 @include position (0, 1rem);
@@ -139,9 +156,28 @@
     flex: 0 0 auto;
     height: 100%;
 
+    @include mobile {
+        display: none;
+        overflow: hidden;
+        @include position (0, .0);
+        @include wh(100%, 100vh);
+        background-color: #ccc;
+    }
+
+    &.on {
+
+        @include mobile {
+            display: block;
+        }
+    }
+
     &:hover {
         .sub-menu {
             display: block;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
@@ -152,6 +188,13 @@
             display: flex;
             align-items: center;
             height: 100%;
+
+            @include mobile {
+                width: 100%;
+                flex-direction: column;
+                align-items: baseline;
+                margin-top: 10rem;
+            }
 
             >li {
                 position: relative;
@@ -174,82 +217,6 @@
             background-color: #fff;
             @include wh(100%, 12rem);
 
-            li {
-            }
-        }
-    }
-
-}
-
-//---------------------------------------------------
-// responsive : ~ 1024 style
-//---------------------------------------------------
-
-@include mobile {
-    .wrap {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    #header {
-        .inner {
-            flex-wrap: wrap;
-            width: 100%;
-
-            .header-logo {
-                margin: 0 auto;
-            }
-
-            .header-util {
-                width: 100%;
-
-                .btn-search {
-                    background: url($path-img-common + 'ico_search_1.svg') no-repeat 0 0;
-                }
-
-                .btn-qsearch {
-                    background: url($path-img-common + 'ico_quick_searh.svg') no-repeat 0 0;
-                }
-            }
-
-            .nav-toggle {
-                display: inline-block;
-            }
-        }
-
-        .nav {
-            display: none;
-            overflow: hidden;
-            @include position (0, .0);
-            @include wh(100%, 100vh);
-            background-color: #ccc;
-
-            &.on {
-                display: block;
-
-                &:hover {
-                    .sub-menu {
-                        display: none;
-                    }
-                }
-            }
-
-            &-wrap {
-
-                .nav-menu {
-                    width: 100%;
-                    flex-direction: column;
-                    align-items: baseline;
-                    margin-top: 10rem;
-                }
-
-                .sub-menu {}
-            }
         }
     }
 }
-
-
-
-

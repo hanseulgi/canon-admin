@@ -593,6 +593,10 @@ $f-sizes:
 //table
 .table-wrap {
 
+    @include mobile {
+        padding: 0 20px;
+    }
+
     .td>.td {
         padding: 0 0 !important;
     }
@@ -637,9 +641,21 @@ $f-sizes:
         text-align: center;
         border-top: 2px solid $color-000;
 
+        .tr:first-child {
+
+            @include mobile {
+                display: none;
+            }
+        }
+
         .tr {
             display: table-row;
             border-bottom: 1px solid $bg-f6f6f6;
+
+            @include mobile {
+                position: relative;
+                height: 10.2rem;
+            }
 
             .title {
                 width: calc(100% - 62%);
@@ -647,6 +663,18 @@ $f-sizes:
 
             .category {
                 width: 20rem;
+
+                @include mobile {
+                    @include fs($fs14);
+                    color: $color-666;
+                }
+            }
+
+            .hidden {
+
+                @include mobile {
+                    display: none !important;
+                }
             }
 
             .th {
@@ -684,6 +712,120 @@ $f-sizes:
 
             p {
                 @include fs($fs15);
+            }
+
+            @include mobile {
+
+                .show-bottom1 ~ .show-bottom2:before {
+                    content:"";
+                    position: absolute;
+                    top: 6px;
+                    left: -6px;
+                    width: 1px;
+                    height: 8px;
+                    background-color:#666;
+                }
+                .show-bottom2 ~ .show-bottom3:before {
+                    content:"";
+                    position: absolute;
+                    top: 6px;
+                    left: -6px;
+                    width: 1px;
+                    height: 8px;
+                    background-color:#666;
+                }
+
+                & [class*='show-'] {
+                    position: absolute;
+                    top: 6.8rem;
+                    text-align: left;
+
+                    p {
+                        @include fs($fs13);
+                        color: $color-666;
+                    }
+
+                    &[class*='-top'] {
+                        left: 0;
+                        top: 1.5rem;
+                        width: 85%;
+                        @include fs($fs13);
+
+                        p {
+                            @include fs($fs13);
+                        }
+                    }
+
+                    &[class*='-top2'] {
+                        left: 0;
+                        top: 4rem;
+                        @include fs($fs15);
+
+                        p {
+                            width: auto;
+                            padding: 0 0;
+                            @include fs($fs15);
+                        }
+                    }
+
+                    &[class*='-bottom1'] {
+                        left: 0;
+                    }
+
+                    &[class*='-bottom2'] {
+                        left: 4.6rem;
+                    }
+
+                    &[class*='-bottom3'] {
+                        left: 11.9rem;
+                    }
+
+                    &[class*='-right'] {
+                        @include flex-flow;
+                        right: 2rem;
+                        top: 50%;
+                        width: 6rem;
+                        transform: translateY(-50%);
+
+                        p {
+                            margin-left: 0;
+                        }
+
+                        p, a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            color: $color-666;
+                        }
+
+                        .file-icon + span {
+                            margin-left: 0;
+                            margin-top: 2px;
+                        }
+
+                        &:before {
+                            content:"";
+                            width: 1px;
+                            height: 73px;
+                            background-color: #e6e6e6;
+                        }
+                    }
+                }
+
+                .th {
+                    font-weight: $fw-m;
+                    padding: 1.5rem 1.5rem;
+                    background-color: $bg-f6f6f6;
+
+                    p {
+                        color: $color-666;
+                    }
+                }
+
+                .td {
+                    padding: 0 0;
+
+                }
             }
         }
     }
@@ -1215,6 +1357,10 @@ $f-sizes:
 //filter
 .filter-wrap {
 
+    @include mobile {
+        padding: 0 20px;
+    }
+
     .inner {
         margin-top: 5rem;
         margin-bottom: 1rem;
@@ -1334,13 +1480,16 @@ $f-sizes:
 }
 
 
-
-
-
 //location
 .location-wrap {
     background-color: #373d45;
     height: 12rem;
+
+    @include mobile {
+        padding: 0 20px;
+        background-color: #373d45;
+        height: 5rem;
+    }
 
     .inner {
         @include flex-flow;
@@ -1348,10 +1497,20 @@ $f-sizes:
         width: 120rem;
         margin: 0 auto;
 
+        @include mobile {
+            width: 100%;
+        }
+
         .location-title {
             color: #fff;
             font-size: 30px;
             font-weight: $fw-m;
+
+            @include mobile {
+                color: #fff;
+                font-size: 16px;
+                font-weight: $fw-m;
+            }
         }
 
         .location-list {
@@ -1382,10 +1541,18 @@ $f-sizes:
 .search-box-wrap {
     margin-top: 4rem;
 
+    @include mobile {
+        margin-top: 0;
+    }
+
     >.inner {
         background-color: $bg-f6f6f6;
         padding: 3.5rem 14.3rem;
         border-radius: 12px;
+
+        @include mobile {
+            padding: 2rem;
+        }
 
         .table-col {
             display: table;
@@ -1548,220 +1715,6 @@ $f-sizes:
                     }
                 }
             }
-        }
-    }
-}
-
-
-//---------------------------------------------------
-// responsive : ~ 1024 style
-//---------------------------------------------------
-
-
-//table
-@include mobile {
-
-    .table-wrap {
-        padding: 0 20px;
-
-        //리스트 테이블
-        [class$='-list'] {
-            width: 100%;
-            text-align: center;
-            border-top: 2px solid $color-000;
-
-            .tr:first-child {
-                display: none;
-            }
-
-            .tr {
-                position: relative;
-                height: 10.2rem;
-
-                .category {
-                    @include fs($fs14);
-                    color: $color-666;
-                }
-
-                .hidden {
-                    display: none !important;
-                }
-
-                .show-bottom1 ~ .show-bottom2:before {
-                    content:"";
-                    position: absolute;
-                    top: 6px;
-                    left: -6px;
-                    width: 1px;
-                    height: 8px;
-                    background-color:#666;
-                }
-                .show-bottom2 ~ .show-bottom3:before {
-                   content:"";
-                    position: absolute;
-                    top: 6px;
-                    left: -6px;
-                    width: 1px;
-                    height: 8px;
-                    background-color:#666;
-                }
-
-                & [class*='show-'] {
-                    position: absolute;
-                    top: 6.8rem;
-                    text-align: left;
-
-                    p {
-                        @include fs($fs13);
-                        color: $color-666;
-                    }
-
-                    &[class*='-top'] {
-                        left: 0;
-                        top: 1.5rem;
-                        width: 85%;
-                        @include fs($fs13);
-
-                        p {
-                            @include fs($fs13);
-                        }
-                    }
-
-                    &[class*='-top2'] {
-                        left: 0;
-                        top: 4rem;
-                        @include fs($fs15);
-
-                        p {
-                            width: auto;
-                            padding: 0 0;
-                            @include fs($fs15);
-                        }
-                    }
-
-                    &[class*='-bottom1'] {
-                        left: 0;
-                    }
-
-                    &[class*='-bottom2'] {
-                        left: 4.6rem;
-                    }
-
-                    &[class*='-bottom3'] {
-                        left: 11.9rem;
-                    }
-
-                    &[class*='-right'] {
-                        @include flex-flow;
-                        right: 2rem;
-                        top: 50%;
-                        width: 6rem;
-                        transform: translateY(-50%);
-
-                        p {
-                            margin-left: 0;
-                        }
-
-                        p, a {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            color: $color-666;
-                        }
-
-                        .file-icon + span {
-                            margin-left: 0;
-                            margin-top: 2px;
-                        }
-
-                        &:before {
-                            content:"";
-                            width: 1px;
-                            height: 73px;
-                            background-color: #e6e6e6;
-                        }
-                    }
-                }
-
-                .th {
-                    font-weight: $fw-m;
-                    padding: 1.5rem 1.5rem;
-                    background-color: $bg-f6f6f6;
-
-                    p {
-                        color: $color-666;
-                    }
-                }
-
-                .td {
-                    padding: 0 0;
-
-
-                }
-
-            }
-        }
-    }
-}
-
-//filter
-@include mobile {
-
-    .filter-wrap {
-        padding: 0 20px;
-    }
-}
-
-//location
-@include mobile {
-
-    .location-wrap {
-        padding: 0 20px;
-        background-color: #373d45;
-        height: 5rem;
-
-        .inner {
-            width: 100%;
-
-            .location-title {
-                color: #fff;
-                font-size: 16px;
-                font-weight: $fw-m;
-            }
-
-            .location-list {
-                font-size: 0;
-
-                li {
-                    @include fs ($fs14);
-                    position: relative;
-                    display: inline-block;
-                    color: $color-fff;
-
-                    &+li {
-                        padding-left: 2.4rem;
-
-                        &:before {
-                            content: "";
-                            @include position (7px, 4px);
-                            @include wh (1.2rem, 1.2rem);
-                            background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-//search box
-@include mobile {
-
-    .search-box-wrap {
-        margin-top: 0;
-
-        .inner {
-            padding: 2rem;
         }
     }
 }
