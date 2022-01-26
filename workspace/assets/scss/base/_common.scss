@@ -70,6 +70,13 @@ box
         border-color: $color-f6f6f6;
         background-color: $bg-fff;
     }
+    &[class*='white'] {
+        background-color: $bg-fff;
+    }
+    &[class*='white'][class*='line'] {
+        border-color: $color-f6f6f6;
+        background-color: $bg-fff;
+    }
 }
 
 

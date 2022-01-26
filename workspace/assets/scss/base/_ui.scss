@@ -221,12 +221,36 @@ LOGIN
         margin-left: 5rem;
         margin-top: 19rem;
 
-        border: 1px solid red;
-
-
         &.fixed {
             position: fixed;
             margin-top: 0;
+        }
+        & > div {
+            & + div {
+                margin-top: 3rem;
+            }
+        }
+
+        .lists {
+            padding: 0 3rem 3rem;
+
+            .tit {
+                @include fs($fs16);
+                padding: 3rem 0 2rem;
+                font-weight: $fw-m;
+
+            }
+            dd {
+                a {
+                    display: block;
+                    @include fs($fs14);
+                    
+                    & + a {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            
         }
     }
 

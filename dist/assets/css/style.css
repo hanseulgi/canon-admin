@@ -504,6 +504,13 @@ box
     border-color: #f6f6f6;
     background-color: #fff;
 }
+[class^=box-][class*=white] {
+    background-color: #fff;
+}
+[class^=box-][class*=white][class*=line] {
+    border-color: #f6f6f6;
+    background-color: #fff;
+}
 
 /* modal */
 /* text */
@@ -9068,11 +9075,54 @@ LOGIN
     width: 25rem;
     margin-left: 5rem;
     margin-top: 19rem;
-    border: 1px solid red;
 }
 .result .result-aside.fixed {
     position: fixed;
     margin-top: 0;
+}
+.result .result-aside > div + div {
+    margin-top: 3rem;
+}
+.result .result-aside .lists {
+    padding: 0 3rem 3rem;
+}
+.result .result-aside .lists .tit {
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    /* 15px */
+    /* 14px */
+    /* 12px */
+    padding: 3rem 0 2rem;
+    font-weight: 500;
+}
+.result .result-aside .lists dd a {
+    display: block;
+    /* 예) @include fs( $fs50 ); */
+    /* 50px */
+    /* 40px */
+    /* 30px */
+    /* 24px */
+    /* 20px */
+    /* 18px */
+    /* 16px */
+    /* 15px */
+    /* 14px */
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    /* 12px */
+}
+.result .result-aside .lists dd a + a {
+    margin-top: 1rem;
 }
 .result::after {
     content: "";
