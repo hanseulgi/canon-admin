@@ -2,7 +2,6 @@
 // variable : 기본 재사용 선언 스타일
 //---------------------------------------------------
 
-
 $notosans: 'NotoSansKR', Arial, AppleGothic, verdana, sans-serif;
 $roboto: 'Roboto', Arial, AppleGothic, verdana, sans-serif;
 $path-img: '../img/';
@@ -11,113 +10,72 @@ $path-img-ico: $path-img + 'ico/';
 $path-img-main: $path-img + 'main/';
 $path-img-btn: $path-img + 'btn/';
 
-
-// Breakpoints
+//Breakpoints
 $breakpoint-mobile: 1024px;
-// $breakpoint-tablet: 758px;
-// $breakpoint-desktop: 1024px;
+//$breakpoint-tablet: 758px;
+//$breakpoint-desktop: 1024px;
 
-
-// $img-notice-up: 'ico_notice.svg';
-// $img-arrow-up: 'ico_arrow_up.svg';
-// $img-arrow-down: 'ico_arrow_down.svg';
-// $img-arrow-view: 'ico_arrow_view.svg';
-// $img-arrow-circle: 'ico_arrow_circle.svg';
-// $img-arrow-question: 'ico_question.svg';
-// $img-arrow-purple: 'ico_arrow_purple.svg';
-// $img-rating-edit: 'ioc_rating_edit.svg';
-
-// $ico_category1: 'ico_category1.svg';
-// $ico_category2: 'ico_category2.svg';
-// $ico_category3: 'ico_category3.svg';
-// $ico_category4: 'ico_category4.svg';
-// $ico_category5: 'ico_category5.svg';
-// $ico_category6: 'ico_category6.svg';
-// $ico_category7: 'ico_category7.svg';
-// $ico_category8: 'ico_category8.svg';
-// $ico_category9: 'ico_category9.svg';
-// $ico_category10: 'ico_category10.svg';
-
-// $ico_category1_on: 'ico_category1_on.svg';
-// $ico_category2_on: 'ico_category2_on.svg';
-// $ico_category3_on: 'ico_category3_on.svg';
-// $ico_category4_on: 'ico_category4_on.svg';
-// $ico_category5_on: 'ico_category5_on.svg';
-// $ico_category6_on: 'ico_category6_on.svg';
-// $ico_category7_on: 'ico_category7_on.svg';
-// $ico_category8_on: 'ico_category8_on.svg';
-// $ico_category9_on: 'ico_category9_on.svg';
-// $ico_category10_on: 'ico_category10_on.svg';
-
-
-/*
-font
-*/
-
+//font
 $fw-b: 700;
 $fw-m: 500;
 $fw-r: 400;
 
-
-/* 50px */
+//50px
 $fs50: 5rem;
 $lh50: 1.4;
 $ls50: -0.5px;
 
-/* 40px */
+//40px
 $fs40: 4rem;
 $lh40: 1.5;
 $ls40: -0.4px;
 
-/* 30px */
+//30px
 $fs30: 3rem;
 $lh30: 1.5;
 $ls30: -0.3px;
 
-/* 24px */
+//24px
 $fs24: 2.4rem;
 $lh24: 1.5;
 $ls24: -0.4px;
 
-/* 20px */
+//20px
 $fs20: 2rem;
 $lh20: 1.75;
 $ls20: -0.2px;
 
-
-/* 18px */
+//18px
 $fs18: 1.8rem;
 $lh18: 1.44;
 $ls18: -0.18px;
 
-/* 16px */
+//16px
 $fs16: 1.6rem;
 $lh16: 1.5;
 $ls16: -0.16px;
 
-
-/* 15px */
+//15px
 $fs15: 1.5rem;
 $lh15: 1.4;
 $ls15: -0.15px;
 
-
-/* 14px */
+//14px
 $fs14: 1.4rem;
 $lh14: 1.43;
 $ls14: -0.14px;
 
-/* 12px */
+//13px
+$fs13: 1.3rem;
+$lh13: normal;
+$ls13: -0.3px;
+
+//12px
 $fs12: 1.2rem;
 $lh12: 1.42;
 $ls12: -0.12px;
 
-
-
-
-/*
-color
-*/
+//color
 $color-red: #dc000c;
 $color-fff: #fff;
 $color-000: #000;
@@ -127,9 +85,7 @@ $color-f6f6f6: #f6f6f6;
 $color-e6e6e6: #e6e6e6;
 $color-ccc: #ccc;
 
-/*
-bg color
-*/
+//bg color
 $bg-red: #dc000c;
 $bg-fff: #fff;
 $bg-000: #000;
@@ -138,4 +94,3 @@ $bg-666: #666;
 $bg-f6f6f6: #f6f6f6;
 $bg-e6e6e6: #e6e6e6;
 $bg-ccc: #ccc;
-

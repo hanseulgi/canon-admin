@@ -1,92 +1,21 @@
-@charset "UTF-8";
-/* base */
-/*
-font
-*/
-/* 50px */
-/* 40px */
-/* 30px */
-/* 24px */
-/* 20px */
-/* 18px */
-/* 16px */
-/* 15px */
-/* 14px */
-/* 12px */
-/*
-color
-*/
-/*
-bg color
-*/
-/*
-responsive
-*/
-/* Mobile */
-/* Tablet */
-/* Desktop */
-/*
-transition
-*/
-/*
-clearfix
-*/
-/* 예) @include clearfix; */
-/*
-blind
-*/
-/*
-flex
-*/
-/* 예) @include flex-flow; */
-/*
-position
-*/
-/*
-transform
-*/
-/* 예) @include transform */
-/*
-border
-*/
-/* 예) @include border-radius(20px); */
-/*
-font
-*/
-/* 예) @include fs-type( $fs20, $lh32, $ls30 ); */
-/*
-bullet
-*/
-/* 말줄임 */
-/*
-margin, padding
-*/
-/*
-width, height
-*/
-/* NotoSans */
 @font-face {
     font-family: "NotoSansKR";
     font-style: normal;
     font-weight: 400;
     src: local(""), url("../fonts/noto-sans-kr-v13-latin_korean-regular.woff2") format("woff2"), url("../fonts/noto-sans-kr-v13-latin_korean-regular.woff") format("woff"), url("../fonts/noto-sans-kr-v13-latin_korean-regular.ttf") format("truetype"), url("../fonts/noto-sans-kr-v13-latin_korean-regular.svg#NotoSansKR") format("svg");
-    /* Legacy iOS */
 }
 @font-face {
     font-family: "NotoSansKR";
     font-style: normal;
     font-weight: 500;
     src: local(""), url("../fonts/noto-sans-kr-v13-latin_korean-500.woff2") format("woff2"), url("../fonts/noto-sans-kr-v13-latin_korean-500.woff") format("woff"), url("../fonts/noto-sans-kr-v13-latin_korean-500.ttf") format("truetype"), url("../fonts/noto-sans-kr-v13-latin_korean-500.svg#NotoSansKR") format("svg");
-    /* Legacy iOS */
 }
 @font-face {
     font-family: "NotoSansKR";
     font-style: normal;
     font-weight: 700;
     src: local(""), url("../fonts/noto-sans-kr-v13-latin_korean-700.woff2") format("woff2"), url("../fonts/noto-sans-kr-v13-latin_korean-700.woff") format("woff"), url("../fonts/noto-sans-kr-v13-latin_korean-700.ttf") format("truetype"), url("../fonts/noto-sans-kr-v13-latin_korean-700.svg#NotoSansKR") format("svg");
-    /* Legacy iOS */
 }
-/* Roboto */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
@@ -190,24 +119,12 @@ button {
     cursor: pointer;
 }
 
-/* Form */
 select {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 10px;
     color: #111;
     background-color: #fff;
@@ -225,20 +142,9 @@ select[readonly], select[disabled] {
 input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], input[type=number], input[type=date] {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 20px;
     color: #111;
     background-color: #fff;
@@ -249,20 +155,9 @@ input[type=tel], input[type=time], input[type=text], input[type=password], input
 input[type=tel][readonly], input[type=text][readonly], input[type=password][readonly], input[type=search][readonly], input[type=email][readonly], input[type=tel][disabled], input[type=text][disabled], input[type=password][disabled], input[type=search][disabled], input[type=email][disabled] {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 20px;
     color: #111;
     background-color: #f6f6f6;
@@ -273,20 +168,9 @@ input[type=tel][readonly], input[type=text][readonly], input[type=password][read
 input[type=tel].disabled, input[type=text].disabled, input[type=password].disabled, input[type=search].disabled, input[type=email].disabled {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 20px;
     color: #111;
     background-color: #f6f6f6;
@@ -305,20 +189,9 @@ input:focus {
 
 input[type=text][class*=lg], input[type=tel][class*=lg], input[type=time][class*=lg], input[type=text][class*=lg], input[type=password][class*=lg], input[type=search][class*=lg], input[type=email][class*=lg], input[type=file][class*=lg], input[type=url][class*=lg], input[type=number][class*=lg], input[type=date][class*=lg] {
     height: 6rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
     padding: 18px 20px;
     color: #111;
     background-color: #fff;
@@ -386,7 +259,6 @@ textarea:focus {
     box-sizing: border-box;
 }
 
-/* ios safe area */
 :root {
     --safeTop:env(safe-area-inset-top);
     --safeBtm:env(safe-area-inset-bottom);
@@ -395,51 +267,26 @@ textarea:focus {
 body {
     padding: var(--safeTop) 0 var(--safeBtm) !important;
 }
+
 .wrap {
-    overflow: hidden;
-    position: relative;
-    min-width: 108rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
     font-size: 2.4rem;
     line-height: 1.5;
     letter-spacing: -0.4px;
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
+    overflow: hidden;
+    position: relative;
+    min-width: 108rem;
 }
 
-/*
-container
-*/
 #container .contents {
     width: 120rem;
     margin: 0 auto;
 }
 
-/*
-main
-*/
-main {
-    /* 공통 */
-}
-/*
-container
-*/
 @media (max-width: 1024px) {
     #container .contents {
         width: 100%;
     }
 }
-/*
-skip
-*/
 .skip {
     position: absolute;
     left: 0;
@@ -455,20 +302,9 @@ skip
     margin-bottom: -1px;
 }
 .skip a:focus, .skip a:active {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
     font-size: 2.4rem;
     line-height: 1.5;
     letter-spacing: -0.4px;
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     text-align: center;
     color: #000;
     width: 100%;
@@ -477,9 +313,6 @@ skip
     background-color: #ccc;
 }
 
-/*
-dim
-*/
 .dim {
     position: fixed;
     display: none;
@@ -496,9 +329,6 @@ dim
     display: block;
 }
 
-/*
-box
-*/
 [class^=box-] {
     border-radius: 12px;
     border: 1px solid transparent;
@@ -518,15 +348,12 @@ box
     background-color: #fff;
 }
 
-/* modal */
-/* text */
-/* bullit */
-/* tab */
-/*
-font-style
-*/
 .fs12 {
     font-size: 12px;
+}
+
+.fs13 {
+    font-size: 13px;
 }
 
 .fs14 {
@@ -565,9 +392,6 @@ font-style
     font-size: 50px;
 }
 
-/*
-Font Weight
-*/
 .fw-b {
     font-weight: 700 !important;
 }
@@ -580,18 +404,12 @@ Font Weight
     font-weight: 400 !important;
 }
 
-/*
-flex
-*/
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/*
-color
-*/
 .color-red {
     color: #dc000c !important;
 }
@@ -617,9 +435,6 @@ color
     color: #ccc !important;
 }
 
-/*
-bg color
-*/
 .bg-red {
     background-color: #dc000c !important;
 }
@@ -645,9 +460,6 @@ bg color
     background-color: #ccc !important;
 }
 
-/*
-ellipsis
-*/
 .ellipsis {
     display: block;
     white-space: nowrap;
@@ -671,9 +483,6 @@ ellipsis
     -webkit-box-orient: vertical;
 }
 
-/*
-width
-*/
 .w0 {
     width: 0px !important;
 }
@@ -3139,9 +2948,6 @@ width
     width: 100% !important;
 }
 
-/*
-margin-top
-*/
 .mt0 {
     margin-top: 0px !important;
 }
@@ -3194,9 +3000,6 @@ margin-top
     margin-top: 80px !important;
 }
 
-/*
-margin-bottom
-*/
 .mb5 {
     margin-bottom: 5px !important;
 }
@@ -3228,9 +3031,6 @@ margin-bottom
     margin-bottom: 50px !important;
 }
 
-/*
-margin-left
-*/
 .ml1 {
     margin-left: 1px !important;
 }
@@ -3382,9 +3182,6 @@ margin-left
     margin-left: 50px !important;
 }
 
-/*
-margin-right
-*/
 .mr5 {
     margin-right: 5px !important;
 }
@@ -3416,9 +3213,6 @@ margin-right
     margin-right: 50px !important;
 }
 
-/*
-padding-top
-*/
 .pt5 {
     padding-top: 5px !important;
 }
@@ -3450,9 +3244,6 @@ padding-top
     padding-top: 50px !important;
 }
 
-/*
-padding-bottom
-*/
 .pb0 {
     padding-bottom: 0px !important;
 }
@@ -3487,9 +3278,6 @@ padding-bottom
     padding-bottom: 50px !important;
 }
 
-/*
-padding-left
-*/
 .pl5 {
     padding-left: 5px !important;
 }
@@ -3521,9 +3309,6 @@ padding-left
     padding-left: 50px !important;
 }
 
-/*
-padding-right
-*/
 .pr5 {
     padding-right: 5px !important;
 }
@@ -3555,1513 +3340,6 @@ padding-right
     padding-right: 50px !important;
 }
 
-/*
-left
-*/
-.left1 {
-    left: 1px !important;
-}
-.left2 {
-    left: 2px !important;
-}
-.left3 {
-    left: 3px !important;
-}
-.left4 {
-    left: 4px !important;
-}
-.left5 {
-    left: 5px !important;
-}
-.left6 {
-    left: 6px !important;
-}
-.left7 {
-    left: 7px !important;
-}
-.left8 {
-    left: 8px !important;
-}
-.left9 {
-    left: 9px !important;
-}
-.left10 {
-    left: 10px !important;
-}
-.left11 {
-    left: 11px !important;
-}
-.left12 {
-    left: 12px !important;
-}
-.left13 {
-    left: 13px !important;
-}
-.left14 {
-    left: 14px !important;
-}
-.left15 {
-    left: 15px !important;
-}
-.left16 {
-    left: 16px !important;
-}
-.left17 {
-    left: 17px !important;
-}
-.left18 {
-    left: 18px !important;
-}
-.left19 {
-    left: 19px !important;
-}
-.left20 {
-    left: 20px !important;
-}
-.left21 {
-    left: 21px !important;
-}
-.left22 {
-    left: 22px !important;
-}
-.left23 {
-    left: 23px !important;
-}
-.left24 {
-    left: 24px !important;
-}
-.left25 {
-    left: 25px !important;
-}
-.left26 {
-    left: 26px !important;
-}
-.left27 {
-    left: 27px !important;
-}
-.left28 {
-    left: 28px !important;
-}
-.left29 {
-    left: 29px !important;
-}
-.left30 {
-    left: 30px !important;
-}
-.left31 {
-    left: 31px !important;
-}
-.left32 {
-    left: 32px !important;
-}
-.left33 {
-    left: 33px !important;
-}
-.left34 {
-    left: 34px !important;
-}
-.left35 {
-    left: 35px !important;
-}
-.left36 {
-    left: 36px !important;
-}
-.left37 {
-    left: 37px !important;
-}
-.left38 {
-    left: 38px !important;
-}
-.left39 {
-    left: 39px !important;
-}
-.left40 {
-    left: 40px !important;
-}
-.left41 {
-    left: 41px !important;
-}
-.left42 {
-    left: 42px !important;
-}
-.left43 {
-    left: 43px !important;
-}
-.left44 {
-    left: 44px !important;
-}
-.left45 {
-    left: 45px !important;
-}
-.left46 {
-    left: 46px !important;
-}
-.left47 {
-    left: 47px !important;
-}
-.left48 {
-    left: 48px !important;
-}
-.left49 {
-    left: 49px !important;
-}
-.left50 {
-    left: 50px !important;
-}
-.left51 {
-    left: 51px !important;
-}
-.left52 {
-    left: 52px !important;
-}
-.left53 {
-    left: 53px !important;
-}
-.left54 {
-    left: 54px !important;
-}
-.left55 {
-    left: 55px !important;
-}
-.left56 {
-    left: 56px !important;
-}
-.left57 {
-    left: 57px !important;
-}
-.left58 {
-    left: 58px !important;
-}
-.left59 {
-    left: 59px !important;
-}
-.left60 {
-    left: 60px !important;
-}
-.left61 {
-    left: 61px !important;
-}
-.left62 {
-    left: 62px !important;
-}
-.left63 {
-    left: 63px !important;
-}
-.left64 {
-    left: 64px !important;
-}
-.left65 {
-    left: 65px !important;
-}
-.left66 {
-    left: 66px !important;
-}
-.left67 {
-    left: 67px !important;
-}
-.left68 {
-    left: 68px !important;
-}
-.left69 {
-    left: 69px !important;
-}
-.left70 {
-    left: 70px !important;
-}
-.left71 {
-    left: 71px !important;
-}
-.left72 {
-    left: 72px !important;
-}
-.left73 {
-    left: 73px !important;
-}
-.left74 {
-    left: 74px !important;
-}
-.left75 {
-    left: 75px !important;
-}
-.left76 {
-    left: 76px !important;
-}
-.left77 {
-    left: 77px !important;
-}
-.left78 {
-    left: 78px !important;
-}
-.left79 {
-    left: 79px !important;
-}
-.left80 {
-    left: 80px !important;
-}
-.left81 {
-    left: 81px !important;
-}
-.left82 {
-    left: 82px !important;
-}
-.left83 {
-    left: 83px !important;
-}
-.left84 {
-    left: 84px !important;
-}
-.left85 {
-    left: 85px !important;
-}
-.left86 {
-    left: 86px !important;
-}
-.left87 {
-    left: 87px !important;
-}
-.left88 {
-    left: 88px !important;
-}
-.left89 {
-    left: 89px !important;
-}
-.left90 {
-    left: 90px !important;
-}
-.left91 {
-    left: 91px !important;
-}
-.left92 {
-    left: 92px !important;
-}
-.left93 {
-    left: 93px !important;
-}
-.left94 {
-    left: 94px !important;
-}
-.left95 {
-    left: 95px !important;
-}
-.left96 {
-    left: 96px !important;
-}
-.left97 {
-    left: 97px !important;
-}
-.left98 {
-    left: 98px !important;
-}
-.left99 {
-    left: 99px !important;
-}
-.left100 {
-    left: 100px !important;
-}
-.left101 {
-    left: 101px !important;
-}
-.left102 {
-    left: 102px !important;
-}
-.left103 {
-    left: 103px !important;
-}
-.left104 {
-    left: 104px !important;
-}
-.left105 {
-    left: 105px !important;
-}
-.left106 {
-    left: 106px !important;
-}
-.left107 {
-    left: 107px !important;
-}
-.left108 {
-    left: 108px !important;
-}
-.left109 {
-    left: 109px !important;
-}
-.left110 {
-    left: 110px !important;
-}
-.left111 {
-    left: 111px !important;
-}
-.left112 {
-    left: 112px !important;
-}
-.left113 {
-    left: 113px !important;
-}
-.left114 {
-    left: 114px !important;
-}
-.left115 {
-    left: 115px !important;
-}
-.left116 {
-    left: 116px !important;
-}
-.left117 {
-    left: 117px !important;
-}
-.left118 {
-    left: 118px !important;
-}
-.left119 {
-    left: 119px !important;
-}
-.left120 {
-    left: 120px !important;
-}
-.left121 {
-    left: 121px !important;
-}
-.left122 {
-    left: 122px !important;
-}
-.left123 {
-    left: 123px !important;
-}
-.left124 {
-    left: 124px !important;
-}
-.left125 {
-    left: 125px !important;
-}
-.left126 {
-    left: 126px !important;
-}
-.left127 {
-    left: 127px !important;
-}
-.left128 {
-    left: 128px !important;
-}
-.left129 {
-    left: 129px !important;
-}
-.left130 {
-    left: 130px !important;
-}
-.left131 {
-    left: 131px !important;
-}
-.left132 {
-    left: 132px !important;
-}
-.left133 {
-    left: 133px !important;
-}
-.left134 {
-    left: 134px !important;
-}
-.left135 {
-    left: 135px !important;
-}
-.left136 {
-    left: 136px !important;
-}
-.left137 {
-    left: 137px !important;
-}
-.left138 {
-    left: 138px !important;
-}
-.left139 {
-    left: 139px !important;
-}
-.left140 {
-    left: 140px !important;
-}
-.left141 {
-    left: 141px !important;
-}
-.left142 {
-    left: 142px !important;
-}
-.left143 {
-    left: 143px !important;
-}
-.left144 {
-    left: 144px !important;
-}
-.left145 {
-    left: 145px !important;
-}
-.left146 {
-    left: 146px !important;
-}
-.left147 {
-    left: 147px !important;
-}
-.left148 {
-    left: 148px !important;
-}
-.left149 {
-    left: 149px !important;
-}
-.left150 {
-    left: 150px !important;
-}
-.left151 {
-    left: 151px !important;
-}
-.left152 {
-    left: 152px !important;
-}
-.left153 {
-    left: 153px !important;
-}
-.left154 {
-    left: 154px !important;
-}
-.left155 {
-    left: 155px !important;
-}
-.left156 {
-    left: 156px !important;
-}
-.left157 {
-    left: 157px !important;
-}
-.left158 {
-    left: 158px !important;
-}
-.left159 {
-    left: 159px !important;
-}
-.left160 {
-    left: 160px !important;
-}
-.left161 {
-    left: 161px !important;
-}
-.left162 {
-    left: 162px !important;
-}
-.left163 {
-    left: 163px !important;
-}
-.left164 {
-    left: 164px !important;
-}
-.left165 {
-    left: 165px !important;
-}
-.left166 {
-    left: 166px !important;
-}
-.left167 {
-    left: 167px !important;
-}
-.left168 {
-    left: 168px !important;
-}
-.left169 {
-    left: 169px !important;
-}
-.left170 {
-    left: 170px !important;
-}
-.left171 {
-    left: 171px !important;
-}
-.left172 {
-    left: 172px !important;
-}
-.left173 {
-    left: 173px !important;
-}
-.left174 {
-    left: 174px !important;
-}
-.left175 {
-    left: 175px !important;
-}
-.left176 {
-    left: 176px !important;
-}
-.left177 {
-    left: 177px !important;
-}
-.left178 {
-    left: 178px !important;
-}
-.left179 {
-    left: 179px !important;
-}
-.left180 {
-    left: 180px !important;
-}
-.left181 {
-    left: 181px !important;
-}
-.left182 {
-    left: 182px !important;
-}
-.left183 {
-    left: 183px !important;
-}
-.left184 {
-    left: 184px !important;
-}
-.left185 {
-    left: 185px !important;
-}
-.left186 {
-    left: 186px !important;
-}
-.left187 {
-    left: 187px !important;
-}
-.left188 {
-    left: 188px !important;
-}
-.left189 {
-    left: 189px !important;
-}
-.left190 {
-    left: 190px !important;
-}
-.left191 {
-    left: 191px !important;
-}
-.left192 {
-    left: 192px !important;
-}
-.left193 {
-    left: 193px !important;
-}
-.left194 {
-    left: 194px !important;
-}
-.left195 {
-    left: 195px !important;
-}
-.left196 {
-    left: 196px !important;
-}
-.left197 {
-    left: 197px !important;
-}
-.left198 {
-    left: 198px !important;
-}
-.left199 {
-    left: 199px !important;
-}
-.left200 {
-    left: 200px !important;
-}
-.left201 {
-    left: 201px !important;
-}
-.left202 {
-    left: 202px !important;
-}
-.left203 {
-    left: 203px !important;
-}
-.left204 {
-    left: 204px !important;
-}
-.left205 {
-    left: 205px !important;
-}
-.left206 {
-    left: 206px !important;
-}
-.left207 {
-    left: 207px !important;
-}
-.left208 {
-    left: 208px !important;
-}
-.left209 {
-    left: 209px !important;
-}
-.left210 {
-    left: 210px !important;
-}
-.left211 {
-    left: 211px !important;
-}
-.left212 {
-    left: 212px !important;
-}
-.left213 {
-    left: 213px !important;
-}
-.left214 {
-    left: 214px !important;
-}
-.left215 {
-    left: 215px !important;
-}
-.left216 {
-    left: 216px !important;
-}
-.left217 {
-    left: 217px !important;
-}
-.left218 {
-    left: 218px !important;
-}
-.left219 {
-    left: 219px !important;
-}
-.left220 {
-    left: 220px !important;
-}
-.left221 {
-    left: 221px !important;
-}
-.left222 {
-    left: 222px !important;
-}
-.left223 {
-    left: 223px !important;
-}
-.left224 {
-    left: 224px !important;
-}
-.left225 {
-    left: 225px !important;
-}
-.left226 {
-    left: 226px !important;
-}
-.left227 {
-    left: 227px !important;
-}
-.left228 {
-    left: 228px !important;
-}
-.left229 {
-    left: 229px !important;
-}
-.left230 {
-    left: 230px !important;
-}
-.left231 {
-    left: 231px !important;
-}
-.left232 {
-    left: 232px !important;
-}
-.left233 {
-    left: 233px !important;
-}
-.left234 {
-    left: 234px !important;
-}
-.left235 {
-    left: 235px !important;
-}
-.left236 {
-    left: 236px !important;
-}
-.left237 {
-    left: 237px !important;
-}
-.left238 {
-    left: 238px !important;
-}
-.left239 {
-    left: 239px !important;
-}
-.left240 {
-    left: 240px !important;
-}
-.left241 {
-    left: 241px !important;
-}
-.left242 {
-    left: 242px !important;
-}
-.left243 {
-    left: 243px !important;
-}
-.left244 {
-    left: 244px !important;
-}
-.left245 {
-    left: 245px !important;
-}
-.left246 {
-    left: 246px !important;
-}
-.left247 {
-    left: 247px !important;
-}
-.left248 {
-    left: 248px !important;
-}
-.left249 {
-    left: 249px !important;
-}
-.left250 {
-    left: 250px !important;
-}
-.left251 {
-    left: 251px !important;
-}
-.left252 {
-    left: 252px !important;
-}
-.left253 {
-    left: 253px !important;
-}
-.left254 {
-    left: 254px !important;
-}
-.left255 {
-    left: 255px !important;
-}
-.left256 {
-    left: 256px !important;
-}
-.left257 {
-    left: 257px !important;
-}
-.left258 {
-    left: 258px !important;
-}
-.left259 {
-    left: 259px !important;
-}
-.left260 {
-    left: 260px !important;
-}
-.left261 {
-    left: 261px !important;
-}
-.left262 {
-    left: 262px !important;
-}
-.left263 {
-    left: 263px !important;
-}
-.left264 {
-    left: 264px !important;
-}
-.left265 {
-    left: 265px !important;
-}
-.left266 {
-    left: 266px !important;
-}
-.left267 {
-    left: 267px !important;
-}
-.left268 {
-    left: 268px !important;
-}
-.left269 {
-    left: 269px !important;
-}
-.left270 {
-    left: 270px !important;
-}
-.left271 {
-    left: 271px !important;
-}
-.left272 {
-    left: 272px !important;
-}
-.left273 {
-    left: 273px !important;
-}
-.left274 {
-    left: 274px !important;
-}
-.left275 {
-    left: 275px !important;
-}
-.left276 {
-    left: 276px !important;
-}
-.left277 {
-    left: 277px !important;
-}
-.left278 {
-    left: 278px !important;
-}
-.left279 {
-    left: 279px !important;
-}
-.left280 {
-    left: 280px !important;
-}
-.left281 {
-    left: 281px !important;
-}
-.left282 {
-    left: 282px !important;
-}
-.left283 {
-    left: 283px !important;
-}
-.left284 {
-    left: 284px !important;
-}
-.left285 {
-    left: 285px !important;
-}
-.left286 {
-    left: 286px !important;
-}
-.left287 {
-    left: 287px !important;
-}
-.left288 {
-    left: 288px !important;
-}
-.left289 {
-    left: 289px !important;
-}
-.left290 {
-    left: 290px !important;
-}
-.left291 {
-    left: 291px !important;
-}
-.left292 {
-    left: 292px !important;
-}
-.left293 {
-    left: 293px !important;
-}
-.left294 {
-    left: 294px !important;
-}
-.left295 {
-    left: 295px !important;
-}
-.left296 {
-    left: 296px !important;
-}
-.left297 {
-    left: 297px !important;
-}
-.left298 {
-    left: 298px !important;
-}
-.left299 {
-    left: 299px !important;
-}
-.left300 {
-    left: 300px !important;
-}
-.left301 {
-    left: 301px !important;
-}
-.left302 {
-    left: 302px !important;
-}
-.left303 {
-    left: 303px !important;
-}
-.left304 {
-    left: 304px !important;
-}
-.left305 {
-    left: 305px !important;
-}
-.left306 {
-    left: 306px !important;
-}
-.left307 {
-    left: 307px !important;
-}
-.left308 {
-    left: 308px !important;
-}
-.left309 {
-    left: 309px !important;
-}
-.left310 {
-    left: 310px !important;
-}
-.left311 {
-    left: 311px !important;
-}
-.left312 {
-    left: 312px !important;
-}
-.left313 {
-    left: 313px !important;
-}
-.left314 {
-    left: 314px !important;
-}
-.left315 {
-    left: 315px !important;
-}
-.left316 {
-    left: 316px !important;
-}
-.left317 {
-    left: 317px !important;
-}
-.left318 {
-    left: 318px !important;
-}
-.left319 {
-    left: 319px !important;
-}
-.left320 {
-    left: 320px !important;
-}
-.left321 {
-    left: 321px !important;
-}
-.left322 {
-    left: 322px !important;
-}
-.left323 {
-    left: 323px !important;
-}
-.left324 {
-    left: 324px !important;
-}
-.left325 {
-    left: 325px !important;
-}
-.left326 {
-    left: 326px !important;
-}
-.left327 {
-    left: 327px !important;
-}
-.left328 {
-    left: 328px !important;
-}
-.left329 {
-    left: 329px !important;
-}
-.left330 {
-    left: 330px !important;
-}
-.left331 {
-    left: 331px !important;
-}
-.left332 {
-    left: 332px !important;
-}
-.left333 {
-    left: 333px !important;
-}
-.left334 {
-    left: 334px !important;
-}
-.left335 {
-    left: 335px !important;
-}
-.left336 {
-    left: 336px !important;
-}
-.left337 {
-    left: 337px !important;
-}
-.left338 {
-    left: 338px !important;
-}
-.left339 {
-    left: 339px !important;
-}
-.left340 {
-    left: 340px !important;
-}
-.left341 {
-    left: 341px !important;
-}
-.left342 {
-    left: 342px !important;
-}
-.left343 {
-    left: 343px !important;
-}
-.left344 {
-    left: 344px !important;
-}
-.left345 {
-    left: 345px !important;
-}
-.left346 {
-    left: 346px !important;
-}
-.left347 {
-    left: 347px !important;
-}
-.left348 {
-    left: 348px !important;
-}
-.left349 {
-    left: 349px !important;
-}
-.left350 {
-    left: 350px !important;
-}
-.left351 {
-    left: 351px !important;
-}
-.left352 {
-    left: 352px !important;
-}
-.left353 {
-    left: 353px !important;
-}
-.left354 {
-    left: 354px !important;
-}
-.left355 {
-    left: 355px !important;
-}
-.left356 {
-    left: 356px !important;
-}
-.left357 {
-    left: 357px !important;
-}
-.left358 {
-    left: 358px !important;
-}
-.left359 {
-    left: 359px !important;
-}
-.left360 {
-    left: 360px !important;
-}
-.left361 {
-    left: 361px !important;
-}
-.left362 {
-    left: 362px !important;
-}
-.left363 {
-    left: 363px !important;
-}
-.left364 {
-    left: 364px !important;
-}
-.left365 {
-    left: 365px !important;
-}
-.left366 {
-    left: 366px !important;
-}
-.left367 {
-    left: 367px !important;
-}
-.left368 {
-    left: 368px !important;
-}
-.left369 {
-    left: 369px !important;
-}
-.left370 {
-    left: 370px !important;
-}
-.left371 {
-    left: 371px !important;
-}
-.left372 {
-    left: 372px !important;
-}
-.left373 {
-    left: 373px !important;
-}
-.left374 {
-    left: 374px !important;
-}
-.left375 {
-    left: 375px !important;
-}
-.left376 {
-    left: 376px !important;
-}
-.left377 {
-    left: 377px !important;
-}
-.left378 {
-    left: 378px !important;
-}
-.left379 {
-    left: 379px !important;
-}
-.left380 {
-    left: 380px !important;
-}
-.left381 {
-    left: 381px !important;
-}
-.left382 {
-    left: 382px !important;
-}
-.left383 {
-    left: 383px !important;
-}
-.left384 {
-    left: 384px !important;
-}
-.left385 {
-    left: 385px !important;
-}
-.left386 {
-    left: 386px !important;
-}
-.left387 {
-    left: 387px !important;
-}
-.left388 {
-    left: 388px !important;
-}
-.left389 {
-    left: 389px !important;
-}
-.left390 {
-    left: 390px !important;
-}
-.left391 {
-    left: 391px !important;
-}
-.left392 {
-    left: 392px !important;
-}
-.left393 {
-    left: 393px !important;
-}
-.left394 {
-    left: 394px !important;
-}
-.left395 {
-    left: 395px !important;
-}
-.left396 {
-    left: 396px !important;
-}
-.left397 {
-    left: 397px !important;
-}
-.left398 {
-    left: 398px !important;
-}
-.left399 {
-    left: 399px !important;
-}
-.left400 {
-    left: 400px !important;
-}
-.left401 {
-    left: 401px !important;
-}
-.left402 {
-    left: 402px !important;
-}
-.left403 {
-    left: 403px !important;
-}
-.left404 {
-    left: 404px !important;
-}
-.left405 {
-    left: 405px !important;
-}
-.left406 {
-    left: 406px !important;
-}
-.left407 {
-    left: 407px !important;
-}
-.left408 {
-    left: 408px !important;
-}
-.left409 {
-    left: 409px !important;
-}
-.left410 {
-    left: 410px !important;
-}
-.left411 {
-    left: 411px !important;
-}
-.left412 {
-    left: 412px !important;
-}
-.left413 {
-    left: 413px !important;
-}
-.left414 {
-    left: 414px !important;
-}
-.left415 {
-    left: 415px !important;
-}
-.left416 {
-    left: 416px !important;
-}
-.left417 {
-    left: 417px !important;
-}
-.left418 {
-    left: 418px !important;
-}
-.left419 {
-    left: 419px !important;
-}
-.left420 {
-    left: 420px !important;
-}
-.left421 {
-    left: 421px !important;
-}
-.left422 {
-    left: 422px !important;
-}
-.left423 {
-    left: 423px !important;
-}
-.left424 {
-    left: 424px !important;
-}
-.left425 {
-    left: 425px !important;
-}
-.left426 {
-    left: 426px !important;
-}
-.left427 {
-    left: 427px !important;
-}
-.left428 {
-    left: 428px !important;
-}
-.left429 {
-    left: 429px !important;
-}
-.left430 {
-    left: 430px !important;
-}
-.left431 {
-    left: 431px !important;
-}
-.left432 {
-    left: 432px !important;
-}
-.left433 {
-    left: 433px !important;
-}
-.left434 {
-    left: 434px !important;
-}
-.left435 {
-    left: 435px !important;
-}
-.left436 {
-    left: 436px !important;
-}
-.left437 {
-    left: 437px !important;
-}
-.left438 {
-    left: 438px !important;
-}
-.left439 {
-    left: 439px !important;
-}
-.left440 {
-    left: 440px !important;
-}
-.left441 {
-    left: 441px !important;
-}
-.left442 {
-    left: 442px !important;
-}
-.left443 {
-    left: 443px !important;
-}
-.left444 {
-    left: 444px !important;
-}
-.left445 {
-    left: 445px !important;
-}
-.left446 {
-    left: 446px !important;
-}
-.left447 {
-    left: 447px !important;
-}
-.left448 {
-    left: 448px !important;
-}
-.left449 {
-    left: 449px !important;
-}
-.left450 {
-    left: 450px !important;
-}
-.left451 {
-    left: 451px !important;
-}
-.left452 {
-    left: 452px !important;
-}
-.left453 {
-    left: 453px !important;
-}
-.left454 {
-    left: 454px !important;
-}
-.left455 {
-    left: 455px !important;
-}
-.left456 {
-    left: 456px !important;
-}
-.left457 {
-    left: 457px !important;
-}
-.left458 {
-    left: 458px !important;
-}
-.left459 {
-    left: 459px !important;
-}
-.left460 {
-    left: 460px !important;
-}
-.left461 {
-    left: 461px !important;
-}
-.left462 {
-    left: 462px !important;
-}
-.left463 {
-    left: 463px !important;
-}
-.left464 {
-    left: 464px !important;
-}
-.left465 {
-    left: 465px !important;
-}
-.left466 {
-    left: 466px !important;
-}
-.left467 {
-    left: 467px !important;
-}
-.left468 {
-    left: 468px !important;
-}
-.left469 {
-    left: 469px !important;
-}
-.left470 {
-    left: 470px !important;
-}
-.left471 {
-    left: 471px !important;
-}
-.left472 {
-    left: 472px !important;
-}
-.left473 {
-    left: 473px !important;
-}
-.left474 {
-    left: 474px !important;
-}
-.left475 {
-    left: 475px !important;
-}
-.left476 {
-    left: 476px !important;
-}
-.left477 {
-    left: 477px !important;
-}
-.left478 {
-    left: 478px !important;
-}
-.left479 {
-    left: 479px !important;
-}
-.left480 {
-    left: 480px !important;
-}
-.left481 {
-    left: 481px !important;
-}
-.left482 {
-    left: 482px !important;
-}
-.left483 {
-    left: 483px !important;
-}
-.left484 {
-    left: 484px !important;
-}
-.left485 {
-    left: 485px !important;
-}
-.left486 {
-    left: 486px !important;
-}
-.left487 {
-    left: 487px !important;
-}
-.left488 {
-    left: 488px !important;
-}
-.left489 {
-    left: 489px !important;
-}
-.left490 {
-    left: 490px !important;
-}
-.left491 {
-    left: 491px !important;
-}
-.left492 {
-    left: 492px !important;
-}
-.left493 {
-    left: 493px !important;
-}
-.left494 {
-    left: 494px !important;
-}
-.left495 {
-    left: 495px !important;
-}
-.left496 {
-    left: 496px !important;
-}
-.left497 {
-    left: 497px !important;
-}
-.left498 {
-    left: 498px !important;
-}
-.left499 {
-    left: 499px !important;
-}
-.left500 {
-    left: 500px !important;
-}
-
-/*
-align
-*/
 .al-l {
     text-align: left;
 }
@@ -5072,9 +3350,6 @@ align
     text-align: center;
 }
 
-/*
-float
-*/
 .fl-l {
     float: left;
 }
@@ -5082,14 +3357,10 @@ float
     float: right;
 }
 
-/*
-border
-*/
 .border-none {
     border: 0 !important;
 }
 
-/* hr */
 .hr {
     display: block;
     width: 100%;
@@ -5098,9 +3369,6 @@ border
     background-color: #000;
 }
 
-/*
-button
-*/
 [class^=btn-] {
     display: inline-block;
     padding: 0 10px;
@@ -5175,26 +3443,12 @@ button
     margin-left: 1rem;
 }
 
-/*
-select box
-*/
 .select {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 10px;
     color: #111;
     background-color: #fff;
@@ -5207,20 +3461,9 @@ select box
 .input {
     width: 100%;
     height: 4.5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 12px 10px;
     color: #111;
     background-color: #fff;
@@ -5228,27 +3471,13 @@ select box
     border-radius: 6px;
 }
 
-/*
-radio
-*/
 .radio {
     position: relative;
     display: inline-block;
     height: 2rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .radio input[type=radio] {
     display: inline-block;
@@ -5287,27 +3516,13 @@ radio
     margin-left: 30px;
 }
 
-/*
-checkbox
-*/
 .checkbox {
     position: relative;
     display: inline-block;
     height: 2rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .checkbox i {
     position: absolute;
@@ -5345,15 +3560,6 @@ checkbox
     display: none;
 }
 
-/*
-table
-*/
-.table-wrap {
-    /* 리스트 table */
-    /* 등록 table */
-    /* 상세 table */
-    /* 동영상 리스트 table */
-}
 .table-wrap .td > .td {
     padding: 0 0 !important;
 }
@@ -5365,20 +3571,9 @@ table
     margin-top: 6rem;
 }
 .table-wrap .top-wrap .txt {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 .table-wrap .top-wrap .txt span {
@@ -5389,20 +3584,9 @@ table
     width: 100%;
 }
 .table-wrap .top-title {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
 }
 .table-wrap .required:after {
     content: " *";
@@ -5421,7 +3605,7 @@ table
     border-bottom: 1px solid #f6f6f6;
 }
 .table-wrap [class$=-list] .tr .title {
-    width: 55rem;
+    width: 38%;
 }
 .table-wrap [class$=-list] .tr .category {
     width: 20rem;
@@ -5454,20 +3638,9 @@ table
     display: table-cell;
 }
 .table-wrap [class$=-list] .tr p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
 }
 .table-wrap .edit-title {
     margin-top: 6rem;
@@ -5487,20 +3660,9 @@ table
     margin-left: 3rem;
 }
 .table-wrap .edit-title ul li p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     line-height: 10px;
 }
 .table-wrap .edit-title ul li p.tit {
@@ -5543,20 +3705,9 @@ table
     padding: 0 5px;
 }
 .table-wrap > [class*=-edit] .tr p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
 }
 .table-wrap > [class*=-edit].type2 {
     display: flex;
@@ -5599,20 +3750,9 @@ table
     padding: 0 5px;
 }
 .table-wrap > [class*=-edit].type2 .tr p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
 }
 .table-wrap > [class*=-edit].type2 .tr .radio-group {
     height: 4.5rem;
@@ -5624,20 +3764,9 @@ table
     border-top: 2px solid #000;
 }
 .table-wrap .detail-title .detail-name {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
     font-size: 2rem;
     line-height: 1.75;
     letter-spacing: -0.2px;
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     margin-top: 2.5rem;
 }
 .table-wrap .detail-title ul {
@@ -5652,20 +3781,9 @@ table
     margin-left: 3rem;
 }
 .table-wrap .detail-title ul li p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     line-height: 10px;
 }
 .table-wrap .detail-title ul li p.tit {
@@ -5720,20 +3838,9 @@ table
     height: 100%;
 }
 .table-wrap > [class*=-detail] .tr p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
 }
 .table-wrap > [class*=-detail].type2 {
     display: flex;
@@ -5808,62 +3915,25 @@ table
     margin-left: 1.5rem;
 }
 .table-wrap .video-list-wrap ul li .item .info .tit {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     word-break: keep-all;
 }
 .table-wrap .video-list-wrap ul li .item .info .dsc {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     margin-top: 1.5rem;
 }
 .table-wrap .video-list-wrap ul li .item .info .dsc2 {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     margin-top: 0.5rem;
     color: #666;
 }
 
-/*
-input
-file
-*/
 .input-file {
     width: 100%;
 }
@@ -5885,7 +3955,6 @@ file
     width: calc(100% - 11rem) !important;
 }
 
-/* 기본 스타일 숨기기 */
 .input-none {
     position: absolute;
     width: 1px;
@@ -5897,27 +3966,15 @@ file
     border: 0;
 }
 
-/* add-file */
 .add-file.view .add-file-names {
     width: 100% !important;
     border: 0;
     padding-left: 0;
 }
 .add-file.view .add-file-names .name {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .add-file.view .add-file-names .name:before {
     content: none;
@@ -5937,17 +3994,6 @@ file
 .add-file .add-file-names .name {
     display: block;
     position: relative;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -5966,9 +4012,6 @@ file
     margin-top: 5px;
 }
 
-/*
-comment
-*/
 .comment-wrap {
     margin-top: 7rem;
     display: flex;
@@ -5982,33 +4025,11 @@ comment
 }
 .comment-wrap .title em {
     font-weight: 500;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .comment-wrap .counter {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -6031,17 +4052,6 @@ comment
     border-right-color: transparent;
 }
 .comment-wrap textarea {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -6050,17 +4060,6 @@ comment
     resize: none;
 }
 .comment-wrap textarea::-webkit-input-placeholder {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -6069,7 +4068,7 @@ comment
     width: 100px;
     height: 100px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #e6e6e6;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -6078,20 +4077,9 @@ comment
     margin-top: 4rem;
 }
 .comment-lists .length {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
     padding-bottom: 1rem;
     font-weight: 500;
     border-bottom: 1px solid #e6e6e6;
@@ -6118,34 +4106,12 @@ comment
     border-left: 1px solid #ccc;
 }
 .comment-lists .comment-item .txt {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     margin-top: 1rem;
 }
 .comment-lists .comment-item .date {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -6159,9 +4125,6 @@ comment
     color: #666;
 }
 
-/*
-filter
-*/
 .filter-wrap .inner {
     margin-top: 5rem;
     margin-bottom: 1rem;
@@ -6170,20 +4133,9 @@ filter
     display: flex;
 }
 .filter-wrap ul li {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     line-height: 1.2rem;
     color: #666;
 }
@@ -6196,9 +4148,6 @@ filter
     width: 13rem;
 }
 
-/*
-paging
-*/
 .paging {
     margin-top: 40px;
     text-align: center;
@@ -6241,7 +4190,6 @@ paging
     background-position: center center;
 }
 
-/* file icon */
 .file-icon {
     width: 2rem;
     height: 2rem;
@@ -6268,21 +4216,14 @@ paging
     margin-left: 0.3rem;
 }
 
-/*
-table bottom button
-*/
 .right-btn {
     text-align: right;
     margin-top: 1rem;
-    /* 페이징이 있는 경우 */
 }
 .right-btn + .paging {
     margin-top: -1rem;
 }
 
-/*
-location
-*/
 .location-wrap {
     background-color: #373d45;
     height: 12rem;
@@ -6306,20 +4247,9 @@ location
 .location-wrap .inner .location-list li {
     position: relative;
     display: inline-block;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #fff;
 }
 .location-wrap .inner .location-list li + li {
@@ -6335,9 +4265,6 @@ location
     background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
 }
 
-/*
-search box
-*/
 .search-box-wrap {
     margin-top: 4rem;
 }
@@ -6351,20 +4278,9 @@ search box
     width: 100%;
 }
 .search-box-wrap > .inner .table-col .th {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-weight: 700;
     width: 10.6rem;
     white-space: nowrap;
@@ -6398,9 +4314,6 @@ search box
     background: url("../img/ico/ico_minus.svg") no-repeat center center;
 }
 
-/*
-modal
-*/
 .modal {
     display: none;
     position: fixed;
@@ -6410,27 +4323,15 @@ modal
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 11;
-    /* alert */
 }
 .modal .modal-wrap {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     background-color: #fff;
 }
 .modal .modal-wrap[type=alert] {
@@ -6443,20 +4344,9 @@ modal
     background-color: #dc000c;
 }
 .modal .modal-wrap .modal-header .modal-title {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     color: #fff;
 }
 .modal .modal-wrap .modal-header .modal-close {
@@ -6475,7 +4365,6 @@ modal
     background: url();
 }
 
-/* 검색결과 다중 tab */
 .tab-wrap .tab-title .depth1 .inner {
     display: flex;
     justify-content: space-between;
@@ -6484,26 +4373,15 @@ modal
 .tab-wrap .tab-title .depth1 .inner a {
     flex: 1 0 128px;
     height: 4.8rem;
+    line-height: 4.6rem;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
-    color: #666;
     background-color: #f6f6f6;
     text-align: center;
-    line-height: 4.6rem;
+    color: #666;
 }
 .tab-wrap .tab-title .depth1 .inner a:first-child {
     border-left: 1px solid #e6e6e6;
@@ -6526,20 +4404,9 @@ modal
     justify-content: center;
 }
 .tab-wrap .tab-title .depth1 .depth2 li a {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     padding: 0 1.5rem;
 }
 .tab-wrap .tab-title .depth1 .depth2 li a.on {
@@ -6547,13 +4414,9 @@ modal
     font-weight: 500;
 }
 
-/*
-table
-*/
 @media (max-width: 1024px) {
     .table-wrap {
         padding: 0 20px;
-        /* 리스트 table */
     }
     .table-wrap [class$=-list] {
         width: 100%;
@@ -6565,86 +4428,109 @@ table
     }
     .table-wrap [class$=-list] .tr {
         position: relative;
-        height: 8rem;
+        height: 10.2rem;
+    }
+    .table-wrap [class$=-list] .tr .category {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        color: #666;
     }
     .table-wrap [class$=-list] .tr .hidden {
         display: none !important;
     }
+    .table-wrap [class$=-list] .tr .show-bottom1 ~ .show-bottom2:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: -6px;
+        width: 1px;
+        height: 8px;
+        background-color: #666;
+    }
+    .table-wrap [class$=-list] .tr .show-bottom2 ~ .show-bottom3:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: -6px;
+        width: 1px;
+        height: 8px;
+        background-color: #666;
+    }
     .table-wrap [class$=-list] .tr [class*=show-] {
         position: absolute;
-        top: 6rem;
+        top: 6.8rem;
         text-align: left;
     }
     .table-wrap [class$=-list] .tr [class*=show-] p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        /* 14px */
-        font-size: 1.4rem;
-        line-height: 1.43;
-        letter-spacing: -0.14px;
-        /* 12px */
+        font-size: 1.3rem;
+        line-height: normal;
+        letter-spacing: -0.3px;
         color: #666;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-top] {
         left: 0;
         top: 1.5rem;
         width: 85%;
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
+        font-size: 1.3rem;
+        line-height: normal;
+        letter-spacing: -0.3px;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-top] p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
-        color: #111;
+        font-size: 1.3rem;
+        line-height: normal;
+        letter-spacing: -0.3px;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-top2] {
         left: 0;
         top: 4rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-top2] p {
+        width: auto;
+        padding: 0 0;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom1] {
         left: 0;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom2] {
-        left: 7.5rem;
+        left: 4.6rem;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
-        left: 14.5rem;
+        left: 11.9rem;
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-right] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         right: 2rem;
         top: 50%;
+        width: 6rem;
         transform: translateY(-50%);
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] p {
+        margin-left: 0;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] p, .table-wrap [class$=-list] .tr [class*=show-][class*=-right] a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #666;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right] .file-icon + span {
+        margin-left: 0;
+        margin-top: 2px;
+    }
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right]:before {
+        content: "";
+        width: 1px;
+        height: 73px;
+        background-color: #e6e6e6;
     }
     .table-wrap [class$=-list] .tr .th {
         font-weight: 500;
@@ -6657,43 +4543,12 @@ table
     .table-wrap [class$=-list] .tr .td {
         padding: 0 0;
     }
-    .table-wrap [class$=-list] .tr .td .ellipsis {
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: auto;
-        margin: 0 auto;
-        padding: 0 0;
-    }
-    .table-wrap [class$=-list] .tr p {
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
-        /* 14px */
-        /* 12px */
-    }
 }
-/*
-filter
-*/
 @media (max-width: 1024px) {
     .filter-wrap {
         padding: 0 20px;
     }
 }
-/*
-location
-*/
 @media (max-width: 1024px) {
     .location-wrap {
         padding: 0 20px;
@@ -6712,22 +4567,11 @@ location
         font-size: 0;
     }
     .location-wrap .inner .location-list li {
-        position: relative;
-        display: inline-block;
-        /* 예) @include fs( $fs50 ); */
-        /* 50px */
-        /* 40px */
-        /* 30px */
-        /* 24px */
-        /* 20px */
-        /* 18px */
-        /* 16px */
-        /* 15px */
-        /* 14px */
         font-size: 1.4rem;
         line-height: 1.43;
         letter-spacing: -0.14px;
-        /* 12px */
+        position: relative;
+        display: inline-block;
         color: #fff;
     }
     .location-wrap .inner .location-list li + li {
@@ -6743,9 +4587,6 @@ location
         background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
     }
 }
-/*
-search-box
-*/
 @media (max-width: 1024px) {
     .search-box-wrap {
         margin-top: 0;
@@ -8896,10 +6737,100 @@ a.ui-button:active,
     background-image: linear-gradient(bottom, #dc000c 0%, #cd300c 100%);
 }
 
-/**
-LOGIN
-*/
-/* 로그인 */
+main [class$=-wrap] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main [class$=-wrap] .inner {
+    position: relative;
+    width: 120rem;
+    margin: 0 auto;
+}
+main [class$=-wrap] .inner .tab label {
+    display: inline-block;
+    cursor: pointer;
+}
+main [class$=-wrap] .inner .tab label p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: #fff;
+    margin-left: 5.5rem;
+}
+main [class$=-wrap] .inner .tab .content {
+    display: none;
+    position: absolute;
+    left: 24rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    margin: 2rem 0;
+    padding: 2rem;
+    color: #f00;
+    border: 1px solid #ccc;
+}
+main [class$=-wrap] .inner .tab [type=radio] {
+    display: none;
+}
+main [class$=-wrap] .inner .tab [type=radio]:checked ~ label ~ .content {
+    display: block;
+    z-index: 1;
+}
+main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p {
+    position: relative;
+}
+main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 11.2rem;
+    height: 4px;
+    background-color: #fff;
+}
+main .search-wrap {
+    background: url("../img/main/bg_keyvisual.png") no-repeat left top/cover;
+    width: 100%;
+    height: 28rem;
+}
+main .search-wrap .inner {
+    padding: 2rem 0;
+}
+main .search-wrap .inner .tab:nth-child(1) label p {
+    margin-top: 60px;
+}
+main .search-wrap .inner .tab:nth-child(2) label p {
+    margin-top: 5px;
+}
+main .search-wrap .inner .tab label {
+    width: 20rem;
+    height: 12rem;
+    background-color: #315bb7;
+}
+main .menu-wrap .inner {
+    margin: 6rem 0;
+}
+main .menu-wrap .inner .tab:nth-child(1) label p {
+    margin-top: 60px;
+}
+main .menu-wrap .inner .tab:nth-child(2) label p {
+    margin-top: 5px;
+}
+main .menu-wrap .inner .tab:nth-child(3) label p {
+    margin-top: 5px;
+}
+main .menu-wrap .inner .tab label {
+    width: 20rem;
+    height: 8rem;
+    background-color: #479fd1;
+}
+main .menu-wrap .inner .tab .content {
+    margin: 0;
+}
+
 .log {
     width: 100%;
 }
@@ -8924,40 +6855,18 @@ LOGIN
     padding: 3rem;
 }
 .log .inner .box-gray .b-item {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 .log .inner .box-gray .b-item + .b-item {
     margin-top: 1rem;
 }
 .log .inner .title {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-weight: 500;
     color: initial;
 }
@@ -8995,38 +6904,16 @@ LOGIN
 .log .inner .agree {
     width: 80rem;
     margin: 2rem auto 0;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .log .inner .log-search {
     margin-top: 1.5rem;
     text-align: center;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .log .inner .log-search a {
     position: relative;
@@ -9051,108 +6938,15 @@ LOGIN
 .log .inner .comment {
     text-align: center;
     margin-top: 3rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 
-.search-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 28rem;
-    background: url("../img/main/bg_keyvisual.png") no-repeat left top/cover;
-}
-.search-wrap .inner {
-    position: relative;
-    width: 120rem;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-.search-wrap .inner .tab:nth-child(1) label p {
-    margin-top: 60px;
-}
-.search-wrap .inner .tab:nth-child(2) label p {
-    margin-top: 5px;
-}
-.search-wrap .inner .tab label {
-    width: 20rem;
-    height: 12rem;
-    display: inline-block;
-    background-color: #315bb7;
-    cursor: pointer;
-}
-.search-wrap .inner .tab label p {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    font-size: 2.4rem;
-    line-height: 1.5;
-    letter-spacing: -0.4px;
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
-    color: #fff;
-    margin-left: 5.5rem;
-}
-.search-wrap .inner .tab .content {
-    display: none;
-    position: absolute;
-    left: 24rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    color: #fff;
-    font-size: 20px;
-    margin: 2rem 0;
-    padding: 2rem;
-    border: 1px solid #ccc;
-}
-.search-wrap .inner .tab [type=radio] {
-    display: none;
-}
-.search-wrap .inner .tab [type=radio]:checked ~ label ~ .content {
-    display: block;
-    z-index: 1;
-}
-.search-wrap .inner .tab [type=radio]:checked ~ label p {
-    position: relative;
-}
-.search-wrap .inner .tab [type=radio]:checked ~ label p:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 11.2rem;
-    height: 4px;
-    background-color: #fff;
-}
-
-/*
-검색 결과
-*/
 .result {
-    width: 120rem;
     position: relative;
+    width: 120rem;
 }
 .result .result-wrap {
     float: left;
@@ -9160,10 +6954,8 @@ LOGIN
 }
 .result .result-aside {
     float: left;
-    display: inline-block;
     width: 25rem;
-    margin-left: 5rem;
-    margin-top: 19rem;
+    margin: 19rem 0 0 5rem;
 }
 .result .result-aside.fixed {
     position: fixed;
@@ -9176,39 +6968,17 @@ LOGIN
     padding: 0 3rem 3rem;
 }
 .result .result-aside .lists .tit {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
     padding: 3rem 0 2rem;
     font-weight: 500;
 }
 .result .result-aside .lists dd a {
     display: block;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .result .result-aside .lists dd a + a {
     margin-top: 1rem;
@@ -9226,20 +6996,9 @@ LOGIN
     margin-top: 6.8rem;
 }
 .result-wrap .filter-wrap ul li {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
     color: inherit;
 }
 .result-wrap .filter-wrap ul li + li {
@@ -9254,22 +7013,10 @@ LOGIN
     margin-left: 1rem;
 }
 
-/* 퀵서치 */
 .result-quicksearch > .title {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
     font-size: 2rem;
     line-height: 1.75;
     letter-spacing: -0.2px;
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-weight: 500;
     margin-top: 8rem;
     margin-bottom: 1rem;
@@ -9278,20 +7025,9 @@ LOGIN
     margin-top: 6rem;
 }
 .result-quicksearch dl.list dt {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-weight: 500;
     border-bottom: 1px solid #e6e6e6;
     padding-bottom: 1rem;
@@ -9300,20 +7036,9 @@ LOGIN
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
     padding: 1.5rem 0;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -9321,7 +7046,6 @@ LOGIN
     flex: 0 1 70%;
 }
 
-/* 통합검색 */
 .result-integrate-search {
     margin-top: 1rem;
 }
@@ -9333,20 +7057,9 @@ LOGIN
     padding-bottom: 1rem;
 }
 .result-integrate-search .result-lists > .title span {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
 }
 .result-integrate-search .result-lists > .title span + span:before {
     content: "";
@@ -9360,71 +7073,27 @@ LOGIN
     padding: 3rem 0;
 }
 .result-integrate-search .result-lists dl.list dt {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.16px;
-    /* 15px */
-    /* 14px */
-    /* 12px */
 }
 .result-integrate-search .result-lists dl.list dd {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 .result-integrate-search .result-lists dl.list dd .tit {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     margin-top: 1rem;
     max-width: 80%;
 }
 .result-integrate-search .result-lists dl.list dd .file-link {
     display: block;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     margin-top: 1rem;
     vertical-align: middle;
 }
@@ -9432,20 +7101,9 @@ LOGIN
     margin-top: 2rem;
 }
 .result-integrate-search .result-lists dl.list dd .desc .sub-title span {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 .result-integrate-search .result-lists dl.list dd .desc .sub-title span + span:before {
@@ -9453,24 +7111,13 @@ LOGIN
     display: inline-block;
     width: 1.2rem;
     height: 1.2rem;
-    background: url("../img/ico/ico_next_1.svg") no-repeat 0 0/12px 12px;
     margin: 0 5px 0 3px;
+    background: url("../img/ico/ico_next_1.svg") no-repeat 0 0/12px 12px;
 }
 .result-integrate-search .result-lists dl.list dd .desc .date {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 .result-integrate-search .result-lists dl.list + dl.list {
@@ -9479,27 +7126,15 @@ LOGIN
 .result-integrate-search .result-lists [class^=btn] {
     width: 100%;
     height: 5rem;
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     line-height: 4.8rem;
     border-color: #e6e6e6;
     color: #666;
     font-weight: 400;
 }
 
-/* layout */
 #header {
     position: relative;
     width: 100%;
@@ -9550,36 +7185,14 @@ LOGIN
     display: flex;
 }
 #header .inner .header-user .account {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    /* 14px */
-    /* 12px */
     font-weight: 500;
     margin-right: 4rem;
     line-height: inherit;
 }
 #header .inner .header-user .my {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
-    /* 12px */
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
@@ -9745,37 +7358,15 @@ LOGIN
     margin: 0 auto;
 }
 #footer .inner .footer-copyright {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
     color: #666;
 }
 #footer .inner .footer-util {
-    /* 예) @include fs( $fs50 ); */
-    /* 50px */
-    /* 40px */
-    /* 30px */
-    /* 24px */
-    /* 20px */
-    /* 18px */
-    /* 16px */
-    /* 15px */
-    /* 14px */
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    /* 12px */
 }
 #footer .inner .footer-util a {
     text-decoration: underline;

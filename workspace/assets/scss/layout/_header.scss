@@ -1,9 +1,7 @@
 #header {
-
     position: relative;
     @include wh(100%, 11rem);
     background-color: #fff;
-
 
     .inner {
         @include flex-flow;
@@ -17,6 +15,7 @@
         .header-logo {
 
             a { display: block; }
+
             a::after {
                 content: "";
                 display: inline-block;
@@ -35,11 +34,12 @@
                 line-height: 2.4rem;
 
                 & + button { margin-left: 3rem; }
-
             }
+
             .btn-search {
                 background: url($path-img-common + 'ico_search_1.svg') no-repeat;
             }
+
             .btn-qsearch {
                 background: url($path-img-common + 'ico_quick_searh.svg') no-repeat;
             }
@@ -57,6 +57,7 @@
                 margin-right: 4rem;
                 line-height: inherit;
             }
+
             .my {
                 @include fs ($fs12);
                 line-height: 2.2rem;
@@ -113,7 +114,6 @@
 
             &.on {
                 .hamburger {
-
                     background-color: transparent;
 
                     &:before,
@@ -146,26 +146,21 @@
     }
 
     &-wrap {
-
         height: 100%;
 
         .nav-menu {
             display: flex;
             align-items: center;
             height: 100%;
-           
 
             >li {
                 position: relative;
                 padding-right: 65px;
 
-                & + li { }
+                & + li {}
 
                 >a {
                     font-size: 1.8rem;
-
-                 
-
                 }
             }
         }
@@ -178,10 +173,8 @@
             top: 6.7rem;
             background-color: #fff;
             @include wh(100%, 12rem);
-            // @include transition(all .1s ease-in);
 
             li {
-               
             }
         }
     }
@@ -192,9 +185,7 @@
 // responsive : ~ 1024 style
 //---------------------------------------------------
 
-
 @include mobile {
-
     .wrap {
         width: 100%;
         min-width: 100%;
@@ -202,7 +193,6 @@
     }
 
     #header {
-
         .inner {
             flex-wrap: wrap;
             width: 100%;
@@ -217,6 +207,7 @@
                 .btn-search {
                     background: url($path-img-common + 'ico_search_1.svg') no-repeat 0 0;
                 }
+
                 .btn-qsearch {
                     background: url($path-img-common + 'ico_quick_searh.svg') no-repeat 0 0;
                 }
@@ -245,6 +236,7 @@
             }
 
             &-wrap {
+
                 .nav-menu {
                     width: 100%;
                     flex-direction: column;
@@ -254,9 +246,7 @@
 
                 .sub-menu {}
             }
-
         }
-
     }
 }
 

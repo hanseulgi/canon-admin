@@ -1,65 +1,18 @@
 var UI = UI || {};
 
-// if(typeof UI === 'undefined') {  위에꺼랑 결국 같은 뜻
-// 	var UI = {};
-// }
-
 UI.window = $(window);
 UI.doc = $(document);
 UI.body = $('body');
 
-
-
-// 생성자
-// UI.a = function() {};
-// UI.b = function() {};
-
-// UI.c = (function () {
-//     const $var1 = '';
-//     let _var2 = '';
-
-//     return {
-//         init: function () { //이걸 실행
-//             this.open();   //여기서 this는 UI임
-//         },
-
-//         open: function ( target ) {
-
-//         },
-//         close: function ( target ) {
-
-//         }
-//     }
-// })();  //즉시 실행
-
-
-
-/* modal */
+//modal
 let open = function(el) {
     $(el).fadeIn();
-};
+}
 let close = function(el) {
     $(el).fadeOut();
 };
 
-
-
-// dim
-// UI.dim = function () {
-//     const $targetDim = $('[data-dim]');
-
-//     $targetDim.off("mouseover").on("mouseover", function() {
-//         $('.dim').addClass('on');
-//     });
-
-//     $targetDim.off("mouseleave").on("mouseleave", function() {
-//         $('.dim').removeClass('on');
-//     });
-
-// };
-
-
-/* file remove */
+//file remove
 UI.file  = function () {
 
     const $target = $('.table-edit .add-file-names').find('.name');
@@ -67,13 +20,14 @@ UI.file  = function () {
     $target.off("click").on("click", function() {
         $(this).hide();
     });
+
 };
 
-/* textarea */
+//textarea
 UI.textarea  = function () {
 
-    $('.comment-wrap textarea').off('keyup').on('keyup', function() {
-        //const $this = $(this);
+    $('.comment-wrap textarea').off("keyup").on("keyup", function() {
+
         const $counter = $('.counter');
         let _target = $(this).val();
         let _max = _target.length;
@@ -83,10 +37,12 @@ UI.textarea  = function () {
         if ( _max >= 300 ) {
             console.log('글자 입력 수 초과')
         };
+
     });
+
 };
 
-// nav
+//nav
 UI.navToggle = function () {
 
     const $el =  $('.nav-toggle');
@@ -102,14 +58,15 @@ UI.navToggle = function () {
 //tableM
 UI.tableM = function () {
 
-    if ( $('.show-right').length == 0 ){
-        $('.show-top2').css('width','100%');
+    if ( $('.show-right').length == 0 ) {
+        $('.show-top2').css('width','90%');
     } else {
-        $('.show-top2').css('width','85%');
+        $('.show-top2').css('width','70%');
     }
+
 };
 
-// commentDel
+//commentDel
 UI.commentDel = function () {
 
     $('.comment-item').find('.del').off("click").on("click", function() {
@@ -118,7 +75,7 @@ UI.commentDel = function () {
 
 };
 
-// dropDown
+//dropDown
 UI.dropDown = function () {
 
     $('.nav-menu > li > a').off("click").on("click", function(e) {
@@ -132,18 +89,13 @@ UI.dropDown = function () {
 
 };
 
-// search
+//search
 UI.search = function () {
 
-    $('.loop').each(function(){
-
-        //const $children = $(".loop").clone();
-
+    $('.loop').each(function() {
         $(this).find('.ico-search').off("click").on("click", function() {
 
             let _class = 'plus';
-            //let _null = '';
-
             let _target= `<div class="loop">
                             <div class="select-wrap w130">
                                 <select class="select">
@@ -161,62 +113,35 @@ UI.search = function () {
             if ( $(this).hasClass('plus') ) {
                 $(this).removeClass('plus');
                 $(this).addClass('minus');
-                $(".add").append(_target);
+                $('.add').append(_target);
             }
-            // if ( $(this).hasClass('minus') ){
-            //     $(this).removeClass('minus');
-            //     $(this).addClass('plus');
-            //     $(".add").append(_target);
-            // }
 
         });
     });
+
 };
 
-
-// modal
-UI.modal = (function () {
-
-    return {
-        init: function() {
-
-        },
-        open: function() {
-
-        },
-        close: function() {
-
-        },
-    }
-})();
-
-// datepicker
+//datepicker
 UI.datepicker = function () {
     $.datepicker.setDefaults({
-       dateFormat: 'yy-mm-dd' //Input Display Format 변경
-       ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-       ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
-       // ,changeYear: true //콤보박스에서 년 선택 가능
-       // ,changeMonth: true //콤보박스에서 월 선택 가능
-       ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
-       ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
-       ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip 텍스트
-       ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 부분 텍스트
-       ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 부분 Tooltip 텍스트
-       // ,minDate: "-1M" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-       // ,maxDate: "+1M" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+       dateFormat: 'yy-mm-dd'
+       ,showOtherMonths: true
+       ,showMonthAfterYear:true 
+       ,yearSuffix: "년"
+       ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] 
+       ,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+       ,dayNamesMin: ['일','월','화','수','목','금','토']
+       ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
     });
 
     $( ".datepicker" ).datepicker();
 
-    /* skin */
+    //skin
     $( ".datepicker" ).datepicker('widget').wrap('<div class="ll-skin-santiago"/>');
 
 };
 
-
-
-// sticky
+//sticky
 UI.sticky = function () {
 
     const $target = $('.result-aside');
@@ -244,12 +169,7 @@ UI.sticky = function () {
 
 };
 
-/* 실행 선언 */
 UI.init = function(){
-	// UI.a();
-	// UI.b();
-	// UI.c.init();
-    // UI.dim();
     UI.navToggle();
     UI.dropDown();
     UI.search();
@@ -259,10 +179,9 @@ UI.init = function(){
     UI.datepicker();
     UI.tableM();
     UI.sticky();
-    //UI.modal.init();
 };
 
-/* 실행 */
+//init
 (function(){
     UI.init();
 })();

@@ -4,9 +4,8 @@
 
 
 
-/*
-skip
-*/
+
+//skip
 .skip {
     position: absolute;
     left: 0;
@@ -35,10 +34,7 @@ skip
 }
 
 
-
-/*
-dim
-*/
+//dim
 .dim {
     position: fixed;
     display: none;
@@ -56,9 +52,7 @@ dim
     }
 }
 
-/*
-box
-*/
+//box
 [class^='box-'] {
     border-radius: 12px;
     border: 1px solid transparent;
@@ -82,22 +76,10 @@ box
     }
 }
 
-
-/* modal */
-
-/* text */
-
-/* bullit */
-
-/* tab */
-
-
-
-
-/*
-font-style
-*/
-$f-sizes: 12,
+//font-style
+$f-sizes: 
+12,
+13,
 14,
 15,
 16,
@@ -114,9 +96,7 @@ $f-sizes: 12,
     }
 }
 
-/*
-Font Weight
-*/
+//font weight
 .fw-b {
     font-weight: $fw-b !important;
 }
@@ -129,17 +109,13 @@ Font Weight
     font-weight: $fw-r !important;
 }
 
-/*
-flex
-*/
+//flex
 .flex {
     @include flex-flow();
 }
 
 
-/*
-color
-*/
+//color
 .color {
 
     &-red {
@@ -173,12 +149,9 @@ color
     &-ccc {
         color: $color-ccc !important;
     }
-
 }
 
-/*
-bg color
-*/
+//bg color
 .bg {
 
     &-red {
@@ -212,12 +185,9 @@ bg color
     &-ccc {
         background-color: $bg-ccc !important;
     }
-
 }
 
-/*
-ellipsis
-*/
+//ellipsis
 .ellipsis {
     @include ellipsis(1);
 
@@ -228,15 +198,15 @@ ellipsis
     &-line05 {
         @include ellipsis(5);
     }
-
 }
 
-/*
-width
-*/
+//width : px
 .w {
+
     @for $i from 0 through 800 {
+
         @if($i%1==0) {
+
             &#{$i} {
                 width: #{$i}px !important;
             }
@@ -244,9 +214,13 @@ width
     }
 }
 
+//width : %
 .wp {
+
     @for $i from 5 through 100 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 width: #{$i}+'%' !important;
             }
@@ -254,13 +228,13 @@ width
     }
 }
 
-
-/*
-margin-top
-*/
+//margin-top
 .mt {
+
     @for $i from 0 through 80 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 margin-top: #{$i}px !important;
             }
@@ -268,12 +242,13 @@ margin-top
     }
 }
 
-/*
-margin-bottom
-*/
+//margin-bottom
 .mb {
+
     @for $i from 1 through 50 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 margin-bottom: #{$i}px !important;
             }
@@ -281,12 +256,13 @@ margin-bottom
     }
 }
 
-/*
-margin-left
-*/
+//margin-left
 .ml {
+
     @for $i from 1 through 50 {
+
         @if($i%1==0) {
+
             &#{$i} {
                 margin-left: #{$i}px !important;
             }
@@ -294,12 +270,13 @@ margin-left
     }
 }
 
-/*
-margin-right
-*/
+//margin-right
 .mr {
+
     @for $i from 1 through 50 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 margin-right: #{$i}px !important;
             }
@@ -307,13 +284,13 @@ margin-right
     }
 }
 
-
-/*
-padding-top
-*/
+//padding-top
 .pt {
+
     @for $i from 1 through 50 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 padding-top: #{$i}px !important;
             }
@@ -321,12 +298,13 @@ padding-top
     }
 }
 
-/*
-padding-bottom
-*/
+//padding-bottom
 .pb {
+
     @for $i from 0 through 50 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 padding-bottom: #{$i}px !important;
             }
@@ -334,12 +312,13 @@ padding-bottom
     }
 }
 
-/*
-padding-left
-*/
+//padding-left
 .pl {
+
     @for $i from 1 through 50 {
+
         @if($i%5==0) {
+
             &#{$i} {
                 padding-left: #{$i}px !important;
             }
@@ -347,12 +326,13 @@ padding-left
     }
 }
 
-/*
-padding-right
-*/
+//padding-right
 .pr {
+
     @for $i from 1 through 50 {
+
         @if($i%5==0) {
+            
             &#{$i} {
                 padding-right: #{$i}px !important;
             }
@@ -360,24 +340,7 @@ padding-right
     }
 }
 
-/*
-left
-*/
-.left {
-    @for $i from 1 through 500 {
-        @if($i%1==0) {
-            &#{$i} {
-                left: #{$i}px !important;
-            }
-        }
-    }
-}
-
-
-
-/*
-align
-*/
+//text-align
 .al {
 
     &-l {
@@ -394,10 +357,9 @@ align
 
 }
 
-/*
-float
-*/
+//float
 .fl {
+
     &-l {
         float: left;
     }
@@ -407,18 +369,15 @@ float
     }
 }
 
-/*
-border
-*/
+//border
 .border {
+
     &-none {
         border: 0 !important;
     }
-
 }
 
-/* hr */
-
+//hr
 .hr {
     display: block;
     width: 100%;
@@ -427,9 +386,7 @@ border
     background-color: $bg-000;
 }
 
-/*
-button
-*/
+//button
 [class^='btn-'] {
     display: inline-block;
     padding: 0 10px;
@@ -516,10 +473,7 @@ button
     }
 }
 
-
-/*
-select box
-*/
+//select box
 .select {
     @include wh (100%, 4.5rem);
     @include fs($fs14);
@@ -532,6 +486,7 @@ select box
     appearance: none;
 }
 
+//input
 .input {
     @include wh (100%, 4.5rem);
     @include fs($fs14);
@@ -542,10 +497,7 @@ select box
     border-radius: 6px;
 }
 
-
-/*
-radio
-*/
+//radio
 .radio {
     position: relative;
     display: inline-block;
@@ -592,10 +544,7 @@ radio
     }
 }
 
-
-/*
-checkbox
-*/
+//checkbox
 .checkbox {
     position: relative;
     display: inline-block;
@@ -622,9 +571,6 @@ checkbox
         &:checked {
             background-color: #dc000c;
             border-color: #dc000c;
-
-            &+i {}
-
         }
 
         &:disabled {
@@ -644,10 +590,7 @@ checkbox
 }
 
 
-/*
-table
-*/
-
+//table
 .table-wrap {
 
     .td>.td {
@@ -685,7 +628,7 @@ table
         }
     }
 
-    /* 리스트 table */
+    //리스트 테이블
     [class$='-list'] {
         display: table;
         table-layout: fixed;
@@ -699,7 +642,7 @@ table
             border-bottom: 1px solid $bg-f6f6f6;
 
             .title {
-                width: 55rem;
+                width: calc(100% - 62%);
             }
 
             .category {
@@ -741,13 +684,11 @@ table
 
             p {
                 @include fs($fs15);
-
             }
-
         }
     }
 
-    /* 등록 table */
+    //등록 table
     .edit-title {
         margin-top: 6rem;
         border-bottom: 1px solid $color-e6e6e6;
@@ -761,8 +702,6 @@ table
 
             li {
                 display: flex;
-
-
 
                 &+li {
                     margin-left: 3rem;
@@ -785,11 +724,9 @@ table
                 }
             }
         }
-
     }
 
     &>[class*='-edit'] {
-
         width: 100%;
         text-align: left;
 
@@ -800,10 +737,6 @@ table
                 font-weight: $fw-m;
                 padding: 1.5rem 0;
                 flex: 0 0 8rem;
-
-                p {
-                    // color: $color-666;
-                }
             }
 
             .td {
@@ -822,21 +755,14 @@ table
                         padding: 0 5px;
                     }
                 }
-
             }
-
-            .th,
-            .td {}
 
             p {
                 @include fs($fs15);
-
             }
-
         }
 
         &.type2 {
-
             display: flex;
             flex-wrap: wrap;
             margin-top: 1.5rem;
@@ -864,7 +790,6 @@ table
 
                     [class^='btn'] {
                         margin-left: 10px;
-
                     }
 
                     & {
@@ -874,31 +799,21 @@ table
                             margin: 0 auto;
                             padding: 0 5px;
                         }
-
-
                     }
-
                 }
-
-                .th,
-                .td {}
 
                 p {
                     @include fs($fs15);
-
                 }
 
                 .radio-group {
                     height: 4.5rem;
                 }
-
             }
-
         }
-
     }
 
-    /* 상세 table */
+    //상세 table
     .detail-title {
         margin-top: 6rem;
         border-bottom: 1px solid $color-e6e6e6;
@@ -942,10 +857,8 @@ table
     }
 
     &>[class*='-detail'] {
-
         width: 100%;
         text-align: left;
-
 
         .tr {
             @include flex-flow;
@@ -956,10 +869,6 @@ table
                 font-weight: $fw-m;
                 padding: 1.5rem 0;
                 word-break: keep-all;
-
-                p {
-                    // color: $color-666;
-                }
             }
 
             .td {
@@ -990,21 +899,14 @@ table
                         height: 100%;
                     }
                 }
-
             }
-
-            .th,
-            .td {}
 
             p {
                 @include fs($fs15);
-
             }
-
         }
 
         &.type2 {
-
             display: flex;
             flex-wrap: wrap;
 
@@ -1017,7 +919,6 @@ table
                     flex: 0 0 13rem;
                     font-weight: $fw-m;
                     padding: 1.5rem 0;
-
 
                     &~.th {
                         margin-left: 3rem;
@@ -1051,7 +952,7 @@ table
         }
     }
 
-    /* 동영상 리스트 table */
+    //동영상 리스트 table
     .video-list-wrap {
         border-top: 2px solid $color-000;
 
@@ -1105,12 +1006,7 @@ table
     }
 }
 
-
-/*
-input
-file
-*/
-
+//input file
 .input-file {
     width: 100%;
 
@@ -1134,7 +1030,6 @@ file
     }
 }
 
-/* 기본 스타일 숨기기 */
 .input-none {
     position: absolute;
     width: 1px;
@@ -1146,12 +1041,11 @@ file
     border: 0;
 }
 
-
-/* add-file */
+//add file
 .add-file {
 
-    // 상세페이지 스타일 s
     &.view {
+
         .add-file-names {
             width: 100% !important;
             border: 0;
@@ -1167,14 +1061,11 @@ file
         }
     }
 
-    // 상세페이지 스타일 e
-
     &.flex {
         align-items: start;
     }
 
     .add-file-names {
-
         width: calc(100% - 11rem) !important;
         border: 1px solid $color-e6e6e6;
         border-radius: 6px;
@@ -1204,11 +1095,7 @@ file
     }
 }
 
-
-/*
-comment
-*/
-
+//댓글
 .comment-wrap {
     margin-top: 7rem;
     @include flex-flow;
@@ -1261,25 +1148,25 @@ comment
     .comment-register {
         @include wh(100px, 100px);
         background-color: $bg-fff;
-        border: 1px solid $color-ccc;
+        border: 1px solid $color-e6e6e6;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
     }
-
 }
 
 .comment-lists {
     margin-top: 4rem;
 
     .length {
-        em {
-            font-weight: $fw-m !important;
-        }
-
         @include fs($fs16);
         padding-bottom: 1rem;
         font-weight: $fw-m;
         border-bottom: 1px solid $color-e6e6e6;
+
+        em {
+            font-weight: $fw-m !important;
+        }
+
     }
 
     .comment-item {
@@ -1290,6 +1177,7 @@ comment
         border-bottom: 1px solid $color-e6e6e6;
 
         .info {
+
             span {
                 display: inline-block;
                 line-height: 1rem;
@@ -1324,11 +1212,9 @@ comment
     }
 }
 
-/*
-filter
-*/
-
+//filter
 .filter-wrap {
+
     .inner {
         margin-top: 5rem;
         margin-bottom: 1rem;
@@ -1355,11 +1241,7 @@ filter
     }
 }
 
-
-/*
-paging
-*/
-
+//paging
 .paging {
     margin-top: 40px;
     text-align: center;
@@ -1409,8 +1291,7 @@ paging
     }
 }
 
-
-/* file icon */
+//file icon
 .file-icon {
     @include wh(2rem, 2rem);
     display: inline-block;
@@ -1439,17 +1320,14 @@ paging
         vertical-align: middle;
         margin-left: .3rem;
     }
-
 }
 
-/*
-table bottom button
-*/
+//table bottom button
 .right-btn {
     text-align: right;
     margin-top: 1rem;
 
-    /* 페이징이 있는 경우 */
+    //버튼 아래에 페이징이 있는 경우
     &+.paging {
         margin-top: -1rem;
     }
@@ -1458,9 +1336,8 @@ table bottom button
 
 
 
-/*
-location
-*/
+
+//location
 .location-wrap {
     background-color: #373d45;
     height: 12rem;
@@ -1501,11 +1378,7 @@ location
     }
 }
 
-
-
-/*
-search box
-*/
+//search box
 .search-box-wrap {
     margin-top: 4rem;
 
@@ -1518,17 +1391,9 @@ search box
             display: table;
             width: 100%;
 
-            // &.result {
-            //     display: flex !important;
-            //     align-items: center;
-            //     justify-content: baseline;
-            //     margin-bottom: 10px;
-            // }
-
             .th {
                 @include fs($fs18);
                 font-weight: $fw-b;
-                //padding-right: 5rem;
                 width: 10.6rem;
                 white-space: nowrap;
             }
@@ -1570,16 +1435,13 @@ search box
                     background: url($path-img-ico + 'ico_minus.svg') no-repeat center center;
                 }
             }
-
         }
     }
 }
 
 
 
-/*
-modal
-*/
+//modal
 .modal {
     display: none;
     position: fixed;
@@ -1589,7 +1451,7 @@ modal
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 11;
 
-    /* alert */
+    //alert type
     .modal-wrap {
         @include position (50%, 50%);
         transform: translate(-50%, -50%);
@@ -1629,24 +1491,27 @@ modal
     }
 }
 
-/* 검색결과 다중 tab */
+//검색결과 tab
 .tab-wrap {
+
     .tab-title {
+
         .depth1 {
+
             .inner {
                 @include flex-flow;
 
                 a {
                     flex: 1 0 128px;
                     height: 4.8rem;
+                    line-height: 4.6rem;
                     border-top: 1px solid $color-e6e6e6;
                     border-bottom: 1px solid $color-e6e6e6;
                     @include fs($fs15);
-                    color: $color-666;
                     background-color: $bg-f6f6f6;
                     text-align: center;
-                    line-height: 4.6rem;
-
+                    color: $color-666;
+                    
                     &:first-child {
                         border-left: 1px solid $color-e6e6e6;
                     }
@@ -1671,6 +1536,7 @@ modal
                 justify-content: center;
 
                 li {
+
                     a {
                         @include fs($fs14);
                         padding: 0 1.5rem;
@@ -1692,15 +1558,13 @@ modal
 //---------------------------------------------------
 
 
-/*
-table
-*/
-
+//table
 @include mobile {
+
     .table-wrap {
         padding: 0 20px;
 
-        /* 리스트 table */
+        //리스트 테이블
         [class$='-list'] {
             width: 100%;
             text-align: center;
@@ -1712,20 +1576,43 @@ table
 
             .tr {
                 position: relative;
-                height: 8rem;
+                height: 10.2rem;
+
+                .category {
+                    @include fs($fs14);
+                    color: $color-666;
+                }
 
                 .hidden {
                     display: none !important;
                 }
 
+                .show-bottom1 ~ .show-bottom2:before {
+                    content:"";
+                    position: absolute;
+                    top: 6px;
+                    left: -6px;
+                    width: 1px;
+                    height: 8px;
+                    background-color:#666;
+                }
+                .show-bottom2 ~ .show-bottom3:before {
+                   content:"";
+                    position: absolute;
+                    top: 6px;
+                    left: -6px;
+                    width: 1px;
+                    height: 8px;
+                    background-color:#666;
+                }
 
                 & [class*='show-'] {
                     position: absolute;
-                    top: 6rem;
+                    top: 6.8rem;
                     text-align: left;
 
                     p {
-                        @include fs($fs14);
+                        @include fs($fs13);
                         color: $color-666;
                     }
 
@@ -1733,17 +1620,23 @@ table
                         left: 0;
                         top: 1.5rem;
                         width: 85%;
-                        @include fs($fs15);
+                        @include fs($fs13);
 
                         p {
-                            @include fs($fs15);
-                            color: $color-111;
+                            @include fs($fs13);
                         }
                     }
 
                     &[class*='-top2'] {
                         left: 0;
                         top: 4rem;
+                        @include fs($fs15);
+
+                        p {
+                            width: auto;
+                            padding: 0 0;
+                            @include fs($fs15);
+                        }
                     }
 
                     &[class*='-bottom1'] {
@@ -1751,35 +1644,43 @@ table
                     }
 
                     &[class*='-bottom2'] {
-                        left: 7.5rem;
+                        left: 4.6rem;
                     }
 
                     &[class*='-bottom3'] {
-                        left: 14.5rem;
+                        left: 11.9rem;
                     }
 
                     &[class*='-right'] {
+                        @include flex-flow;
                         right: 2rem;
                         top: 50%;
+                        width: 6rem;
                         transform: translateY(-50%);
+
+                        p {
+                            margin-left: 0;
+                        }
+
+                        p, a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            color: $color-666;
+                        }
+
+                        .file-icon + span {
+                            margin-left: 0;
+                            margin-top: 2px;
+                        }
+
+                        &:before {
+                            content:"";
+                            width: 1px;
+                            height: 73px;
+                            background-color: #e6e6e6;
+                        }
                     }
-
-
-                    // &[class*='-bottom'] ~ [class*='-bottom'] {
-                    //     border-left: 1px solid green;
-                    //     padding-left: 2rem;
-                    // }
-                    // &[class*='-bottom'] ~ [class*='-bottom']:before {
-                    //     content:"";
-                    //     position: absolute;
-                    //     left: -15px;
-                    //     top: 5px;
-                    //     border-left: 1px solid red;
-                    //     height: 1rem;
-                    //     width: 1px;
-                    //     background-color:#ccc;
-                    //     display: inline-block;
-                    // }
                 }
 
                 .th {
@@ -1796,20 +1697,6 @@ table
                     padding: 0 0;
 
 
-                    & {
-                        .ellipsis {
-                            @include ellipsis(1);
-                            width: auto;
-                            margin: 0 auto;
-                            padding: 0 0;
-                        }
-                    }
-
-                }
-
-                p {
-                    @include fs($fs15);
-
                 }
 
             }
@@ -1817,23 +1704,17 @@ table
     }
 }
 
-/*
-filter
-*/
-
-
+//filter
 @include mobile {
+
     .filter-wrap {
         padding: 0 20px;
     }
 }
 
-
-/*
-location
-*/
-
+//location
 @include mobile {
+
     .location-wrap {
         padding: 0 20px;
         background-color: #373d45;
@@ -1852,9 +1733,9 @@ location
                 font-size: 0;
 
                 li {
+                    @include fs ($fs14);
                     position: relative;
                     display: inline-block;
-                    @include fs ($fs14);
                     color: $color-fff;
 
                     &+li {
@@ -1873,12 +1754,9 @@ location
     }
 }
 
-
-/*
-search-box
-*/
-
+//search box
 @include mobile {
+
     .search-box-wrap {
         margin-top: 0;
 
