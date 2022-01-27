@@ -3652,6 +3652,18 @@ body {
         color: #666;
     }
 }
+.table-wrap [class$=-list] .tr .category span + span::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
+}
+@media (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr .category span + span::before {
+        vertical-align: -2px;
+    }
+}
 @media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr .hidden {
         display: none !important;

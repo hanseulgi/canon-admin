@@ -671,6 +671,19 @@ $f-sizes:
                     @include fs($fs14);
                     color: $color-666;
                 }
+                
+                span {
+                    &+span::before {
+                        content: "";
+                        display: inline-block;
+                        @include wh(1.2rem, 1.2rem);
+                        background: url($path-img-common + 'ico_arrow_category.svg') no-repeat center / cover;
+
+                        @include mobile {
+                            vertical-align: -2px;
+                        }
+                    }
+                }
             }
 
             .hidden {
