@@ -714,7 +714,6 @@ $f-sizes:
                     .ellipsis {
                         @include ellipsis(1);
                         width: calc(100% - 100px);
-                        margin: 0 auto;
                         padding: 0 5px;
                     }
                 }
@@ -870,7 +869,7 @@ $f-sizes:
                     line-height: 10px;
 
                     &.tit {
-                        font-weight: $fw-m;
+                        font-weight: $fw-r;
                         color: $color-666;
                     }
 
@@ -1640,16 +1639,15 @@ $f-sizes:
             }
 
             .th {
-                @include fs($fs18);
-                font-weight: $fw-b;
-                width: 12.6rem;
+                @include fs($fs16);
+                font-weight: $fw-m;
+                width: 12rem;
                 white-space: nowrap;
-                
+                color: $color-666;
+
                 @include mobile {
                     @include fs($fs14);
-                    font-weight: $fw-r;
                     width: auto;
-                    color: $color-666;
                 }
             }
 
