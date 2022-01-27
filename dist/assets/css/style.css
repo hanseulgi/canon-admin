@@ -6899,6 +6899,8 @@ main [class$=-wrap] .inner .tab [type=radio]:checked ~ label ~ .content {
 }
 main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p {
     position: relative;
+    display: inline-block;
+    border-bottom: 4px solid #fff;
 }
 main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p:after {
     content: "";
@@ -6906,7 +6908,7 @@ main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p:after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    width: 11.2rem;
+    width: calc(100% + 5px);
     height: 4px;
     background-color: #fff;
 }
@@ -6932,19 +6934,27 @@ main .search-wrap .inner .tab label {
 main .menu-wrap .inner {
     margin: 6rem 0;
 }
-main .menu-wrap .inner .tab:nth-child(1) label p {
-    margin-top: 60px;
-}
-main .menu-wrap .inner .tab:nth-child(2) label p {
-    margin-top: 5px;
-}
-main .menu-wrap .inner .tab:nth-child(3) label p {
-    margin-top: 5px;
-}
 main .menu-wrap .inner .tab label {
     width: 20rem;
-    height: 8rem;
     background-color: #479fd1;
+}
+main .menu-wrap .inner .tab:nth-child(1) label {
+    height: 8.3rem;
+}
+main .menu-wrap .inner .tab:nth-child(1) label p {
+    margin-top: 4.2rem;
+}
+main .menu-wrap .inner .tab:nth-child(2) label {
+    height: 5.3rem;
+}
+main .menu-wrap .inner .tab:nth-child(2) label p {
+    margin-top: 2.1rem;
+}
+main .menu-wrap .inner .tab:nth-child(3) label {
+    height: 10.4rem;
+}
+main .menu-wrap .inner .tab:nth-child(3) label p {
+    margin-top: 2.1rem;
 }
 main .menu-wrap .inner .tab .content {
     margin: 0;
