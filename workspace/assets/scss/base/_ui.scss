@@ -50,7 +50,9 @@ main {
                         }
 
                         p {
-                            position: relative;
+                            position:relative;
+                            display: inline-block;
+                            border-bottom: 4px solid $color-fff;
                         }
 
                         p:after {
@@ -59,7 +61,7 @@ main {
                             position: absolute;
                             left: 0;
                             bottom: -4px;
-                            @include wh (11.2rem, 4px);
+                            @include wh ( calc(100% + 5px), 4px );
                             background-color: $bg-fff;
                         }
                     }
@@ -111,11 +113,17 @@ main {
             margin: 6rem 0;
 
             .tab {
+                label {
+                    width: 20rem;
+                    background-color: #479fd1;
+                }
                 &:nth-child(1) {
+
                     label {
+                        height: 8.3rem;
 
                         p {
-                            margin-top: 60px;
+                            margin-top: 4.2rem;
                         }
                     }
                 }
@@ -123,9 +131,10 @@ main {
                 &:nth-child(2) {
 
                     label {
+                        height: 5.3rem;
 
                         p {
-                            margin-top: 5px;
+                            margin-top: 2.1rem;
                         }
                     }
                 }
@@ -133,16 +142,12 @@ main {
                 &:nth-child(3) {
 
                     label {
+                        height: 10.4rem;
 
                         p {
-                            margin-top: 5px;
+                            margin-top: 2.1rem;
                         }
                     }
-                }
-
-                label {
-                    @include wh(20rem, 8rem);
-                    background-color: #479fd1;
                 }
 
                 .content {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
     font-family: "NotoSansKR";
     font-style: normal;
@@ -4631,7 +4632,7 @@ body {
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 11;
 }
 .modal .modal-wrap {
@@ -4639,19 +4640,33 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.4rem;
-    line-height: 1.43;
-    letter-spacing: -0.14px;
-    background-color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
 }
 .modal .modal-wrap[type=alert] {
-    width: 40rem;
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
 }
 .modal .modal-wrap .modal-header {
     position: relative;
     padding: 1rem;
     box-sizing: border-box;
     background-color: #dc000c;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
 }
 .modal .modal-wrap .modal-header .modal-title {
     font-size: 1.8rem;
@@ -4665,8 +4680,106 @@ body {
     top: 1rem;
 }
 .modal .modal-wrap .modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.modal .modal-wrap .modal-content p {
+    width: 100%;
+    height: 15rem;
+    background: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
     box-sizing: border-box;
-    padding: 1rem;
+}
+.modal .modal-wrap .modal-content .btns {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+}
+.modal .modal-wrap .modal-content .btns.btns--full-wh .modal__btn {
+    width: 100%;
+}
+.modal .modal-wrap .modal-content .btns.include-red-stroke {
+    border-left: 1px solid #dc000c;
+    border-radius: 0 0 0 1.5rem;
+}
+.modal .modal-wrap .modal-content .btns .modal__btn {
+    display: block;
+    width: 50%;
+    height: 100%;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 0;
+    font-weight: 400;
+}
+.modal .modal-wrap .modal-content .btns .modal__btn.btn--gray {
+    background: #666;
+    border-left: 1px solid #666;
+}
+.modal .modal-wrap .modal-content .btns .modal__btn.btn--red-stroke {
+    background: #fff;
+    border-color: #dc000c;
+    color: #dc000c;
+    border-width: 1px 0 1px 0;
+    border-radius: 0 0 0 1.5rem;
+}
+.modal .modal-wrap.modal--m-size[type=alert] {
+    width: 36rem;
+    height: 24rem;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .modal-content {
+    height: 100%;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input {
+    padding: 3rem 3rem 0 3rem;
+    background: #fff;
+    width: 100%;
+    height: calc(100% - 5rem);
+    margin: 0 auto;
+    text-align: left;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input p {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    height: auto;
+    font-size: 1.3rem;
+    color: #666;
+    border: 0;
+    text-align: left;
+    display: block;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input p::before {
+    content: "※";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.4rem;
+    height: 0.5rem;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input dt, .modal .modal-wrap.modal--m-size[type=alert] .password-input dd {
+    width: 100%;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input dt {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111;
+}
+.modal .modal-wrap.modal--m-size[type=alert] .password-input input[type=password] {
+    padding: 1rem 1.5rem;
+    height: 4rem;
+    color: #666;
+    border-radius: 4px;
 }
 .modal .modal-close {
     display: block;
@@ -6909,6 +7022,8 @@ main [class$=-wrap] .inner .tab [type=radio]:checked ~ label ~ .content {
 }
 main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p {
     position: relative;
+    display: inline-block;
+    border-bottom: 4px solid #fff;
 }
 main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p:after {
     content: "";
@@ -6916,7 +7031,7 @@ main [class$=-wrap] .inner .tab [type=radio]:checked ~ label p:after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    width: 11.2rem;
+    width: calc(100% + 5px);
     height: 4px;
     background-color: #fff;
 }
@@ -6942,19 +7057,27 @@ main .search-wrap .inner .tab label {
 main .menu-wrap .inner {
     margin: 6rem 0;
 }
-main .menu-wrap .inner .tab:nth-child(1) label p {
-    margin-top: 60px;
-}
-main .menu-wrap .inner .tab:nth-child(2) label p {
-    margin-top: 5px;
-}
-main .menu-wrap .inner .tab:nth-child(3) label p {
-    margin-top: 5px;
-}
 main .menu-wrap .inner .tab label {
     width: 20rem;
-    height: 8rem;
     background-color: #479fd1;
+}
+main .menu-wrap .inner .tab:nth-child(1) label {
+    height: 8.3rem;
+}
+main .menu-wrap .inner .tab:nth-child(1) label p {
+    margin-top: 4.2rem;
+}
+main .menu-wrap .inner .tab:nth-child(2) label {
+    height: 5.3rem;
+}
+main .menu-wrap .inner .tab:nth-child(2) label p {
+    margin-top: 2.1rem;
+}
+main .menu-wrap .inner .tab:nth-child(3) label {
+    height: 10.4rem;
+}
+main .menu-wrap .inner .tab:nth-child(3) label p {
+    margin-top: 2.1rem;
 }
 main .menu-wrap .inner .tab .content {
     margin: 0;
