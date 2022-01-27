@@ -7003,7 +7003,7 @@ main [class$=-wrap] .inner .tab label p {
 main [class$=-wrap] .inner .tab .content {
     display: none;
     position: absolute;
-    left: 24rem;
+    left: 23rem;
     top: 0;
     right: 0;
     bottom: 0;
@@ -7011,7 +7011,6 @@ main [class$=-wrap] .inner .tab .content {
     margin: 2rem 0;
     padding: 2rem;
     color: #f00;
-    border: 1px solid #ccc;
 }
 main [class$=-wrap] .inner .tab [type=radio] {
     display: none;
@@ -7081,6 +7080,150 @@ main .menu-wrap .inner .tab:nth-child(3) label p {
 }
 main .menu-wrap .inner .tab .content {
     margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 26rem;
+    top: 0;
+}
+main .menu-wrap .inner .tab .content .icon-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: baseline;
+    margin-top: 4rem;
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item {
+    flex: 1 1 auto;
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item a {
+    display: block;
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    main .menu-wrap .inner .tab .content .icon-list .icon-item a img:nth-child(1) {
+        display: none;
+    }
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item a img:nth-child(2) {
+    display: none;
+}
+@media (max-width: 1024px) {
+    main .menu-wrap .inner .tab .content .icon-list .icon-item a img:nth-child(2) {
+        display: block;
+    }
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item a span {
+    display: block;
+    font-size: 2rem;
+    line-height: 1.75;
+    letter-spacing: -0.2px;
+}
+main .bottom-wrap .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    height: 24rem;
+    margin-bottom: -2rem;
+}
+main .bottom-wrap .inner .info-list {
+    width: calc(100% - 41rem);
+}
+main .bottom-wrap .inner .info-list .ver-pc ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li {
+    position: relative;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li a {
+    display: block;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20rem;
+    height: 100%;
+    padding: 6rem 3rem 0 3rem;
+    background-color: rgba(32, 65, 146, 0.9);
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.22px;
+    color: #fff;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ * {
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    color: #fff;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a {
+    position: relative;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a + a {
+    margin: 2rem 2rem 0 0;
+    text-align: right;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a:after {
+    content: "";
+    position: absolute;
+    background: url("../img/main/ico_arrow_view.svg") no-repeat left top 2px/2rem 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+main .bottom-wrap .inner .info-list .ver-pc ul li.list-1 .con {
+    padding: 6rem 5.9rem 0;
+}
+@media (max-width: 1024px) {
+    main .bottom-wrap .inner .info-list .ver-pc {
+        display: none;
+    }
+}
+main .bottom-wrap .inner .info-list .ver-mo {
+    display: none;
+}
+@media (max-width: 1024px) {
+    main .bottom-wrap .inner .info-list .ver-mo {
+        display: block;
+    }
+}
+main .bottom-wrap .inner .notice-list {
+    width: 38rem;
+    height: 100%;
+}
+main .bottom-wrap .inner .notice-list .title {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+main .bottom-wrap .inner .notice-list .notice-items a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+main .bottom-wrap .inner .notice-list .notice-items a:last-child {
+    padding-bottom: 0.6rem;
+}
+main .bottom-wrap .inner .notice-list .notice-items a p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    flex: 0 0 75%;
+}
+main .bottom-wrap .inner .notice-list .notice-items a span {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.15px;
+    color: #999;
 }
 
 .log {

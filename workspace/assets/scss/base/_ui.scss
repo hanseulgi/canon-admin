@@ -28,7 +28,7 @@ main {
 
                 .content {
                     display: none;
-                    @include position (24rem, 0);
+                    @include position (23rem, 0);
                     right: 0;
                     bottom: 0;
                     font-size: 20px;
@@ -36,7 +36,6 @@ main {
                     padding: 2rem;
 
                     color: #f00;
-                    border: 1px solid #ccc; //임시
                 }
 
                 [type=radio] {
@@ -117,6 +116,7 @@ main {
                     width: 20rem;
                     background-color: #479fd1;
                 }
+
                 &:nth-child(1) {
 
                     label {
@@ -152,6 +152,153 @@ main {
 
                 .content {
                     margin: 0;
+                    padding:0;
+                    @include position (26rem, 0);
+
+                    .icon-list {
+                        @include flex-flow;
+                        align-items: baseline;
+                        margin-top: 4rem;
+
+                        .icon-item {
+                            flex: 1 1 auto;
+
+                            a {
+                                display: block;
+                                text-align: center;
+
+                                img:nth-child(1) {
+
+                                    @include mobile {
+                                        display: none;
+                                    }
+                                }
+                                img:nth-child(2) {
+                                    display: none;
+
+                                    @include mobile {
+                                        display: block;
+                                    }
+                                }
+                                span {
+                                    display: block;
+                                    @include fs($fs20)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .bottom-wrap {
+        .inner {
+            @include flex-flow;
+            overflow: hidden;
+            height: 24rem;
+            margin-bottom: -2rem;
+
+            .info-list {
+                width: calc(100% - 41rem);
+
+                .ver-pc {
+                    ul {
+                        @include flex-flow;
+
+                        li {
+                            position: relative;
+
+                            a {
+                                display: block;
+                            }
+
+                            .con {
+                                @include position(0,0);
+                                @include wh(20rem, 100%);
+                                padding: 6rem 3rem 0 3rem;
+                                background-color: rgba(32,65,146,.9);
+
+                                .tit {
+                                    margin-bottom: 2rem;
+                                    font-weight: $fw-m;
+                                    font-size: 2.2rem;
+                                    line-height: 3.2rem;
+                                    letter-spacing: -0.22px;
+                                    color: $color-fff;
+
+                                    &~*{
+                                        @include fs($fs18);
+                                        color: $color-fff;
+                                    }
+
+                                    &~a {
+                                        position: relative;
+
+                                        & + a {
+                                            margin: 2rem 2rem 0 0;
+                                            text-align: right;
+                                        }
+
+                                        &:after {
+                                            content:"";
+                                            position:absolute;
+                                            background: url($path-img-main + 'ico_arrow_view.svg') no-repeat left top 2px / 2rem 2rem;
+                                            @include wh(2rem, 2rem);
+                                        }
+                                    }
+                                }
+                            }
+                            &.list-1 {
+                                .con {
+                                    padding: 6rem 5.9rem 0;
+                                }
+                            }
+                        }
+                    }
+
+                    @include mobile {
+                        display: none;
+                    }
+                }
+                .ver-mo {
+                    display: none;
+
+                    @include mobile {
+                        display: block;
+                    }
+                }
+            }
+
+            .notice-list {
+                width: 38rem;
+                height: 100%;
+
+                .title {
+                    @include fs($fs24);
+                    font-weight: $fw-b;
+                    margin-bottom: 1rem;
+                }
+                .notice-items {
+
+                    a {
+                        @include flex-flow;
+                        padding: 1.5rem 0;
+
+                        &:last-child {
+                            padding-bottom: .6rem;
+                        }
+
+                        p {
+                            @include fs($fs15);
+                            flex: 0 0 75%;
+                        }
+
+                        span {
+                            @include fs($fs15);
+                            color: #999;
+                        }
+                    }
                 }
             }
         }
