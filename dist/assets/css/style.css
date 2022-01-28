@@ -7108,12 +7108,6 @@ main [class$=-wrap] .inner .tab .content .search-bar .search-input::-webkit-inpu
 main [class$=-wrap] .inner .tab .content .search-bar .search-input:focus {
     border: 2px solid #fff;
 }
-main [class$=-wrap] .inner .tab .content .search-bar button {
-    margin-left: 1rem;
-    width: 7rem;
-    height: 7rem;
-    background: #dc000c url("../img/ico/ico_search_2_white.svg") no-repeat center;
-}
 main [class$=-wrap] .inner .tab .content .hash-list {
     width: 89rem;
     padding-left: 3rem;
@@ -7134,6 +7128,35 @@ main [class$=-wrap] .inner .tab .content .hash-list li a {
     color: #fff;
     padding: 5px 1rem;
     background-color: rgba(255, 255, 255, 0.15);
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select {
+    background-color: transparent;
+    background-position: right 30px top 50%;
+    background-size: 2rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 0;
+    height: 7rem;
+    color: #fff;
+    outline: 0;
+    font-size: 2rem;
+    line-height: 1.75;
+    letter-spacing: -0.2px;
+    line-height: 1;
+    padding: 2rem 7rem 2rem 3rem;
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select option {
+    color: #111;
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select + select {
+    border-left: 0;
+}
+main [class$=-wrap] .inner .tab .content .btn-search {
+    margin-left: 1rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 0;
+    background: #dc000c url("../img/ico/ico_search_2_white.svg") no-repeat center;
+    flex: 1 0 7rem;
 }
 main [class$=-wrap] .inner .tab [type=radio] {
     display: none;
@@ -7664,19 +7687,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     border-color: #e6e6e6;
     color: #666;
     font-weight: 400;
-}
-
-.dep-cate span + span::before {
-    content: "";
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
-}
-@media (max-width: 1024px) {
-    .dep-cate span + span::before {
-        vertical-align: -2px;
-    }
 }
 
 #header {
