@@ -7661,7 +7661,7 @@ main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a {
     position: relative;
 }
 main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a + a {
-    margin: 2rem 2rem 0 0;
+    margin: 2rem 1.6rem 0 0;
     text-align: right;
 }
 main .bottom-wrap .inner .info-list .ver-pc ul li .con .tit ~ a:after {
@@ -7703,6 +7703,7 @@ main .bottom-wrap .inner .notice-list {
 }
 @media (max-width: 1024px) {
     main .bottom-wrap .inner .notice-list {
+        width: 100%;
         margin-top: 4rem;
     }
 }
