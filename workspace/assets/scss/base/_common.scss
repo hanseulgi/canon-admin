@@ -1996,7 +1996,7 @@ $f-sizes:
         position: relative;
 
         input[type="text"] {
-            padding:.4 0 1.5rem .4rem;
+            padding:.8rem 5rem 1.5rem .2rem;
             @include wh (100%, 5rem);
             border:0;
             @include border-radius(0);
