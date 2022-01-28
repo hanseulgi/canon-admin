@@ -3477,6 +3477,16 @@ body {
     }
 }
 
+.select-row-3 {
+    display: flex;
+}
+.select-row-3 .select-wrap {
+    flex: 1;
+}
+.select-row-3 .select-wrap + .select-wrap {
+    margin-left: 10px;
+}
+
 .input {
     width: 100%;
     height: 4.5rem;
@@ -3651,18 +3661,6 @@ body {
         line-height: 1.43;
         letter-spacing: -0.14px;
         color: #666;
-    }
-}
-.table-wrap [class$=-list] .tr .category span + span::before {
-    content: "";
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
-}
-@media (max-width: 1024px) {
-    .table-wrap [class$=-list] .tr .category span + span::before {
-        vertical-align: -2px;
     }
 }
 @media (max-width: 1024px) {
@@ -3851,7 +3849,7 @@ body {
 .table-wrap > [class*=-edit] .tr .th {
     font-weight: 500;
     padding: 1.5rem 0;
-    flex: 0 0 8rem;
+    flex: 0 0 9rem;
 }
 .table-wrap > [class*=-edit] .tr .td {
     flex: 1 1 auto;
@@ -3870,9 +3868,9 @@ body {
     padding: 0 5px;
 }
 .table-wrap > [class*=-edit] .tr p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    letter-spacing: -0.15px;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
 }
 .table-wrap > [class*=-edit].type2 {
     display: flex;
@@ -3972,7 +3970,7 @@ body {
 }
 .table-wrap > [class*=-detail] .tr .th {
     width: 9rem;
-    font-weight: 500;
+    font-weight: 400;
     padding: 1.5rem 0;
     word-break: keep-all;
 }
@@ -4063,7 +4061,7 @@ body {
     width: calc(50% - 10px);
 }
 .table-wrap .video-list-wrap ul li:nth-child(n+3) {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .table-wrap .video-list-wrap ul li .item {
     display: flex;
@@ -4078,6 +4076,15 @@ body {
 }
 .table-wrap .video-list-wrap ul li .item .info {
     margin-left: 1.5rem;
+}
+.table-wrap .video-list-wrap ul li .item .info .dep-cate {
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
+    margin-bottom: 5px;
+}
+.table-wrap .video-list-wrap ul li .item .info .dep-cate span + span::before {
+    margin-right: 5px;
 }
 .table-wrap .video-list-wrap ul li .item .info .tit {
     font-size: 1.8rem;
@@ -7588,6 +7595,19 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     border-color: #e6e6e6;
     color: #666;
     font-weight: 400;
+}
+
+.dep-cate span + span::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
+}
+@media (max-width: 1024px) {
+    .dep-cate span + span::before {
+        vertical-align: -2px;
+    }
 }
 
 #header {
