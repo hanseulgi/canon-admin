@@ -3365,6 +3365,10 @@ body {
     float: right;
 }
 
+.f-a-start {
+    align-items: flex-start !important;
+}
+
 .border-none {
     border: 0 !important;
 }
@@ -3447,6 +3451,12 @@ body {
 .row-btns .col {
     margin: 0;
 }
+@media (max-width: 1024px) {
+    .row-btns .col {
+        flex: 1;
+        margin-top: 20px;
+    }
+}
 .row-btns .col + .col {
     margin-left: 1rem;
 }
@@ -3462,18 +3472,19 @@ body {
     background-color: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 6px;
-    background: #fff url("../img/ico/ico_arrow_select.svg") no-repeat right 10px top 50%/auto;
+    background: #fff url("../img/ico/ico_arrow_select.svg") no-repeat right 10px top 50%/12px;
     appearance: none;
+}
+.select.on {
+    background-image: url("../img/ico/ico_arrow_select_black.svg");
 }
 @media (max-width: 1024px) {
     .select {
         width: 100%;
         height: 4rem;
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: -0.15px;
         padding: 9px 15px;
         background-position: right 15px top 50%;
+        background-size: 15px;
     }
 }
 
@@ -3771,7 +3782,7 @@ body {
         align-items: center;
         right: 2rem;
         top: 50%;
-        width: 6rem;
+        width: 5rem;
         transform: translateY(-50%);
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-right] p {
@@ -4005,6 +4016,14 @@ body {
     line-height: 1.4;
     letter-spacing: -0.15px;
 }
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap {
+    margin-top: -1px;
+    border-top: 1px solid #fff;
+}
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap th,
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap td {
+    padding-top: 0;
+}
 .table-wrap > [class*=-detail].type2 {
     display: flex;
     flex-wrap: wrap;
@@ -4017,7 +4036,7 @@ body {
     flex: 1 1 100%;
 }
 .table-wrap > [class*=-detail].type2 .tr .th {
-    flex: 0 0 13rem;
+    flex: 0 0 16rem;
     font-weight: 500;
     padding: 1.5rem 0;
 }
@@ -4093,17 +4112,20 @@ body {
     word-break: keep-all;
 }
 .table-wrap .video-list-wrap ul li .item .info .dsc {
-    font-size: 1.4rem;
-    line-height: 1.43;
-    letter-spacing: -0.14px;
+    font-size: 1.2rem;
+    line-height: 1.42;
+    letter-spacing: -0.12px;
     margin-top: 1.5rem;
 }
-.table-wrap .video-list-wrap ul li .item .info .dsc2 {
-    font-size: 1.4rem;
-    line-height: 1.43;
-    letter-spacing: -0.14px;
-    margin-top: 0.5rem;
-    color: #666;
+.table-wrap .video-list-wrap ul li .item .info .dsc span + span::before {
+    content: "";
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #666;
+    vertical-align: 3px;
 }
 
 .input-file {
@@ -4544,7 +4566,7 @@ body {
 }
 @media (max-width: 1024px) {
     .search-box-wrap > .inner {
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 }
 .search-box-wrap > .inner .table-col {
@@ -4599,8 +4621,14 @@ body {
 }
 @media (max-width: 1024px) {
     .search-box-wrap > .inner .table-col .td [class*=-wrap] + [class*=-wrap] {
-        margin-left: 0;
+        margin-left: 0 !important;
         margin-top: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    .search-box-wrap > .inner .table-col .td.add [class*=-wrap] {
+        display: inline-block;
+        width: calc(100% - 33px) !important;
     }
 }
 .search-box-wrap > .inner .table-col .th,
@@ -4626,10 +4654,16 @@ body {
     vertical-align: middle;
 }
 .search-box-wrap > .inner .table-col .ico-search.plus {
-    background: url("../img/ico/ico_plus.svg") no-repeat center center;
+    background: url("../img/ico/ico_plus.svg") no-repeat center center/cover;
 }
 .search-box-wrap > .inner .table-col .ico-search.minus {
-    background: url("../img/ico/ico_minus.svg") no-repeat center center;
+    background: url("../img/ico/ico_minus.svg") no-repeat center center/cover;
+}
+@media (max-width: 1024px) {
+    .search-box-wrap > .inner .table-col .ico-search {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 .modal {
@@ -7184,12 +7218,6 @@ main [class$=-wrap] .inner .tab .content .search-bar .search-input::-webkit-inpu
 main [class$=-wrap] .inner .tab .content .search-bar .search-input:focus {
     border: 2px solid #fff;
 }
-main [class$=-wrap] .inner .tab .content .search-bar button {
-    margin-left: 1rem;
-    width: 7rem;
-    height: 7rem;
-    background: #dc000c url("../img/ico/ico_search_2_white.svg") no-repeat center;
-}
 main [class$=-wrap] .inner .tab .content .hash-list {
     width: 89rem;
     padding-left: 3rem;
@@ -7210,6 +7238,35 @@ main [class$=-wrap] .inner .tab .content .hash-list li a {
     color: #fff;
     padding: 5px 1rem;
     background-color: rgba(255, 255, 255, 0.15);
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select {
+    background-color: transparent;
+    background-position: right 30px top 50%;
+    background-size: 2rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 0;
+    height: 7rem;
+    color: #fff;
+    outline: 0;
+    font-size: 2rem;
+    line-height: 1.75;
+    letter-spacing: -0.2px;
+    line-height: 1;
+    padding: 2rem 7rem 2rem 3rem;
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select option {
+    color: #111;
+}
+main [class$=-wrap] .inner .tab .content .qsearch-select-wrap select + select {
+    border-left: 0;
+}
+main [class$=-wrap] .inner .tab .content .btn-search {
+    margin-left: 1rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 0;
+    background: #dc000c url("../img/ico/ico_search_2_white.svg") no-repeat center;
+    flex: 1 0 7rem;
 }
 main [class$=-wrap] .inner .tab [type=radio] {
     display: none;
@@ -7740,19 +7797,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     border-color: #e6e6e6;
     color: #666;
     font-weight: 400;
-}
-
-.dep-cate span + span::before {
-    content: "";
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
-}
-@media (max-width: 1024px) {
-    .dep-cate span + span::before {
-        vertical-align: -2px;
-    }
 }
 
 #header {

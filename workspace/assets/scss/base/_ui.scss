@@ -58,12 +58,6 @@ main {
                                 border: 2px solid #fff;
                             }
                         }
-
-                        button {
-                            margin-left: 1rem;
-                            @include wh(7rem,7rem);
-                            background:$bg-red url($path-img-ico + 'ico_search_2_white.svg') no-repeat center;
-                        }
                     }
 
                     .hash-list {
@@ -88,6 +82,39 @@ main {
                                 }
                             }
                         }
+                    }
+
+                    .qsearch-select-wrap {
+
+                        select {
+                            background-color: transparent;
+                            background-position: right 30px top 50%;
+                            background-size: 2rem 2rem;
+                            border: 2px solid $color-fff;
+                            border-radius: 0;
+                            height: 7rem;
+                            color: $color-fff;
+                            outline: 0;
+                            @include fs($fs20);
+                            line-height: 1;
+                            padding: 2rem 7rem 2rem 3rem;
+
+                            option {
+                                color: $color-111;
+                            }
+
+                            & + select {
+                                border-left: 0;
+                            }
+                        }
+                    }
+
+                    .btn-search {
+                        margin-left: 1rem;
+                        @include wh(7rem,7rem);
+                        border-radius: 0;
+                        background:$bg-red url($path-img-ico + 'ico_search_2_white.svg') no-repeat center;
+                        flex: 1 0 7rem;
                     }
                 }
 
@@ -594,7 +621,7 @@ main {
 .result-quicksearch {
 
     .result-amnt {
-        
+
         font-weight: $fw-r;
         margin-top: 8.5rem;
         margin-bottom: 1rem;
@@ -721,22 +748,6 @@ main {
             border-color: $color-e6e6e6;
             color: $color-666;
             font-weight: $fw-r;
-        }
-    }
-}
-
-//depth category
-.dep-cate {
-    span {
-        &+span::before {
-            content: "";
-            display: inline-block;
-            @include wh(1.2rem, 1.2rem);
-            background: url($path-img-common + 'ico_arrow_category.svg') no-repeat center / cover;
-
-            @include mobile {
-                vertical-align: -2px;
-            }
         }
     }
 }
