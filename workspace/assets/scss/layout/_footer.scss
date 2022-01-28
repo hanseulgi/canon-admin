@@ -3,6 +3,10 @@
     background-color: $bg-f6f6f6;
     height: 8rem;
 
+    @include mobile {
+        height: 9rem;
+    }
+
     .inner {
         @include flex-flow;
         position: relative;
@@ -10,13 +14,29 @@
         height: 100%;
         margin: 0 auto;
 
+        @include mobile {
+            width: 100%;
+            padding: 4.5rem 3rem;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .footer-copyright {
             @include fs($fs14);
             color: $color-666;
+
+            @include mobile {
+                @include fs($fs12);
+            }
         }
 
         .footer-util {
             @include fs($fs14);
+            margin-top: 1rem;
+
+            @include mobile {
+                @include fs($fs12);
+            }
 
             a {
                 text-decoration: underline;
@@ -24,6 +44,10 @@
 
                 & + a {
                     margin-left: 5rem;
+
+                    @include mobile {
+                        margin-left: 2.5rem;
+                    }
                 }
             }
         }

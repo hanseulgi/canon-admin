@@ -35,10 +35,16 @@ main {
                     margin: 2rem 0;
                     padding: 2rem;
 
-                    color: #f00;
+                    @include mobile {
+                        display: block;
+                    }
 
                     .search-bar {
                         @include flex-flow;
+
+                        @include mobile {
+                            display: block;
+                        }
 
                         .search-input {
                             @include fs($fs24);
@@ -49,10 +55,23 @@ main {
                             color: #fff;
                             outline: 0;
 
+                            @include mobile {
+                                @include fs($fs15);
+                                height: 4rem;
+                                padding: 9px 2rem;
+                                position: relative;
+                            }
+
                             &::-webkit-input-placeholder {
                                 color: rgba(255, 255, 255,.5);
                                 font-size: 2.4rem;
                                 line-height: 3.7rem;
+
+                                @include mobile {
+                                    font-size: 1.5rem;
+                                    line-height: 2.2rem;
+                                }
+
                             }
                             &:focus {
                                 border: 2px solid #fff;
@@ -82,6 +101,10 @@ main {
                                 }
                             }
                         }
+
+                        @include mobile {
+                            display: none;
+                        }
                     }
 
                     .qsearch-select-wrap {
@@ -98,9 +121,14 @@ main {
                             @include fs($fs20);
                             line-height: 1;
                             padding: 2rem 7rem 2rem 3rem;
+                            background-image: url($path-img-main + 'ico_view_2_def.svg');
 
                             option {
                                 color: $color-111;
+                            }
+
+                            &.on {
+                                background-image: url($path-img-main + 'ico_view_2_on.svg');
                             }
 
                             & + select {
@@ -115,6 +143,15 @@ main {
                         border-radius: 0;
                         background:$bg-red url($path-img-ico + 'ico_search_2_white.svg') no-repeat center;
                         flex: 1 0 7rem;
+
+                        @include mobile {
+                            position: absolute;
+                            right: 2rem;
+                            @include wh(4rem,4rem);
+                            background-color: transparent;
+                            background-size: 1.5rem 1.5rem;
+                        }
+
                     }
                 }
 
@@ -142,6 +179,15 @@ main {
                             bottom: -4px;
                             @include wh ( calc(100% + 5px), 4px );
                             background-color: $bg-fff;
+
+                            @include mobile {
+                                left: 50%;
+                                bottom: -1rem;
+                                transform: translateX(-50%);
+                                background-color: $bg-red;
+                                width: 10.5rem;
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -153,8 +199,22 @@ main {
         background: url($path-img-main + 'bg_keyvisual.png') no-repeat left top / cover;
         @include wh(100%, 28rem);
 
+        @include mobile {
+            background: none;
+            background-color: #131c29;
+
+            @include mobile {
+                height: 8rem;
+            }
+        }
+
         .inner {
             padding: 2rem 0;
+
+            @include mobile {
+                width: 100%;
+                padding: 2rem 2rem;
+            }
 
             .tab {
 
@@ -170,6 +230,10 @@ main {
 
                 &:nth-child(2) {
 
+                    @include mobile {
+                        display: none;
+                    }
+
                     label {
 
                         p {
@@ -181,11 +245,21 @@ main {
                 label {
                     @include wh(20rem, 12rem);
                     background-color: #315bb7;
+
+                    @include mobile {
+                        display: none;
+                    }
+
                 }
 
                 .content {
                     margin-top: 10.5rem;
                     padding: 0 0;
+
+                    @include mobile {
+                        margin: 0 0;
+                        position: static;
+                    }
                 }
             }
         }
@@ -193,13 +267,53 @@ main {
 
     & .menu-wrap {
 
+        @include mobile {
+            padding: 0 2rem;
+            position: relative;
+        }
         .inner {
             margin: 6rem 0;
 
+            @include mobile {
+                position: relative;
+                @include wh(100%, 26rem);
+                width: 100%;
+                margin: 3rem 0 0;
+            }
+
+            &:after {
+                @include position (0,2.9rem);
+                z-index: -1;
+                @include wh(100%, 1px);
+                background-color: #ccc;
+            }
+
             .tab {
+
+                @include mobile {
+                    float: left;
+                    padding: 0 0;
+                    width: calc(100% / 3);
+                    text-align: center;
+                }
                 label {
                     width: 20rem;
                     background-color: #479fd1;
+
+                    @include mobile {
+                        @include wh(100%, 3rem);
+                        position: relative;
+                        background-color: transparent;
+                    }
+                    p {
+                        @include mobile {
+                            display: block;
+                            width: 100%;
+                            margin-left: 0;
+                            @include fs($fs15);
+                            color: inherit;
+                        }
+                    }
                 }
 
                 &:nth-child(1) {
@@ -207,8 +321,16 @@ main {
                     label {
                         height: 8.3rem;
 
+                        @include mobile {
+                            height: auto;
+                        }
+
                         p {
-                            margin-top: 4.2rem;
+                            margin-top: 4.6rem;
+
+                            @include mobile {
+                                margin-top: 0;
+                            }
                         }
                     }
                 }
@@ -218,8 +340,16 @@ main {
                     label {
                         height: 5.3rem;
 
+                        @include mobile {
+                            height: auto;
+                        }
+
                         p {
-                            margin-top: 2.1rem;
+                            margin-top: 1.9rem;
+
+                            @include mobile {
+                                margin-top: 0;
+                            }
                         }
                     }
                 }
@@ -229,8 +359,16 @@ main {
                     label {
                         height: 10.4rem;
 
+                        @include mobile {
+                            height: auto;
+                        }
+
                         p {
                             margin-top: 2.1rem;
+
+                            @include mobile {
+                                margin-top: 0;
+                            }
                         }
                     }
                 }
@@ -240,17 +378,52 @@ main {
                     padding:0;
                     @include position (26rem, 0);
 
+                    @include mobile {
+                        display: none;
+                        height:100%;
+                        position: absolute;
+                        top: 2.9rem;
+                        left: 0;
+                        right: 0;
+                        margin: 0 -2rem;
+                        padding: 0 0;
+                        box-sizing: border-box;
+                    }
+
                     .icon-list {
                         @include flex-flow;
                         align-items: baseline;
                         margin-top: 4rem;
 
+                        @include mobile{
+                            align-items: center;
+                            flex-wrap: wrap;
+                            margin-top: .5rem;
+                        }
+
                         .icon-item {
                             flex: 1 1 auto;
+
+                            @include mobile {
+                                flex: 0 0 33.33%;
+                            }
 
                             a {
                                 display: block;
                                 text-align: center;
+
+                                @include mobile {
+                                    padding: 1.5rem 0;
+                                }
+
+                                img {
+                                    @include mobile {
+                                        margin: 0 auto;
+                                        width:  6rem;
+                                        background-color: $bg-f6f6f6;
+                                        border-radius: 1.2rem;
+                                    }
+                                }
 
                                 img:nth-child(1) {
 
@@ -267,13 +440,19 @@ main {
                                 }
                                 span {
                                     display: block;
-                                    @include fs($fs20)
+                                    @include fs($fs20);
+
+                                    @include mobile {
+                                        margin-top: 1rem;
+                                        @include fs($fs14);
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+            @include clearfix;
         }
     }
 
@@ -284,8 +463,19 @@ main {
             height: 24rem;
             margin-bottom: -2rem;
 
+            @include mobile {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 0 2rem;
+                margin-top: 3.7rem;
+            }
+
             .info-list {
                 width: calc(100% - 41rem);
+
+                @include mobile {
+                    width: 100%;
+                }
 
                 .ver-pc {
                     ul {
@@ -351,6 +541,16 @@ main {
 
                     @include mobile {
                         display: block;
+
+                        ul {
+                            @include flex-flow;
+
+                            li {
+                                flex: 0 0 30%;
+                                height: 125px;
+                                border: 1px solid red; //디자인 수급 후 수정 임시스타일
+                            }
+                        }
                     }
                 }
             }
@@ -358,6 +558,10 @@ main {
             .notice-list {
                 width: 38rem;
                 height: 100%;
+
+                @include mobile {
+                    margin-top: 4rem;
+                }
 
                 .title {
                     @include fs($fs24);
