@@ -4650,13 +4650,20 @@ body {
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.01);
 }
 .modal .modal-wrap[type=alert] {
     width: 30rem;
     height: 20rem;
     overflow: hidden;
     border-radius: 1.5rem;
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap[type=alert] {
+        width: 20rem;
+        height: 13rem;
+        border-radius: 0.8rem;
+    }
 }
 .modal .modal-wrap .modal-header {
     position: relative;
@@ -4706,6 +4713,13 @@ body {
     border-radius: 1.5rem 1.5rem 0 0;
     box-sizing: border-box;
 }
+@media (max-width: 1024px) {
+    .modal .modal-wrap .modal-content p {
+        height: 9rem;
+        font-size: 1.4rem;
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
+}
 .modal .modal-wrap .modal-content .btns {
     width: 100%;
     height: 5rem;
@@ -4718,6 +4732,11 @@ body {
     border-left: 1px solid #dc000c;
     border-radius: 0 0 0 1.5rem;
 }
+@media (max-width: 1024px) {
+    .modal .modal-wrap .modal-content .btns.include-red-stroke {
+        border-radius: 0 0 0 0.8rem;
+    }
+}
 .modal .modal-wrap .modal-content .btns .modal__btn {
     display: block;
     width: 50%;
@@ -4727,6 +4746,7 @@ body {
     text-align: center;
     border-radius: 0;
     font-weight: 400;
+    box-sizing: border-box;
 }
 .modal .modal-wrap .modal-content .btns .modal__btn.btn--gray {
     background: #666;
@@ -4739,9 +4759,34 @@ body {
     border-width: 1px 0 1px 0;
     border-radius: 0 0 0 1.5rem;
 }
+@media (max-width: 1024px) {
+    .modal .modal-wrap .modal-content .btns .modal__btn.btn--red-stroke {
+        border-radius: 0 0 0 0.8rem;
+    }
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap .modal-content .btns .modal__btn {
+        line-height: 3.8rem;
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap .modal-content .btns {
+        height: 4rem;
+    }
+}
 .modal .modal-wrap.modal--m-size[type=alert] {
     width: 36rem;
     height: 24rem;
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] {
+        width: 30rem;
+        height: 21rem;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+    }
 }
 .modal .modal-wrap.modal--m-size[type=alert] .modal-content {
     height: 100%;
@@ -4753,6 +4798,15 @@ body {
     height: calc(100% - 5rem);
     margin: 0 auto;
     text-align: left;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] .password-input {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        height: calc(100% - 4rem);
+    }
 }
 .modal .modal-wrap.modal--m-size[type=alert] .password-input p {
     position: relative;
@@ -4764,6 +4818,17 @@ body {
     border: 0;
     text-align: left;
     display: block;
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] .password-input p {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] .password-input p br {
+        display: none;
+    }
 }
 .modal .modal-wrap.modal--m-size[type=alert] .password-input p::before {
     content: "※";
@@ -4782,11 +4847,22 @@ body {
     font-weight: 500;
     color: #111;
 }
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] .password-input dt {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+}
 .modal .modal-wrap.modal--m-size[type=alert] .password-input input[type=password] {
     padding: 1rem 1.5rem;
     height: 4rem;
     color: #666;
     border-radius: 4px;
+}
+@media (max-width: 1024px) {
+    .modal .modal-wrap.modal--m-size[type=alert] .password-input input[type=password] {
+        padding: 1rem;
+    }
 }
 .modal .modal-close {
     display: block;
