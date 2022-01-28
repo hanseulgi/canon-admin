@@ -4851,7 +4851,7 @@ body {
     position: relative;
 }
 .integrate-search-wrap .inner input[type=text] {
-    padding: 0.4 0 1.5rem 0.4rem;
+    padding: 0.8rem 5rem 1.5rem 0.2rem;
     width: 100%;
     height: 5rem;
     border: 0;
