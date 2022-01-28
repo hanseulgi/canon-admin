@@ -3782,7 +3782,7 @@ body {
         align-items: center;
         right: 2rem;
         top: 50%;
-        width: 6rem;
+        width: 5rem;
         transform: translateY(-50%);
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-right] p {
