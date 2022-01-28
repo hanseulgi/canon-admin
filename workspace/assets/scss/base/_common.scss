@@ -1933,3 +1933,69 @@ $f-sizes:
         }
     }
 }
+
+//통합검색
+.integrate-search-wrap {
+    margin-top: 5.8rem;
+
+    .inner {
+        position: relative;
+
+        input[type="text"] {
+            padding:.4 0 1.5rem .4rem;
+            @include wh (100%, 5rem);
+            border:0;
+            @include border-radius(0);
+            border-bottom: 3px solid $color-111;
+            @include fs ($fs24);
+            font-weight:$fw-m;
+            color:$color-111;
+        }
+
+        .srch-btn{
+            position: absolute;
+            right:0;
+            bottom:0;
+            @include wh (5rem, 4.5rem);
+            background: url($path-img-common + 'ico_search_1.svg') center top .4rem/3rem 3rem  no-repeat;
+        }
+    }
+
+}
+
+
+//퀵서치영역
+.quicksearch-wrap {
+    margin-top: 5rem;
+    .inner {
+        @include flex-flow;
+    }
+
+    .select-wrap {
+        @include flex-flow;
+        width:85.7%;
+
+        .select-box {
+            width:31.3%;
+        }
+        
+        select {
+            padding:1rem 0;
+            height:4.6rem;
+            @include fs ($fs18);
+            font-weight:600;
+            color:$color-111;
+            border:0;
+            @include border-radius(0);
+            border-bottom:2px solid $color-000;
+            background: url($path-img-ico + 'ico_arrow_view.svg') right center /2rem 2rem  no-repeat;
+           
+        }
+    }
+    button {
+        width:11.6%;
+        height:4.6rem;
+        font-size: $fs20;
+        @include border-radius(1rem);
+    }
+}

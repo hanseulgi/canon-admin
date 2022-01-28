@@ -4837,6 +4837,71 @@ body {
     font-weight: 500;
 }
 
+.integrate-search-wrap {
+    margin-top: 5.8rem;
+}
+.integrate-search-wrap .inner {
+    position: relative;
+}
+.integrate-search-wrap .inner input[type=text] {
+    padding: 0.4 0 1.5rem 0.4rem;
+    width: 100%;
+    height: 5rem;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 3px solid #111;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    font-weight: 500;
+    color: #111;
+}
+.integrate-search-wrap .inner .srch-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 5rem;
+    height: 4.5rem;
+    background: url("../img/common/ico_search_1.svg") center top 0.4rem/3rem 3rem no-repeat;
+}
+
+.quicksearch-wrap {
+    margin-top: 5rem;
+}
+.quicksearch-wrap .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quicksearch-wrap .select-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85.7%;
+}
+.quicksearch-wrap .select-wrap .select-box {
+    width: 31.3%;
+}
+.quicksearch-wrap .select-wrap select {
+    padding: 1rem 0;
+    height: 4.6rem;
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
+    font-weight: 600;
+    color: #111;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #000;
+    background: url("../img/ico/ico_arrow_view.svg") right center/2rem 2rem no-repeat;
+}
+.quicksearch-wrap button {
+    width: 11.6%;
+    height: 4.6rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, draggable.css, resizable.css, progressbar.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
