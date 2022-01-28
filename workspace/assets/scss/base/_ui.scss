@@ -282,10 +282,12 @@ main {
             }
 
             &:after {
-                @include position (0,2.9rem);
-                z-index: -1;
-                @include wh(100%, 1px);
-                background-color: #ccc;
+                @include mobile {
+                    @include position (0,2.9rem);
+                    z-index: -1;
+                    @include wh(100%, 1px);
+                    background-color: #ccc;
+                }
             }
 
             .tab {
