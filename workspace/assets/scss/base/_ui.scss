@@ -47,19 +47,25 @@ main {
                             border-radius: 0;
                             background-color: transparent;
                             color: #fff;
+                            outline: 0;
 
                             &::-webkit-input-placeholder {
                                 color: rgba(255, 255, 255,.5);
                                 font-size: 2.4rem;
                                 line-height: 3.7rem;
                             }
+                            &:focus {
+                                border: 2px solid #fff;
+                            }
                         }
+
                         button {
                             margin-left: 1rem;
                             @include wh(7rem,7rem);
-                            background-color: $bg-red;
+                            background:$bg-red url($path-img-ico + 'ico_search_2_white.svg') no-repeat center;
                         }
                     }
+
                     .hash-list {
                         width: 89rem;
                         padding-left: 3rem;
