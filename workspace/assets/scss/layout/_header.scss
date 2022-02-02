@@ -1,20 +1,63 @@
 #header {
     position: relative;
+    z-index: 1;
     @include wh(100%, 11rem);
-    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    background-color: $bg-fff;
 
-    .inner {
-        @include flex-flow;
+    @include mobile {
+        @include wh(100%, 5rem);
+    }
+
+    &.on {
+        &:before {
+            content:"";
+            position:absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 32rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .sub-menu {
+            overflow: hidden;
+            height: 36rem;
+
+            @include mobile {
+                height: auto;
+            }
+        }
+    }
+
+    &.type2 {
+        &:before {
+            content:"";
+            position:absolute;
+            top: 11.1rem;
+            display: block;
+            width: 100%;
+            height: 17rem;
+            background-color: $bg-fff;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    > .inner {
+        display: flex;
+        justify-content: start;
         align-items: end;
         position: relative;
-        width: 120rem;
+        width: 136.2rem;
         height: 100%;
-        margin: 0 auto;
+        margin-left: 19.8rem;
         padding: 1.5rem 0;
 
         @include mobile {
-            flex-wrap: wrap;
+            align-items: center;
             width: 100%;
+            margin-left: 0;
         }
 
         .header-logo {
@@ -31,13 +74,20 @@
                 @include wh(16.2rem, 6rem);
                 background: url($path-img-common + 'logo.svg') no-repeat 0 0;
                 background-size: 100%;
+
+                @include mobile {
+                    @include wh(7.7rem, 2.8rem);
+                    margin-top: 2px;
+                }
             }
         }
 
         .header-util {
+            position: absolute;
+            right: 0;
 
             @include mobile {
-                width: 100%;
+                display: none;
             }
 
             button {
@@ -46,7 +96,8 @@
                 padding-left: 2.8rem;
                 line-height: 2.4rem;
 
-                & + button { margin-left: 3rem; }
+                & + button {padding-left: 2.8rem;}
+
             }
 
             .btn-search {
@@ -56,6 +107,79 @@
             .btn-qsearch {
                 background: url($path-img-common + 'ico_quick_searh.svg') no-repeat;
             }
+
+            .btn-search-view {
+                position: relative;
+                padding: 0 0;
+
+                @include mobile {
+                    position: relative;
+                    width: 50%;
+                }
+
+                &.on {
+                    z-index: 1;
+                }
+
+                & ~ .btn-search-view {
+                    margin-left: 3rem;
+
+                    @include mobile {
+                        margin-left: 0;
+                    }
+
+                    &:before {
+                        @include mobile {
+                            content:"";
+                            position: absolute;
+                            left: 0;
+                            @include wh(1px, 2.5rem);
+                            background-color: $bg-e6e6e6;
+                        }
+                    }
+                }
+
+                .integrate-search-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -70.5rem;
+                    top: 0rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+                    .inner {
+                        width: 90rem;
+                    }
+                }
+
+                .quicksearch-wrap {
+                    display: none;
+                    position: absolute;
+                    left: -113rem;
+                    top: 0rem;
+                    margin-top: 0;
+                    padding-top: 9.5rem;
+                    padding-bottom: 6.5rem;
+
+                    .inner {
+                        width: 120rem;
+
+                        .btn-red {
+                            padding: 0 1rem !important;
+                            font-size: 2rem;
+                            line-height: 4.4rem !important;
+                        }
+                    }
+                }
+            }
+
+            .search1:hover > .integrate-search-wrap,
+            .search2:hover > .quicksearch-wrap{
+                display: block;
+            }
+            .search1:hover .quicksearch-wrap {
+                display: none;
+            }
         }
 
         .header-user {
@@ -64,8 +188,12 @@
             right: 0;
             display: flex;
 
+            @include mobile {
+                display: none;
+            }
+
             .account {
-                @include fs ($fs15);
+                @include fs($fs15);
                 font-weight: $fw-m;
                 margin-right: 4rem;
                 line-height: inherit;
@@ -94,16 +222,13 @@
 
         .nav-toggle {
             display: none;
-            position: absolute;
-            left: 0;
-            top: 0;
+            @include wh(2.4rem,2.4rem);
+            @include position(2rem,1.3rem);
             z-index: 101;
-            width: 24px;
-            height: 24px;
             cursor: pointer;
 
             @include mobile {
-                display: inline-block;
+                display: block;
             }
 
             .hamburger {
@@ -130,6 +255,10 @@
             }
 
             &.on {
+                left: inherit;
+                right: 2rem;
+                background-color: $bg-fff;
+
                 .hamburger {
                     background-color: transparent;
 
@@ -137,6 +266,7 @@
                     &:after {
                         top: 0;
                         transition: all .2s ease-in-out;
+                        background-color: #aaa;
                     }
 
                     &:before {
@@ -154,26 +284,28 @@
 
 .nav {
     flex: 0 0 auto;
-    height: 100%;
 
     @include mobile {
         display: none;
         overflow: hidden;
-        @include position (0, .0);
+        @include position (0, 0);
+        position: fixed;
         @include wh(100%, 100vh);
-        background-color: #ccc;
+        background-color: $bg-fff;
     }
 
     &.on {
 
         @include mobile {
             display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
     }
 
     &:hover {
         .sub-menu {
-            display: block;
+            display:block;
 
             @include mobile {
                 display: none;
@@ -183,40 +315,188 @@
 
     &-wrap {
         height: 100%;
+        margin-left: 13.1rem;
+        display: flex;
+        align-items: end;
+
+        @include mobile {
+            display: block;
+            margin-left: 0;
+            padding-top: 4rem;
+        }
+
+        .info-user {
+            display: none;
+            margin-left: 2rem;
+            font-weight: $fw-b;
+            font-size: 2rem;
+            line-height: 3rem;
+
+            @include mobile {
+                display: block;
+            }
+
+            & + .header-util {
+                display: none;
+
+                @include mobile {
+                    display: flex !important;
+                    justify-content: center;
+                    position: static !important;
+                    padding: 1.6rem 0;
+                    margin-top: 1.5rem;
+                    border-top: 1px solid $color-e6e6e6;
+                    border-bottom: 1px solid $color-e6e6e6;
+                }
+            }
+        }
 
         .nav-menu {
             display: flex;
-            align-items: center;
-            height: 100%;
+            align-items: baseline;
 
             @include mobile {
                 width: 100%;
                 flex-direction: column;
                 align-items: baseline;
-                margin-top: 10rem;
+                margin-top: 0;
+                padding: 0 2rem;
             }
 
             >li {
                 position: relative;
-                padding-right: 65px;
+                z-index: 1;
 
-                & + li {}
+                @include mobile {
+                    padding-right: 0 !important;
+                    width: 100%;
+                    border-bottom: 1px solid $color-e6e6e6;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
 
                 >a {
-                    font-size: 1.8rem;
+                    padding-right: 8rem;
+                    @include fs($fs18);
+                    color: $color-000;
+                    font-weight: $fw-m;
+
+                    @include mobile {
+                        position: relative;
+                        @include fs($fs16);
+                        display: block;
+                        height: 5rem;
+                        padding-right: 0;
+                        line-height: 5rem;
+
+                        &:after {
+                            content:"";
+                            position: absolute;
+                            right: .5rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition-duration:.2s;
+                            background: url($path-img-main + 'ico_arrow_acco.svg') no-repeat right top / cover;
+                            @include wh(1.5rem, 1.5rem);
+                        }
+
+                        &.on:after {
+                            transform: rotate(180deg);
+                            transform-origin: 50% 25%;
+                        }
+                    }
                 }
             }
         }
 
         .sub-menu {
-            display: none;
-            overflow: hidden;
             position: absolute;
             left: 0;
-            top: 6.7rem;
-            background-color: #fff;
-            @include wh(100%, 12rem);
+            top: 0;
+            display: none;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 5.2rem;
 
+            @include mobile {
+                position: static;
+                margin-top: 5px;
+                padding-top: 0;
+                background-color: transparent;
+            }
+
+            li {
+                a {
+                    display: block;
+                    padding: 1rem 0;
+                    @include fs($fs14);
+                    color: $color-000;
+
+                    @include mobile {
+                        padding-left: 1rem;
+                    }
+
+                    &:hover {
+                        color: $color-red;
+                        text-decoration:  underline;
+
+                        @include mobile {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-footer {
+            display: none;
+
+            @include mobile {
+                display: block;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 8rem;
+            }
+            #footer {
+                @include mobile {
+                    position: fixed;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 9;
+                    height: 4.8rem;
+                    padding-top: 0;
+                    background-color: transparent;
+                }
+
+                .inner {
+                    @include mobile {
+                        padding: 0 0 0 2rem;
+                        align-items: baseline;
+                        background-color: $bg-f6f6f6;
+                    }
+
+                    .footer-util {
+                        @include mobile {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logout {
+            display: none;
+
+            @include mobile {
+                display: block;
+                padding: 1.5rem 0 1.5rem 2rem;
+                @include fs($fs13);
+                color: $color-666;
+            }
         }
     }
 }

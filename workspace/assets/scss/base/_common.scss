@@ -73,7 +73,7 @@
 }
 
 //font-style
-$f-sizes: 
+$f-sizes:
 12,
 13,
 14,
@@ -325,10 +325,10 @@ $f-sizes:
 //padding-right
 .pr {
 
-    @for $i from 1 through 50 {
+    @for $i from 1 through 100 {
 
         @if($i%5==0) {
-            
+
             &#{$i} {
                 padding-right: #{$i}px !important;
             }
@@ -498,7 +498,7 @@ $f-sizes:
     @include mobile {
         @include wh (100%, 4rem);
         padding: 9px 15px;
-        background-position: right 15px top 50%; 
+        background-position: right 15px top 50%;
         background-size: 15px;
     }
 }
@@ -1078,7 +1078,7 @@ $f-sizes:
             .access-wrap+.access-wrap {
                 margin-top: -1px;
                 border-top: 1px solid #fff;
-                
+
                 th,
                 td {
                     padding-top: 0;
@@ -1490,7 +1490,7 @@ $f-sizes:
 
     .first {
         background: url($path-img-common + 'ico_arrow_doble.svg') no-repeat center;
-        
+
         @include mobile {
             display: none;
         }
@@ -1677,7 +1677,7 @@ $f-sizes:
 
                 @include mobile {
                     margin-top: 2rem;
-                }   
+                }
             }
 
             .th {
@@ -1719,7 +1719,7 @@ $f-sizes:
                         @include mobile {
                             display: inline-block;
                             width: calc(100% - 33px) !important;
-                        }       
+                        }
                     }
                 }
             }
@@ -1772,7 +1772,6 @@ $f-sizes:
     top: 0px;
     left: 0px;
     @include wh(100%, 100%);
-    background-color: rgba(0, 0, 0, 0.2);
     z-index: 11;
 
     //alert type
@@ -1781,15 +1780,13 @@ $f-sizes:
         transform: translate(-50%, -50%);
         @include fs($fs15);
         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.01);
-       
-        
 
         &[type='alert'] {
-           @include wh(30rem,20rem);
-           overflow:hidden;
-           border-radius:1.5rem;
+            @include wh(30rem,20rem);
+            overflow:hidden;
+            border-radius:1.5rem;
 
-           @include mobile {
+            @include mobile {
                 @include wh(20rem,13rem);
                 border-radius:.8rem;
             }
@@ -1898,8 +1895,6 @@ $f-sizes:
                 @include fs($fs14);
             }
 
-
-
             .modal-content {
                 height:100%;
             }
@@ -1913,7 +1908,7 @@ $f-sizes:
                 border:1px solid $color-ccc;
                 border-bottom:0;
                 border-radius: 1.5rem 1.5rem 0 0;
-                
+
                 @include mobile {
                     padding:1.5rem 1.5rem 0 1.5rem;
                     height:calc(100% - 4rem);
@@ -1941,9 +1936,7 @@ $f-sizes:
                         }
                     }
 
-                    
-
-                    &::before { 
+                    &::before {
                         content:'※';
                         position: absolute;
                         left:0;
@@ -1972,7 +1965,7 @@ $f-sizes:
                     height:4rem;
                     color:$color-666;
                     @include border-radius(4px);
-                    
+
                     @include mobile {
                         padding:1rem;
                     }
@@ -2084,6 +2077,7 @@ $f-sizes:
 //퀵서치영역
 .quicksearch-wrap {
     margin-top: 5rem;
+
     .inner {
         @include flex-flow;
     }
@@ -2095,7 +2089,7 @@ $f-sizes:
         .select-box {
             width:31.3%;
         }
-        
+
         select {
             padding:1rem 0;
             height:4.6rem;
@@ -2106,9 +2100,9 @@ $f-sizes:
             @include border-radius(0);
             border-bottom:2px solid $color-000;
             background: url($path-img-ico + 'ico_arrow_view.svg') right center /2rem 2rem  no-repeat;
-           
         }
     }
+
     button {
         width:11.6%;
         height:4.6rem;

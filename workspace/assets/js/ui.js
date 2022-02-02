@@ -4,16 +4,23 @@ UI.window = $(window);
 UI.doc = $(document);
 UI.body = $('body');
 
+
 //modal
-let open = function(el) {
-    $(el).fadeIn();
-}
-let close = function(el) {
-    $(el).fadeOut();
-};
+UI.modal = (function () {
+
+    return {
+        open : function(el) {
+            $(el).fadeIn();
+        },
+        close : function(el) {
+            $(el).fadeOut();
+        }
+    }
+
+})();
 
 //file remove
-UI.file  = function () {
+UI.file = function () {
 
     const $target = $('.table-edit .add-file-names').find('.name');
 
@@ -42,7 +49,7 @@ UI.textarea  = function () {
 
 };
 
-//nav
+//navToggle
 UI.navToggle = function () {
 
     const $el =  $('.nav-toggle');
@@ -51,6 +58,12 @@ UI.navToggle = function () {
     $el.off("click").on("click", function() {
         $(this).toggleClass('on');
         $target.toggleClass('on');
+
+        if ( $(this).hasClass('on') ){
+            $('.wrap').addClass('fixed');
+        } else {
+            $('.wrap').removeClass('fixed');
+        }
     });
 
 };
@@ -80,10 +93,20 @@ UI.dropDown = function () {
 
     $('.nav-menu > li > a').off("click").on("click", function(e) {
 
-        e.preventDefault();
+        if ( $('.nav-toggle').hasClass('on') ) {
+            e.preventDefault()
 
-        $('.sub-menu').slideUp();
-        $(this).next().slideDown();
+            let _open = $(this).hasClass("on");
+
+            $('.nav-menu > li > a').removeClass('on');
+
+            if ( !_open ) {
+                $(this).toggleClass('on');
+            }
+
+            $(this).next().slideToggle(300);
+            $(".sub-menu").not($(this).next()).slideUp(300);
+        }
 
     });
 
@@ -123,6 +146,7 @@ UI.search = function () {
 
 //datepicker
 UI.datepicker = function () {
+
     $.datepicker.setDefaults({
         dateFormat: 'yy-mm-dd'
         ,showOtherMonths: true
@@ -169,7 +193,44 @@ UI.sticky = function () {
 
 };
 
+//Nav
+UI.Nav = function () {
+
+    const $bg =  $('#nav');
+    const $bgType2 =  $('.search1');
+    const $bgType3 =  $('.search2');
+
+    $bg.on('mouseover', function () {
+        $('#header').addClass('on');
+        $('#header').removeClass('type2');
+    });
+    $bg.on('mouseout', function () {
+        $('#header').removeClass('on');
+    });
+    $bgType2.on('mouseover', function () {
+        $('#header').addClass('type2');
+        $('#header').removeClass('on');
+    });
+    $bgType2.on('mouseout', function () {
+        $('#header').removeClass('type2');
+        $bgType3.addClass('on');
+        $bgType2.removeClass('on');
+    });
+    $bgType3.on('mouseover', function () {
+        $('#header').addClass('type2');
+        $('#header').removeClass('on');
+    });
+    $bgType3.on('mouseout', function () {
+        $('#header').removeClass('type2');
+        $bgType3.removeClass('on');
+        $bgType2.addClass('on');
+    });
+
+};
+
+
 UI.init = function(){
+    UI.Nav();
     UI.navToggle();
     UI.dropDown();
     UI.search();
@@ -179,6 +240,7 @@ UI.init = function(){
     UI.datepicker();
     UI.tableM();
     UI.sticky();
+    UI.modal.open();
 };
 
 //init

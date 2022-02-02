@@ -23,6 +23,10 @@ body {
         min-width: 100%;
         max-width: 100%;
     }
+
+    &.fixed {
+        position: fixed;
+    }
 }
 
 //container

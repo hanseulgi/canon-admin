@@ -162,7 +162,7 @@ main {
 
                         &~.content {
                             display: block;
-                            z-index: 1;
+                            z-index: 0;
                         }
 
                         p {
@@ -570,12 +570,23 @@ main {
                     @include fs($fs24);
                     font-weight: $fw-b;
                     margin-bottom: 1rem;
+
+                    @include mobile {
+                        @include fs($fs16);
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid $color-ccc;
+                    }
                 }
+
                 .notice-items {
 
                     a {
                         @include flex-flow;
                         padding: 1.5rem 0;
+
+                        @include mobile {
+                            padding: 1rem 0;
+                        }
 
                         &:last-child {
                             padding-bottom: .6rem;
@@ -584,11 +595,19 @@ main {
                         p {
                             @include fs($fs15);
                             flex: 0 0 75%;
+
+                            @include mobile {
+                                @include fs($fs14);
+                            }
                         }
 
                         span {
                             @include fs($fs15);
                             color: #999;
+
+                            @include mobile {
+                                @include fs($fs14);
+                            }
                         }
                     }
                 }

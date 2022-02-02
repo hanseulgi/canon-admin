@@ -1,7 +1,8 @@
 <!-- popup -->
+
 <h2 style="font-size:20px; margin:30px 0 20px;">Alert type</h2>
 <!-- type1 -->
-<a href="javascript:open('#modaltest1');" class="btn-red-sm">팝업오픈</a>
+<a href="#" onclick="UI.modal.open(modaltest1)" class="btn-red-sm">팝업오픈</a>
 <div class="modal" id="modaltest1">
     <div class="modal-wrap" type="alert">
         <div class="modal-header">
@@ -9,10 +10,10 @@
             <a href="javascript:void(0);" class="modal-close"></a>
         </div>
         <div class="modal-content">
-            <p>삭제하시겠습니까?</p>  
+            <p>삭제하시겠습니까?</p>
             <div class="btns include-red-stroke">
-                <a href="javascript:close('#modaltest1');" class="btn--red-stroke modal__btn">취소</a>
-                <a href="javascript:close('#modaltest1');" class="btn--red modal__btn">확인</a>
+                <a href="#" onclick="UI.modal.close(modaltest1)" class="btn--red-stroke modal__btn">취소</a>
+                <a href="#" onclick="UI.modal.close(modaltest1)" class="btn--red modal__btn">확인</a>
             </div>
         </div>
     </div>
@@ -20,7 +21,7 @@
 <!-- //popup -->
 
 <!-- type2 -->
-<a href="javascript:open('#modaltest2');" class="btn-red-sm">팝업오픈</a>
+<a href="#" onclick="UI.modal.open(modaltest2)" class="btn-red-sm">팝업오픈</a>
 <div class="modal" id="modaltest2">
     <div class="modal-wrap" type="alert">
         <div class="modal-header">
@@ -29,10 +30,10 @@
         </div>
         <div class="modal-content">
             <p>삭제하시겠습니까? <br>
-            텍스트 두 줄 이상</p>   
+            텍스트 두 줄 이상</p>
             <div class="btns">
-                <a href="javascript:close('#modaltest2');" class="btn--gray modal__btn">취소</a>
-                <a href="javascript:close('#modaltest2');" class="btn--red modal__btn">확인</a>
+                <a href="#" onclick="UI.modal.close(modaltest2)" class="btn--gray modal__btn">취소</a>
+                <a href="#" onclick="UI.modal.close(modaltest2)" class="btn--red modal__btn">확인</a>
             </div>
         </div>
     </div>
@@ -40,7 +41,7 @@
 <!-- //popup -->
 
 <!-- type3 -->
-<a href="javascript:open('#modaltest3');" class="btn-red-sm">팝업오픈</a>
+<a href="#" onclick="UI.modal.open(modaltest3)" class="btn-red-sm">팝업오픈</a>
 <div class="modal" id="modaltest3">
     <div class="modal-wrap" type="alert">
         <div class="modal-header">
@@ -49,9 +50,9 @@
         </div>
         <div class="modal-content">
             <p>삭제하시겠습니까? <br>
-            텍스트 두 줄 이상</p>  
+            텍스트 두 줄 이상</p>
             <div class="btns btns--full-wh">
-                <a href="javascript:close('#modaltest3');" class="btn--red modal__btn">확인</a>
+                <a href="#" onclick="UI.modal.close(modaltest3)" class="btn--red modal__btn">확인</a>
             </div>
         </div>
     </div>
@@ -59,7 +60,7 @@
 <!-- //popup -->
 
 <!-- type4 -->
-<a href="javascript:open('#modaltest4');" class="btn-red-sm">팝업오픈</a>
+<a href="#" onclick="UI.modal.open(modaltest4)" class="btn-red-sm">팝업오픈</a>
 <div class="modal" id="modaltest4">
     <div class="modal-wrap modal--m-size" type="alert">
         <div class="modal-header">
@@ -75,16 +76,10 @@
                 </dd>
             </dl>
             <div class="btns">
-                <a href="javascript:close('#modaltest4');" class="btn--gray modal__btn">취소</a>
-                <a href="javascript:close('#modaltest4');" class="btn--red modal__btn">저장</a>
+                <a href="#" onclick="UI.modal.close(modaltest4)" class="btn--gray modal__btn">취소</a>
+                <a href="#" onclick="UI.modal.close(modaltest4)" class="btn--red modal__btn">저장</a>
             </div>
         </div>
     </div>
 </div>
 <!-- //popup -->
-
-<!-- <script type="text/javascript">
-    $(function(){
-        open('#modaltest');
-    });
-</script> -->
