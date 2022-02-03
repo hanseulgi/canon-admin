@@ -977,3 +977,25 @@ main {
         }
     }
 }
+
+// 동영상 상세 버튼
+.row-btns.video-wrap-btn {
+    @include mobile {
+        margin-top: 3rem!important;
+        padding-bottom: 2.8rem;
+    }
+
+    .col {
+        @include mobile {
+            margin-top: 0;
+            flex:none;
+        }
+
+        .btn-red-sm {
+            @include mobile {
+                height:40px;
+                line-height: 38px;
+            }
+        }
+    }
+}
