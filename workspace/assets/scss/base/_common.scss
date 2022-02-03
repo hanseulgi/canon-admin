@@ -1674,35 +1674,34 @@ $f-sizes:
         .location-list {
             font-size: 0;
 
-            li {
+            p {
+                
                 position: relative;
                 display: inline-block;
                 @include fs ($fs14);
                 color: $color-fff;
 
                 @include mobile {
+                    width: 16rem;
                     @include fs ($fs12);
                     color: #eee;
                 }
 
-                &+li {
-                    padding-left: 2.4rem;
+                span {
+                    vertical-align: middle;
+                }
+                i {
+                    @include wh (1.2rem, 1.2rem);
+                    display: inline-block;
+                    padding: 0 0.3rem;
+                    background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
+                    vertical-align: middle;
 
                     @include mobile {
-                        padding-left: 1.4rem;
-                    }
-
-                    &:before {
-                        content: "";
-                        @include position (7px, 4px);
-                        @include wh (1.2rem, 1.2rem);
-                        background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
-
-                        @include mobile {
-                            @include position (1px, 3px);
-                        }
+                        padding: 0 0;
                     }
                 }
+
             }
         }
     }
