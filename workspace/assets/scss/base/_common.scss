@@ -464,6 +464,10 @@ $f-sizes:
     width: 100%;
     box-sizing: border-box;
 
+    @include mobile {
+        padding:0 20px;
+    }
+
     [class^='btn'] {
         width: 100%;
         padding: 0 20px;
@@ -473,7 +477,7 @@ $f-sizes:
         margin: 0;
 
         @include mobile {
-            flex: 1;
+            flex: 1 0 auto;
             margin-top: 20px;
         }
 
@@ -639,10 +643,20 @@ $f-sizes:
         flex-wrap: wrap;
         margin-top: 6rem;
 
+        @include mobile {
+            margin-top: 3.8rem;
+        }
+
         .txt {
             @include fs($fs14);
             color: $color-666;
 
+            @include mobile {
+                width:100%;
+                margin-bottom: 0.5rem;
+                @include fs($fs13);
+                text-align: right;
+            }
             span {
                 color: $color-red;
             }
@@ -651,11 +665,22 @@ $f-sizes:
         .hr {
             margin-top: 1rem;
             width: 100%;
+
+            @include mobile {
+                margin-top: 0.5rem;
+                order:3;
+            }
         }
     }
 
     .top-title {
         @include fs($fs18);
+
+        @include mobile {
+            order:2;
+            @include fs($fs16);
+            font-weight: $fw-m;
+        }
     }
 
     .required {
@@ -940,6 +965,10 @@ $f-sizes:
                 
                 &+.tr {
                     margin-top: 30px;
+
+                    @include mobile {
+                        margin-top: 0;
+                    }
                 }
             }
 
@@ -986,10 +1015,25 @@ $f-sizes:
             flex-wrap: wrap;
             margin-top: 1.5rem;
 
+            @include mobile {
+                margin-top: 2rem;
+            }
+
             .tr {
                 @include flex-flow;
                 width: 100%;
                 flex: 1 1 100%;
+
+                @include mobile {
+                    display: block;
+                    margin-bottom: 2.5rem;
+                }
+
+                &:last-of-type {
+                    @include mobile {
+                        margin-bottom:0;
+                    }
+                }
 
                 .th {
                     flex: 0 0 13rem;
@@ -998,6 +1042,10 @@ $f-sizes:
 
                     &~.th {
                         margin-left: 14rem;
+
+                        @include mobile {
+                            margin-left: 0;
+                        }
                     }
                 }
 
@@ -1009,6 +1057,12 @@ $f-sizes:
 
                     [class^='btn'] {
                         margin-left: 10px;
+
+                        @include mobile {
+                            min-width:95px;
+                            height:40px;
+                            line-height: 38px;
+                        }
                     }
 
                     & {
@@ -1019,14 +1073,72 @@ $f-sizes:
                             padding: 0 5px;
                         }
                     }
+
+                    &.select-row-3 {
+                        @include mobile {
+                            display: block;
+                        }
+
+                        .select-wrap {
+                            @include mobile {
+                                margin-left: 0;
+                            }
+
+                            & + .select-wrap {
+                                @include mobile {
+                                    margin-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    @include mobile {
+                        margin-bottom: 2.5rem;
+                    }
+
+                    &:last-of-type {
+                        @include mobile {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
 
                 p {
                     @include fs($fs15);
                 }
 
+                .tit {
+                    @include mobile {
+                        color:$color-666;
+                    }
+                }
+
                 .radio-group {
                     height: 4.5rem;
+
+                    @include mobile {
+                        flex-wrap:wrap;
+                        height:auto;
+                    }
+
+                    .radio {
+                        @include mobile {
+                            margin-top: 1.5rem;
+                            width:33.33%;
+                        }
+
+                        &:nth-child(-n + 3) {
+                            @include mobile  {
+                                margin-top: 0;
+                            }
+                        }
+
+                        &.txt + .txt {
+                            @include mobile {
+                                margin-left: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1083,6 +1195,10 @@ $f-sizes:
             @include flex-flow;
             border-bottom: 1px solid $color-e6e6e6;
 
+            @include mobile {
+                border-bottom:0;
+            }
+
             .th {
                 width: 9rem;
                 font-weight: $fw-r;
@@ -1093,6 +1209,10 @@ $f-sizes:
             .td {
                 flex: 1 1 auto;
                 padding: 1.5rem 0;
+
+                @include mobile {
+                    padding:.75rem 0;
+                }
 
                 &.w600 {
                     display: block;
@@ -1126,6 +1246,10 @@ $f-sizes:
 
             p {
                 @include fs($fs15);
+
+                @include mobile {
+                    @include fs($fs14);
+                }
             }
 
             .access-wrap+.access-wrap {
@@ -1143,18 +1267,48 @@ $f-sizes:
             display: flex;
             flex-wrap: wrap;
 
+            @include mobile {
+                padding-top: 1.4rem;
+                margin-bottom: 5rem;
+            }
+
+            &:last-of-type {
+                @include mobile {
+                    margin-bottom: 0;
+                }
+            }
+
             .tr {
                 @include flex-flow;
                 width: 100%;
                 flex: 1 1 100%;
+
+                @include mobile {
+                    flex-wrap:wrap;
+                }
+
+               
+                @include mobile {
+                    align-items:flex-start;
+                }
+                
 
                 .th {
                     flex: 0 0 16rem;
                     font-weight: $fw-m;
                     padding: 1.5rem 0;
 
+                    @include mobile {
+                        flex:0 0 34%;
+                        padding:.75rem 0;
+                    }
+
                     &~.th {
                         margin-left: 3rem;
+
+                        @include mobile {
+                            margin-left: 0;
+                        }
                     }
 
                     .tit {
@@ -1167,6 +1321,10 @@ $f-sizes:
                     @include flex-flow;
                     justify-content: start;
                     flex: 1 1 33.3%;
+
+                    @include mobile {
+                        flex:0 0 66%;
+                    }
 
                     [class^='btn'] {
                         margin-left: 10px;
