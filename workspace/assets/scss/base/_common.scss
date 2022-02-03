@@ -436,6 +436,13 @@ $f-sizes:
         line-height: 43px;
         padding: 0 20px;
         font-size: 13px;
+
+        @include mobile {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            font-size: 15px;
+        }
     }
 
     &[class*='md'] {
@@ -506,11 +513,19 @@ $f-sizes:
 .select-row-3 {
     display: flex;
 
+    @include mobile {
+        display: block;
+    }
+
     .select-wrap {
         flex: 1;
 
         &+.select-wrap {
             margin-left: 10px;
+
+            @include mobile {
+                margin: 1rem 0 0;
+            }
         }
     }
 }
@@ -864,14 +879,37 @@ $f-sizes:
         border-bottom: 1px solid $color-e6e6e6;
         width: 100%;
         border-top: 2px solid $color-000;
+        
+        @include mobile {
+            margin-top: 0;
+            border-top: none;
+            width: 100%;
+            border-bottom: 2px solid $color-000;
+        }
 
         ul {
             width: 100%;
             display: flex;
             padding: 2.5rem 0;
 
+            @include mobile {
+                padding: 2rem 0;
+                display: f;
+            }
+
             li {
                 display: flex;
+
+                @include mobile {
+                    &.cate,
+                    &.date {
+                        display: none;
+                    }
+
+                    &.human {
+                        margin-left: 0;
+                    }
+                }
 
                 &+li {
                     margin-left: 3rem;
@@ -881,15 +919,29 @@ $f-sizes:
                     @include fs($fs14);
                     line-height: 10px;
 
+                    @include mobile {
+                        @include fs($fs15);
+                    }
+
                     &.tit {
                         font-weight: $fw-r;
                         color: $color-666;
+
+                        @include mobile {
+                            color: $color-111;
+                        }
                     }
 
-                    &+p {
-                        border-left: 1px solid $color-ccc;
-                        margin-left: 8px;
-                        padding-left: 8px;
+                    &+p::before {
+                        content: "|";
+                        color: $color-ccc;
+                        margin: 0 8px;
+
+                        @include mobile {
+                            content: ":";
+                            color: $color-111;
+                            margin: 0 3px;
+                        }
                     }
                 }
             }
@@ -899,6 +951,10 @@ $f-sizes:
     &>[class*='-edit'] {
         width: 100%;
         text-align: left;
+
+        @include mobile {
+            margin-top: 20px;
+        }
 
         .tr {
             @include flex-flow;
@@ -917,8 +973,12 @@ $f-sizes:
                 flex: 0 0 9rem;
 
                 @include mobile {
+                    font-weight: $fw-r;
                     padding: 0 0 1rem;
-                
+
+                    p {
+                        color: $color-666;
+                    }
                 }
             }
 
@@ -998,6 +1058,9 @@ $f-sizes:
                 }
             }
         }
+
+        .add-file-wrap {
+            margin-top: 38px!important;        }
     }
 
     //상세 table
@@ -1260,6 +1323,11 @@ $f-sizes:
 //add file
 .add-file {
 
+    @include mobile {
+        display: block;
+        position: relative;
+    }
+
     &.view {
 
         .add-file-names {
@@ -1287,6 +1355,11 @@ $f-sizes:
         border-radius: 6px;
         padding: 2rem;
 
+        @include mobile {
+            width: 100% !important;
+            padding: 1rem;
+        }
+
         .inner {
             display: inline-block;
         }
@@ -1306,6 +1379,23 @@ $f-sizes:
 
             &+.name {
                 margin-top: 5px;
+            }
+        }
+    }
+
+    .file-add-btn { 
+        @include mobile {
+            position: absolute;
+            top: -4.5rem;
+            right: 0;
+            z-index: 1;
+            
+            [class^=btn-][class*=sm] {
+                min-width: auto;
+                height: 3.5rem;
+                @include fs($fs14);
+                line-height: 3.5rem;
+                padding: 0 12px;
             }
         }
     }

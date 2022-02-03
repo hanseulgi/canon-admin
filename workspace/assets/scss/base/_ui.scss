@@ -743,6 +743,48 @@ main {
     }
 }
 
+//edit
+.table-wrap > [class*=-edit] {
+    .edit-wrap{
+        height: 18rem;
+        @include mobile {
+            height: 25rem;
+        }
+    }
+
+    .use-wrap {
+        @include mobile {
+            display: flex;
+            
+            .th {
+                flex: none;
+                margin-right: 30px;
+                padding-bottom: 0;
+
+                p {
+                    @include fs($fs15);
+                    color: $color-111;
+                }
+            }
+
+            .radio {
+                @include fs($fs15);
+            }
+        }
+
+    }
+}
+
+.table-wrap + .row-btns {
+    margin-top: 35px;
+
+    @include mobile {
+        padding: 0 20px;
+        margin-top: 10px;        
+    }
+}
+
+
 
 //검색 결과
 .result {
