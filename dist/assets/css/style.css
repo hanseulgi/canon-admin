@@ -3515,7 +3515,7 @@ body {
 }
 @media (max-width: 1024px) {
     .row-btns .col {
-        flex: 1;
+        flex: 1 0 auto;
         margin-top: 20px;
     }
 }
@@ -3559,7 +3559,7 @@ body {
     }
 }
 .select-row-3 .select-wrap {
-    flex: 1;
+    flex: 1 0 auto;
 }
 .select-row-3 .select-wrap + .select-wrap {
     margin-left: 10px;
@@ -4183,6 +4183,7 @@ body {
     }
 }
 .table-wrap > [class*=-detail] .tr .th {
+    align-self: baseline;
     width: 9rem;
     font-weight: 400;
     padding: 1.5rem 0;
@@ -4482,7 +4483,7 @@ body {
 .add-file.view .add-file-names {
     width: 100% !important;
     border: 0;
-    padding-left: 0;
+    padding: 0 0;
 }
 .add-file.view .add-file-names .name {
     font-size: 1.4rem;
