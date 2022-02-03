@@ -72,6 +72,21 @@
     }
 }
 
+//display
+.pc {
+    @include mobile {
+        display: none;
+    }
+}
+
+.mo {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
 //font-style
 $f-sizes:
 12,
@@ -438,6 +453,9 @@ $f-sizes:
         font-size: 13px;
 
         @include mobile {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
             font-size: 15px;
         }
     }
@@ -514,11 +532,19 @@ $f-sizes:
 .select-row-3 {
     display: flex;
 
+    @include mobile {
+        display: block;
+    }
+
     .select-wrap {
-        flex: 1;
+        flex: 1 0 auto;
 
         &+.select-wrap {
             margin-left: 10px;
+
+            @include mobile {
+                margin: 1rem 0 0;
+            }
         }
     }
 }
@@ -921,14 +947,37 @@ $f-sizes:
         border-bottom: 1px solid $color-e6e6e6;
         width: 100%;
         border-top: 2px solid $color-000;
+        
+        @include mobile {
+            margin-top: 0;
+            border-top: none;
+            width: 100%;
+            border-bottom: 2px solid $color-000;
+        }
 
         ul {
             width: 100%;
             display: flex;
             padding: 2.5rem 0;
 
+            @include mobile {
+                padding: 2rem 0;
+                display: f;
+            }
+
             li {
                 display: flex;
+
+                @include mobile {
+                    &.cate,
+                    &.date {
+                        display: none;
+                    }
+
+                    &.human {
+                        margin-left: 0;
+                    }
+                }
 
                 &+li {
                     margin-left: 3rem;
@@ -938,15 +987,29 @@ $f-sizes:
                     @include fs($fs14);
                     line-height: 10px;
 
+                    @include mobile {
+                        @include fs($fs15);
+                    }
+
                     &.tit {
                         font-weight: $fw-r;
                         color: $color-666;
+
+                        @include mobile {
+                            color: $color-111;
+                        }
                     }
 
-                    &+p {
-                        border-left: 1px solid $color-ccc;
-                        margin-left: 8px;
-                        padding-left: 8px;
+                    &+p::before {
+                        content: "|";
+                        color: $color-ccc;
+                        margin: 0 8px;
+
+                        @include mobile {
+                            content: ":";
+                            color: $color-111;
+                            margin: 0 3px;
+                        }
                     }
                 }
             }
@@ -956,6 +1019,10 @@ $f-sizes:
     &>[class*='-edit'] {
         width: 100%;
         text-align: left;
+
+        @include mobile {
+            margin-top: 20px;
+        }
 
         .tr {
             @include flex-flow;
@@ -978,8 +1045,12 @@ $f-sizes:
                 flex: 0 0 9rem;
 
                 @include mobile {
+                    font-weight: $fw-r;
                     padding: 0 0 1rem;
-                
+
+                    p {
+                        color: $color-666;
+                    }
                 }
             }
 
@@ -1142,6 +1213,9 @@ $f-sizes:
                 }
             }
         }
+
+        .add-file-wrap {
+            margin-top: 38px!important;        }
     }
 
     //상세 table
@@ -1150,6 +1224,12 @@ $f-sizes:
         border-bottom: 1px solid $color-e6e6e6;
         width: 100%;
         border-top: 2px solid $color-000;
+
+        @include mobile {
+            margin-top: 0;
+            border-top: none;
+            border-bottom: 2px solid $color-000;
+        }
 
         .detail-name {
             @include fs($fs20);
@@ -1160,6 +1240,10 @@ $f-sizes:
             width: 100%;
             display: flex;
             padding: 1rem 0 2.5rem;
+
+            @include mobile {
+                padding: 2rem 0;
+            }
 
             li {
                 display: flex;
@@ -1175,12 +1259,23 @@ $f-sizes:
                     &.tit {
                         font-weight: $fw-m;
                         color: $color-666;
+
+                        @include mobile {
+                            font-weight: $fw-r;
+                            color: $color-111;
+                        }
                     }
 
-                    &+p {
-                        border-left: 1px solid $color-ccc;
-                        margin-left: 8px;
-                        padding-left: 8px;
+                    &+p::before {
+                        content: "|";
+                        color: $color-ccc;
+                        margin: 0 8px;
+
+                        @include mobile {
+                            content: ":";
+                            color: $color-111;
+                            margin: 0 3px;
+                        }
                     }
                 }
             }
@@ -1197,13 +1292,26 @@ $f-sizes:
 
             @include mobile {
                 border-bottom:0;
+                align-items: flex-start;
+
             }
 
             .th {
+                align-self: baseline;
                 width: 9rem;
                 font-weight: $fw-r;
                 padding: 1.5rem 0;
                 word-break: keep-all;
+
+                @include mobile {
+                    width: 8.75rem;
+                }
+
+                p {
+                    @include mobile {
+                        color: $color-666;
+                    }
+                }
             }
 
             .td {
@@ -1211,7 +1319,10 @@ $f-sizes:
                 padding: 1.5rem 0;
 
                 @include mobile {
+
                     padding:.75rem 0;
+                    width: calc(100% - 8.75rem);
+
                 }
 
                 &.w600 {
@@ -1250,6 +1361,16 @@ $f-sizes:
                 @include mobile {
                     @include fs($fs14);
                 }
+
+            }
+
+            &.table-top {
+                .td {
+                    @include mobile {
+                        padding: 2rem 0 2.5rem;
+                    }
+                }
+
             }
 
             .access-wrap+.access-wrap {
@@ -1259,6 +1380,17 @@ $f-sizes:
                 th,
                 td {
                     padding-top: 0;
+                }
+            }
+
+            &:last-child {
+                @include mobile {
+                    border-bottom: none;
+
+                    .th,
+                    .td {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
@@ -1339,6 +1471,21 @@ $f-sizes:
                         }
                     }
                 }
+            }
+        }
+
+        .dep-cate {
+            @include mobile {
+                @include fs($fs12);
+                margin-bottom: 10px;
+
+            }
+        }
+        .detail-name {
+            @include mobile {
+                @include fs($fs16);
+                font-weight: $fw-m;
+                margin-bottom: 1.5px;
             }
         }
     }
@@ -1498,12 +1645,17 @@ $f-sizes:
 //add file
 .add-file {
 
+    @include mobile {
+        display: block;
+        position: relative;
+    }
+
     &.view {
 
         .add-file-names {
             width: 100% !important;
             border: 0;
-            padding-left: 0;
+            padding: 0 0;
 
             .name {
                 @include fs($fs14);
@@ -1517,13 +1669,24 @@ $f-sizes:
 
     &.flex {
         align-items: start;
+
+        .add-file-names {
+            padding: 2rem;
+            
+            @include mobile {
+                padding: 1rem;
+            }
+        }
     }
 
     .add-file-names {
         width: calc(100% - 11rem) !important;
         border: 1px solid $color-e6e6e6;
         border-radius: 6px;
-        padding: 2rem;
+
+        @include mobile {
+            width: 100% !important;
+        }
 
         .inner {
             display: inline-block;
@@ -1544,6 +1707,27 @@ $f-sizes:
 
             &+.name {
                 margin-top: 5px;
+
+                @include mobile {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .file-add-btn { 
+        @include mobile {
+            position: absolute;
+            top: -4.5rem;
+            right: 0;
+            z-index: 1;
+            
+            [class^=btn-][class*=sm] {
+                min-width: auto;
+                height: 3.5rem;
+                @include fs($fs14);
+                line-height: 3.5rem;
+                padding: 0 12px;
             }
         }
     }
@@ -1555,6 +1739,13 @@ $f-sizes:
     @include flex-flow;
     background-color: $bg-f6f6f6;
     padding: 2rem;
+
+    @include mobile {
+        position: relative;
+        margin-top: 3.5rem;
+        display: block;
+        padding: 2.5rem 2rem;
+    }
 
     .title {
         width: 8rem;
@@ -1568,6 +1759,17 @@ $f-sizes:
     .counter {
         @include fs($fs12);
         color: $color-666;
+
+        @include mobile {
+            @include fs($fs15);
+            position: absolute;
+            left: 20px;
+            bottom: 31.5px;
+
+            em {
+                color: $color-111;
+            }
+        }
     }
 
     &::after {
@@ -1586,6 +1788,15 @@ $f-sizes:
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right-color: transparent;
+
+        @include mobile {
+            height: 12.5rem;
+            padding: 10px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-right-color: $color-e6e6e6;
+            margin-top: 10px;
+        }
     }
 
     textarea {
@@ -1594,8 +1805,17 @@ $f-sizes:
         border: 0;
         resize: none;
 
+        @include mobile {
+            @include fs($fs14);
+            height: 100%;
+        }
+
         &::-webkit-input-placeholder {
             @include fs($fs12);
+            
+            @include mobile {
+                @include fs($fs14);
+            }
         }
     }
 
@@ -1605,17 +1825,37 @@ $f-sizes:
         border: 1px solid $color-e6e6e6;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @include mobile {
+            float: right;
+            @include wh(75px, 35px);
+            @include fs($fs15);
+            color: $color-fff;
+            background-color: $bg-000;
+            border-radius: 6px;
+            border: 0;
+            margin-top: 10px;
+        }
     }
 }
 
 .comment-lists {
     margin-top: 4rem;
 
+    @include mobile {
+        padding: 0 2rem;
+    }
+
     .length {
         @include fs($fs16);
         padding-bottom: 1rem;
         font-weight: $fw-m;
         border-bottom: 1px solid $color-e6e6e6;
+
+        @include mobile {
+            @include fs($fs15);
+            border-bottom: 2px solid $color-111;
+        }
 
         em {
             font-weight: $fw-m !important;
@@ -1662,6 +1902,10 @@ $f-sizes:
             top: 2rem;
             text-decoration: underline;
             color: $color-666;
+            
+            @include mobile {
+                @include fs($fs14);
+            }
         }
     }
 }

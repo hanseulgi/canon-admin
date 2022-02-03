@@ -2,19 +2,19 @@
 <div class="table-wrap">
     <div class="edit-title">
         <ul>
-            <li>
+            <li class="cate">
                 <p class="tit">구분</p>
                 <p class="txt">전체</p>
             </li>
-            <li>
+            <li class="human">
                 <p class="tit">등록자</p>
                 <p class="txt">홍길동</p>
             </li>
-            <li>
+            <li class="department">
                 <p class="tit">부서</p>
                 <p class="txt">C&C 지원담당</p>
             </li>
-            <li>
+            <li class="date">
                 <p class="tit">등록일자</p>
                 <p class="txt">2022.10.01</p>
             </li>
@@ -27,7 +27,7 @@
             </div>
             <div class="td select-row-3">
                 <div class="select-wrap">
-                    <select class="select">
+                    <select class="select on">
                         <option>1Depth</option>
                         <option>ENG</option>
                         <option>CHN</option>
@@ -62,12 +62,12 @@
                 <p class="tit">내용</p>
             </div>
             <div class="td">
-                <div class="edit-wrap" style="padding:10px; height:180px; border:1px solid #e6e6e6; border-radius:6px; font-size:20px;">
+                <div class="edit-wrap" style="padding:10px; border:1px solid #e6e6e6; border-radius:6px; font-size:20px;">
                     EDIT 영역
                 </div>
             </div>
         </div>
-        <div class="tr f-a-start">
+        <div class="tr f-a-start add-file-wrap">
             <div class="th">
                 <p class="tit">첨부파일</p>
             </div>
@@ -80,7 +80,7 @@
                             <a class="name" href="#">테스트 정산파일.xls</a>
                         </div>
                     </div>
-                    <div>
+                    <div class="file-add-btn">
                         <label for='file-add'>
                             <span class="btn-white-sm line">파일 찾기</span>
                         </label>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="tr">
+        <div class="tr use-wrap">
             <div class="th">
                 <p class="tit">사용여부</p>
             </div>
@@ -127,7 +127,7 @@
 </div>
 <!-- //table : edit page -->
 
-<div class="row-btns mt35">
+<div class="row-btns">
     <span class="col"><button type="button" class="btn-gray-sm">취소</button></span>
     <span class="col"><button type="button" class="btn-red-sm">저장</button></span>
     <span class="col"><button type="button" class="btn-red-sm line">목록</button></span>
