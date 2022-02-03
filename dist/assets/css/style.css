@@ -3876,6 +3876,34 @@ body {
         height: 73px;
         background-color: #e6e6e6;
     }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status {
+        display: block;
+        right: 0;
+        width: 6.2rem;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 44px;
+        background: #e6e6e6;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status span {
+        color: #666;
+    }
+}
+@media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr .th {
         font-weight: 500;
         padding: 1.5rem 1.5rem;
@@ -3884,6 +3912,8 @@ body {
     .table-wrap [class$=-list] .tr .th p {
         color: #666;
     }
+}
+@media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr .td {
         padding: 0 0;
     }
@@ -4173,6 +4203,11 @@ body {
     width: 100%;
     height: 67.5rem;
     overflow: hidden;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail] .tr .td .video-play {
+        height: 18rem;
+    }
 }
 .table-wrap > [class*=-detail] .tr .td .video-play img {
     width: 100%;
@@ -4819,8 +4854,18 @@ body {
     text-align: right;
     margin-top: 1rem;
 }
+@media (max-width: 1024px) {
+    .right-btn {
+        margin-top: 1.5rem;
+    }
+}
 .right-btn + .paging {
     margin-top: -1rem;
+}
+@media (max-width: 1024px) {
+    .right-btn + .paging {
+        margin-top: 3rem;
+    }
 }
 
 .location-wrap {
@@ -4862,7 +4907,7 @@ body {
 .location-wrap .inner .location-list {
     font-size: 0;
 }
-.location-wrap .inner .location-list li {
+.location-wrap .inner .location-list p {
     position: relative;
     display: inline-block;
     font-size: 1.4rem;
@@ -4871,35 +4916,28 @@ body {
     color: #fff;
 }
 @media (max-width: 1024px) {
-    .location-wrap .inner .location-list li {
+    .location-wrap .inner .location-list p {
+        width: 16rem;
         font-size: 1.2rem;
         line-height: 1.42;
         letter-spacing: -0.12px;
         color: #eee;
     }
 }
-.location-wrap .inner .location-list li + li {
-    padding-left: 2.4rem;
+.location-wrap .inner .location-list p span {
+    vertical-align: middle;
 }
-@media (max-width: 1024px) {
-    .location-wrap .inner .location-list li + li {
-        padding-left: 1.4rem;
-    }
-}
-.location-wrap .inner .location-list li + li:before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 4px;
+.location-wrap .inner .location-list p i {
     width: 1.2rem;
     height: 1.2rem;
+    display: inline-block;
+    padding: 0 0.3rem;
     background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
+    vertical-align: middle;
 }
 @media (max-width: 1024px) {
-    .location-wrap .inner .location-list li + li:before {
-        position: absolute;
-        left: 1px;
-        top: 3px;
+    .location-wrap .inner .location-list p i {
+        padding: 0 0;
     }
 }
 
@@ -8478,6 +8516,25 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 @media (max-width: 1024px) {
     .dep-cate span + span::before {
         vertical-align: -2px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .row-btns.video-wrap-btn {
+        margin-top: 3rem !important;
+        padding-bottom: 2.8rem;
+    }
+}
+@media (max-width: 1024px) {
+    .row-btns.video-wrap-btn .col {
+        margin-top: 0;
+        flex: none;
+    }
+}
+@media (max-width: 1024px) {
+    .row-btns.video-wrap-btn .col .btn-red-sm {
+        height: 40px;
+        line-height: 38px;
     }
 }
 

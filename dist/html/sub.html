@@ -218,14 +218,19 @@
         <div class="location-wrap">
             <div class="inner">
                 <h2 class="location-title">서브 타이틀</h2>
-                <ol class="location-list">
-                    <li>1차 카테고리</li>
-                    <li>2차 카테고리</li>
-                    <li>3차 카테고리</li>
-                </ol>
+                <div class="location-list">
+                    <p class="ellipsis">
+                        <span>1차 카테고리</span>
+                        <i class="ico-loction"></i>
+                        <span>2차 카테고리</span>
+                        <i class="ico-loction"></i>
+                        <span>3차 카테고리</span>
+                    </p>
+                </div>
             </div>
         </div>
         <!-- //location -->
+
         <section id="container">
             <section class="contents">
 
@@ -321,7 +326,7 @@
                         클래스 설명
                         .show-top1 : 제품 카테고리가 들어감
                         .show-top2 : 제목이 들어감
-                        .show-bottom1, show-bottom2 : 가장 하단에 들어감
+                        .show-bottom1, .show-bottom2, .show-bottom3 (.show-bottom3은 예외 case) : 가장 하단에 들어감
                         .show-right al-l : 파일이나 버전 등 우측에 위치하는 것들 ( 없는 type일 시 해당 태그 영역 삭제 )
                     -->
 
@@ -362,17 +367,14 @@
                             </div>
                             <div class="td title show-top2">
                                 <p class="ellipsis">
-                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045</a>
+                                    <a href="#">[RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 [RC1003]imageRUNNER ADVANCE 4051_4045 </a>
                                     <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
                                 </p>
                             </div>
-                            <div class="td show-right al-l"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
+                            <div class="td show-right al-l status"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
                                 <p>
-                                    <a href="#" class="file-link">
-                                        <i class="file-icon" type="html"></i>
-                                        <span>html</span>
-                                    </a>
-                                    <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
+                                 <span>보류</span> 
+                                <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
                                 </p>
                             </div>
                             <div class="td show-bottom1">

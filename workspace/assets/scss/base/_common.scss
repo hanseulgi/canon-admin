@@ -867,6 +867,34 @@ $f-sizes:
                             height: 73px;
                             background-color: #e6e6e6;
                         }
+
+                        &.status {
+                            @include mobile {
+                                display: block;
+                                right:0;
+                                width:6.2rem;
+                                text-align: center;
+                                font-size: $fs13;
+                            }
+
+                            &::before {
+                                @include mobile {
+                                    content:'';
+                                    position: absolute;
+                                    top:50%;
+                                    left:0;
+                                    transform:translateY(-50%);
+                                    width:1px;
+                                    height:44px;
+                                    background: #e6e6e6;
+                                }
+                            }
+                            span {
+                                @include mobile {
+                                    color:$color-666;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -1180,6 +1208,10 @@ $f-sizes:
                     width: 100%;
                     height: 67.5rem;
                     overflow: hidden;
+
+                    @include mobile {
+                        height:18rem;
+                    }
 
                     img {
                         width: 100%;
@@ -1835,9 +1867,17 @@ $f-sizes:
     text-align: right;
     margin-top: 1rem;
 
+    @include mobile {
+        margin-top: 1.5rem;
+    }
+
     //버튼 아래에 페이징이 있는 경우
     &+.paging {
         margin-top: -1rem;
+
+        @include mobile {
+            margin-top: 3rem;
+        }
     }
 }
 
@@ -1878,35 +1918,34 @@ $f-sizes:
         .location-list {
             font-size: 0;
 
-            li {
+            p {
+                
                 position: relative;
                 display: inline-block;
                 @include fs ($fs14);
                 color: $color-fff;
 
                 @include mobile {
+                    width: 16rem;
                     @include fs ($fs12);
                     color: #eee;
                 }
 
-                &+li {
-                    padding-left: 2.4rem;
+                span {
+                    vertical-align: middle;
+                }
+                i {
+                    @include wh (1.2rem, 1.2rem);
+                    display: inline-block;
+                    padding: 0 0.3rem;
+                    background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
+                    vertical-align: middle;
 
                     @include mobile {
-                        padding-left: 1.4rem;
-                    }
-
-                    &:before {
-                        content: "";
-                        @include position (7px, 4px);
-                        @include wh (1.2rem, 1.2rem);
-                        background: url($path-img-ico + 'ico_arrow_right_location.svg') no-repeat center center;
-
-                        @include mobile {
-                            @include position (1px, 3px);
-                        }
+                        padding: 0 0;
                     }
                 }
+
             }
         }
     }
