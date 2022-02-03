@@ -1147,6 +1147,11 @@ $f-sizes:
                     &.tit {
                         font-weight: $fw-m;
                         color: $color-666;
+
+                        @include mobile {
+                            font-weight: $fw-r;
+                            color: $color-111;
+                        }
                     }
 
                     &+p::before {
@@ -1173,11 +1178,19 @@ $f-sizes:
             @include flex-flow;
             border-bottom: 1px solid $color-e6e6e6;
 
+            @include mobile {
+                align-items: flex-start;
+            }
+
             .th {
                 width: 9rem;
                 font-weight: $fw-r;
                 padding: 1.5rem 0;
                 word-break: keep-all;
+
+                @include mobile {
+                    width: 8.75rem;
+                }
 
                 p {
                     @include mobile {
@@ -1189,6 +1202,10 @@ $f-sizes:
             .td {
                 flex: 1 1 auto;
                 padding: 1.5rem 0;
+
+                @include mobile {
+                    width: calc(100% - 8.75rem);
+                }
 
                 &.w600 {
                     display: block;
@@ -1228,6 +1245,14 @@ $f-sizes:
                 }
             }
 
+            &.table-top {
+                .td {
+                    @include mobile {
+                        padding: 2rem 0 2.5rem;
+                    }
+                }
+            }
+
             .access-wrap+.access-wrap {
                 margin-top: -1px;
                 border-top: 1px solid #fff;
@@ -1235,6 +1260,17 @@ $f-sizes:
                 th,
                 td {
                     padding-top: 0;
+                }
+            }
+
+            &:last-child {
+                @include mobile {
+                    border-bottom: none;
+
+                    .th,
+                    .td {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
@@ -1286,14 +1322,16 @@ $f-sizes:
 
         .dep-cate {
             @include mobile {
-                @include fs($fs14);
+                @include fs($fs12);
+                margin-bottom: 10px;
+
             }
         }
         .detail-name {
             @include mobile {
                 @include fs($fs16);
                 font-weight: $fw-m;
-                margin-top: 10px;
+                margin-bottom: 1.5px;
             }
         }
     }
@@ -1477,17 +1515,23 @@ $f-sizes:
 
     &.flex {
         align-items: start;
+
+        .add-file-names {
+            padding: 2rem;
+            
+            @include mobile {
+                padding: 1rem;
+            }
+        }
     }
 
     .add-file-names {
         width: calc(100% - 11rem) !important;
         border: 1px solid $color-e6e6e6;
         border-radius: 6px;
-        padding: 2rem;
 
         @include mobile {
             width: 100% !important;
-            padding: 1rem;
         }
 
         .inner {
@@ -1509,6 +1553,10 @@ $f-sizes:
 
             &+.name {
                 margin-top: 5px;
+
+                @include mobile {
+                    margin-top: 10px;
+                }
             }
         }
     }
