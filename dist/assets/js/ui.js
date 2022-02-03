@@ -169,7 +169,7 @@ UI.datepicker = function () {
 UI.sticky = function () {
 
     const $target = $('.result-aside');
-    const $foot = $('footer');
+    const $foot = $('.wrap > footer');
     const $top = 20;
     let _offsetTop = $target.offset().top - $top;
     let _offsetBottom = $foot.offset().top - ( $top*2 + $target.height() );

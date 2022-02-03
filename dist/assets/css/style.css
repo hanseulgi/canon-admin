@@ -7944,7 +7944,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .result .result-aside {
     display: inline-block;
     width: 25rem;
-    margin: 19rem 0 0 5rem;
+    margin: 18.9rem 0 0 5rem;
 }
 .result .result-aside.fixed {
     position: fixed;
@@ -8493,6 +8493,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .nav-wrap .nav-menu > li {
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 @media (max-width: 1024px) {
     .nav-wrap .nav-menu > li {
@@ -8501,7 +8502,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         border-bottom: 1px solid #e6e6e6;
     }
 }
-.nav-wrap .nav-menu > li:last-child {
+.nav-wrap .nav-menu > li:last-child a {
     padding-right: 0;
 }
 .nav-wrap .nav-menu > li > a {
