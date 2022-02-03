@@ -4669,7 +4669,7 @@ body {
 .location-wrap .inner .location-list {
     font-size: 0;
 }
-.location-wrap .inner .location-list li {
+.location-wrap .inner .location-list p {
     position: relative;
     display: inline-block;
     font-size: 1.4rem;
@@ -4678,35 +4678,28 @@ body {
     color: #fff;
 }
 @media (max-width: 1024px) {
-    .location-wrap .inner .location-list li {
+    .location-wrap .inner .location-list p {
+        width: 16rem;
         font-size: 1.2rem;
         line-height: 1.42;
         letter-spacing: -0.12px;
         color: #eee;
     }
 }
-.location-wrap .inner .location-list li + li {
-    padding-left: 2.4rem;
+.location-wrap .inner .location-list p span {
+    vertical-align: middle;
 }
-@media (max-width: 1024px) {
-    .location-wrap .inner .location-list li + li {
-        padding-left: 1.4rem;
-    }
-}
-.location-wrap .inner .location-list li + li:before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 4px;
+.location-wrap .inner .location-list p i {
     width: 1.2rem;
     height: 1.2rem;
+    display: inline-block;
+    padding: 0 0.3rem;
     background: url("../img/ico/ico_arrow_right_location.svg") no-repeat center center;
+    vertical-align: middle;
 }
 @media (max-width: 1024px) {
-    .location-wrap .inner .location-list li + li:before {
-        position: absolute;
-        left: 1px;
-        top: 3px;
+    .location-wrap .inner .location-list p i {
+        padding: 0 0;
     }
 }
 

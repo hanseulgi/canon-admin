@@ -169,7 +169,7 @@ UI.datepicker = function () {
 UI.sticky = function () {
 
     const $target = $('.result-aside');
-    const $foot = $('.wrap > footer');
+    const $foot = $('#container').next('footer').find('.inner');
     const $top = 20;
     let _offsetTop = $target.offset().top - $top;
     let _offsetBottom = $foot.offset().top - ( $top*2 + $target.height() );
@@ -184,10 +184,7 @@ UI.sticky = function () {
             $target.removeClass('fixed').addClass('default').css('top', 'auto');
         }
         if ( _scrollTop > _offsetBottom && $target.hasClass('fixed') ) {
-            $target.removeClass('fixed').css('top', _offsetBottom + $top);
-        }
-        if ( _offsetBottom > _scrollTop && $target.hasClass('bottom') ) {
-            $target.addClass('fixed').css('top', $top);
+            $target.css('top', $top - 220);
         }
     });
 
