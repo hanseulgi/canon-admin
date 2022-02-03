@@ -72,6 +72,21 @@
     }
 }
 
+//display
+.pc {
+    @include mobile {
+        display: none;
+    }
+}
+
+.mo {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
 //font-style
 $f-sizes:
 12,
@@ -1070,6 +1085,12 @@ $f-sizes:
         width: 100%;
         border-top: 2px solid $color-000;
 
+        @include mobile {
+            margin-top: 0;
+            border-top: none;
+            border-bottom: 2px solid $color-000;
+        }
+
         .detail-name {
             @include fs($fs20);
             margin-top: 2.5rem;
@@ -1079,6 +1100,10 @@ $f-sizes:
             width: 100%;
             display: flex;
             padding: 1rem 0 2.5rem;
+
+            @include mobile {
+                padding: 2rem 0;
+            }
 
             li {
                 display: flex;
@@ -1096,10 +1121,16 @@ $f-sizes:
                         color: $color-666;
                     }
 
-                    &+p {
-                        border-left: 1px solid $color-ccc;
-                        margin-left: 8px;
-                        padding-left: 8px;
+                    &+p::before {
+                        content: "|";
+                        color: $color-ccc;
+                        margin: 0 8px;
+
+                        @include mobile {
+                            content: ":";
+                            color: $color-111;
+                            margin: 0 3px;
+                        }
                     }
                 }
             }
@@ -1119,6 +1150,12 @@ $f-sizes:
                 font-weight: $fw-r;
                 padding: 1.5rem 0;
                 word-break: keep-all;
+
+                p {
+                    @include mobile {
+                        color: $color-666;
+                    }
+                }
             }
 
             .td {
@@ -1153,6 +1190,10 @@ $f-sizes:
 
             p {
                 @include fs($fs15);
+
+                @include mobile {
+                    @include fs($fs14);
+                }
             }
 
             .access-wrap+.access-wrap {
@@ -1208,6 +1249,19 @@ $f-sizes:
                         }
                     }
                 }
+            }
+        }
+
+        .dep-cate {
+            @include mobile {
+                @include fs($fs14);
+            }
+        }
+        .detail-name {
+            @include mobile {
+                @include fs($fs16);
+                font-weight: $fw-m;
+                margin-top: 10px;
             }
         }
     }
@@ -1452,6 +1506,13 @@ $f-sizes:
     background-color: $bg-f6f6f6;
     padding: 2rem;
 
+    @include mobile {
+        position: relative;
+        margin-top: 3.5rem;
+        display: block;
+        padding: 2.5rem 2rem;
+    }
+
     .title {
         width: 8rem;
 
@@ -1464,6 +1525,17 @@ $f-sizes:
     .counter {
         @include fs($fs12);
         color: $color-666;
+
+        @include mobile {
+            @include fs($fs15);
+            position: absolute;
+            left: 20px;
+            bottom: 31.5px;
+
+            em {
+                color: $color-111;
+            }
+        }
     }
 
     &::after {
@@ -1482,6 +1554,15 @@ $f-sizes:
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right-color: transparent;
+
+        @include mobile {
+            height: 12.5rem;
+            padding: 10px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-right-color: $color-e6e6e6;
+            margin-top: 10px;
+        }
     }
 
     textarea {
@@ -1490,8 +1571,17 @@ $f-sizes:
         border: 0;
         resize: none;
 
+        @include mobile {
+            @include fs($fs14);
+            height: 100%;
+        }
+
         &::-webkit-input-placeholder {
             @include fs($fs12);
+            
+            @include mobile {
+                @include fs($fs14);
+            }
         }
     }
 
@@ -1501,17 +1591,37 @@ $f-sizes:
         border: 1px solid $color-e6e6e6;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @include mobile {
+            float: right;
+            @include wh(75px, 35px);
+            @include fs($fs15);
+            color: $color-fff;
+            background-color: $bg-000;
+            border-radius: 6px;
+            border: 0;
+            margin-top: 10px;
+        }
     }
 }
 
 .comment-lists {
     margin-top: 4rem;
 
+    @include mobile {
+        padding: 0 2rem;
+    }
+
     .length {
         @include fs($fs16);
         padding-bottom: 1rem;
         font-weight: $fw-m;
         border-bottom: 1px solid $color-e6e6e6;
+
+        @include mobile {
+            @include fs($fs15);
+            border-bottom: 2px solid $color-111;
+        }
 
         em {
             font-weight: $fw-m !important;
@@ -1558,6 +1668,10 @@ $f-sizes:
             top: 2rem;
             text-decoration: underline;
             color: $color-666;
+            
+            @include mobile {
+                @include fs($fs14);
+            }
         }
     }
 }

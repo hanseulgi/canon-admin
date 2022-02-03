@@ -1019,3 +1019,19 @@ main {
         }
     }
 }
+
+//depth category
+.dep-cate {
+    span {
+        &+span::before {
+            content: "";
+            display: inline-block;
+            @include wh(1.2rem, 1.2rem);
+            background: url($path-img-common + 'ico_arrow_category.svg') no-repeat center / cover;
+
+            @include mobile {
+                vertical-align: -2px;
+            }
+        }
+    }
+}

@@ -365,6 +365,21 @@ body {
     background-color: #fff;
 }
 
+@media (max-width: 1024px) {
+    .pc {
+        display: none;
+    }
+}
+
+.mo {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .mo {
+        display: block;
+    }
+}
+
 .fs12 {
     font-size: 12px;
 }
@@ -4065,6 +4080,13 @@ body {
     width: 100%;
     border-top: 2px solid #000;
 }
+@media (max-width: 1024px) {
+    .table-wrap .detail-title {
+        margin-top: 0;
+        border-top: none;
+        border-bottom: 2px solid #000;
+    }
+}
 .table-wrap .detail-title .detail-name {
     font-size: 2rem;
     line-height: 1.75;
@@ -4075,6 +4097,11 @@ body {
     width: 100%;
     display: flex;
     padding: 1rem 0 2.5rem;
+}
+@media (max-width: 1024px) {
+    .table-wrap .detail-title ul {
+        padding: 2rem 0;
+    }
 }
 .table-wrap .detail-title ul li {
     display: flex;
@@ -4092,10 +4119,17 @@ body {
     font-weight: 500;
     color: #666;
 }
-.table-wrap .detail-title ul li p + p {
-    border-left: 1px solid #ccc;
-    margin-left: 8px;
-    padding-left: 8px;
+.table-wrap .detail-title ul li p + p::before {
+    content: "|";
+    color: #ccc;
+    margin: 0 8px;
+}
+@media (max-width: 1024px) {
+    .table-wrap .detail-title ul li p + p::before {
+        content: ":";
+        color: #111;
+        margin: 0 3px;
+    }
 }
 .table-wrap > [class*=-detail] {
     width: 100%;
@@ -4112,6 +4146,11 @@ body {
     font-weight: 400;
     padding: 1.5rem 0;
     word-break: keep-all;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail] .tr .th p {
+        color: #666;
+    }
 }
 .table-wrap > [class*=-detail] .tr .td {
     flex: 1 1 auto;
@@ -4143,6 +4182,13 @@ body {
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail] .tr p {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+    }
 }
 .table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap {
     margin-top: -1px;
@@ -4193,6 +4239,22 @@ body {
     width: calc(100% - 100px);
     margin: 0 auto;
     padding: 0 5px;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail] .dep-cate {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail] .detail-name {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        letter-spacing: -0.16px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
 }
 .table-wrap .video-list-wrap {
     border-top: 2px solid #000;
@@ -4423,6 +4485,14 @@ body {
     background-color: #f6f6f6;
     padding: 2rem;
 }
+@media (max-width: 1024px) {
+    .comment-wrap {
+        position: relative;
+        margin-top: 3.5rem;
+        display: block;
+        padding: 2.5rem 2rem;
+    }
+}
 .comment-wrap .title {
     width: 8rem;
 }
@@ -4437,6 +4507,19 @@ body {
     line-height: 1.42;
     letter-spacing: -0.12px;
     color: #666;
+}
+@media (max-width: 1024px) {
+    .comment-wrap .counter {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        position: absolute;
+        left: 20px;
+        bottom: 31.5px;
+    }
+    .comment-wrap .counter em {
+        color: #111;
+    }
 }
 .comment-wrap::after {
     content: "";
@@ -4454,6 +4537,16 @@ body {
     border-bottom-right-radius: 0;
     border-right-color: transparent;
 }
+@media (max-width: 1024px) {
+    .comment-wrap .inner {
+        height: 12.5rem;
+        padding: 10px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-right-color: #e6e6e6;
+        margin-top: 10px;
+    }
+}
 .comment-wrap textarea {
     font-size: 1.2rem;
     line-height: 1.42;
@@ -4462,10 +4555,25 @@ body {
     border: 0;
     resize: none;
 }
+@media (max-width: 1024px) {
+    .comment-wrap textarea {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        height: 100%;
+    }
+}
 .comment-wrap textarea::-webkit-input-placeholder {
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
+}
+@media (max-width: 1024px) {
+    .comment-wrap textarea::-webkit-input-placeholder {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+    }
 }
 .comment-wrap .comment-register {
     width: 100px;
@@ -4475,9 +4583,29 @@ body {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+@media (max-width: 1024px) {
+    .comment-wrap .comment-register {
+        float: right;
+        width: 75px;
+        height: 35px;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        color: #fff;
+        background-color: #000;
+        border-radius: 6px;
+        border: 0;
+        margin-top: 10px;
+    }
+}
 
 .comment-lists {
     margin-top: 4rem;
+}
+@media (max-width: 1024px) {
+    .comment-lists {
+        padding: 0 2rem;
+    }
 }
 .comment-lists .length {
     font-size: 1.6rem;
@@ -4486,6 +4614,14 @@ body {
     padding-bottom: 1rem;
     font-weight: 500;
     border-bottom: 1px solid #e6e6e6;
+}
+@media (max-width: 1024px) {
+    .comment-lists .length {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        border-bottom: 2px solid #111;
+    }
 }
 .comment-lists .length em {
     font-weight: 500 !important;
@@ -4526,6 +4662,13 @@ body {
     top: 2rem;
     text-decoration: underline;
     color: #666;
+}
+@media (max-width: 1024px) {
+    .comment-lists .comment-item .del {
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -8323,6 +8466,19 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     border-color: #e6e6e6;
     color: #666;
     font-weight: 400;
+}
+
+.dep-cate span + span::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../img/common/ico_arrow_category.svg") no-repeat center/cover;
+}
+@media (max-width: 1024px) {
+    .dep-cate span + span::before {
+        vertical-align: -2px;
+    }
 }
 
 #header {
