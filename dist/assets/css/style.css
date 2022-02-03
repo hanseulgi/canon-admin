@@ -3848,6 +3848,34 @@ body {
         height: 73px;
         background-color: #e6e6e6;
     }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status {
+        display: block;
+        right: 0;
+        width: 6.2rem;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 44px;
+        background: #e6e6e6;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap [class$=-list] .tr [class*=show-][class*=-right].status span {
+        color: #666;
+    }
+}
+@media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr .th {
         font-weight: 500;
         padding: 1.5rem 1.5rem;
@@ -3856,6 +3884,8 @@ body {
     .table-wrap [class$=-list] .tr .th p {
         color: #666;
     }
+}
+@media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr .td {
         padding: 0 0;
     }
@@ -4586,8 +4616,18 @@ body {
     text-align: right;
     margin-top: 1rem;
 }
+@media (max-width: 1024px) {
+    .right-btn {
+        margin-top: 1.5rem;
+    }
+}
 .right-btn + .paging {
     margin-top: -1rem;
+}
+@media (max-width: 1024px) {
+    .right-btn + .paging {
+        margin-top: 3rem;
+    }
 }
 
 .location-wrap {

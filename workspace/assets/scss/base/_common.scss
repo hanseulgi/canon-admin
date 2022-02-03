@@ -841,6 +841,34 @@ $f-sizes:
                             height: 73px;
                             background-color: #e6e6e6;
                         }
+
+                        &.status {
+                            @include mobile {
+                                display: block;
+                                right:0;
+                                width:6.2rem;
+                                text-align: center;
+                                font-size: $fs13;
+                            }
+
+                            &::before {
+                                @include mobile {
+                                    content:'';
+                                    position: absolute;
+                                    top:50%;
+                                    left:0;
+                                    transform:translateY(-50%);
+                                    width:1px;
+                                    height:44px;
+                                    background: #e6e6e6;
+                                }
+                            }
+                            span {
+                                @include mobile {
+                                    color:$color-666;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -1639,9 +1667,17 @@ $f-sizes:
     text-align: right;
     margin-top: 1rem;
 
+    @include mobile {
+        margin-top: 1.5rem;
+    }
+
     //버튼 아래에 페이징이 있는 경우
     &+.paging {
         margin-top: -1rem;
+
+        @include mobile {
+            margin-top: 3rem;
+        }
     }
 }
 
