@@ -3515,7 +3515,7 @@ body {
 }
 @media (max-width: 1024px) {
     .row-btns .col {
-        flex: 1;
+        flex: 1 0 auto;
         margin-top: 20px;
     }
 }
@@ -3559,7 +3559,7 @@ body {
     }
 }
 .select-row-3 .select-wrap {
-    flex: 1;
+    flex: 1 0 auto;
 }
 .select-row-3 .select-wrap + .select-wrap {
     margin-left: 10px;

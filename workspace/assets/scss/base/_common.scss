@@ -491,7 +491,7 @@ $f-sizes:
         margin: 0;
 
         @include mobile {
-            flex: 1;
+            flex: 1 0 auto;
             margin-top: 20px;
         }
 
@@ -533,7 +533,7 @@ $f-sizes:
     }
 
     .select-wrap {
-        flex: 1;
+        flex: 1 0 auto;
 
         &+.select-wrap {
             margin-left: 10px;
