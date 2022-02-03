@@ -149,11 +149,6 @@ input {
         border: 1px solid #e6e6e6;
         border-radius: 6px;
         vertical-align:middle;
-
-        @include mobile {
-            height: 4rem;
-            padding: 9px 15px;
-        }
     }
 
     &[type=tel].disabled,
@@ -169,11 +164,6 @@ input {
         border: 1px solid #e6e6e6;
         border-radius: 6px;
         vertical-align:middle;
-
-        @include mobile {
-            height: 4rem;
-            padding: 9px 15px;
-        }
     }
 
     &::-webkit-input-placeholder {
