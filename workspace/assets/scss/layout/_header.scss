@@ -366,6 +366,7 @@
             >li {
                 position: relative;
                 z-index: 1;
+                cursor: pointer;
 
                 @include mobile {
                     padding-right: 0 !important;
@@ -373,7 +374,7 @@
                     border-bottom: 1px solid $color-e6e6e6;
                 }
 
-                &:last-child {
+                &:last-child a {
                     padding-right: 0;
                 }
 
