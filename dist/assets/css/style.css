@@ -7804,8 +7804,23 @@ main .bottom-wrap .inner .info-list .ver-mo {
     }
     main .bottom-wrap .inner .info-list .ver-mo ul li {
         flex: 0 0 30%;
-        height: 125px;
-        border: 1px solid red;
+        position: relative;
+    }
+    main .bottom-wrap .inner .info-list .ver-mo ul li a {
+        display: block;
+    }
+    main .bottom-wrap .inner .info-list .ver-mo ul li a span {
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        font-weight: 500;
+        color: #fff;
+    }
+    main .bottom-wrap .inner .info-list .ver-mo ul li a img {
+        width: 100%;
     }
 }
 main .bottom-wrap .inner .notice-list {

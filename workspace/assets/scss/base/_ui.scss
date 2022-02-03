@@ -549,8 +549,24 @@ main {
 
                             li {
                                 flex: 0 0 30%;
-                                height: 125px;
-                                border: 1px solid red; //디자인 수급 후 수정 임시스타일
+                                position: relative;
+
+                                a {
+                                    display: block;
+
+                                    span {
+                                        position: absolute;
+                                        left: 1.5rem;
+                                        bottom: 1.5rem;
+                                        @include fs($fs14);
+                                        font-weight: $fw-m;
+                                        color: $color-fff;
+                                    }
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
                             }
                         }
                     }
