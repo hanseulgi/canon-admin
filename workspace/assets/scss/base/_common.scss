@@ -1174,6 +1174,7 @@ $f-sizes:
             border-bottom: 1px solid $color-e6e6e6;
 
             .th {
+                align-self: baseline;
                 width: 9rem;
                 font-weight: $fw-r;
                 padding: 1.5rem 0;
@@ -1463,7 +1464,7 @@ $f-sizes:
         .add-file-names {
             width: 100% !important;
             border: 0;
-            padding-left: 0;
+            padding: 0 0;
 
             .name {
                 @include fs($fs14);

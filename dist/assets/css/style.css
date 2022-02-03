@@ -4172,6 +4172,7 @@ body {
     border-bottom: 1px solid #e6e6e6;
 }
 .table-wrap > [class*=-detail] .tr .th {
+    align-self: baseline;
     width: 9rem;
     font-weight: 400;
     padding: 1.5rem 0;
@@ -4446,7 +4447,7 @@ body {
 .add-file.view .add-file-names {
     width: 100% !important;
     border: 0;
-    padding-left: 0;
+    padding: 0 0;
 }
 .add-file.view .add-file-names .name {
     font-size: 1.4rem;
