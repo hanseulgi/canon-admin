@@ -436,6 +436,10 @@ $f-sizes:
         line-height: 43px;
         padding: 0 20px;
         font-size: 13px;
+
+        @include mobile {
+            font-size: 15px;
+        }
     }
 
     &[class*='md'] {
@@ -1080,6 +1084,10 @@ $f-sizes:
                     width: 100%;
                     height: 67.5rem;
                     overflow: hidden;
+
+                    @include mobile {
+                        height:18rem;
+                    }
 
                     img {
                         width: 100%;
