@@ -903,15 +903,32 @@ $f-sizes:
         .tr {
             @include flex-flow;
 
+            @include mobile {
+                display: block;
+                
+                &+.tr {
+                    margin-top: 30px;
+                }
+            }
+
             .th {
                 font-weight: $fw-m;
                 padding: 1.5rem 0;
                 flex: 0 0 9rem;
+
+                @include mobile {
+                    padding: 0 0 1rem;
+                
+                }
             }
 
             .td {
                 flex: 1 1 auto;
                 padding: 1.5rem 0;
+
+                @include mobile {
+                    padding: 0;
+                }
 
                 &.w600 {
                     display: block;
