@@ -759,6 +759,48 @@ main {
     }
 }
 
+//edit
+.table-wrap > [class*=-edit] {
+    .edit-wrap{
+        height: 18rem;
+        @include mobile {
+            height: 25rem;
+        }
+    }
+
+    .use-wrap {
+        @include mobile {
+            display: flex;
+            
+            .th {
+                flex: none;
+                margin-right: 30px;
+                padding-bottom: 0;
+
+                p {
+                    @include fs($fs15);
+                    color: $color-111;
+                }
+            }
+
+            .radio {
+                @include fs($fs15);
+            }
+        }
+
+    }
+}
+
+.table-wrap + .row-btns {
+    margin-top: 35px;
+
+    @include mobile {
+        padding: 0 20px;
+        margin-top: 10px;        
+    }
+}
+
+
 
 //검색 결과
 .result {
@@ -994,6 +1036,21 @@ main {
     }
 }
 
+//depth category
+.dep-cate {
+    span {
+        &+span::before {
+            content: "";
+            display: inline-block;
+            @include wh(1.2rem, 1.2rem);
+            background: url($path-img-common + 'ico_arrow_category.svg') no-repeat center / cover;
+
+            @include mobile {
+                vertical-align: -2px;
+            }
+        }
+    }
+}
 // 동영상 상세 버튼
 .row-btns.video-wrap-btn {
     @include mobile {
