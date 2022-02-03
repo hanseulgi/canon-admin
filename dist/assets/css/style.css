@@ -4204,25 +4204,63 @@ body {
     flex-wrap: wrap;
     margin-top: 4rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul {
+        margin-top: 2rem;
+    }
+}
 .table-wrap .video-list-wrap ul li {
     width: calc(50% - 10px);
+}
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li {
+        margin-bottom: 4rem;
+        width: 100%;
+    }
 }
 .table-wrap .video-list-wrap ul li:nth-child(n+3) {
     margin-top: 4rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li:nth-child(n+3) {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li:last-of-type {
+        margin-bottom: 2rem;
+    }
+}
 .table-wrap .video-list-wrap ul li .item {
     display: flex;
+}
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li .item {
+        display: block;
+    }
 }
 .table-wrap .video-list-wrap ul li .item .area {
     overflow: hidden;
     width: 25rem;
     height: 14rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li .item .area {
+        width: 100%;
+        height: 18rem;
+    }
+}
 .table-wrap .video-list-wrap ul li .item .area img {
     width: 100%;
 }
 .table-wrap .video-list-wrap ul li .item .info {
     margin-left: 1.5rem;
+}
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li .item .info {
+        margin-top: 1.5rem;
+        margin-left: 0;
+    }
 }
 .table-wrap .video-list-wrap ul li .item .info .dep-cate {
     font-size: 1.2rem;
@@ -4239,11 +4277,25 @@ body {
     letter-spacing: -0.18px;
     word-break: keep-all;
 }
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li .item .info .tit {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        font-weight: 500;
+    }
+}
 .table-wrap .video-list-wrap ul li .item .info .dsc {
     font-size: 1.2rem;
     line-height: 1.42;
     letter-spacing: -0.12px;
     margin-top: 1.5rem;
+    color: #666;
+}
+@media (max-width: 1024px) {
+    .table-wrap .video-list-wrap ul li .item .info .dsc {
+        margin-top: 1rem;
+    }
 }
 .table-wrap .video-list-wrap ul li .item .info .dsc span + span::before {
     content: "";
