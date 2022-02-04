@@ -4075,7 +4075,7 @@ body {
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] .tr .th {
         font-weight: 400;
-        padding: 0 0 1.7rem;
+        padding: 0 0 1rem;
     }
     .table-wrap > [class*=-edit] .tr .th p {
         color: #666;
