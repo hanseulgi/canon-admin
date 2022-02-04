@@ -450,7 +450,7 @@ $f-sizes:
         height: 45px;
         line-height: 43px;
         padding: 0 20px;
-        font-size: 13px;
+        font-size: 14px;
 
         @include mobile {
             height: 40px;
@@ -1019,9 +1019,11 @@ $f-sizes:
     &>[class*='-edit'] {
         width: 100%;
         text-align: left;
+        border-bottom: 1px solid $color-e6e6e6;
 
         @include mobile {
             margin-top: 20px;
+            border-bottom: none;
         }
 
         .tr {
@@ -1215,7 +1217,10 @@ $f-sizes:
         }
 
         .add-file-wrap {
-            margin-top: 38px!important;        }
+            @include mobile {
+                margin-top: 38px!important;        
+            }
+        }
     }
 
     //상세 table
