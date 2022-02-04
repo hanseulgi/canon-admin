@@ -363,6 +363,14 @@
                 padding: 0 2rem;
             }
 
+            >li a {
+                padding-bottom: 4px;
+                border-bottom: 4px solid transparent;
+            }
+            >li:hover > a {
+                border-bottom: 4px solid $color-red;
+            }
+
             >li {
                 display: inline-block;
                 position: relative;
@@ -408,10 +416,6 @@
                             transform: rotate(180deg);
                             transform-origin: 50% 25%;
                         }
-                    }
-                    a:hover {
-                        display: block;
-                        border: 2px solid red;
                     }
                 }
 

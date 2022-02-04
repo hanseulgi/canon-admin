@@ -9294,6 +9294,13 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         padding: 0 2rem;
     }
 }
+.nav-wrap .nav-menu > li a {
+    padding-bottom: 4px;
+    border-bottom: 4px solid transparent;
+}
+.nav-wrap .nav-menu > li:hover > a {
+    border-bottom: 4px solid #dc000c;
+}
 .nav-wrap .nav-menu > li {
     display: inline-block;
     position: relative;
@@ -9344,10 +9351,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         transform: rotate(180deg);
         transform-origin: 50% 25%;
     }
-}
-.nav-wrap .nav-menu > li > a a:hover {
-    display: block;
-    border: 2px solid red;
 }
 .nav-wrap .sub-menu {
     position: absolute;
