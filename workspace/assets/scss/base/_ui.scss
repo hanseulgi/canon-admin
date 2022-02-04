@@ -1161,3 +1161,87 @@ main {
         }
     }
 }
+
+
+//접근권한
+.access-wrap {
+    &.edit {
+        .th {
+            margin-top: 13px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .td {
+            > div {
+                @include flex-flow;
+
+                @include mobile {
+                    display: block;
+                    position: relative;
+                    margin-top: 75px!important;
+                }
+
+                .value-wrap {
+                    flex: 1 1 auto;
+                    margin: 0 10px;
+                    padding: 1.2rem 1rem;
+                    @include fs($fs14);
+                    color: $color-666;
+                    background-color: $color-f6f6f6;
+                    border: 1px solid $color-e6e6e6;
+                    border-radius: 6px;
+
+                    @include mobile {
+                        margin: 0;
+                        height: 12.5rem;
+                        padding: 1rem;
+                        color: $color-666;
+                        background-color: $color-fff;
+                        border: 1px solid #eee;
+                    }
+                }
+
+                p {
+                    @include mobile {
+                        position: absolute;
+                        left: 0;
+                        top: -37px;
+                        color: $color-666;
+                    }
+                }
+
+                a {
+                    @include mobile {
+                        position: absolute;
+                        right: 0;
+                        top: -45px;
+                        min-width: auto;
+                        height: 3.5rem;
+                        font-size: 1.4rem;
+                        line-height: 3.5rem;
+                        padding: 0 0.9rem;
+                    }
+                }
+
+                &+div {
+                    margin-top: 10px;
+                }
+            }
+
+        }
+    }
+    &.view {
+        &+.access-wrap {
+            margin-top: -1px;
+            border-top: 1px solid #fff;
+    
+            .th,
+            .td {
+                padding-top: 0!important;
+            }
+        }
+    }
+}
