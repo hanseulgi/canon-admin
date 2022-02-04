@@ -88,6 +88,25 @@ UI.commentDel = function () {
 
 };
 
+//통합검색 mobile
+UI.searchSelect  = function () {
+
+    var winW = $(window).width();
+
+    if ( winW < 1024 ) {    //모바일 ver일때만
+        $('.result-aside').find('.tit').on("click", function() {
+            $(this).next().toggle();
+        });
+
+        $("body").click(function(e) {
+            if( !$(".box-white").has(e.target).length ) {
+                $('.result-aside').find('dd:not(.first)').hide();
+            }
+        });
+    }
+
+};
+
 //dropDown
 UI.dropDown = function () {
 
@@ -238,6 +257,7 @@ UI.init = function(){
     UI.tableM();
     UI.sticky();
     UI.modal.open();
+    UI.searchSelect();
 };
 
 //init
