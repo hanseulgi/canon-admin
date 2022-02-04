@@ -670,7 +670,7 @@ $f-sizes:
         margin-top: 6rem;
 
         @include mobile {
-            margin-top: 3.8rem;
+            margin-top: 2rem;
         }
 
         .txt {
@@ -1046,7 +1046,7 @@ $f-sizes:
 
                 @include mobile {
                     font-weight: $fw-r;
-                    padding: 0 0 1rem;
+                    padding: 0 0 1.7rem;
 
                     p {
                         color: $color-666;
@@ -1316,7 +1316,7 @@ $f-sizes:
 
             .td {
                 flex: 1 1 auto;
-                padding: 1.5rem 0;
+                padding: 2rem 0;
 
                 @include mobile {
 
@@ -1356,7 +1356,7 @@ $f-sizes:
             }
 
             p {
-                @include fs($fs15);
+                @include fs($fs14);
 
                 @include mobile {
                     @include fs($fs14);
@@ -1428,7 +1428,7 @@ $f-sizes:
                 .th {
                     flex: 0 0 16rem;
                     font-weight: $fw-m;
-                    padding: 1.5rem 0;
+                    padding: 2rem 0;
 
                     @include mobile {
                         flex:0 0 34%;
