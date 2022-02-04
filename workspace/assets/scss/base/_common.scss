@@ -2677,12 +2677,12 @@ $f-sizes:
 
     @include mobile {
         margin-top: 0;
-        padding: 3rem 2rem;
+        padding: 3rem 2rem 1.5rem;
         position: absolute;
         width: 100%;
         top: 0;
         background-color: $bg-f6f6f6;
-        z-index: -1;
+        z-index: 3;
     }
 
     .inner {
@@ -2697,6 +2697,15 @@ $f-sizes:
             @include fs ($fs24);
             font-weight:$fw-m;
             color:$color-111;
+
+            @include mobile {
+                padding:.9rem 5rem 1.1rem 1.5rem;
+                @include wh (100%, 4rem);
+                @include fs ($fs14);
+                border-radius: 6px;
+                border: 1px solid #eee;
+                font-weight:$fw-r;
+            }
         }
 
         .srch-btn{
@@ -2705,6 +2714,14 @@ $f-sizes:
             bottom:0;
             @include wh (5rem, 4.5rem);
             background: url($path-img-common + 'ico_search_1.svg') center top .4rem/3rem 3rem  no-repeat;
+            
+            @include mobile {
+                top: 50%;
+                transform: translateY(-50%);
+                @include wh (4rem, 2rem);
+                background-size: 2rem 2rem;
+                background-position: center center;
+            }
         }
     }
 

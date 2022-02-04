@@ -5643,12 +5643,12 @@ body {
 @media (max-width: 1024px) {
     .integrate-search-wrap {
         margin-top: 0;
-        padding: 3rem 2rem;
+        padding: 3rem 2rem 1.5rem;
         position: absolute;
         width: 100%;
         top: 0;
         background-color: #f6f6f6;
-        z-index: -1;
+        z-index: 3;
     }
 }
 .integrate-search-wrap .inner {
@@ -5667,6 +5667,19 @@ body {
     font-weight: 500;
     color: #111;
 }
+@media (max-width: 1024px) {
+    .integrate-search-wrap .inner input[type=text] {
+        padding: 0.9rem 5rem 1.1rem 1.5rem;
+        width: 100%;
+        height: 4rem;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        border-radius: 6px;
+        border: 1px solid #eee;
+        font-weight: 400;
+    }
+}
 .integrate-search-wrap .inner .srch-btn {
     position: absolute;
     right: 0;
@@ -5674,6 +5687,16 @@ body {
     width: 5rem;
     height: 4.5rem;
     background: url("../img/common/ico_search_1.svg") center top 0.4rem/3rem 3rem no-repeat;
+}
+@media (max-width: 1024px) {
+    .integrate-search-wrap .inner .srch-btn {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4rem;
+        height: 2rem;
+        background-size: 2rem 2rem;
+        background-position: center center;
+    }
 }
 
 .quicksearch-wrap {
@@ -8721,12 +8744,14 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     .result .result-aside {
         position: static;
         display: flex;
+        justify-content: space-between;
         float: none;
         top: 0 !important;
         width: auto;
         margin: 8.5rem 0 0 0;
         flex-wrap: wrap;
         background-color: #f6f6f6;
+        padding: 0 2rem 3rem;
     }
 }
 .result .result-aside.fixed {
@@ -8747,21 +8772,26 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 @media (max-width: 1024px) {
     .result .result-aside .box-white {
-        width: 49%;
+        width: calc(50% - 10px);
+        background-color: transparent;
+        border: 0;
     }
 }
 @media (max-width: 1024px) {
     .result .result-aside .box-white:first-child {
         border-color: none !important;
         border: 0;
+        border-radius: 0;
         width: 100%;
         background-color: transparent !important;
-        padding: 1.5rem 3.5rem 0;
+        padding: 0 1.5rem 0;
     }
 }
 @media (max-width: 1024px) and (max-width: 1024px) {
     .result .result-aside .box-white:first-child .lists {
         padding: 0 0 0;
+        background: transparent;
+        border: 0;
     }
 }
 @media (max-width: 1024px) and (max-width: 1024px) and (max-width: 1024px) {
@@ -8771,8 +8801,18 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 @media (max-width: 1024px) and (max-width: 1024px) and (max-width: 1024px) {
     .result .result-aside .box-white:first-child .lists dd {
+        position: static;
+        height: auto !important;
         display: flex;
         justify-content: baseline;
+        background: transparent;
+        border: none;
+        padding-left: 0;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .result .result-aside .box-white:first-child .lists dd a {
+        margin-top: 0;
     }
 }
 @media (max-width: 1024px) and (max-width: 1024px) {
@@ -8783,6 +8823,12 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 .result .result-aside .lists {
     padding: 0 3rem 3rem;
+    position: relative;
+}
+@media (max-width: 1024px) {
+    .result .result-aside .lists {
+        padding: 0 0 0;
+    }
 }
 .result .result-aside .lists .tit {
     font-size: 1.6rem;
@@ -8791,11 +8837,48 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     padding: 3rem 0 2rem;
     font-weight: 500;
 }
+@media (max-width: 1024px) {
+    .result .result-aside .lists .tit {
+        padding: 1rem 1.5rem 1rem;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        letter-spacing: -0.14px;
+        font-weight: inherit;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        background: #fff url("../img/ico/ico_arrow_select.svg") no-repeat right 10px top 50%/15px;
+    }
+}
+.result .result-aside .lists dd {
+    display: block;
+}
+@media (max-width: 1024px) {
+    .result .result-aside .lists dd {
+        height: 12rem;
+        overflow-y: auto;
+        position: absolute;
+        width: 100%;
+        top: 3.8rem;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 0;
+        padding: 0 1.5rem;
+        display: none;
+    }
+}
 .result .result-aside .lists dd a {
     display: block;
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
+}
+@media (max-width: 1024px) {
+    .result .result-aside .lists dd a {
+        margin-top: 1rem;
+    }
 }
 .result .result-aside .lists dd a + a {
     margin-top: 1rem;
