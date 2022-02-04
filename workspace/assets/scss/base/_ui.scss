@@ -993,15 +993,36 @@ main {
 //퀵서치
 .result-quicksearch {
 
+    @include mobile {
+        padding: 0 2rem;
+    }
+
     .result-amnt {
 
         font-weight: $fw-r;
         margin-top: 8.5rem;
         margin-bottom: 1rem;
 
+        @include mobile {
+            font-weight: $fw-m;
+            margin: 3rem 0;
+        }
+
         li {
             display: inline-block;
             @include fs($fs16);
+
+            @include mobile {
+                display: block;
+            }
+
+            &:last-child {
+                span {
+                    @include mobile {
+                        color: $color-111;
+                    }
+                }
+            }
         }
         span {
             color:$color-red;
@@ -1011,11 +1032,27 @@ main {
     dl.list {
         margin-top: 6rem;
 
+        @include mobile {
+            margin-top: 0;
+        }
+
+        &+dl.list {
+            @include mobile {
+                margin-top: 40px;
+            }
+        }
+
         dt {
             @include fs($fs16);
             font-weight: $fw-m;
             border-bottom: 1px solid $color-e6e6e6;
             padding-bottom: 1rem;
+
+            @include mobile {
+                @include fs($fs15);
+                border-bottom: 1px solid $color-111;
+                padding-bottom: 0.5rem;
+            }
         }
 
         dd {
@@ -1024,8 +1061,22 @@ main {
             padding: 1.5rem 0;
             border-bottom: 1px solid $color-e6e6e6;
 
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
             .tit {
+                @include fs($fs14);
                 flex: 0 1 70%;
+                width: 100%;
+            }
+
+            .date {
+                @include mobile {
+                    @include fs($fs12);
+                    margin-top: 2px;
+                }
             }
 
         }
