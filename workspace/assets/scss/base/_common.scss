@@ -2556,6 +2556,16 @@ $f-sizes:
 .integrate-search-wrap {
     margin-top: 5.8rem;
 
+    @include mobile {
+        margin-top: 0;
+        padding: 3rem 2rem;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background-color: $bg-f6f6f6;
+        z-index: -1;
+    }
+
     .inner {
         position: relative;
 

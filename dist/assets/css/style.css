@@ -5563,6 +5563,17 @@ body {
 .integrate-search-wrap {
     margin-top: 5.8rem;
 }
+@media (max-width: 1024px) {
+    .integrate-search-wrap {
+        margin-top: 0;
+        padding: 3rem 2rem;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background-color: #f6f6f6;
+        z-index: -1;
+    }
+}
 .integrate-search-wrap .inner {
     position: relative;
 }
@@ -8556,24 +8567,91 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     position: relative;
     width: 120rem;
 }
+@media (max-width: 1024px) {
+    .result {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 .result .result-wrap {
     float: left;
     width: 90rem;
+}
+@media (max-width: 1024px) {
+    .result .result-wrap {
+        float: none;
+        width: 100%;
+    }
 }
 .result .result-aside {
     display: inline-block;
     width: 25rem;
     margin: 18.9rem 0 0 5rem;
 }
+@media (max-width: 1024px) {
+    .result .result-aside {
+        position: static;
+        display: flex;
+        float: none;
+        top: 0 !important;
+        width: auto;
+        margin: 8.5rem 0 0 0;
+        flex-wrap: wrap;
+        background-color: #f6f6f6;
+    }
+}
 .result .result-aside.fixed {
     position: fixed;
     margin-top: 0;
+}
+@media (max-width: 1024px) {
+    .result .result-aside.fixed {
+        position: static;
+        top: 0 !important;
+    }
 }
 .result .result-aside > div + div {
     margin-top: 3rem;
 }
 .result .result-aside .box-white {
     border-color: #e6e6e6;
+}
+@media (max-width: 1024px) {
+    .result .result-aside .box-white {
+        width: 49%;
+    }
+}
+@media (max-width: 1024px) {
+    .result .result-aside .box-white:first-child {
+        border-color: none !important;
+        border: 0;
+        width: 100%;
+        background-color: transparent !important;
+        padding: 1.5rem 3.5rem 0;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .result .result-aside .box-white:first-child .lists {
+        padding: 0 0 0;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) and (max-width: 1024px) {
+    .result .result-aside .box-white:first-child .lists .tit {
+        display: none;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) and (max-width: 1024px) {
+    .result .result-aside .box-white:first-child .lists dd {
+        display: flex;
+        justify-content: baseline;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .result .result-aside .box-white:first-child .lists dd a + a {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
 }
 .result .result-aside .lists {
     padding: 0 3rem 3rem;
@@ -8593,6 +8671,11 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 .result .result-aside .lists dd a + a {
     margin-top: 1rem;
+}
+@media (max-width: 1024px) {
+    .result .result-aside .lists dd a span {
+        display: none;
+    }
 }
 .result::after {
     content: "";
@@ -8782,80 +8865,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         height: 40px;
         line-height: 38px;
     }
-}
-
-.access-wrap.edit .th {
-    margin-top: 13px;
-}
-@media (max-width: 1024px) {
-    .access-wrap.edit .th {
-        display: none;
-    }
-}
-.access-wrap.edit .td > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-@media (max-width: 1024px) {
-    .access-wrap.edit .td > div {
-        display: block;
-        position: relative;
-        margin-top: 75px !important;
-    }
-}
-.access-wrap.edit .td > div .value-wrap {
-    flex: 1 1 auto;
-    margin: 0 10px;
-    padding: 1.2rem 1rem;
-    font-size: 1.4rem;
-    line-height: 1.43;
-    letter-spacing: -0.14px;
-    color: #666;
-    background-color: #f6f6f6;
-    border: 1px solid #e6e6e6;
-    border-radius: 6px;
-}
-@media (max-width: 1024px) {
-    .access-wrap.edit .td > div .value-wrap {
-        margin: 0;
-        height: 12.5rem;
-        padding: 1rem;
-        color: #666;
-        background-color: #fff;
-        border: 1px solid #eee;
-    }
-}
-@media (max-width: 1024px) {
-    .access-wrap.edit .td > div p {
-        position: absolute;
-        left: 0;
-        top: -37px;
-        color: #666;
-    }
-}
-@media (max-width: 1024px) {
-    .access-wrap.edit .td > div a {
-        position: absolute;
-        right: 0;
-        top: -45px;
-        min-width: auto;
-        height: 3.5rem;
-        font-size: 1.4rem;
-        line-height: 3.5rem;
-        padding: 0 0.9rem;
-    }
-}
-.access-wrap.edit .td > div + div {
-    margin-top: 10px;
-}
-.access-wrap.view + .access-wrap {
-    margin-top: -1px;
-    border-top: 1px solid #fff;
-}
-.access-wrap.view + .access-wrap .th,
-.access-wrap.view + .access-wrap .td {
-    padding-top: 0 !important;
 }
 
 #header {
