@@ -88,6 +88,25 @@ UI.commentDel = function () {
 
 };
 
+//통합검색 mobile
+UI.searchSelect  = function () {
+
+    var winW = $(window).width();
+
+    if ( winW < 1024 ) {    //모바일 ver일때만
+        $('.result-aside').find('.tit').on("click", function() {
+            $(this).next().toggle();
+        });
+
+        $("body").click(function(e) {
+            if( !$(".box-white").has(e.target).length ) {
+                $('.result-aside').find('dd:not(.first)').hide();
+            }
+        });
+    }
+
+};
+
 //dropDown
 UI.dropDown = function () {
 
@@ -120,14 +139,14 @@ UI.search = function () {
 
             let _class = 'plus';
             let _target= `<div class="loop">
-                            <div class="select-wrap w130">
+                            <div class="select-wrap w160">
                                 <select class="select">
                                     <option>전체</option>
                                     <option>ENG</option>
                                     <option>CHN</option>
                                 </select>
                             </div>
-                            <div class="input-wrap w370 ml6">
+                            <div class="input-wrap w323 ml1">
                                 <input type="text" class="input">
                             </div>
                             <button type="button" class="ico-search ${_class}"><em class="blind">플러스 마이너스 아이콘</em></button>
@@ -238,6 +257,7 @@ UI.init = function(){
     UI.tableM();
     UI.sticky();
     UI.modal.open();
+    UI.searchSelect();
 };
 
 //init
