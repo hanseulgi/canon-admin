@@ -379,16 +379,16 @@ body {
 
 @media (max-width: 1024px) {
     .pc {
-        display: none;
+        display: none !important;
     }
 }
 
 .mo {
-    display: none;
+    display: none !important;
 }
 @media (max-width: 1024px) {
     .mo {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -5598,10 +5598,22 @@ body {
 .quicksearch-wrap {
     margin-top: 5rem;
 }
+@media (max-width: 1024px) {
+    .quicksearch-wrap {
+        margin-top: 0;
+    }
+}
 .quicksearch-wrap .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+@media (max-width: 1024px) {
+    .quicksearch-wrap .inner {
+        display: block;
+        padding: 30px 20px;
+        background-color: #f6f6f6;
+    }
 }
 .quicksearch-wrap .select-wrap {
     display: flex;
@@ -5609,8 +5621,22 @@ body {
     align-items: center;
     width: 85.7%;
 }
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap {
+        display: block;
+        width: 100%;
+    }
+}
 .quicksearch-wrap .select-wrap .select-box {
     width: 31.3%;
+}
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap .select-box {
+        width: 100%;
+    }
+}
+.quicksearch-wrap .select-wrap .select-box + .select-box {
+    margin-top: 10px;
 }
 .quicksearch-wrap .select-wrap select {
     padding: 1rem 0;
@@ -5625,11 +5651,36 @@ body {
     border-bottom: 2px solid #000;
     background: url("../img/ico/ico_arrow_view.svg") right center/2rem 2rem no-repeat;
 }
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap select {
+        padding: 0.9rem 1.5rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        border-radius: 6px;
+        border: 2px solid #eee;
+        background: #fff url("../img/ico/ico_arrow_select.svg") right 1.5rem center/1.5rem 1.5rem no-repeat;
+    }
+}
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap select.on {
+        background-image: url("../img/ico/ico_arrow_select_black.svg");
+    }
+}
 .quicksearch-wrap button {
     width: 11.6%;
     height: 4.6rem;
     font-size: 2rem;
     border-radius: 1rem;
+}
+@media (max-width: 1024px) {
+    .quicksearch-wrap button {
+        width: 100%;
+        height: 4rem;
+        font-size: 1.5rem;
+        border-radius: 0.6rem;
+        margin-top: 30px;
+    }
 }
 
 /*! jQuery UI - v1.12.1 - 2016-09-14
@@ -8703,10 +8754,21 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     margin-left: 1rem;
 }
 
+@media (max-width: 1024px) {
+    .result-quicksearch {
+        padding: 0 2rem;
+    }
+}
 .result-quicksearch .result-amnt {
     font-weight: 400;
     margin-top: 8.5rem;
     margin-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+    .result-quicksearch .result-amnt {
+        font-weight: 500;
+        margin: 3rem 0;
+    }
 }
 .result-quicksearch .result-amnt li {
     display: inline-block;
@@ -8714,11 +8776,31 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     line-height: 1.5;
     letter-spacing: -0.16px;
 }
+@media (max-width: 1024px) {
+    .result-quicksearch .result-amnt li {
+        display: block;
+    }
+}
+@media (max-width: 1024px) {
+    .result-quicksearch .result-amnt li:last-child span {
+        color: #111;
+    }
+}
 .result-quicksearch .result-amnt span {
     color: #dc000c;
 }
 .result-quicksearch dl.list {
     margin-top: 6rem;
+}
+@media (max-width: 1024px) {
+    .result-quicksearch dl.list {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .result-quicksearch dl.list + dl.list {
+        margin-top: 40px;
+    }
 }
 .result-quicksearch dl.list dt {
     font-size: 1.6rem;
@@ -8727,6 +8809,15 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     font-weight: 500;
     border-bottom: 1px solid #e6e6e6;
     padding-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+    .result-quicksearch dl.list dt {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+        border-bottom: 1px solid #111;
+        padding-bottom: 0.5rem;
+    }
 }
 .result-quicksearch dl.list dd {
     display: flex;
@@ -8738,8 +8829,26 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     padding: 1.5rem 0;
     border-bottom: 1px solid #e6e6e6;
 }
+@media (max-width: 1024px) {
+    .result-quicksearch dl.list dd {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 .result-quicksearch dl.list dd .tit {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
     flex: 0 1 70%;
+    width: 100%;
+}
+@media (max-width: 1024px) {
+    .result-quicksearch dl.list dd .date {
+        font-size: 1.2rem;
+        line-height: 1.42;
+        letter-spacing: -0.12px;
+        margin-top: 2px;
+    }
 }
 
 .result-integrate-search {
