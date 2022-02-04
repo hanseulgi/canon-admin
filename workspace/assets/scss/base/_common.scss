@@ -482,9 +482,9 @@ $f-sizes:
     width: 100%;
     box-sizing: border-box;
 
-    @include mobile {
-        padding:0 20px;
-    }
+    // @include mobile {
+    //     padding:0 20px;
+    // }
 
     [class^='btn'] {
         width: 100%;
@@ -769,7 +769,7 @@ $f-sizes:
 
             .th {
                 font-weight: $fw-m;
-                padding: 1.5rem 1.5rem;
+                padding: 1.3rem 1.5rem;
                 background-color: $bg-f6f6f6;
 
                 p {
@@ -1916,7 +1916,7 @@ $f-sizes:
     }
 
     .inner {
-        margin-top: 5rem;
+        margin-top: 4rem;
         margin-bottom: 1rem;
 
         @include mobile {
@@ -2065,7 +2065,7 @@ $f-sizes:
 //table bottom button
 .right-btn {
     text-align: right;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     @include mobile {
         margin-top: 1.5rem;
@@ -2074,7 +2074,7 @@ $f-sizes:
 
     //버튼 아래에 페이징이 있는 경우
     &+.paging {
-        margin-top: -1rem;
+        margin-top: -1.3rem;
 
         @include mobile {
             margin-top: 3rem;
@@ -2207,12 +2207,16 @@ $f-sizes:
                 & [class*='-wrap'] {
                     display: inline-block;
 
+                    select:disabled {
+                        background-color: #fff;
+                    }
+
                     @include mobile {
                         width: 100% !important;
                     }
 
                     &+[class*='-wrap'] {
-                        margin-left: 6px;
+                        margin-left: 1px;
 
                         @include mobile {
                             margin-left: 0 !important;
@@ -2228,12 +2232,16 @@ $f-sizes:
                         }
                     }
                 }
+
+                &.btn-wrap {
+                    vertical-align: bottom;
+                }
             }
 
             .th,
             .td {
                 display: table-cell;
-                vertical-align: middle;
+                vertical-align: text-top;
 
                 @include mobile {
                     display: block;

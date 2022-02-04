@@ -120,14 +120,14 @@ UI.search = function () {
 
             let _class = 'plus';
             let _target= `<div class="loop">
-                            <div class="select-wrap w130">
+                            <div class="select-wrap w160">
                                 <select class="select">
                                     <option>전체</option>
                                     <option>ENG</option>
                                     <option>CHN</option>
                                 </select>
                             </div>
-                            <div class="input-wrap w370 ml6">
+                            <div class="input-wrap w323 ml1">
                                 <input type="text" class="input">
                             </div>
                             <button type="button" class="ico-search ${_class}"><em class="blind">플러스 마이너스 아이콘</em></button>
