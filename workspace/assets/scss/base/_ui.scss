@@ -1091,7 +1091,7 @@ main {
 .access-wrap {
     &.edit {
         .th {
-            padding-top: 28px;
+            margin-top: 13px;
 
             @include mobile {
                 display: none;
@@ -1129,21 +1129,25 @@ main {
                 }
 
                 p {
-                    position: absolute;
-                    left: 0;
-                    top: -37px;
-                    color: $color-666;
+                    @include mobile {
+                        position: absolute;
+                        left: 0;
+                        top: -37px;
+                        color: $color-666;
+                    }
                 }
 
                 a {
-                    position: absolute;
-                    right: 0;
-                    top: -45px;
-                    min-width: auto;
-                    height: 3.5rem;
-                    font-size: 1.4rem;
-                    line-height: 3.5rem;
-                    padding: 0 0.9rem;
+                    @include mobile {
+                        position: absolute;
+                        right: 0;
+                        top: -45px;
+                        min-width: auto;
+                        height: 3.5rem;
+                        font-size: 1.4rem;
+                        line-height: 3.5rem;
+                        padding: 0 0.9rem;
+                    }
                 }
 
                 &+div {

@@ -4023,7 +4023,7 @@ body {
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] .tr .th {
         font-weight: 400;
-        padding: 0 0 1rem;
+        padding: 0 0 1.7rem;
     }
     .table-wrap > [class*=-edit] .tr .th p {
         color: #666;
@@ -8612,7 +8612,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 
 .access-wrap.edit .th {
-    padding-top: 28px;
+    margin-top: 13px;
 }
 @media (max-width: 1024px) {
     .access-wrap.edit .th {
@@ -8653,21 +8653,25 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         border: 1px solid #eee;
     }
 }
-.access-wrap.edit .td > div p {
-    position: absolute;
-    left: 0;
-    top: -37px;
-    color: #666;
+@media (max-width: 1024px) {
+    .access-wrap.edit .td > div p {
+        position: absolute;
+        left: 0;
+        top: -37px;
+        color: #666;
+    }
 }
-.access-wrap.edit .td > div a {
-    position: absolute;
-    right: 0;
-    top: -45px;
-    min-width: auto;
-    height: 3.5rem;
-    font-size: 1.4rem;
-    line-height: 3.5rem;
-    padding: 0 0.9rem;
+@media (max-width: 1024px) {
+    .access-wrap.edit .td > div a {
+        position: absolute;
+        right: 0;
+        top: -45px;
+        min-width: auto;
+        height: 3.5rem;
+        font-size: 1.4rem;
+        line-height: 3.5rem;
+        padding: 0 0.9rem;
+    }
 }
 .access-wrap.edit .td > div + div {
     margin-top: 10px;
