@@ -9294,12 +9294,25 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         padding: 0 2rem;
     }
 }
-.nav-wrap .nav-menu > li a {
+.nav-wrap .nav-menu > li > a {
     padding-bottom: 4px;
     border-bottom: 4px solid transparent;
+    padding: 0 0 3px;
+}
+@media (max-width: 1024px) {
+    .nav-wrap .nav-menu > li > a {
+        padding-bottom: 0;
+        border-bottom: 0;
+        padding: 0 0 0;
+    }
 }
 .nav-wrap .nav-menu > li:hover > a {
     border-bottom: 4px solid #dc000c;
+}
+@media (max-width: 1024px) {
+    .nav-wrap .nav-menu > li:hover > a {
+        border-bottom: 0;
+    }
 }
 .nav-wrap .nav-menu > li {
     display: inline-block;
@@ -9335,6 +9348,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         height: 5rem;
         padding-right: 0;
         line-height: 5rem;
+        margin-right: 0;
     }
     .nav-wrap .nav-menu > li > a:after {
         content: "";
