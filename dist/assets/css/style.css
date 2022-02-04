@@ -5292,7 +5292,7 @@ body {
     width: 30rem;
     height: 20rem;
     overflow: hidden;
-    border-radius: 1.5rem;
+    border-radius: 0 0 1.2rem 1.2rem;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap[type=alert] {
@@ -5301,39 +5301,52 @@ body {
         border-radius: 0.8rem;
     }
 }
-.modal .modal-wrap .modal-header {
-    position: relative;
-    padding: 1rem;
-    box-sizing: border-box;
-    background-color: #dc000c;
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    text-indent: -9999px;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
+.modal .modal-wrap .pop-tit {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111;
 }
-.modal .modal-wrap .modal-header .modal-title {
-    font-size: 1.8rem;
-    line-height: 1.44;
-    letter-spacing: -0.18px;
-    color: #fff;
+@media (max-width: 1024px) {
+    .modal .modal-wrap .pop-tit {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
 }
-.modal .modal-wrap .modal-header .modal-close {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-}
-.modal .modal-wrap .modal-content {
+.modal .modal-wrap .dl-cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.modal .modal-wrap .dl-cont:last-of-type {
+    margin-bottom: 0;
+}
+.modal .modal-wrap .dl-cont dt, .modal .modal-wrap .dl-cont dd {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+}
+.modal .modal-wrap .dl-cont dt {
+    padding: 1rem 0;
+    width: 12rem;
+    color: #666;
+}
+.modal .modal-wrap .dl-cont dd {
+    width: calc(100% - 12rem);
+    color: #111;
+}
+.modal .modal-wrap .dl-cont.detail {
+    margin-bottom: 0;
+}
+.modal .modal-wrap .dl-cont.first {
+    border-top: 1px solid #e6e6e6;
+}
+.modal .modal-wrap .dl-cont.first dt {
+    padding-top: 2rem;
+}
+.modal .modal-wrap .modal-content {
     text-align: center;
 }
 .modal .modal-wrap .modal-content p {
@@ -5346,7 +5359,7 @@ body {
     align-items: center;
     border: 1px solid #ccc;
     border-bottom: 0;
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 1.2rem 1.2rem 0 0;
     box-sizing: border-box;
 }
 @media (max-width: 1024px) {
@@ -5366,7 +5379,7 @@ body {
 }
 .modal .modal-wrap .modal-content .btns.include-red-stroke {
     border-left: 1px solid #dc000c;
-    border-radius: 0 0 0 1.5rem;
+    border-radius: 0 0 0 1.2rem;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap .modal-content .btns.include-red-stroke {
@@ -5393,7 +5406,7 @@ body {
     border-color: #dc000c;
     color: #dc000c;
     border-width: 1px 0 1px 0;
-    border-radius: 0 0 0 1.5rem;
+    border-radius: 0 0 0 1.1rem;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap .modal-content .btns .modal__btn.btn--red-stroke {
@@ -5413,7 +5426,7 @@ body {
 }
 .modal .modal-wrap.modal--m-size[type=alert] {
     width: 36rem;
-    height: 24rem;
+    height: auto;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap.modal--m-size[type=alert] {
@@ -5427,8 +5440,16 @@ body {
 .modal .modal-wrap.modal--m-size[type=alert] .modal-content {
     height: 100%;
 }
+.modal .modal-wrap.modal--m-size[type=alert] .content-wrap {
+    padding: 3rem 3rem 2rem 3rem;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 1.2rem 1.2rem 0 0;
+    text-align: left;
+    background: #fff;
+}
 .modal .modal-wrap.modal--m-size[type=alert] .password-input {
-    padding: 3rem 3rem 0 3rem;
+    padding: 3rem;
     background: #fff;
     width: 100%;
     height: calc(100% - 5rem);
@@ -5436,7 +5457,7 @@ body {
     text-align: left;
     border: 1px solid #ccc;
     border-bottom: 0;
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 1.2rem 1.2rem 0 0;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap.modal--m-size[type=alert] .password-input {
@@ -5476,18 +5497,6 @@ body {
 }
 .modal .modal-wrap.modal--m-size[type=alert] .password-input dt, .modal .modal-wrap.modal--m-size[type=alert] .password-input dd {
     width: 100%;
-}
-.modal .modal-wrap.modal--m-size[type=alert] .password-input dt {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #111;
-}
-@media (max-width: 1024px) {
-    .modal .modal-wrap.modal--m-size[type=alert] .password-input dt {
-        margin-bottom: 1rem;
-        font-size: 1.4rem;
-    }
 }
 .modal .modal-wrap.modal--m-size[type=alert] .password-input input[type=password] {
     padding: 1rem 1.5rem;
@@ -9403,6 +9412,26 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         padding: 0 2rem;
     }
 }
+.nav-wrap .nav-menu > li > a {
+    padding-bottom: 4px;
+    border-bottom: 4px solid transparent;
+    padding: 0 0 3px;
+}
+@media (max-width: 1024px) {
+    .nav-wrap .nav-menu > li > a {
+        padding-bottom: 0;
+        border-bottom: 0;
+        padding: 0 0 0;
+    }
+}
+.nav-wrap .nav-menu > li:hover > a {
+    border-bottom: 4px solid #dc000c;
+}
+@media (max-width: 1024px) {
+    .nav-wrap .nav-menu > li:hover > a {
+        border-bottom: 0;
+    }
+}
 .nav-wrap .nav-menu > li {
     display: inline-block;
     position: relative;
@@ -9437,6 +9466,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         height: 5rem;
         padding-right: 0;
         line-height: 5rem;
+        margin-right: 0;
     }
     .nav-wrap .nav-menu > li > a:after {
         content: "";
@@ -9453,10 +9483,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         transform: rotate(180deg);
         transform-origin: 50% 25%;
     }
-}
-.nav-wrap .nav-menu > li > a a:hover {
-    display: block;
-    border: 2px solid red;
 }
 .nav-wrap .sub-menu {
     position: absolute;

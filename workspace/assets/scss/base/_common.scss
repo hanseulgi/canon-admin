@@ -2290,46 +2290,72 @@ $f-sizes:
         &[type='alert'] {
             @include wh(30rem,20rem);
             overflow:hidden;
-            border-radius:1.5rem;
-
-            @include mobile {
+            border-radius:0 0 1.2rem 1.2rem;
+            @include mobile{
                 @include wh(20rem,13rem);
                 border-radius:.8rem;
             }
         }
 
-        .modal-header {
-            position: relative;
-            padding: 1rem;
-            box-sizing: border-box;
-            background-color: $bg-red;
-            @include blind;
+        .pop-tit {
+            display: block;
+            margin-bottom: 2rem;
+            font-size: $fs15;
+            font-weight:$fw-m;
+            color:$color-111;
 
-            .modal-title {
-                @include fs($fs18);
-                color: $color-fff;
+            @include mobile {
+                margin-bottom: 1rem;
+                font-size: $fs14;
+            }
+        }
+
+        .dl-cont {
+            @include flex-flow; 
+            margin-bottom: 1rem;
+            
+
+            &:last-of-type {
+                margin-bottom: 0;
             }
 
-            .modal-close {
-                @include position (1rem, 1rem);
+            dt, dd {
+                @include fs ($fs14);
+            }
+            dt {
+                padding:1rem 0;
+                width:12rem;
+                color: $color-666;
+            }
+            dd {
+                width:calc(100% - 12rem);
+                color:$color-111;
+            }
+
+            &.detail {
+                margin-bottom: 0;
+            }
+
+            &.first {
+                border-top:1px solid $color-e6e6e6;
+                dt {
+                    padding-top: 2rem;
+                }
             }
         }
 
         .modal-content {
-            @include flex-flow;
-            flex-direction: column;
             text-align: center;
 
             p {
                 @include wh(100%,15rem);
                 background: $bg-fff;
                 font-size: $fs15;
-                @include flex-flow ($justify: center, $align: center);
+                @include flex-flow($justify:center,$align: center);
                 border:1px solid $color-ccc;
                 border-bottom:0;
-                border-radius:1.5rem 1.5rem 0 0;
+                border-radius:1.2rem 1.2rem 0 0;
                 box-sizing: border-box;
-
                 @include mobile {
                     height:9rem;
                     font-size: $fs14;
@@ -2347,9 +2373,8 @@ $f-sizes:
 
                 &.include-red-stroke {
                     border-left:1px solid $color-red;
-                    border-radius: 0 0 0 1.5rem;
-
-                    @include mobile {
+                    border-radius: 0 0 0 1.2rem;
+                    @include mobile{
                         border-radius:0 0 0 .8rem;
                     }
                 }
@@ -2373,8 +2398,7 @@ $f-sizes:
                         border-color:$bg-red;
                         color:$color-red;
                         border-width:1px 0 1px 0;
-                        border-radius:0 0 0 1.5rem ;
-
+                        border-radius:0 0 0 1.1rem ;
                         @include mobile {
                             border-radius:0 0 0 .8rem;
                         }
@@ -2394,7 +2418,7 @@ $f-sizes:
         }
 
         &.modal--m-size[type='alert'] {
-            @include wh(36rem,24rem);
+            @include wh(36rem,auto);
 
             @include mobile {
                 @include wh (30rem, 21rem);
@@ -2404,18 +2428,27 @@ $f-sizes:
             .modal-content {
                 height:100%;
             }
+
+            .content-wrap {
+                padding:3rem 3rem 2rem 3rem;
+                border:1px solid $color-ccc;
+                border-bottom:0;
+                border-radius:1.2rem 1.2rem 0 0;
+                text-align: left;
+                background: $color-fff;
+            }
+
             .password-input {
-                padding: 3rem 3rem 0 3rem;
-                background: #fff;
+                padding: 3rem;
+                background: $color-fff;
                 width:100%;
                 height:calc(100% - 5rem);
                 margin:0 auto;
                 text-align: left;
                 border:1px solid $color-ccc;
                 border-bottom:0;
-                border-radius: 1.5rem 1.5rem 0 0;
-
-                @include mobile {
+                border-radius: 1.2rem 1.2rem 0 0;
+                @include mobile{
                     padding:1.5rem 1.5rem 0 1.5rem;
                     height:calc(100% - 4rem);
                 }
@@ -2455,17 +2488,7 @@ $f-sizes:
                 dt, dd {
                     width:100%;
                 }
-                dt {
-                    margin-bottom: 2rem;
-                    font-size: $fs15;
-                    font-weight:$fw-m;
-                    color:$color-111;
-
-                    @include mobile {
-                        margin-bottom: 1rem;
-                        font-size: $fs14;
-                    }
-                }
+                
                 input[type="password"] {
                     padding:1rem 1.5rem;
                     height:4rem;
