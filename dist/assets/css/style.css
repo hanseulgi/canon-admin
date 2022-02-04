@@ -172,6 +172,12 @@ input[type=tel][readonly], input[type=text][readonly], input[type=password][read
     border-radius: 6px;
     vertical-align: middle;
 }
+@media (max-width: 1024px) {
+    input[type=tel][readonly], input[type=text][readonly], input[type=password][readonly], input[type=search][readonly], input[type=email][readonly], input[type=tel][disabled], input[type=text][disabled], input[type=password][disabled], input[type=search][disabled], input[type=email][disabled] {
+        height: 4rem;
+        padding: 9px 15px;
+    }
+}
 input[type=tel].disabled, input[type=text].disabled, input[type=password].disabled, input[type=search].disabled, input[type=email].disabled {
     width: 100%;
     height: 4.5rem;
@@ -184,6 +190,12 @@ input[type=tel].disabled, input[type=text].disabled, input[type=password].disabl
     border: 1px solid #e6e6e6;
     border-radius: 6px;
     vertical-align: middle;
+}
+@media (max-width: 1024px) {
+    input[type=tel].disabled, input[type=text].disabled, input[type=password].disabled, input[type=search].disabled, input[type=email].disabled {
+        height: 4rem;
+        padding: 9px 15px;
+    }
 }
 input::-webkit-input-placeholder {
     color: #898989;
@@ -3476,7 +3488,7 @@ body {
     height: 45px;
     line-height: 43px;
     padding: 0 20px;
-    font-size: 14px;
+    font-size: 13px;
 }
 @media (max-width: 1024px) {
     [class^=btn-][class*=sm] {
@@ -3505,6 +3517,11 @@ body {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+    .row-btns {
+        padding: 0 20px;
+    }
 }
 .row-btns [class^=btn] {
     width: 100%;
@@ -3687,11 +3704,26 @@ body {
     flex-wrap: wrap;
     margin-top: 6rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap .top-wrap {
+        margin-top: 2rem;
+    }
+}
 .table-wrap .top-wrap .txt {
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
     color: #666;
+}
+@media (max-width: 1024px) {
+    .table-wrap .top-wrap .txt {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        line-height: normal;
+        letter-spacing: -0.3px;
+        text-align: right;
+    }
 }
 .table-wrap .top-wrap .txt span {
     color: #dc000c;
@@ -3700,10 +3732,25 @@ body {
     margin-top: 1rem;
     width: 100%;
 }
+@media (max-width: 1024px) {
+    .table-wrap .top-wrap .hr {
+        margin-top: 0.5rem;
+        order: 3;
+    }
+}
 .table-wrap .top-title {
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
+}
+@media (max-width: 1024px) {
+    .table-wrap .top-title {
+        order: 2;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        letter-spacing: -0.16px;
+        font-weight: 500;
+    }
 }
 .table-wrap .required:after {
     content: " *";
@@ -3994,12 +4041,10 @@ body {
 .table-wrap > [class*=-edit] {
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #e6e6e6;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] {
         margin-top: 20px;
-        border-bottom: none;
     }
 }
 .table-wrap > [class*=-edit] .tr {
@@ -4013,6 +4058,11 @@ body {
     }
     .table-wrap > [class*=-edit] .tr + .tr {
         margin-top: 30px;
+    }
+}
+@media (max-width: 1024px) and (max-width: 1024px) {
+    .table-wrap > [class*=-edit] .tr + .tr {
+        margin-top: 0;
     }
 }
 .table-wrap > [class*=-edit] .tr .th {
@@ -4060,12 +4110,28 @@ body {
     flex-wrap: wrap;
     margin-top: 1.5rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 {
+        margin-top: 2rem;
+    }
+}
 .table-wrap > [class*=-edit].type2 .tr {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     flex: 1 1 100%;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr {
+        display: block;
+        margin-bottom: 2.5rem;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr:last-of-type {
+        margin-bottom: 0;
+    }
 }
 .table-wrap > [class*=-edit].type2 .tr .th {
     flex: 0 0 13rem;
@@ -4074,6 +4140,11 @@ body {
 }
 .table-wrap > [class*=-edit].type2 .tr .th ~ .th {
     margin-left: 14rem;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .th ~ .th {
+        margin-left: 0;
+    }
 }
 .table-wrap > [class*=-edit].type2 .tr .td {
     display: flex;
@@ -4086,6 +4157,13 @@ body {
 .table-wrap > [class*=-edit].type2 .tr .td [class^=btn] {
     margin-left: 10px;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td [class^=btn] {
+        min-width: 95px;
+        height: 40px;
+        line-height: 38px;
+    }
+}
 .table-wrap > [class*=-edit].type2 .tr .td .ellipsis {
     display: block;
     white-space: nowrap;
@@ -4095,18 +4173,68 @@ body {
     margin: 0 auto;
     padding: 0 5px;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td.select-row-3 {
+        display: block;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td.select-row-3 .select-wrap {
+        margin-left: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td.select-row-3 .select-wrap + .select-wrap {
+        margin-top: 1rem;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td {
+        margin-bottom: 2.5rem;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .td:last-of-type {
+        margin-bottom: 0;
+    }
+}
 .table-wrap > [class*=-edit].type2 .tr p {
     font-size: 1.5rem;
     line-height: 1.4;
     letter-spacing: -0.15px;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .tit {
+        color: #666;
+    }
+}
 .table-wrap > [class*=-edit].type2 .tr .radio-group {
     height: 4.5rem;
 }
 @media (max-width: 1024px) {
-    .table-wrap > [class*=-edit] .add-file-wrap {
-        margin-top: 38px !important;
+    .table-wrap > [class*=-edit].type2 .tr .radio-group {
+        flex-wrap: wrap;
+        height: auto;
     }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .radio-group .radio {
+        margin-top: 1.5rem;
+        width: 33.33%;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .radio-group .radio:nth-child(-n+3) {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit].type2 .tr .radio-group .radio.txt + .txt {
+        margin-left: 0;
+    }
+}
+.table-wrap > [class*=-edit] .add-file-wrap {
+    margin-top: 38px !important;
 }
 .table-wrap .detail-title {
     margin-top: 6rem;
@@ -4183,6 +4311,7 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr {
+        border-bottom: 0;
         align-items: flex-start;
     }
 }
@@ -4205,10 +4334,11 @@ body {
 }
 .table-wrap > [class*=-detail] .tr .td {
     flex: 1 1 auto;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr .td {
+        padding: 0.75rem 0;
         width: calc(100% - 8.75rem);
     }
 }
@@ -4240,9 +4370,9 @@ body {
     height: 100%;
 }
 .table-wrap > [class*=-detail] .tr p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    letter-spacing: -0.15px;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr p {
@@ -4255,6 +4385,14 @@ body {
     .table-wrap > [class*=-detail] .tr.table-top .td {
         padding: 2rem 0 2.5rem;
     }
+}
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap {
+    margin-top: -1px;
+    border-top: 1px solid #fff;
+}
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap th,
+.table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap td {
+    padding-top: 0;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr:last-child {
@@ -4269,6 +4407,17 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 {
+        padding-top: 1.4rem;
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2:last-of-type {
+        margin-bottom: 0;
+    }
+}
 .table-wrap > [class*=-detail].type2 .tr {
     display: flex;
     justify-content: space-between;
@@ -4276,13 +4425,34 @@ body {
     width: 100%;
     flex: 1 1 100%;
 }
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 .tr {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 .tr {
+        align-items: flex-start;
+    }
+}
 .table-wrap > [class*=-detail].type2 .tr .th {
     flex: 0 0 16rem;
     font-weight: 500;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 .tr .th {
+        flex: 0 0 34%;
+        padding: 0.75rem 0;
+    }
 }
 .table-wrap > [class*=-detail].type2 .tr .th ~ .th {
     margin-left: 3rem;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 .tr .th ~ .th {
+        margin-left: 0;
+    }
 }
 .table-wrap > [class*=-detail].type2 .tr .th .tit {
     font-weight: 500;
@@ -4294,6 +4464,11 @@ body {
     align-items: center;
     justify-content: start;
     flex: 1 1 33.3%;
+}
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-detail].type2 .tr .td {
+        flex: 0 0 66%;
+    }
 }
 .table-wrap > [class*=-detail].type2 .tr .td [class^=btn] {
     margin-left: 10px;
@@ -8333,10 +8508,6 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         height: 25rem;
     }
 }
-.table-wrap > [class*=-edit] .use-wrap .th,
-.table-wrap > [class*=-edit] .use-wrap .td {
-    padding: 0.5rem 0;
-}
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] .use-wrap {
         display: flex;
@@ -8359,21 +8530,11 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     }
 }
 
-.table-wrap.edit + .row-btns {
+.table-wrap + .row-btns {
     margin-top: 35px;
 }
 @media (max-width: 1024px) {
-    .table-wrap.edit + .row-btns {
-        padding: 0 20px;
-        margin-top: 30px;
-    }
-}
-
-.table-wrap.detail + .row-btns {
-    margin-top: 50px;
-}
-@media (max-width: 1024px) {
-    .table-wrap.detail + .row-btns {
+    .table-wrap + .row-btns {
         padding: 0 20px;
         margin-top: 10px;
     }
