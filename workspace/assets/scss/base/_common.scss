@@ -656,7 +656,31 @@ $f-sizes:
             }
         }
     }
+
+    &.circle {
+
+        input[type='checkbox'] {
+            width:2rem;
+            height:2rem;
+            margin-right: 1rem;
+            background: $bg-fff;
+            @include border-radius; 
+
+            &:checked {
+                background-color: #dc000c;
+            }
+        }
+
+        i {
+            @include wh(2rem, 2rem);
+            background-size: 18px 18px;
+            
+        }
+    }
+
 }
+
+
 
 
 //table
@@ -2292,10 +2316,12 @@ $f-sizes:
             overflow:hidden;
             border-radius:0 0 1.2rem 1.2rem;
             @include mobile{
-                @include wh(20rem,13rem);
+                @include wh(25rem,15rem);
                 border-radius:.8rem;
             }
         }
+
+        
 
         .pop-tit {
             display: block;
@@ -2346,6 +2372,7 @@ $f-sizes:
 
         .modal-content {
             text-align: center;
+            position: relative;
 
             p {
                 @include wh(100%,15rem);
@@ -2357,7 +2384,7 @@ $f-sizes:
                 border-radius:1.2rem 1.2rem 0 0;
                 box-sizing: border-box;
                 @include mobile {
-                    height:9rem;
+                    height:11rem;
                     font-size: $fs14;
                     border-radius:.8rem .8rem 0 0;
                 }
@@ -2417,9 +2444,10 @@ $f-sizes:
             }
         }
 
-        &.modal--m-size[type='alert'] {
-            @include wh(36rem,auto);
-
+        &.modal--m-size[type='layer'] {
+            @include wh(36rem,auto) ;
+            overflow:hidden;
+            border-radius:0 0 1.2rem 1.2rem;
             @include mobile {
                 @include wh (30rem, 21rem);
                 @include fs($fs14);
@@ -2436,6 +2464,10 @@ $f-sizes:
                 border-radius:1.2rem 1.2rem 0 0;
                 text-align: left;
                 background: $color-fff;
+
+                &.chk-include {
+                    padding-bottom: 3rem;
+                }
             }
 
             .password-input {
@@ -2501,12 +2533,60 @@ $f-sizes:
                 }
             }
         }
+        &.modal__table-wrap[type='layer'] {
+            width:60rem;
+            
+            table {
+                width:100%;
+                border-top:1px solid $color-e6e6e6;
+
+                input[type='checkbox'] {
+                    margin-right:0;
+                }
+            }
+
+            th, td {
+                padding:1.5rem 0;
+                font-size: 1.4rem;
+                text-align: center;
+                border-bottom:1px solid $color-e6e6e6;
+            }
+            th {
+                background: $bg-f6f6f6;
+                color:$color-666;
+                font-weight: $fw-m;
+            }
+            td {
+                text-align: center;
+            }
+
+        }
+
+        .chk-list-wrap {
+            border-top:1px solid $color-e6e6e6;
+
+            li {
+                padding:1.5rem 0 1.5rem 1rem;
+                border-bottom:1px solid $color-e6e6e6;
+                &:first-of-type {
+                    background: $bg-f6f6f6;
+                }
+            }
+        }
+        input[type='text'], input[type='password'] {
+            padding:1rem;
+            height: 4rem;
+            line-height: 3.8rem;
+            @include border-radius(4px);
+        } 
+
     }
 
-    .modal-close {
-        display: block;
-        @include wh(2rem, 2rem);
-        background: url();
+    .close-btn {
+        @include position (auto, 3rem);
+        right:3rem;
+        @include wh(2.5rem, 2.5rem);
+        background: url($path-img-ico + 'ico_close.svg') no-repeat center / 25px;
     }
 
 
