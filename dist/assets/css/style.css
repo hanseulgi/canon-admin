@@ -4933,7 +4933,7 @@ body {
     }
 }
 .filter-wrap .inner {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 @media (max-width: 1024px) {
@@ -4962,8 +4962,10 @@ body {
         padding-left: 0.5rem;
     }
 }
-.filter-wrap .select-wrap {
-    width: 13rem;
+@media (max-width: 1024px) {
+    .filter-wrap .select-wrap {
+        width: 11.5rem !important;
+    }
 }
 
 .paging {
@@ -5195,7 +5197,7 @@ body {
 }
 @media (max-width: 1024px) {
     .search-box-wrap > .inner .table-col + .table-col {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 }
 .search-box-wrap > .inner .table-col .th {
@@ -5282,6 +5284,11 @@ body {
     .search-box-wrap > .inner .table-col .ico-search {
         width: 2rem;
         height: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .search-box-wrap > .inner .table-col .row-btns [class^=btn-][class*=sm] {
+        height: 4.5rem;
     }
 }
 
