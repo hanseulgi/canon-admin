@@ -22,10 +22,10 @@ UI.modal = (function () {
 //file remove
 UI.file = function () {
 
-    const $target = $('.table-edit .add-file-names').find('.name');
+    const $target = $('.table-edit .add-file-names').find('.ico-cancel');
 
     $target.off("click").on("click", function() {
-        $(this).hide();
+        $(this).closest('.file').hide();
     });
 
 };

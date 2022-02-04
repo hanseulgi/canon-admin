@@ -1672,7 +1672,7 @@ $f-sizes:
 
         .add-file-names {
             padding: 2rem;
-            
+
             @include mobile {
                 padding: 1rem;
             }
@@ -1693,35 +1693,32 @@ $f-sizes:
         }
 
         .name {
-            display: block;
             position: relative;
-            @include fs($fs12);
-
-            &:before {
-                content: "";
-                @include position (100%, 0);
-                @include wh(1.2rem, 1.2rem);
-                margin: 3px 0 0 5px;
-                background: url($path-img-common + 'ico_cancel_1.svg') no-repeat 0 0;
-            }
+            @include fs($fs14);
 
             &+.name {
-                margin-top: 5px;
 
                 @include mobile {
-                    margin-top: 10px;
+                    margin-top: 1rem;
                 }
             }
         }
+        .file {
+            padding: 5px 0;
+        }
+        .ico-cancel {
+            cursor: pointer;
+            vertical-align: 10%;
+            margin-left: 2px;
+        }
     }
 
-    .file-add-btn { 
+    .file-add-btn {
         @include mobile {
             position: absolute;
             top: -4.5rem;
             right: 0;
             z-index: 1;
-            
             [class^=btn-][class*=sm] {
                 min-width: auto;
                 height: 3.5rem;

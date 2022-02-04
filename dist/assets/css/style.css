@@ -4689,29 +4689,23 @@ body {
     display: inline-block;
 }
 .add-file .add-file-names .name {
-    display: block;
     position: relative;
-    font-size: 1.2rem;
-    line-height: 1.42;
-    letter-spacing: -0.12px;
-}
-.add-file .add-file-names .name:before {
-    content: "";
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 1.2rem;
-    height: 1.2rem;
-    margin: 3px 0 0 5px;
-    background: url("../img/common/ico_cancel_1.svg") no-repeat 0 0;
-}
-.add-file .add-file-names .name + .name {
-    margin-top: 5px;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
 }
 @media (max-width: 1024px) {
     .add-file .add-file-names .name + .name {
-        margin-top: 10px;
+        margin-top: 1rem;
     }
+}
+.add-file .add-file-names .file {
+    padding: 5px 0;
+}
+.add-file .add-file-names .ico-cancel {
+    cursor: pointer;
+    vertical-align: 10%;
+    margin-left: 2px;
 }
 @media (max-width: 1024px) {
     .add-file .file-add-btn {
