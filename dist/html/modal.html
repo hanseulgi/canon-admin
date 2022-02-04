@@ -238,13 +238,9 @@
 
                 <h2 style="font-size:20px; margin:30px 0 20px;">Alert type</h2>
                 <!-- type1 -->
-                <a href="#" onclick="UI.modal.open(modaltest1)" class="btn-red-sm">팝업오픈</a>
+                <a href="#" onclick="UI.modal.open(modaltest1)" class="btn-red-sm">팝업오픈1</a>
                 <div class="modal" id="modaltest1">
                     <div class="modal-wrap" type="alert">
-                        <div class="modal-header">
-                            <h2 class="modal-title">레이어팝업</h2>
-                            <a href="javascript:void(0);" class="modal-close"></a>
-                        </div>
                         <div class="modal-content">
                             <p>삭제하시겠습니까?</p>
                             <div class="btns include-red-stroke">
@@ -257,13 +253,9 @@
                 <!-- //popup -->
 
                 <!-- type2 -->
-                <a href="#" onclick="UI.modal.open(modaltest2)" class="btn-red-sm">팝업오픈</a>
+                <a href="#" onclick="UI.modal.open(modaltest2)" class="btn-red-sm">팝업오픈2</a>
                 <div class="modal" id="modaltest2">
                     <div class="modal-wrap" type="alert">
-                        <div class="modal-header">
-                            <h2 class="modal-title">레이어팝업</h2>
-                            <a href="javascript:void(0);" class="modal-close"></a>
-                        </div>
                         <div class="modal-content">
                             <p>삭제하시겠습니까? <br>
                             텍스트 두 줄 이상</p>
@@ -277,13 +269,9 @@
                 <!-- //popup -->
 
                 <!-- type3 -->
-                <a href="#" onclick="UI.modal.open(modaltest3)" class="btn-red-sm">팝업오픈</a>
+                <a href="#" onclick="UI.modal.open(modaltest3)" class="btn-red-sm">팝업오픈3</a>
                 <div class="modal" id="modaltest3">
                     <div class="modal-wrap" type="alert">
-                        <div class="modal-header">
-                            <h2 class="modal-title">레이어팝업</h2>
-                            <a href="javascript:void(0);" class="modal-close"></a>
-                        </div>
                         <div class="modal-content">
                             <p>삭제하시겠습니까? <br>
                             텍스트 두 줄 이상</p>
@@ -296,16 +284,12 @@
                 <!-- //popup -->
 
                 <!-- type4 -->
-                <a href="#" onclick="UI.modal.open(modaltest4)" class="btn-red-sm">팝업오픈</a>
+                <a href="#" onclick="UI.modal.open(modaltest4)" class="btn-red-sm">팝업오픈4</a>
                 <div class="modal" id="modaltest4">
                     <div class="modal-wrap modal--m-size" type="alert">
-                        <div class="modal-header">
-                            <h2 class="modal-title">레이어팝업</h2>
-                            <a href="javascript:void(0);" class="modal-close"></a>
-                        </div>
                         <div class="modal-content">
                             <dl class="password-input">
-                                <dt>비밀번호 입력</dt>
+                                <dt class="pop-tit">비밀번호 입력</dt>
                                 <dd>
                                     <input type="password" >
                                     <p>등록글에 대한 비밀번호를 6~20자리로 입력하여 <br> 주세요. 등록글에 대해 수정/삭제 시 필요합니다.</p>
@@ -314,6 +298,98 @@
                             <div class="btns">
                                 <a href="#" onclick="UI.modal.close(modaltest4)" class="btn--gray modal__btn">취소</a>
                                 <a href="#" onclick="UI.modal.close(modaltest4)" class="btn--red modal__btn">저장</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //popup -->
+
+                <!-- type5 -->
+                <a href="#" onclick="UI.modal.open(modaltest5)" class="btn-red-sm">팝업오픈5</a>
+                <div class="modal" id="modaltest5">
+                    <div class="modal-wrap  modal--m-size" type="alert">
+                        <div class="modal-content">
+                            <div class="content-wrap">
+                                <strong class="pop-tit">권한 카테고리 등록</strong>
+                                <dl class="dl-cont">
+                                    <dt>권한 카테고리명</dt>
+                                    <dd><input type="text"></dd>
+                                </dl>
+                                <dl class="dl-cont">
+                                    <dt>권한 카테고리 코드</dt>
+                                    <dd><input type="text"></dd>
+                                </dl>
+                                <dl class="dl-cont">
+                                    <dt>사용여부</dt>
+                                    <dd>
+                                        <label class="radio txt">
+                                            <input type="radio" name="radio1" checked="">
+                                            <i></i>
+                                            활성
+                                        </label>
+
+                                        <label class="radio txt">
+                                            <input type="radio" name="radio1">
+                                            <i></i>
+                                            비활성
+                                        </label>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="btns">
+                                <a href="#" onclick="UI.modal.close(modaltest5)" class="btn--gray modal__btn">취소</a>
+                                <a href="#" onclick="UI.modal.close(modaltest5)" class="btn--red modal__btn">저장</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //popup -->
+
+                <!-- type6 -->
+                <a href="#" onclick="UI.modal.open(modaltest6)" class="btn-red-sm">팝업오픈6</a>
+                <div class="modal" id="modaltest6">
+                    <div class="modal-wrap  modal--m-size" type="alert">
+                        <div class="modal-content">
+                            <button type="button" class="close-btn"><span class="blind">닫기 버튼</span></button>
+                            <div class="content-wrap">
+                                <strong class="pop-tit mb15">권한 카테고리 상세</strong>
+                                <dl class="dl-cont detail first">
+                                    <dt>권한 카테고리명</dt>
+                                    <dd>시스템관리자</dd>
+                                </dl>
+                                <dl class="dl-cont detail">
+                                    <dt>권한 카테고리 코드</dt>
+                                    <dd>Adcg-001</dd>
+                                </dl>
+                                <dl class="dl-cont detail">
+                                    <dt>사용여부</dt>
+                                    <dd>활성</dd>
+                                </dl>
+                            </div>
+                            <div class="btns">
+                                <a href="#" onclick="UI.modal.close(modaltest6)" class="btn--gray modal__btn">삭제</a>
+                                <a href="#" onclick="UI.modal.close(modaltest6)" class="btn--red modal__btn">수정</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //popup -->
+
+                <!-- type7 -->
+                <a href="#" onclick="UI.modal.open(modaltest7)" class="btn-red-sm">팝업오픈7</a>
+                <div class="modal" id="modaltest7">
+                    <div class="modal-wrap  modal--m-size" type="alert">
+                        <div class="modal-content">
+                            <button type="button" class="close-btn"><span class="blind">닫기 버튼</span></button>
+                            <div class="content-wrap">
+                                <strong class="pop-tit mb15">접근그룹관리</strong>
+                                <ul class="chk-list-wrap">
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="btns">
+                                <a href="#" onclick="UI.modal.close(modaltest7)" class="btn--gray modal__btn">취소</a>
+                                <a href="#" onclick="UI.modal.close(modaltest7)" class="btn--red modal__btn">저장</a>
                             </div>
                         </div>
                     </div>
