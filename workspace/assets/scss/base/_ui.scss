@@ -769,6 +769,11 @@ main {
     }
 
     .use-wrap {
+        .th,
+        .td {
+            padding: 0.5rem 0;
+        }
+
         @include mobile {
             display: flex;
             
@@ -791,15 +796,24 @@ main {
     }
 }
 
-.table-wrap + .row-btns {
+.table-wrap.edit + .row-btns {
     margin-top: 35px;
+
+    @include mobile {
+        padding: 0 20px;
+        margin-top: 30px;        
+    }
+}
+
+//detail
+.table-wrap.detail + .row-btns {
+    margin-top: 50px;
 
     @include mobile {
         padding: 0 20px;
         margin-top: 10px;        
     }
 }
-
 
 
 //검색 결과
