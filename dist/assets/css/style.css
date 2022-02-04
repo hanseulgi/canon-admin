@@ -3488,7 +3488,7 @@ body {
     height: 45px;
     line-height: 43px;
     padding: 0 20px;
-    font-size: 13px;
+    font-size: 14px;
 }
 @media (max-width: 1024px) {
     [class^=btn-][class*=sm] {
@@ -4041,10 +4041,12 @@ body {
 .table-wrap > [class*=-edit] {
     width: 100%;
     text-align: left;
+    border-bottom: 1px solid #e6e6e6;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] {
         margin-top: 20px;
+        border-bottom: none;
     }
 }
 .table-wrap > [class*=-edit] .tr {
@@ -4233,8 +4235,10 @@ body {
         margin-left: 0;
     }
 }
-.table-wrap > [class*=-edit] .add-file-wrap {
-    margin-top: 38px !important;
+@media (max-width: 1024px) {
+    .table-wrap > [class*=-edit] .add-file-wrap {
+        margin-top: 38px !important;
+    }
 }
 .table-wrap .detail-title {
     margin-top: 6rem;
@@ -8508,6 +8512,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         height: 25rem;
     }
 }
+.table-wrap > [class*=-edit] .use-wrap .th,
+.table-wrap > [class*=-edit] .use-wrap .td {
+    padding: 0.5rem 0;
+}
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] .use-wrap {
         display: flex;
@@ -8530,11 +8538,21 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     }
 }
 
-.table-wrap + .row-btns {
+.table-wrap.edit + .row-btns {
     margin-top: 35px;
 }
 @media (max-width: 1024px) {
-    .table-wrap + .row-btns {
+    .table-wrap.edit + .row-btns {
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+}
+
+.table-wrap.detail + .row-btns {
+    margin-top: 50px;
+}
+@media (max-width: 1024px) {
+    .table-wrap.detail + .row-btns {
         padding: 0 20px;
         margin-top: 10px;
     }
