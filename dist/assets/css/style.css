@@ -9299,6 +9299,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     }
 }
 .nav-wrap .nav-menu > li {
+    display: inline-block;
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -9311,10 +9312,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     }
 }
 .nav-wrap .nav-menu > li:last-child a {
-    padding-right: 0;
+    margin-right: 0;
 }
 .nav-wrap .nav-menu > li > a {
-    padding-right: 8rem;
+    margin-right: 8rem;
     font-size: 1.8rem;
     line-height: 1.44;
     letter-spacing: -0.18px;
@@ -9347,6 +9348,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         transform: rotate(180deg);
         transform-origin: 50% 25%;
     }
+}
+.nav-wrap .nav-menu > li > a a:hover {
+    display: block;
+    border: 2px solid red;
 }
 .nav-wrap .sub-menu {
     position: absolute;

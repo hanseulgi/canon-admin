@@ -364,6 +364,7 @@
             }
 
             >li {
+                display: inline-block;
                 position: relative;
                 z-index: 1;
                 cursor: pointer;
@@ -375,11 +376,11 @@
                 }
 
                 &:last-child a {
-                    padding-right: 0;
+                    margin-right: 0;
                 }
 
                 >a {
-                    padding-right: 8rem;
+                    margin-right: 8rem;
                     @include fs($fs18);
                     color: $color-000;
                     font-weight: $fw-m;
@@ -408,7 +409,12 @@
                             transform-origin: 50% 25%;
                         }
                     }
+                    a:hover {
+                        display: block;
+                        border: 2px solid red;
+                    }
                 }
+
             }
         }
 
