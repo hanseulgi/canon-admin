@@ -546,6 +546,12 @@ $f-sizes:
                 margin: 1rem 0 0;
             }
         }
+
+        select[disabled] {
+            @include mobile {
+                background-color: transparent;
+            }
+        }
     }
 }
 
@@ -1034,10 +1040,6 @@ $f-sizes:
                 
                 &+.tr {
                     margin-top: 30px;
-
-                    @include mobile {
-                        margin-top: 0;
-                    }
                 }
             }
 
@@ -1295,12 +1297,6 @@ $f-sizes:
             @include flex-flow;
             border-bottom: 1px solid $color-e6e6e6;
 
-            @include mobile {
-                border-bottom:0;
-                align-items: flex-start;
-
-            }
-
             .th {
                 align-self: baseline;
                 width: 9rem;
@@ -1325,7 +1321,7 @@ $f-sizes:
 
                 @include mobile {
 
-                    padding:.75rem 0;
+                    padding: 1.5rem 0;
                     width: calc(100% - 8.75rem);
 
                 }
@@ -2073,6 +2069,7 @@ $f-sizes:
 
     @include mobile {
         margin-top: 1.5rem;
+        padding: 0 20px;
     }
 
     //버튼 아래에 페이징이 있는 경우
@@ -2197,6 +2194,7 @@ $f-sizes:
 
                 @include mobile {
                     @include fs($fs14);
+                    font-weight: $fw-r;
                     width: auto;
                 }
             }
