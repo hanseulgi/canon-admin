@@ -5679,6 +5679,7 @@ body {
     .tab-wrap .tab-title .depth1 .inner {
         padding: 0 6px 10px;
         border-bottom: 1px solid #eee;
+        overflow-x: scroll;
     }
 }
 .tab-wrap .tab-title .depth1 .inner a {
@@ -5746,7 +5747,7 @@ body {
         background-color: #dc000c;
     }
 }
-.tab-wrap .tab-title .depth1 .depth2 {
+.tab-wrap .tab-title .depth2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -5754,30 +5755,37 @@ body {
     justify-content: center;
 }
 @media (max-width: 1024px) {
-    .tab-wrap .tab-title .depth1 .depth2 {
+    .tab-wrap .tab-title .depth2 {
         margin-top: 1.5rem;
         padding: 0 20px;
     }
 }
-.tab-wrap .tab-title .depth1 .depth2 li a {
+.tab-wrap .tab-title .depth2 .inner {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab-wrap .tab-title .depth2 .inner a {
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
     padding: 0 1.5rem;
+    flex: none;
 }
 @media (max-width: 1024px) {
-    .tab-wrap .tab-title .depth1 .depth2 li a {
+    .tab-wrap .tab-title .depth2 .inner a {
         padding: 1rem 1.5rem;
         border: 1px solid #eee;
         border-radius: 2rem;
     }
 }
-.tab-wrap .tab-title .depth1 .depth2 li a.on {
+.tab-wrap .tab-title .depth2 .inner a.on {
     color: #dc000c;
     font-weight: 500;
 }
 @media (max-width: 1024px) {
-    .tab-wrap .tab-title .depth1 .depth2 li a.on {
+    .tab-wrap .tab-title .depth2 .inner a.on {
         border: 1px solid #dc000c;
     }
 }
