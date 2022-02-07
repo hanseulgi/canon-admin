@@ -2357,6 +2357,10 @@ $f-sizes:
         .dl-cont {
             @include flex-flow; 
             margin-bottom: 1rem;
+
+            @include  mobile {
+                margin-bottom: 0.8rem;
+            }
             
 
             &:last-of-type {
@@ -2365,15 +2369,27 @@ $f-sizes:
 
             dt, dd {
                 @include fs ($fs14);
+
+                @include mobile {
+                    @include fs($fs13);
+                }
             }
             dt {
                 padding:1rem 0;
                 width:12rem;
                 color: $color-666;
+
+                @include mobile {
+                    width:43%;
+                }
             }
             dd {
                 width:calc(100% - 12rem);
                 color:$color-111;
+
+                @include mobile {
+                    width:57%;
+                }
             }
 
             &.detail {
@@ -2384,6 +2400,12 @@ $f-sizes:
                 border-top:1px solid $color-e6e6e6;
                 dt {
                     padding-top: 2rem;
+                }
+            }
+
+            .radio.txt + .txt {
+                @include mobile {
+                    margin-left: 1.6rem;
                 }
             }
         }
@@ -2486,6 +2508,10 @@ $f-sizes:
                 &.chk-include {
                     padding-bottom: 3rem;
                 }
+
+                @include mobile {
+                    padding:2.5rem;
+                }
             }
 
             .password-input {
@@ -2553,10 +2579,28 @@ $f-sizes:
         }
         &.modal__table-wrap[type='layer'] {
             width:60rem;
+
+            @include mobile {
+                width:30rem;
+            }
             
+            .modal-tb {
+                height:55rem;
+                overflow-y:auto;
+
+                @include mobile {
+                    height:42.5rem;
+                    overflow-x:auto;
+                }
+            }
+
             table {
                 width:100%;
                 border-top:1px solid $color-e6e6e6;
+
+                @include mobile {
+                    width:55rem;
+                }
 
                 input[type='checkbox'] {
                     margin-right:0;
@@ -2568,26 +2612,48 @@ $f-sizes:
                 font-size: 1.4rem;
                 text-align: center;
                 border-bottom:1px solid $color-e6e6e6;
+
+                @include mobile {
+                    padding:1.2rem 0;
+                }
             }
             th {
                 background: $bg-f6f6f6;
                 color:$color-666;
                 font-weight: $fw-m;
+
+                &:nth-of-type(2) {
+                    text-align: left;
+                }
             }
             td {
                 text-align: center;
+
+                &:nth-of-type(2) {
+                    text-align: left;
+                }
             }
 
         }
 
         .chk-list-wrap {
             border-top:1px solid $color-e6e6e6;
+            height:45rem;
+            overflow-y:auto;
+
+            @include mobile {
+                height:41rem;
+            }
 
             li {
-                padding:1.5rem 0 1.5rem 1rem;
+                padding:1.5rem;
                 border-bottom:1px solid $color-e6e6e6;
                 &:first-of-type {
                     background: $bg-f6f6f6;
+                }
+
+                @include mobile {
+                    padding:1.2rem;
                 }
             }
         }
@@ -2605,6 +2671,10 @@ $f-sizes:
         right:3rem;
         @include wh(2.5rem, 2.5rem);
         background: url($path-img-ico + 'ico_close.svg') no-repeat center / 25px;
+
+        @include mobile {
+            top:2rem;
+        }
     }
 
 
