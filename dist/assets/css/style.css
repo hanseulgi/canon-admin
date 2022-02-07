@@ -9869,13 +9869,13 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    margin-top: 1rem;
 }
 @media (max-width: 1024px) {
     #footer .inner .footer-util {
         font-size: 1.2rem;
         line-height: 1.42;
         letter-spacing: -0.12px;
+        margin-top: 1rem;
     }
 }
 #footer .inner .footer-util a {
