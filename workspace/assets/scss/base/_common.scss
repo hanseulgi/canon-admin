@@ -1948,6 +1948,7 @@ $f-sizes:
         }
     }
 
+
     ul {
         display: flex;
 
@@ -1970,6 +1971,7 @@ $f-sizes:
     }
 
     .select-wrap {
+        width:13rem;
         @include mobile {
             width: 11.5rem!important;
         }

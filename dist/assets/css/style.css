@@ -4963,6 +4963,9 @@ body {
         padding-left: 0.5rem;
     }
 }
+.filter-wrap .select-wrap {
+    width: 13rem;
+}
 @media (max-width: 1024px) {
     .filter-wrap .select-wrap {
         width: 11.5rem !important;
