@@ -1018,12 +1018,25 @@ main {
 
     .tab-wrap {
         margin-top: 8rem;
+
+        @include mobile {
+            margin-top: 3rem;
+        }
     }
 
     .filter-wrap {
 
+        @include mobile {
+            padding: 0;
+        }
+
         .inner {
             margin-top: 6.8rem;
+
+            @include mobile {
+                display: block;
+                margin: 4rem 0 0;
+            }
         }
 
         ul {
@@ -1031,6 +1044,10 @@ main {
             li {
                 @include fs($fs16);
                 color: inherit;
+
+                &:first-child {
+                    font-weight: $fw-m;
+                }
 
                 &+li {
                     border: 0;
@@ -1045,12 +1062,21 @@ main {
             }
         }
 
-        .select-wrap {
-
-            &+.select-wrap {
-                margin-left: 1rem;
+        div.flex {
+            @include mobile {
+                margin-top: 10px;
             }
 
+            .select-wrap {
+
+                &+.select-wrap {
+                    margin-left: 1rem;
+                }
+
+                &.mo {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
@@ -1152,15 +1178,33 @@ main {
 .result-integrate-search {
     margin-top: 1rem;
 
+    @include mobile {
+        margin-top: 3rem;
+    }
+
     .result-lists {
         margin-top: 6rem;
+
+        @include mobile {
+            margin-top: 0;
+        }
 
         >.title {
             border-bottom: 1px solid $color-e6e6e6;
             padding-bottom: 1rem;
 
+            @include mobile {
+                border-bottom: 1px solid $color-111;
+                padding-bottom: 0.5rem;
+            }
+
             span {
                 @include fs($fs16);
+
+                @include mobile {
+                    @include fs($fs15);
+                    font-weight: $fw-m;
+                }
 
                 &+span {
 
@@ -1178,8 +1222,17 @@ main {
         dl.list {
             padding: 3rem 0;
 
+            @include mobile {
+                padding: 1.5rem 0 1.75rem;
+            }
+
             dt {
                 @include fs($fs16);
+
+                @include mobile {
+                    @include fs($fs14);
+                    font-weight: $fw-m
+                }
             }
 
             dd {
@@ -1189,6 +1242,14 @@ main {
                     @include fs($fs14);
                     margin-top: 1rem;
                     max-width: 80%;
+
+                    @include mobile {
+                        margin-top: .5rem;
+                        white-space: normal;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                    }
                 }
 
                 .file-link {
@@ -1196,15 +1257,29 @@ main {
                     @include fs($fs14);
                     margin-top: 1rem;
                     vertical-align: middle;
+
+                    @include mobile {
+                        @include fs($fs13);
+                        color: $color-666;
+                    }
                 }
 
                 .desc {
                     margin-top: 2rem;
 
+                    @include mobile {
+                        margin-top: 1.5rem;
+                        display: block;
+                    }
+
                     .sub-title {
                         span {
                             @include fs($fs14);
                             color: $color-666;
+
+                            @include mobile {
+                                @include fs($fs13);
+                            }
 
                             &+span {
                                 &:before {
@@ -1213,6 +1288,10 @@ main {
                                     @include wh(1.2rem, 1.2rem);
                                     margin: 0 5px 0 3px;
                                     background: url($path-img-ico + 'ico_next_1.svg') no-repeat 0 0 / 12px 12px;
+
+                                    @include mobile {
+                                        margin: 0;
+                                    }
                                 }
                             }
                         }
@@ -1221,6 +1300,12 @@ main {
                     .date {
                         @include fs($fs14);
                         color: $color-666;
+
+                        @include mobile {
+                            @include fs($fs13);
+                            display: block;
+                            margin-top: .5rem;
+                        }
                     }
                 }
             }
@@ -1237,6 +1322,16 @@ main {
             border-color: $color-e6e6e6;
             color: $color-666;
             font-weight: $fw-r;
+
+            @include mobile {
+                @include wh(100%, 4rem);
+                line-height: 4rem;
+                margin-top: 1.25rem;
+            }
+        }
+
+        &+.result-lists {
+            margin-top: 5rem;
         }
     }
 }
