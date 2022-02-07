@@ -4534,7 +4534,7 @@ body {
 }
 .table-wrap .video-list-wrap ul li .item {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item {
@@ -4545,6 +4545,7 @@ body {
     overflow: hidden;
     width: 24rem;
     height: 13.5rem;
+    flex: 0 0 auto;
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item .area {
@@ -4557,7 +4558,7 @@ body {
 }
 .table-wrap .video-list-wrap ul li .item .info {
     margin-left: 2rem;
-    width: calc(100% - 27rem);
+    width: calc(100% - 24rem);
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item .info {

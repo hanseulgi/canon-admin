@@ -1536,7 +1536,7 @@ $f-sizes:
 
                 .item {
                     display: flex;
-                    flex-wrap: wrap;
+                    justify-content: space-between;
 
                     @include mobile {
                         display: block;
@@ -1546,6 +1546,7 @@ $f-sizes:
                         overflow: hidden;
                         width: 24rem;
                         height: 13.5rem;
+                        flex: 0 0 auto;
 
                         @include mobile {
                             width:100%;
@@ -1559,7 +1560,7 @@ $f-sizes:
 
                     .info {
                         margin-left: 2rem;
-                        width: calc(100% - 27rem);
+                        width: calc(100% - 24rem);
 
                         @include mobile {
                             margin-top: 1.5rem;
