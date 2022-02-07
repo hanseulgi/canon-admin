@@ -748,6 +748,11 @@ main {
             width: 100%;
             margin-top: 3.5rem;
             font-weight: $fw-m;
+            border-radius: 12px;
+        }
+
+        .btn-gray-lg {
+            border-radius: 12px;
         }
 
         .comment {

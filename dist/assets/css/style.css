@@ -3889,7 +3889,7 @@ body {
     }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-top2] {
         left: 0;
-        top: 4rem;
+        top: 4.35rem;
         font-size: 1.5rem;
         line-height: 1.4;
         letter-spacing: -0.15px;
@@ -4002,7 +4002,6 @@ body {
 @media (max-width: 1024px) {
     .table-wrap .edit-title ul {
         padding: 2rem 0;
-        display: f;
     }
 }
 .table-wrap .edit-title ul li {
@@ -4044,7 +4043,7 @@ body {
 .table-wrap .edit-title ul li p + p::before {
     content: "|";
     color: #ccc;
-    margin: 0 8px;
+    margin: 0 5px;
 }
 @media (max-width: 1024px) {
     .table-wrap .edit-title ul li p + p::before {
@@ -4432,11 +4431,6 @@ body {
     .table-wrap > [class*=-detail].type2 .tr {
         flex-wrap: wrap;
         border-bottom: none;
-    }
-}
-@media (max-width: 1024px) {
-    .table-wrap > [class*=-detail].type2 .tr {
-        align-items: flex-start;
     }
 }
 .table-wrap > [class*=-detail].type2 .tr .th {
@@ -4939,7 +4933,7 @@ body {
 }
 @media (max-width: 1024px) {
     .filter-wrap .inner {
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
 }
 .filter-wrap ul {
@@ -8731,6 +8725,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     width: 100%;
     margin-top: 3.5rem;
     font-weight: 500;
+    border-radius: 12px;
+}
+.log .inner .btn-gray-lg {
+    border-radius: 12px;
 }
 .log .inner .comment {
     text-align: center;
