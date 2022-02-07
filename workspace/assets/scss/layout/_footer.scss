@@ -32,10 +32,10 @@
 
         .footer-util {
             @include fs($fs14);
-            margin-top: 1rem;
 
             @include mobile {
                 @include fs($fs12);
+                margin-top: 1rem;
             }
 
             a {

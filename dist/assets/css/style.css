@@ -4957,6 +4957,9 @@ body {
         padding-left: 0.5rem;
     }
 }
+.filter-wrap .select-wrap {
+    width: 13rem;
+}
 @media (max-width: 1024px) {
     .filter-wrap .select-wrap {
         width: 11.5rem !important;
@@ -5636,6 +5639,7 @@ body {
 }
 .modal .modal-wrap .chk-list-wrap li:first-of-type {
     background: #f6f6f6;
+    font-weight: 500;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap .chk-list-wrap li {
@@ -5659,6 +5663,8 @@ body {
 }
 @media (max-width: 1024px) {
     .modal .close-btn {
+        width: 3rem;
+        height: 3rem;
         top: 2rem;
     }
 }
@@ -9864,13 +9870,13 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
-    margin-top: 1rem;
 }
 @media (max-width: 1024px) {
     #footer .inner .footer-util {
         font-size: 1.2rem;
         line-height: 1.42;
         letter-spacing: -0.12px;
+        margin-top: 1rem;
     }
 }
 #footer .inner .footer-util a {

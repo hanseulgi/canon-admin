@@ -1941,6 +1941,7 @@ $f-sizes:
         }
     }
 
+
     ul {
         display: flex;
 
@@ -1963,6 +1964,7 @@ $f-sizes:
     }
 
     .select-wrap {
+        width:13rem;
         @include mobile {
             width: 11.5rem!important;
         }
@@ -2643,6 +2645,7 @@ $f-sizes:
                 border-bottom:1px solid $color-e6e6e6;
                 &:first-of-type {
                     background: $bg-f6f6f6;
+                    font-weight: $fw-m;
                 }
 
                 @include mobile {
@@ -2666,6 +2669,7 @@ $f-sizes:
         background: url($path-img-ico + 'ico_close.svg') no-repeat center / 25px;
 
         @include mobile {
+            @include wh(3rem, 3rem);
             top:2rem;
         }
     }
