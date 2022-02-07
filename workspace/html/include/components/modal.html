@@ -105,7 +105,7 @@
                 </dl>
             </div>
             <div class="btns">
-                <a href="#" onclick="UI.modal.close(modaltest5)" class="btn--gray modal__btn">취소</a>
+                <a href="#" onclick="UI.modal.close(modaltest5)" class="btn--gray modal__btn">닫기</a>
                 <a href="#" onclick="UI.modal.close(modaltest5)" class="btn--red modal__btn">저장</a>
             </div>
         </div>
@@ -167,7 +167,6 @@
 </div>
 <!-- //popup -->
 
-
 <!-- type8 -->
 <a href="#" onclick="UI.modal.open(modaltest8)" class="btn-red-sm">팝업오픈8</a>
 <div class="modal" id="modaltest8">
@@ -220,9 +219,8 @@
 </div>
 <!-- //popup -->
 
-
 <!-- type9 -->
-<a href="#" onclick="UI.modal.open(modaltest9)" class="btn-red-sm">팝업오픈8</a>
+<a href="#" onclick="UI.modal.open(modaltest9)" class="btn-red-sm">팝업오픈9</a>
 <div class="modal" id="modaltest9">
     <div class="modal-wrap modal__table-wrap modal--m-size" type="layer">
         <div class="modal-content">
@@ -265,6 +263,48 @@
             <div class="btns">
                 <a href="#" onclick="UI.modal.close(modaltest9)" class="btn--gray modal__btn">취소</a>
                 <a href="#" onclick="UI.modal.close(modaltest9)" class="btn--red modal__btn">저장</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup -->
+
+<!-- type10 -->
+<a href="#" onclick="UI.modal.open(modaltest10)" class="btn-red-sm">팝업오픈10</a>
+<div class="modal" id="modaltest10">
+    <div class="modal-wrap modal__table-wrap modal--m-size w500" type="layer">
+        <div class="modal-content">
+            <div class="content-wrap pb30">
+                <strong class="pop-tit mb25">라이선스 변경/재발행 변경지원 업무</strong>
+                <dl class="dl-cont detail">
+                    <dt class="w150 required">재발행 라이선스 번호</dt>
+                    <dd>
+                        <input type="text" value="5s3df3-356" readonly style="background-color: #fff;">
+                    </dd>
+                </dl>
+                <dl class="dl-cont detail mt10">  
+                    <dt class="w150 required">처리결과</dt>
+                    <dd>
+                        <select class="select on" style="background-color: #f6f6f6;">
+                            <option>-선택-</option>
+                            <option>ENG</option>
+                            <option>CHN</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="dl-cont detail mt10">
+                    <dt class="w150 required">증상발생일</dt>
+                    <dd>
+                        <label class="td" for="picker" style="display: flex;">
+                            <input type="text" id="picker" class="disabled datepicker" value="2022-01-02">
+                            <div class="btn-white-sm line" style="flex: 1 0 .9rem;margin-left: 10px;height: 40px;">날짜선택</div>
+                        </label>
+                    </dd>
+                </dl>
+            </div>
+            <div class="btns">
+                <a href="#" onclick="UI.modal.close(modaltest10)" class="btn--gray modal__btn">닫기</a>
+                <a href="#" onclick="UI.modal.close(modaltest10)" class="btn--red modal__btn">저장</a>
             </div>
         </div>
     </div>
