@@ -5645,6 +5645,7 @@ body {
 }
 .modal .modal-wrap .chk-list-wrap li:first-of-type {
     background: #f6f6f6;
+    font-weight: 500;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap .chk-list-wrap li {
@@ -5668,6 +5669,8 @@ body {
 }
 @media (max-width: 1024px) {
     .modal .close-btn {
+        width: 3rem;
+        height: 3rem;
         top: 2rem;
     }
 }
