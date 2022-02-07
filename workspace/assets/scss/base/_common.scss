@@ -739,6 +739,13 @@ $f-sizes:
         }
     }
 
+    .required {
+        &:after {
+            content: " *";
+            color: $color-red;
+        }
+    }
+
     //리스트 테이블
     [class$='-list'] {
         display: table;
@@ -2936,13 +2943,5 @@ $f-sizes:
             @include border-radius(0.6rem);
             margin-top: 30px;
         }
-    }
-}
-
-//필수
-.required {
-    &:after {
-        content: " *";
-        color: $color-red;
     }
 }
