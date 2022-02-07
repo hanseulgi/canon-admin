@@ -4663,6 +4663,7 @@ body {
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
+    display: block;
 }
 .add-file.view .add-file-names .name:before {
     content: none;
