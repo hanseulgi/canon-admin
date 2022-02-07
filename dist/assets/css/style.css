@@ -8706,9 +8706,19 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .log {
     width: 100%;
 }
+@media (max-width: 1024px) {
+    .log .log-wrap {
+        padding: 0 5.5%;
+    }
+}
 .log .inner {
     margin: 0 auto;
     padding: 13rem 0 5rem;
+}
+@media (max-width: 1024px) {
+    .log .inner {
+        padding: 5rem 0 0;
+    }
 }
 .log .inner .logo {
     text-align: center;
@@ -8721,10 +8731,24 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     background: url("../img/common/logo.svg") no-repeat 0 0;
     background-size: 100%;
 }
+@media (max-width: 1024px) {
+    .log .inner .logo a::after {
+        width: 16.5rem;
+        height: 6.25rem;
+        background: url("../img/common/logo.svg") no-repeat 0 0;
+    }
+}
 .log .inner .box-gray {
     width: 80rem;
     margin: 6rem auto 0;
     padding: 3rem;
+}
+@media (max-width: 1024px) {
+    .log .inner .box-gray {
+        width: 100%;
+        margin-top: 3rem;
+        padding: 2rem;
+    }
 }
 .log .inner .box-gray .b-item {
     font-size: 1.4rem;
@@ -8735,6 +8759,11 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .log .inner .box-gray .b-item + .b-item {
     margin-top: 1rem;
 }
+@media (max-width: 1024px) {
+    .log .inner .box-gray .b-item + .b-item {
+        margin-top: 1.5rem;
+    }
+}
 .log .inner .title {
     font-size: 1.8rem;
     line-height: 1.44;
@@ -8742,10 +8771,20 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     font-weight: 500;
     color: initial;
 }
+@media (max-width: 1024px) {
+    .log .inner .title {
+        font-size: 1.5rem;
+    }
+}
 .log .inner .flex {
     width: 108rem;
     margin: 0 auto;
     align-items: start;
+}
+@media (max-width: 1024px) {
+    .log .inner .flex {
+        width: 100%;
+    }
 }
 .log .inner .flex.pwc {
     margin-bottom: 5rem;
@@ -8757,35 +8796,141 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     margin: 12rem 0 0;
     padding: 5rem;
 }
+@media (max-width: 1024px) {
+    .log .inner .flex .box-gray {
+        margin: 3rem 0 0;
+        padding: 3rem 2.5rem;
+        width: 100%;
+        height: auto;
+    }
+}
 .log .inner .flex .box-gray.id a {
     margin-top: 9.5rem;
 }
+@media (max-width: 1024px) {
+    .log .inner .flex .box-gray.id a {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .flex .box-gray.pw {
+        margin-top: 2rem;
+    }
+}
 .log .inner .flex .box-gray a {
     margin-top: 2.5rem;
+    border-radius: 1.2rem;
+}
+@media (max-width: 1024px) {
+    .log .inner .flex .box-gray a {
+        height: 4.8rem;
+        line-height: 4.8rem;
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        border-radius: 0.6rem;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .flex.id-pw-flex {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .flex.pwc .box-gray a {
+        margin-top: 0;
+    }
 }
 .log .inner .login-wrap {
     margin: 5rem auto 0;
     width: 40rem;
 }
+@media (max-width: 1024px) {
+    .log .inner .login-wrap {
+        width: 100%;
+    }
+}
 .log .inner .input-wrap {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
+}
+@media (max-width: 1024px) {
+    .log .inner .input-wrap {
+        margin-top: 2rem;
+    }
 }
 .log .inner .input-wrap input + input {
     margin-top: 1rem;
 }
+@media (max-width: 1024px) {
+    .log .inner .row-btns {
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .row-btns .col:first-child {
+        margin-top: 0.8rem;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .row-btns .col + .col {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+}
 .log .inner .agree {
+    padding-left: 3rem;
     width: 80rem;
     margin: 2rem auto 0;
+}
+@media (max-width: 1024px) {
+    .log .inner .agree {
+        display: flex;
+        padding-left: 0;
+        width: 100%;
+        margin: 1.5rem auto 0;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .agree .checkbox input[type=checkbox] {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .log .inner .agree .checkbox i {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.log .inner .agree span {
+    display: inline-block;
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
+    vertical-align: -0.4rem;
+}
+@media (max-width: 1024px) {
+    .log .inner input[type=text], .log .inner input[type=password], .log .inner input[type=email] {
+        height: 4.8rem;
+        line-height: 4.6rem;
+        padding: 1.4rem 1.5rem;
+        font-size: 1.5rem;
+        border-radius: 0.6rem;
+    }
+}
+.log .inner input[type=text]::placeholder, .log .inner input[type=password]::placeholder, .log .inner input[type=email]::placeholder {
+    color: #ccc;
 }
 .log .inner .log-search {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
+}
+@media (max-width: 1024px) {
+    .log .inner .log-search {
+        margin-top: 1.5rem;
+    }
 }
 .log .inner .log-search a {
     position: relative;
@@ -8804,20 +8949,36 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 .log .inner .btn-red-lg {
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     font-weight: 500;
-    border-radius: 12px;
+    border-radius: 1.2rem;
 }
-.log .inner .btn-gray-lg {
-    border-radius: 12px;
+@media (max-width: 1024px) {
+    .log .inner .btn-red-lg {
+        margin-top: 2rem;
+        height: 4.8rem;
+        line-height: 4.8rem;
+        font-size: 1.4rem;
+        border-radius: 0.6rem;
+    }
 }
 .log .inner .comment {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 8rem;
     font-size: 1.4rem;
     line-height: 1.43;
     letter-spacing: -0.14px;
     color: #666;
+}
+@media (max-width: 1024px) {
+    .log .inner .comment {
+        margin: 5rem auto 0;
+        width: 75%;
+        word-break: keep-all;
+    }
+}
+.log .inner .comment em {
+    font-weight: 500;
 }
 
 @media (max-width: 1024px) {
