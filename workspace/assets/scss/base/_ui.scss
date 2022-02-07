@@ -759,6 +759,37 @@ main {
     }
 }
 
+//rowBtns
+.table-wrap + .row-btns {
+    @include mobile {
+        padding: 0 20px;
+    }
+}
+
+.table-wrap.edit + .row-btns {
+    margin-top: 35px;
+
+    @include mobile {
+        margin-top: 30px;        
+    }
+}
+
+.table-wrap.edit2 + .row-btns {
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 30px;        
+    }
+}
+
+.table-wrap.detail + .row-btns {
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 10px;        
+    }
+}
+
 //edit
 .table-wrap > [class*=-edit] {
     .edit-wrap{
@@ -795,26 +826,6 @@ main {
 
     }
 }
-
-.table-wrap.edit + .row-btns {
-    margin-top: 35px;
-
-    @include mobile {
-        padding: 0 20px;
-        margin-top: 30px;        
-    }
-}
-
-//detail
-.table-wrap.detail + .row-btns {
-    margin-top: 50px;
-
-    @include mobile {
-        padding: 0 20px;
-        margin-top: 10px;        
-    }
-}
-
 
 //검색 결과
 .result {

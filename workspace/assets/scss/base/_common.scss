@@ -1113,6 +1113,7 @@ $f-sizes:
             display: flex;
             flex-wrap: wrap;
             margin-top: 1.5rem;
+            border-bottom: none;
 
             @include mobile {
                 margin-top: 2rem;
@@ -1125,13 +1126,6 @@ $f-sizes:
 
                 @include mobile {
                     display: block;
-                    margin-bottom: 2.5rem;
-                }
-
-                &:last-of-type {
-                    @include mobile {
-                        margin-bottom:0;
-                    }
                 }
 
                 .th {
@@ -1192,7 +1186,7 @@ $f-sizes:
                     }
 
                     @include mobile {
-                        margin-bottom: 2.5rem;
+                        margin-bottom: 3rem;
                     }
 
                     &:last-of-type {
@@ -1322,13 +1316,13 @@ $f-sizes:
             border-bottom: 1px solid $color-e6e6e6;
 
             .th {
-                align-self: baseline;
                 width: 9rem;
                 font-weight: $fw-r;
                 padding: 1.5rem 0;
                 word-break: keep-all;
 
                 @include mobile {
+                    align-self: flex-start;
                     width: 8.75rem;
                 }
 
@@ -1553,6 +1547,7 @@ $f-sizes:
 
                 .item {
                     display: flex;
+                    flex-wrap: wrap;
 
                     @include mobile {
                         display: block;
@@ -1560,8 +1555,8 @@ $f-sizes:
 
                     .area {
                         overflow: hidden;
-                        width: 25rem;
-                        height: 14rem;
+                        width: 24rem;
+                        height: 13.5rem;
 
                         @include mobile {
                             width:100%;
@@ -1574,11 +1569,13 @@ $f-sizes:
                     }
 
                     .info {
-                        margin-left: 1.5rem;
+                        margin-left: 2rem;
+                        width: calc(100% - 27rem);
 
                         @include mobile {
                             margin-top: 1.5rem;
                             margin-left: 0;
+                            width: 100%;
                         }
 
                         .dep-cate {
