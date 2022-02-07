@@ -4324,7 +4324,6 @@ body {
     border-bottom: 1px solid #e6e6e6;
 }
 .table-wrap > [class*=-detail] .tr .th {
-    align-self: baseline;
     width: 9rem;
     font-weight: 400;
     padding: 1.5rem 0;
@@ -4332,6 +4331,7 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr .th {
+        align-self: flex-start;
         width: 8.75rem;
     }
 }
