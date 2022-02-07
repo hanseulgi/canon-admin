@@ -4412,8 +4412,8 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail].type2 {
-        padding-top: 1.4rem;
-        margin-bottom: 5rem;
+        padding-top: 1.25rem;
+        margin-bottom: 4.25rem;
     }
 }
 @media (max-width: 1024px) {
@@ -4431,6 +4431,7 @@ body {
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail].type2 .tr {
         flex-wrap: wrap;
+        border-bottom: none;
     }
 }
 @media (max-width: 1024px) {
@@ -4441,12 +4442,12 @@ body {
 .table-wrap > [class*=-detail].type2 .tr .th {
     flex: 0 0 16rem;
     font-weight: 500;
-    padding: 2rem 0;
+    padding: 2rem 2rem 2rem 0;
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail].type2 .tr .th {
-        flex: 0 0 34%;
-        padding: 0.75rem 0;
+        flex: 0 0 11rem;
+        padding: 0.75rem 1.5rem 0.75rem 0;
     }
 }
 .table-wrap > [class*=-detail].type2 .tr .th ~ .th {
@@ -4470,7 +4471,9 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail].type2 .tr .td {
-        flex: 0 0 66%;
+        flex: none;
+        width: calc(100% - 11rem);
+        padding: 0.75rem 0;
     }
 }
 .table-wrap > [class*=-detail].type2 .tr .td [class^=btn] {
