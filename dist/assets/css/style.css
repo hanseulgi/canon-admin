@@ -5382,9 +5382,7 @@ body {
 }
 .modal .modal-wrap .dl-cont.first {
     border-top: 1px solid #e6e6e6;
-}
-.modal .modal-wrap .dl-cont.first dt {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 @media (max-width: 1024px) {
     .modal .modal-wrap .dl-cont .radio.txt + .txt {
@@ -5608,7 +5606,6 @@ body {
 }
 .modal .modal-wrap.modal__table-wrap[type=layer] th {
     background: #f6f6f6;
-    color: #666;
     font-weight: 500;
 }
 .modal .modal-wrap.modal__table-wrap[type=layer] th:nth-of-type(2) {

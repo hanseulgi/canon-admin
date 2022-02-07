@@ -2387,9 +2387,7 @@ $f-sizes:
 
             &.first {
                 border-top:1px solid $color-e6e6e6;
-                dt {
-                    padding-top: 2rem;
-                }
+                padding-top: 1rem;
             }
 
             .radio.txt + .txt {
@@ -2608,7 +2606,6 @@ $f-sizes:
             }
             th {
                 background: $bg-f6f6f6;
-                color:$color-666;
                 font-weight: $fw-m;
 
                 &:nth-of-type(2) {
