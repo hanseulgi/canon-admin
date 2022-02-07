@@ -4546,6 +4546,7 @@ body {
 }
 .table-wrap .video-list-wrap ul li .item {
     display: flex;
+    flex-wrap: wrap;
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item {
@@ -4554,8 +4555,8 @@ body {
 }
 .table-wrap .video-list-wrap ul li .item .area {
     overflow: hidden;
-    width: 25rem;
-    height: 14rem;
+    width: 24rem;
+    height: 13.5rem;
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item .area {
@@ -4567,7 +4568,8 @@ body {
     width: 100%;
 }
 .table-wrap .video-list-wrap ul li .item .info {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
+    width: calc(100% - 27rem);
 }
 @media (max-width: 1024px) {
     .table-wrap .video-list-wrap ul li .item .info {
