@@ -406,7 +406,7 @@ $f-sizes:
 [class^='btn-'] {
     display: inline-block;
     padding: 0 10px;
-    font-weight: $fw-m;
+    font-weight: $fw-r;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -1677,6 +1677,7 @@ $f-sizes:
 
             .name {
                 @include fs($fs14);
+                display: block;
 
                 &:before {
                     content: none;
