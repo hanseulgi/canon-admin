@@ -640,9 +640,19 @@ main {
 .log {
     width: 100%;
 
+    .log-wrap {
+        @include mobile {
+        padding:0 5.5%;
+        }
+    }
+
     .inner {
         margin: 0 auto;
         padding: 13rem 0 5rem;
+
+        @include mobile {
+            padding:5rem 0 0;
+        }
 
         .logo {
             text-align: center;
@@ -653,6 +663,11 @@ main {
                 @include wh(23rem, 8.7rem);
                 background: url($path-img-common + 'logo.svg') no-repeat 0 0;
                 background-size: 100%;
+
+                @include mobile {
+                    @include wh(16.5rem, 6.25rem);
+                background: url($path-img-common + 'logo.svg') no-repeat 0 0;
+                }
             }
         }
 
@@ -661,12 +676,22 @@ main {
             margin: 6rem auto 0;
             padding: 3rem;
 
+            @include mobile {
+                width:100%;
+                margin-top:3rem;
+                padding:2rem;
+            }
+
             .b-item {
                 @include fs($fs14);
                 color: $color-666;
 
                 &+.b-item {
                     margin-top: 1rem;
+
+                    @include mobile {
+                        margin-top: 1.5rem;
+                    }
                 }
             }
         }
@@ -675,12 +700,20 @@ main {
             @include fs($fs18);
             font-weight: $fw-m;
             color: initial;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
         }
 
         .flex {
             width: 108rem;
             margin: 0 auto;
             align-items: start;
+
+            @include mobile {
+                width:100%;
+            }
 
             &.pwc {
                 margin-bottom: 5rem;
@@ -692,14 +725,52 @@ main {
                 margin: 12rem 0 0;
                 padding: 5rem;
 
+                @include mobile {
+                    margin: 3rem 0 0;
+                    padding: 3rem 2.5rem;
+                    @include wh(100%,auto);
+                }
+
                 &.id {
 
                     a {
                         margin-top: 9.5rem;
+
+                        @include mobile {
+                            margin-top: 2rem;
+                        }
                     }
                 }
+
+                &.pw {
+                    @include mobile {
+                        margin-top: 2rem;
+                    }
+                }
+
                 a {
                     margin-top: 2.5rem;
+                    @include border-radius(1.2rem);
+
+                    @include mobile {
+                        height: 4.8rem;
+                        line-height: 4.8rem;
+                        font-size: $fs14;
+                        margin-top: 2rem;
+                        @include border-radius(.6rem);
+                    }
+                }
+            }
+
+            &.id-pw-flex {
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+
+            &.pwc .box-gray a {
+                @include mobile {
+                    margin-top: 0;
                 }
             }
         }
@@ -707,26 +778,97 @@ main {
         .login-wrap {
             margin: 5rem auto 0;
             width: 40rem;
+
+            @include mobile {
+                width:100%;
+            }
         }
 
         .input-wrap {
-            margin-top: 1.5rem;
+            margin-top: 3rem;
+
+            @include mobile {
+                margin-top: 2rem;
+            }
 
             input+input {
                 margin-top: 1rem;
             }
         }
 
+        .row-btns {
+            @include mobile{
+                flex-direction: column-reverse;
+            }
+
+            .col:first-child {
+                @include mobile {
+                    margin-top: 0.8rem;
+                }
+            }
+
+           .col + .col {
+               @include mobile {
+                   margin-left: 0;
+                   margin-top: 2rem;
+               }
+           }
+        }
+
         .agree {
+            padding-left: 3rem;
             width: 80rem;
             margin: 2rem auto 0;
-            @include fs($fs14);
+
+            @include mobile {
+                display: flex;
+                padding-left: 0;
+                width:100%;
+                margin:1.5rem auto 0;
+            }
+
+            .checkbox input[type="checkbox"] {
+                @include mobile {
+                    @include wh(2rem,2rem);
+                }
+            }
+
+            .checkbox i {
+                @include mobile {
+                    @include wh(2rem, 2rem);
+                }
+            }
+
+            span {
+                display: inline-block;
+                @include fs($fs14);
+                vertical-align: -.4rem;
+
+            }
+        }
+
+        input[type="text"], input[type="password"] , input[type="email"] {
+            @include mobile {
+                height:4.8rem;
+                line-height: 4.6rem;
+                padding:1.4rem 1.5rem;
+                font-size:$fs15;
+                @include border-radius(.6rem);
+            }
+        }
+
+        input[type="text"]::placeholder, input[type="password"]::placeholder , input[type="email"]::placeholder {
+            color:$color-ccc;
         }
 
         .log-search {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             text-align: center;
             @include fs($fs14);
+
+            @include mobile {
+                margin-top: 1.5rem;
+            }
 
             a {
                 position: relative;
@@ -746,20 +888,34 @@ main {
 
         .btn-red-lg {
             width: 100%;
-            margin-top: 3.5rem;
+            margin-top: 3rem;
             font-weight: $fw-m;
-            border-radius: 12px;
-        }
+            @include border-radius(1.2rem);
 
-        .btn-gray-lg {
-            border-radius: 12px;
+            @include mobile {
+                margin-top: 2rem;
+                height:4.8rem;
+                line-height: 4.8rem;
+                font-size: $fs14;
+                @include border-radius(0.6rem);
+            }
         }
 
         .comment {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 8rem;
             @include fs($fs14);
             color: $color-666;
+
+            @include mobile{
+                margin: 5rem auto 0;
+                width:75%;
+                word-break: keep-all;
+            }
+
+            em {
+                font-weight: $fw-m;
+            }
         }
     }
 }
@@ -1018,25 +1174,12 @@ main {
 
     .tab-wrap {
         margin-top: 8rem;
-
-        @include mobile {
-            margin-top: 3rem;
-        }
     }
 
     .filter-wrap {
 
-        @include mobile {
-            padding: 0;
-        }
-
         .inner {
             margin-top: 6.8rem;
-
-            @include mobile {
-                display: block;
-                margin: 4rem 0 0;
-            }
         }
 
         ul {
@@ -1044,10 +1187,6 @@ main {
             li {
                 @include fs($fs16);
                 color: inherit;
-
-                &:first-child {
-                    font-weight: $fw-m;
-                }
 
                 &+li {
                     border: 0;
@@ -1062,21 +1201,12 @@ main {
             }
         }
 
-        div.flex {
-            @include mobile {
-                margin-top: 10px;
+        .select-wrap {
+
+            &+.select-wrap {
+                margin-left: 1rem;
             }
 
-            .select-wrap {
-
-                &+.select-wrap {
-                    margin-left: 1rem;
-                }
-
-                &.mo {
-                    margin-left: 0;
-                }
-            }
         }
     }
 }
@@ -1178,33 +1308,15 @@ main {
 .result-integrate-search {
     margin-top: 1rem;
 
-    @include mobile {
-        margin-top: 3rem;
-    }
-
     .result-lists {
         margin-top: 6rem;
-
-        @include mobile {
-            margin-top: 0;
-        }
 
         >.title {
             border-bottom: 1px solid $color-e6e6e6;
             padding-bottom: 1rem;
 
-            @include mobile {
-                border-bottom: 1px solid $color-111;
-                padding-bottom: 0.5rem;
-            }
-
             span {
                 @include fs($fs16);
-
-                @include mobile {
-                    @include fs($fs15);
-                    font-weight: $fw-m;
-                }
 
                 &+span {
 
@@ -1222,17 +1334,8 @@ main {
         dl.list {
             padding: 3rem 0;
 
-            @include mobile {
-                padding: 1.5rem 0 1.75rem;
-            }
-
             dt {
                 @include fs($fs16);
-
-                @include mobile {
-                    @include fs($fs14);
-                    font-weight: $fw-m
-                }
             }
 
             dd {
@@ -1242,14 +1345,6 @@ main {
                     @include fs($fs14);
                     margin-top: 1rem;
                     max-width: 80%;
-
-                    @include mobile {
-                        margin-top: .5rem;
-                        white-space: normal;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                    }
                 }
 
                 .file-link {
@@ -1257,29 +1352,15 @@ main {
                     @include fs($fs14);
                     margin-top: 1rem;
                     vertical-align: middle;
-
-                    @include mobile {
-                        @include fs($fs13);
-                        color: $color-666;
-                    }
                 }
 
                 .desc {
                     margin-top: 2rem;
 
-                    @include mobile {
-                        margin-top: 1.5rem;
-                        display: block;
-                    }
-
                     .sub-title {
                         span {
                             @include fs($fs14);
                             color: $color-666;
-
-                            @include mobile {
-                                @include fs($fs13);
-                            }
 
                             &+span {
                                 &:before {
@@ -1288,10 +1369,6 @@ main {
                                     @include wh(1.2rem, 1.2rem);
                                     margin: 0 5px 0 3px;
                                     background: url($path-img-ico + 'ico_next_1.svg') no-repeat 0 0 / 12px 12px;
-
-                                    @include mobile {
-                                        margin: 0;
-                                    }
                                 }
                             }
                         }
@@ -1300,12 +1377,6 @@ main {
                     .date {
                         @include fs($fs14);
                         color: $color-666;
-
-                        @include mobile {
-                            @include fs($fs13);
-                            display: block;
-                            margin-top: .5rem;
-                        }
                     }
                 }
             }
@@ -1322,16 +1393,6 @@ main {
             border-color: $color-e6e6e6;
             color: $color-666;
             font-weight: $fw-r;
-
-            @include mobile {
-                @include wh(100%, 4rem);
-                line-height: 4rem;
-                margin-top: 1.25rem;
-            }
-        }
-
-        &+.result-lists {
-            margin-top: 5rem;
         }
     }
 }
