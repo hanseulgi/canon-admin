@@ -5667,7 +5667,6 @@ body {
 @media (max-width: 1024px) {
     .tab-wrap .tab-title {
         width: 100%;
-        overflow: scroll;
     }
 }
 .tab-wrap .tab-title .depth1 .inner {
@@ -5679,7 +5678,11 @@ body {
     .tab-wrap .tab-title .depth1 .inner {
         padding: 0 6px 10px;
         border-bottom: 1px solid #eee;
-        overflow-x: scroll;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .tab-wrap .tab-title .depth1 .inner::-webkit-scrollbar {
+        display: none;
     }
 }
 .tab-wrap .tab-title .depth1 .inner a {
@@ -5757,14 +5760,18 @@ body {
 @media (max-width: 1024px) {
     .tab-wrap .tab-title .depth2 {
         margin-top: 1.5rem;
-        padding: 0 20px;
     }
 }
 .tab-wrap .tab-title .depth2 .inner {
     display: flex;
-    overflow-x: scroll;
     justify-content: space-between;
     align-items: center;
+    overflow-x: auto;
+    padding-left: 2rem;
+    scrollbar-width: none;
+}
+.tab-wrap .tab-title .depth2 .inner::-webkit-scrollbar {
+    display: none;
 }
 .tab-wrap .tab-title .depth2 .inner a {
     font-size: 1.4rem;
@@ -5778,6 +5785,7 @@ body {
         padding: 1rem 1.5rem;
         border: 1px solid #eee;
         border-radius: 2rem;
+        margin-right: 1rem;
     }
 }
 .tab-wrap .tab-title .depth2 .inner a.on {
@@ -5791,7 +5799,7 @@ body {
 }
 @media (max-width: 1024px) {
     .tab-wrap .tab-contents {
-        padding: 0 20px;
+        padding: 40px 20px 0;
     }
 }
 

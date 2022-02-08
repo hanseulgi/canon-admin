@@ -2675,7 +2675,6 @@ $f-sizes:
     .tab-title {
         @include mobile {
             width: 100%;
-            overflow: scroll;
         }
 
         .depth1 {
@@ -2686,9 +2685,13 @@ $f-sizes:
                 @include mobile {
                     padding: 0 6px 10px;
                     border-bottom: 1px solid #eee;
-                    overflow-x: scroll;
-                }
+                    overflow-x: auto;
+                    scrollbar-width: none;
 
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
 
                 a {
                     flex: 1 0 128px;
@@ -2762,14 +2765,17 @@ $f-sizes:
 
             @include mobile {
                 margin-top: 1.5rem;
-                padding: 0 20px;
             }
 
             .inner {
-                display: flex;
-                overflow-x: scroll;
-                justify-content: space-between;
-                align-items: center;
+                @include flex-flow;
+                overflow-x: auto;
+                padding-left: 2rem;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
                 a {
                     @include fs($fs14);
@@ -2780,6 +2786,7 @@ $f-sizes:
                         padding: 1rem 1.5rem;
                         border: 1px solid #eee;
                         border-radius: 2rem;
+                        margin-right: 1rem;
                     }
 
                     &.on {
@@ -2799,7 +2806,7 @@ $f-sizes:
 
     .tab-contents {
         @include mobile {
-            padding: 0 20px;
+            padding: 40px 20px 0;
         }
     }
 }
