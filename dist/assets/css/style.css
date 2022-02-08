@@ -3789,6 +3789,25 @@ body {
     text-align: center;
     border-top: 2px solid #000;
 }
+.table-wrap [class$=-list][type=nodata] {
+    display: flex;
+    flex-direction: column;
+}
+.table-wrap [class$=-list][type=nodata] .tr {
+    display: inline-table;
+}
+.table-wrap [class$=-list][type=nodata] .nodata {
+    padding: 16rem 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    color: #666;
+}
+@media (max-width: 1024px) {
+    .table-wrap [class$=-list][type=nodata] .nodata {
+        padding: 6rem 0;
+    }
+}
 @media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr:first-child {
         display: none;

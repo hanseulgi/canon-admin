@@ -520,6 +520,7 @@ $f-sizes:
     &.on {
         background-image: url($path-img-ico + 'ico_arrow_select_black.svg');
         background-size: 12px;
+
         @include mobile {
             background-position: right 15px top 50%;
             background-size: 15px !important;
@@ -753,6 +754,25 @@ $f-sizes:
         width: 100%;
         text-align: center;
         border-top: 2px solid $color-000;
+
+        &[type="nodata"] {
+            display: flex;
+            flex-direction: column;
+
+            .tr {
+                display: inline-table;
+            }
+
+            .nodata {
+                padding: 16rem 0;
+                @include fs($fs16);
+                color: $color-666;
+
+                @include mobile {
+                    padding: 6rem 0;
+                }
+            }
+        }
 
         .tr:first-child {
 
