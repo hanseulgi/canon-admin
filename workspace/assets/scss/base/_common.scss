@@ -514,18 +514,24 @@ $f-sizes:
     background-color: $bg-fff;
     border: 1px solid #e6e6e6;
     border-radius: 6px;
-    background: #fff url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / 12px;
+    background: #fff url($path-img-ico + 'ico_arrow_select_def.svg') no-repeat right 10px top 50% / 12px;
     appearance: none;
 
     &.on {
         background-image: url($path-img-ico + 'ico_arrow_select_black.svg');
+        background-size: 12px;
+        @include mobile {
+            background-position: right 15px top 50%;
+            background-size: 15px !important;
+        }
+
     }
 
     @include mobile {
         @include wh (100%, 4rem);
         padding: 9px 15px;
         background-position: right 15px top 50%;
-        background-size: 15px;
+        background-size: 15px !important;
     }
 }
 

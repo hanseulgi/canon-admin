@@ -94,13 +94,18 @@ select {
     background-color: $bg-fff;
     border: 1px solid #e6e6e6;
     border-radius: 6px;
-    background:#fff url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / auto;
+    background:#fff url($path-img-ico + 'ico_arrow_select_def.svg') no-repeat right 10px top 50% / 12px;
     appearance:none;
 
     &[readonly],&[disabled] {
+        @include wh (100%, 4.5rem);
         color: $color-111;
-        background-color: $bg-f6f6f6;
+        background:$bg-f6f6f6 url($path-img-ico + 'ico_arrow_select.svg') no-repeat right 10px top 50% / 12px;
         border: 1px solid #e6e6e6;
+
+        @include mobile {
+            background-position: right 15px top 50%;
+        }
     }
 }
 
