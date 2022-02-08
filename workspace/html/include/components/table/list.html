@@ -1,21 +1,20 @@
+<!--
+    2022-01-26 반응형 테이블 설명
+
+    - 모바일 타입으로 전환 시 .th에 있는 hidden 클래스가 먹혀서 타이틀이 생략됨
+    - .td에서 안보여야 하는 부분은 hidden 클래스로 처리
+        공통 : 번호 / 조회수 제외하고 모바일에서 보여짐
+        예외 case : 게시판 카테고리에서는 홍길동 | 2021.05.13 | 활성  <- 이렇게 3개로 한개가 더 추가됨
+
+    클래스 설명
+    .show-top1 : 제품 카테고리가 들어감
+    .show-top2 : 제목이 들어감
+    .show-bottom1, .show-bottom2, .show-bottom3 (.show-bottom3은 예외 case) : 가장 하단에 들어감
+    .show-right al-l : 파일이나 버전 등 우측에 위치하는 것들 ( 없는 type일 시 해당 태그 영역 삭제 )
+-->
+
 <!-- table : list page -->
 <div class="table-wrap">
-
-    <!--
-        2022-01-26 반응형 테이블 설명
-
-        - 모바일 타입으로 전환 시 .th에 있는 hidden 클래스가 먹혀서 타이틀이 생략됨
-        - .td에서 안보여야 하는 부분은 hidden 클래스로 처리
-            공통 : 번호 / 조회수 제외하고 모바일에서 보여짐
-            예외 case : 게시판 카테고리에서는 홍길동 | 2021.05.13 | 활성  <- 이렇게 3개로 한개가 더 추가됨
-
-        클래스 설명
-        .show-top1 : 제품 카테고리가 들어감
-        .show-top2 : 제목이 들어감
-        .show-bottom1, .show-bottom2, .show-bottom3 (.show-bottom3은 예외 case) : 가장 하단에 들어감
-        .show-right al-l : 파일이나 버전 등 우측에 위치하는 것들 ( 없는 type일 시 해당 태그 영역 삭제 )
-    -->
-
     <div class="table-list">
         <div class="tr">
             <div class="th hidden">
@@ -59,7 +58,7 @@
             </div>
             <div class="td show-right"> <!-- 우측 없는 타입일 시 해당 영역 삭제 -->
                 <p>
-                 <span>보류</span> 
+                <span>보류</span>
                 <!-- 클릭 필요한 영역일 경우 해당 태그 감싸기 필요 -->
                 </p>
             </div>
@@ -184,8 +183,41 @@
     </div>
 </div>
 <!-- //table : list page -->
-
-
 <div class="right-btn">
     <button type="button" class="btn-red-sm line">신규등록</button>
 </div>
+
+<br><br><br><br>
+
+<!-- table : list page ( nodata ) -->
+<div class="table-wrap">
+    <div class="table-list" type="nodata">
+        <div class="tr">
+            <div class="th hidden">
+                <p>번호</p>
+            </div>
+            <div class="th category hidden">
+                <p>제품 카테고리</p>
+            </div>
+            <div class="th title hidden">
+                <p>제목</p>
+            </div>
+            <div class="th hidden">
+                <p>자료형태</p>
+            </div>
+            <div class="th hidden">
+                <p>등록자</p>
+            </div>
+            <div class="th hidden">
+                <p>등록일</p>
+            </div>
+            <div class="th hidden">
+                <p>조회수</p>
+            </div>
+        </div>
+        <div class="nodata">
+            검색 결과가 없습니다.
+        </div>
+    </div>
+</div>
+

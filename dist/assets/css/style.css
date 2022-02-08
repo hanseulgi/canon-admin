@@ -3789,6 +3789,25 @@ body {
     text-align: center;
     border-top: 2px solid #000;
 }
+.table-wrap [class$=-list][type=nodata] {
+    display: flex;
+    flex-direction: column;
+}
+.table-wrap [class$=-list][type=nodata] .tr {
+    display: inline-table;
+}
+.table-wrap [class$=-list][type=nodata] .nodata {
+    padding: 16rem 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    color: #666;
+}
+@media (max-width: 1024px) {
+    .table-wrap [class$=-list][type=nodata] .nodata {
+        padding: 6rem 0;
+    }
+}
 @media (max-width: 1024px) {
     .table-wrap [class$=-list] .tr:first-child {
         display: none;
@@ -9335,8 +9354,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .result-wrap .filter-wrap div.flex .select-wrap + .select-wrap {
     margin-left: 1rem;
 }
-.result-wrap .filter-wrap div.flex .select-wrap.mo {
-    margin-left: 0;
+@media (max-width: 1024px) {
+    .result-wrap .filter-wrap div.flex .select-wrap + .select-wrap {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -9446,6 +9467,51 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 }
 .result-integrate-search .result-lists {
     margin-top: 6rem;
+}
+.result-integrate-search .result-lists[type=nodata] {
+    padding: 2rem 0 12rem;
+}
+@media (max-width: 1024px) {
+    .result-integrate-search .result-lists[type=nodata] {
+        width: 100%;
+        padding: 3rem 0 0;
+    }
+}
+.result-integrate-search .result-lists[type=nodata] p {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+}
+.result-integrate-search .result-lists[type=nodata] p span {
+    color: #dc000c;
+}
+.result-integrate-search .result-lists[type=nodata] .box-gray {
+    margin: 3rem auto 0;
+    width: 47rem;
+    padding: 3rem;
+}
+@media (max-width: 1024px) {
+    .result-integrate-search .result-lists[type=nodata] .box-gray {
+        width: 100%;
+        padding: 2.5rem 2rem;
+    }
+}
+.result-integrate-search .result-lists[type=nodata] .desc-list .desc-item {
+    position: relative;
+    margin-left: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    color: #666;
+}
+.result-integrate-search .result-lists[type=nodata] .desc-list .desc-item:before {
+    content: "-";
+    position: absolute;
+    left: -0.8rem;
+}
+.result-integrate-search .result-lists[type=nodata] .desc-list .desc-item + .desc-item {
+    margin-top: 1rem;
 }
 @media (max-width: 1024px) {
     .result-integrate-search .result-lists {

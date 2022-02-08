@@ -1269,11 +1269,11 @@ main {
 
             &+.select-wrap {
                 margin-left: 1rem;
-            }
 
-                &.mo {
+                @include mobile {
                     margin-left: 0;
                 }
+            }
             }
         }
     }
@@ -1382,6 +1382,52 @@ main {
 
     .result-lists {
         margin-top: 6rem;
+
+        &[type="nodata"] {
+            padding: 2rem 0 12rem;
+
+            @include mobile {
+                width: 100%;
+                padding: 3rem 0 0;
+            }
+
+            p {
+                text-align: center;
+                @include fs($fs16);
+
+                span {
+                    color: $color-red;
+                }
+            }
+            .box-gray {
+                margin: 3rem auto 0;
+                width: 47rem;
+                padding: 3rem;
+
+                @include mobile {
+                    width: 100%;
+                    padding: 2.5rem 2rem;
+                }
+            }
+            .desc-list {
+
+                .desc-item {
+                    position: relative;
+                    margin-left: .8rem;
+                    @include fs($fs14);
+                    color: $color-666;
+
+                    &:before {
+                        content:"-";
+                        position: absolute;
+                        left: -.8rem;
+                    }
+                    & + .desc-item {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
 
         @include mobile {
             margin-top: 0;
