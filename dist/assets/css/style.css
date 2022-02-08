@@ -9028,6 +9028,37 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .log .inner .comment em {
     font-weight: 500;
 }
+.log .table-wrap [class*=-edit].type2 .tr p, .log .table-wrap [class*=-edit].type2 .td {
+    font-size: 1.4rem;
+}
+@media (max-width: 1024px) {
+    .log .table-wrap [class*=-edit].type2 .td, .log .table-wrap [class*=-edit].type2 .th {
+        padding: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .log .table-wrap [class*=-edit].type2 .th {
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+}
+.log .table-wrap input[type=text].disabled,
+.log .table-wrap input[type=tel], .log .table-wrap input[type=text], .log .table-wrap input[type=password], .log .table-wrap input[type=email] {
+    padding: 0 1rem;
+}
+@media (max-width: 1024px) {
+    .log .table-wrap input[type=text].disabled,
+.log .table-wrap input[type=tel], .log .table-wrap input[type=text], .log .table-wrap input[type=password], .log .table-wrap input[type=email] {
+        padding: 0 1.5rem;
+    }
+}
+.log .table-wrap input[type=text].disabled {
+    color: #666;
+}
+.log .table-wrap .dec-ico {
+    display: inline-block;
+    margin: 0 0.4rem;
+}
 
 @media (max-width: 1024px) {
     .table-wrap + .row-btns {

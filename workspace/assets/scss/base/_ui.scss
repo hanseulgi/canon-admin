@@ -918,6 +918,48 @@ main {
             }
         }
     }
+
+
+    //개인정보 변경
+    .table-wrap {
+
+        [class*=-edit].type2 {
+
+            .tr p, .td {
+                font-size: $fs14;
+            }
+
+            .td, .th {
+                @include mobile {
+                    padding:0;
+                }
+            }
+            .th {
+                @include mobile {
+                    margin-bottom: 1rem;
+                    font-weight: $fw-r;
+                }
+            }
+        }
+
+        input[type="text"].disabled ,
+        input[type="tel"], input[type="text"], input[type="password"], input[type="email"] {
+            padding:0 1rem;
+            
+            @include mobile {
+                padding:0 1.5rem;
+            }
+        }
+
+        input[type="text"].disabled {
+            color: $color-666;
+        }
+
+        .dec-ico {
+            display: inline-block;
+            margin:0 .4rem;
+        }
+    }
 }
 
 //rowBtns
