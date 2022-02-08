@@ -9028,6 +9028,9 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .log .inner .comment em {
     font-weight: 500;
 }
+.log .table-wrap .top-wrap {
+    justify-content: flex-end;
+}
 .log .table-wrap [class*=-edit].type2 .tr p, .log .table-wrap [class*=-edit].type2 .td {
     font-size: 1.4rem;
 }

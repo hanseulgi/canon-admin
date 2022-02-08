@@ -923,6 +923,10 @@ main {
     //개인정보 변경
     .table-wrap {
 
+        .top-wrap {
+            justify-content: flex-end;
+        }
+
         [class*=-edit].type2 {
 
             .tr p, .td {
