@@ -9323,8 +9323,10 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .result-wrap .filter-wrap div.flex .select-wrap + .select-wrap {
     margin-left: 1rem;
 }
-.result-wrap .filter-wrap div.flex .select-wrap.mo {
-    margin-left: 0;
+@media (max-width: 1024px) {
+    .result-wrap .filter-wrap div.flex .select-wrap + .select-wrap {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 1024px) {
