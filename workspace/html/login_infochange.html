@@ -1,0 +1,109 @@
+@@include('./include/head.html', {"title": "sub", cssArr: ['style']})
+
+<body>
+    <div class="wrap">
+
+        @@include('./include/header.html')
+
+        @@include('./include/components/location.html')
+        <section id="container">
+            <section class="contents log">
+
+                <div class="table-wrap edit2">
+                    <div class="top-wrap">
+                        <p class="txt"><span>*</span> 는 필수 입력정보입니다.</p>
+                        <hr class="hr">
+                    </div>
+                    <div class="table-edit type2">
+                        <div class="tr">
+                            <div class="th">
+                                <p class="tit">아이디</p>
+                            </div>
+                            <div class="td">
+                                <input type="text" class="disabled" value="2022-01-02">
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">
+                                <p class="tit required">비밀번호</p>
+                            </div>
+                            <div class="td">
+                                <input type="password">
+                            </div>
+                            <div class="th">
+                                <p class="tit required">비밀번호 확인</p>
+                            </div>
+                            <div class="td">
+                                <input type="password">
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">
+                                <p class="tit required">부서</p>
+                            </div>
+                            <div class="td">
+                                <select class="select">
+                                    <option>서비스 지원팀</option>
+                                    <option>서비스 지원팀</option>
+                                </select>
+                            </div>
+                            <div class="th">
+                                <p class="tit required">회원명</p>
+                            </div>
+                            <div class="td">
+                                <input type="text" value="홍길동">
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="th">
+                                <p class="tit required">대리점명</p>
+                            </div>
+                            <div class="td">
+                                <input type="text" value="(유)디에스테크">
+                                <select class="select ml10">
+                                    <option>전체</option>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <div class="th">
+                                <p class="tit required">대리점 코드</p>
+                            </div>
+                            <div class="td">
+                                <input type="text" value="12345KD">
+                            </div>
+                        </div>
+
+                        <div class="tr">
+                            <div class="th">
+                                <p class="tit required">E-mail</p>
+                            </div>
+                            <div class="td">
+                                <input type="email" class="mr5" value="dcahn"> @ <input type="email" class="ml5" value="canon-bs.co.kr">
+                            </div>
+                            <div class="th">
+                                <p class="tit">회원 연락처</p>
+                            </div>
+                            <div class="td">
+                                <input type="tel"> <span class="dec-ico">-</span>  
+                                <input type="tel"> <span class="dec-ico">-</span>  
+                                <input type="tel"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row-btns">
+                    <span class="col"><button type="button" class="btn-gray-sm">취소</button></span>
+                    <span class="col"><button type="button" class="btn-red-sm">변경</button></span>
+                    <span class="col"><button type="button" class="btn-red-sm line">비밀번호 변경</button></span>
+                </div>
+                
+
+            </section>
+        </section>
+        @@include('./include/footer.html')
+        @@include('./include/script.html')
+
+    </div>
+</body>
+</html>
