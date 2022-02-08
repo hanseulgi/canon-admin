@@ -2798,9 +2798,7 @@ $f-sizes:
                         }
                     }
                 }
-
             }
-
         }
     }
 
@@ -2822,7 +2820,7 @@ $f-sizes:
         width: 100%;
         top: 0;
         background-color: $bg-f6f6f6;
-        z-index: 3;
+        z-index: 0;
     }
 
     .inner {
@@ -2854,7 +2852,7 @@ $f-sizes:
             bottom:0;
             @include wh (5rem, 4.5rem);
             background: url($path-img-common + 'ico_search_1.svg') center top .4rem/3rem 3rem  no-repeat;
-            
+
             @include mobile {
                 top: 50%;
                 transform: translateY(-50%);

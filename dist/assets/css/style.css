@@ -5814,7 +5814,7 @@ body {
         width: 100%;
         top: 0;
         background-color: #f6f6f6;
-        z-index: 3;
+        z-index: 0;
     }
 }
 .integrate-search-wrap .inner {
