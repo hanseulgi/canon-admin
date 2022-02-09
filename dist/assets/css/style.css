@@ -10129,7 +10129,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 #header > .inner .header-util .search2:hover > .quicksearch-wrap {
     display: block;
 }
-#header > .inner .header-util .search1:hover .quicksearch-wrap {
+#header > .inner .header-util .search1:hover + .search2 .quicksearch-wrap {
     display: none;
 }
 #header > .inner .header-user {

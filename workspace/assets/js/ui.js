@@ -217,47 +217,48 @@ UI.Nav = function () {
     const $bgType3 =  $('.search2');
     const $close = $('.btn-close');
 
-    $bg.on('mouseover', function () {
-        $('#header').addClass('on');
-        $('#header').removeClass('type2');
-    });
-    $bg.on('mouseout', function () {
-        $('#header').removeClass('on');
-    });
-    $bgType2.on('mouseover', function () {
-        $('#header').addClass('type2');
-        $('#header').removeClass('on');
-        $bgType2.addClass('on');
-    });
-    $bgType2.on('mouseout', function () {
-        $('#header').removeClass('type2');
-        $bgType3.addClass('on');
-        $bgType2.removeClass('on');
-    });
-    $bgType3.on('mouseover', function () {
-        $('#header').addClass('type2');
-        $('#header').removeClass('on');
-        $bgType3.addClass('on');
-    });
-    $bgType3.on('mouseout', function () {
-        $('#header').removeClass('type2');
-        $bgType3.removeClass('on');
-        $bgType2.addClass('on');
-    });
+    $bg
+        .on('mouseover', function () {
+
+            $('#header').addClass('on');
+            $('#header').removeClass('type2');
+        })
+        .on('mouseout', function () {
+            $('#header').removeClass('on');
+        });
+
+    $bgType2
+        .on('mouseover', function () {
+            $('#header').addClass('type2');
+            $('#header').removeClass('on');
+            $bgType2.find('> div').css('display','block');
+        })
+        .on('mouseout', function () {
+            $('#header').removeClass('type2');
+            $bgType3.addClass('on');
+            $bgType2.removeClass('on');
+            $bgType2.find('> div').css('display','none');
+        });
+
+    $bgType3
+        .on('mouseover', function () {
+            $('#header').addClass('type2');
+            $('#header').removeClass('on');
+            $bgType3.find('> div').css('display','block');
+        })
+        .on('mouseout', function () {
+            $('#header').removeClass('type2');
+            $bgType2.addClass('on');
+            $bgType3.removeClass('on');
+            $bgType3.find('> div').css('display','none');
+        });
 
     $close.off("click.close").on("click.close", function() {
         $('#header').removeClass('type2');
-        // $(this).closest('div').css('display','none');
-        // $(this).closest('div').sliblings().css('display','block');
-
-        
+        $(this).closest('div').css('display','none');
+        $(this).closest('div').sliblings().css('display','block');
     });
 
-    if ( $('.btn-search-view').hasClass('on') ){
-        $(this).closest('.btn-search-view').find('div').css('opacity','0');
-    } else {
-        $(this).closest('.btn-search-view').find('div').css('opacity','1');
-    }
 };
 
 

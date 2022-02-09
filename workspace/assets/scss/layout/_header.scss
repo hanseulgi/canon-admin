@@ -189,7 +189,7 @@
                 display: block;
             }
 
-            .search1:hover .quicksearch-wrap {
+            .search1:hover + .search2 .quicksearch-wrap {
                 display: none;
             }
         }
