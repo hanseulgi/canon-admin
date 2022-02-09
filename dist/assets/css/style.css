@@ -4017,10 +4017,8 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap .edit-title {
-        margin-top: 0;
-        border-top: none;
+        margin-top: 2rem;
         width: 100%;
-        border-bottom: 2px solid #000;
     }
 }
 .table-wrap .edit-title ul {
@@ -4030,7 +4028,7 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap .edit-title ul {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
 }
 .table-wrap .edit-title ul li {
@@ -4088,7 +4086,7 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-edit] {
-        margin-top: 20px;
+        margin-top: 2.5rem;
         border-bottom: none;
     }
 }
@@ -4281,9 +4279,10 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap .detail-title {
-        margin-top: 0;
-        border-top: none;
-        border-bottom: 2px solid #000;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        border-bottom: none;
     }
 }
 .table-wrap .detail-title .detail-name {
@@ -4292,6 +4291,16 @@ body {
     letter-spacing: -0.2px;
     margin-top: 2.5rem;
 }
+@media (max-width: 1024px) {
+    .table-wrap .detail-title .detail-name {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        letter-spacing: -0.16px;
+        font-weight: 500;
+        margin-top: 4.75rem;
+        white-space: normal;
+    }
+}
 .table-wrap .detail-title ul {
     width: 100%;
     display: flex;
@@ -4299,7 +4308,9 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap .detail-title ul {
-        padding: 2rem 0;
+        position: relative;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e6e6e6;
     }
 }
 .table-wrap .detail-title ul li {
@@ -4314,6 +4325,13 @@ body {
     letter-spacing: -0.14px;
     line-height: 10px;
 }
+@media (max-width: 1024px) {
+    .table-wrap .detail-title ul li p {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        letter-spacing: -0.15px;
+    }
+}
 .table-wrap .detail-title ul li p.tit {
     font-weight: 500;
     color: #666;
@@ -4321,7 +4339,6 @@ body {
 @media (max-width: 1024px) {
     .table-wrap .detail-title ul li p.tit {
         font-weight: 400;
-        color: #111;
     }
 }
 .table-wrap .detail-title ul li p + p::before {
@@ -4330,11 +4347,30 @@ body {
     margin: 0 8px;
 }
 @media (max-width: 1024px) {
-    .table-wrap .detail-title ul li p + p::before {
-        content: ":";
-        color: #111;
-        margin: 0 3px;
+    .table-wrap .detail-title ul li.date {
+        display: none;
     }
+}
+@media (max-width: 1024px) {
+    .table-wrap .detail-title ul li.dep-wrap {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        margin-left: 0;
+    }
+}
+.table-wrap .detail-title ul li.dep-wrap .tit {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .table-wrap .detail-title ul li.dep-wrap p {
+        font-size: 1.2rem;
+        line-height: 1.42;
+        letter-spacing: -0.12px;
+    }
+}
+.table-wrap .detail-title ul li.dep-wrap p + p::before {
+    display: none;
 }
 .table-wrap > [class*=-detail] {
     width: 100%;
@@ -4414,7 +4450,7 @@ body {
 }
 @media (max-width: 1024px) {
     .table-wrap > [class*=-detail] .tr.table-top .td {
-        padding: 2rem 0 2.5rem;
+        padding: 1.5rem 0 2.5rem;
     }
 }
 .table-wrap > [class*=-detail] .tr .access-wrap + .access-wrap {
@@ -9149,6 +9185,21 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     }
 }
 
+@media (max-width: 1024px) {
+    .table-detail.video-wrap .td {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2rem 0 !important;
+        border-bottom: 1px solid #e6e6e6;
+    }
+}
+@media (max-width: 1024px) {
+    .table-detail.video-wrap .td .video-play {
+        margin-top: 0 !important;
+        margin-bottom: 2rem;
+    }
+}
+
 .result {
     position: relative;
     width: 120rem;
@@ -9809,6 +9860,98 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
 .access-wrap.view + .access-wrap .th,
 .access-wrap.view + .access-wrap .td {
     padding-top: 0 !important;
+}
+
+.terms .term-wrap {
+    margin-top: 4rem;
+}
+@media (max-width: 1024px) {
+    .terms .term-wrap {
+        margin-top: 3rem;
+        padding: 0 2rem;
+    }
+}
+.terms .term__big-tit, .terms .term__cmn-tit {
+    font-size: 2.4rem;
+}
+@media (max-width: 1024px) {
+    .terms .term__big-tit, .terms .term__cmn-tit {
+        font-size: 1.6rem;
+    }
+}
+.terms .term__big-tit {
+    color: #000;
+}
+.terms .term__big-tit p {
+    font-size: 1.4rem;
+    color: #666;
+}
+.terms .term__cmn-tit {
+    padding-top: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #eee;
+}
+@media (max-width: 1024px) {
+    .terms .term__cmn-tit {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        padding-top: 2rem;
+    }
+}
+.terms li, .terms p, .terms .term__txt-wrap {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.88;
+}
+@media (max-width: 1024px) {
+    .terms li, .terms p, .terms .term__txt-wrap {
+        font-size: 1.4rem;
+    }
+}
+.terms .term__txt-wrap {
+    margin-left: 2rem;
+}
+@media (max-width: 1024px) {
+    .terms .term__txt-wrap {
+        margin-left: 1rem;
+    }
+}
+.terms .dash-list li {
+    position: relative;
+    margin-left: 1.5rem;
+    padding-left: 0.8rem;
+}
+@media (max-width: 1024px) {
+    .terms .dash-list li {
+        margin-left: 0.8rem;
+    }
+}
+.terms .dash-list li::before {
+    content: "";
+    position: absolute;
+    top: 1.4rem;
+    left: 0;
+    width: 4px;
+    height: 1px;
+    background: #666;
+}
+.terms .circle-num {
+    counter-reset: termNum 0;
+}
+.terms .circle-num > li {
+    padding-left: 1.8rem;
+    position: relative;
+}
+.terms .circle-num > li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counter(termNum) ")";
+    counter-increment: termNum;
+}
+.terms .mb4 {
+    margin-bottom: 0.4rem;
 }
 
 #header {
