@@ -1034,6 +1034,28 @@ main {
     }
 }
 
+//detail
+.table-detail.video-wrap {
+
+    .td {
+
+        @include mobile {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 2rem 0!important;
+            border-bottom: 1px solid $color-e6e6e6;
+        }
+
+        .video-play {
+
+            @include mobile {
+                margin-top: 0!important;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
 //검색 결과
 .result {
     position: relative;
