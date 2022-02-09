@@ -5837,6 +5837,7 @@ body {
 }
 
 .integrate-search-wrap {
+    position: relative;
     margin-top: 5.8rem;
 }
 @media (max-width: 1024px) {
@@ -5897,9 +5898,25 @@ body {
         background-position: center center;
     }
 }
+.integrate-search-wrap .btn-close {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 5.7rem;
+    padding: 0 0;
+    border: 0;
+}
 
 .quicksearch-wrap {
+    position: relative;
     margin-top: 5rem;
+}
+.quicksearch-wrap .btn-close {
+    position: absolute;
+    right: -4.8rem;
+    top: 4.1rem;
+    padding: 0 0;
+    border: 0;
 }
 @media (max-width: 1024px) {
     .quicksearch-wrap {
@@ -5938,8 +5955,10 @@ body {
         width: 100%;
     }
 }
-.quicksearch-wrap .select-wrap .select-box + .select-box {
-    margin-top: 10px;
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap .select-box + .select-box {
+        margin-top: 10px;
+    }
 }
 .quicksearch-wrap .select-wrap select {
     padding: 1rem 0;
@@ -9879,12 +9898,16 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     position: absolute;
     right: 0;
 }
+#header > .inner .header-util .btn-close {
+    display: block;
+}
 @media (max-width: 1024px) {
     #header > .inner .header-util {
         display: none;
     }
 }
 #header > .inner .header-util button {
+    font-weight: 500;
     font-size: 1.6rem;
     padding: 0 0;
     padding-left: 2.8rem;
@@ -9946,7 +9969,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
     display: none;
     position: absolute;
     left: -113rem;
-    top: 0rem;
+    top: 0.5rem;
     margin-top: 0;
     padding-top: 9.5rem;
     padding-bottom: 6.5rem;

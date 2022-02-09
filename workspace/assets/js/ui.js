@@ -215,6 +215,7 @@ UI.Nav = function () {
     const $bg =  $('#nav');
     const $bgType2 =  $('.search1');
     const $bgType3 =  $('.search2');
+    const $close = $('.btn-close');
 
     $bg.on('mouseover', function () {
         $('#header').addClass('on');
@@ -226,6 +227,7 @@ UI.Nav = function () {
     $bgType2.on('mouseover', function () {
         $('#header').addClass('type2');
         $('#header').removeClass('on');
+        $bgType2.addClass('on');
     });
     $bgType2.on('mouseout', function () {
         $('#header').removeClass('type2');
@@ -235,6 +237,7 @@ UI.Nav = function () {
     $bgType3.on('mouseover', function () {
         $('#header').addClass('type2');
         $('#header').removeClass('on');
+        $bgType3.addClass('on');
     });
     $bgType3.on('mouseout', function () {
         $('#header').removeClass('type2');
@@ -242,7 +245,21 @@ UI.Nav = function () {
         $bgType2.addClass('on');
     });
 
+    $close.off("click.close").on("click.close", function() {
+        $('#header').removeClass('type2');
+        // $(this).closest('div').css('display','none');
+        // $(this).closest('div').sliblings().css('display','block');
+
+        
+    });
+
+    if ( $('.btn-search-view').hasClass('on') ){
+        $(this).closest('.btn-search-view').find('div').css('opacity','0');
+    } else {
+        $(this).closest('.btn-search-view').find('div').css('opacity','1');
+    }
 };
+
 
 
 UI.init = function(){

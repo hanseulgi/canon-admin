@@ -32,6 +32,7 @@
     }
 
     &.type2 {
+
         &:before {
             content: "";
             position: absolute;
@@ -88,11 +89,16 @@
             position: absolute;
             right: 0;
 
+            .btn-close {
+                display: block;
+            }
+
             @include mobile {
                 display: none;
             }
 
             button {
+                font-weight: $fw-m;
                 font-size: 1.6rem;
                 padding: 0 0;
                 padding-left: 2.8rem;
@@ -161,7 +167,7 @@
                     display: none;
                     position: absolute;
                     left: -113rem;
-                    top: 0rem;
+                    top: .5rem;
                     margin-top: 0;
                     padding-top: 9.5rem;
                     padding-bottom: 6.5rem;

@@ -2838,6 +2838,8 @@ $f-sizes:
 
 //통합검색
 .integrate-search-wrap {
+    position: relative;
+
     margin-top: 5.8rem;
 
     @include mobile {
@@ -2889,13 +2891,28 @@ $f-sizes:
             }
         }
     }
-
+    .btn-close {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 5.7rem;
+        padding: 0 0;
+        border: 0;
+    }
 }
-
 
 //퀵서치영역
 .quicksearch-wrap {
+    position: relative;
     margin-top: 5rem;
+
+    .btn-close {
+        position: absolute;
+        right: -4.8rem;
+        top: 4.1rem;
+        padding: 0 0;
+        border: 0;
+    }
 
     @include mobile {
         margin-top: 0;
@@ -2928,7 +2945,9 @@ $f-sizes:
             }
 
             &+.select-box {
-                margin-top: 10px;
+                @include mobile {
+                    margin-top: 10px;
+                }
             }
         }
 
