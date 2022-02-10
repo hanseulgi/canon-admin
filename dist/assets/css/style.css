@@ -10083,6 +10083,7 @@ main .bottom-wrap .inner .notice-list .notice-items a span {
         align-items: center;
         width: 100%;
         margin-left: 0;
+        left: inherit;
     }
 }
 @media (max-width: 1024px) {
