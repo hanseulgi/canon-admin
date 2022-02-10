@@ -2953,9 +2953,11 @@ $f-sizes:
             }
 
         }
-        li {
-            padding:0.5rem 2rem;
-            font-size: $fs14;
+        li button {
+            width:100%;
+            padding:0.5rem 2rem!important;
+            font-size: $fs14!important;
+            font-weight: $fw-r!important;
             text-align: left;
             color:$color-666;
 

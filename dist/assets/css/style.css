@@ -5964,26 +5964,28 @@ body {
         padding: 1.3rem 0;
     }
 }
-.integrate-search-wrap .auto-complete-wrap li {
-    padding: 0.5rem 2rem;
-    font-size: 1.4rem;
+.integrate-search-wrap .auto-complete-wrap li button {
+    width: 100%;
+    padding: 0.5rem 2rem !important;
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
     text-align: left;
     color: #666;
 }
 @media (max-width: 1024px) {
-    .integrate-search-wrap .auto-complete-wrap li {
+    .integrate-search-wrap .auto-complete-wrap li button {
         padding: 0.7rem 1.5rem;
     }
 }
-.integrate-search-wrap .auto-complete-wrap li:hover {
+.integrate-search-wrap .auto-complete-wrap li button:hover {
     background: #f9f9f9;
 }
 @media (max-width: 1024px) {
-    .integrate-search-wrap .auto-complete-wrap li:hover {
+    .integrate-search-wrap .auto-complete-wrap li button:hover {
         background: #fff;
     }
 }
-.integrate-search-wrap .auto-complete-wrap li span {
+.integrate-search-wrap .auto-complete-wrap li button span {
     color: #dc000c;
 }
 .integrate-search-wrap .auto-complete-wrap .close-btn-wrap {
