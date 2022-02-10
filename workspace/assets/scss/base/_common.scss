@@ -3009,6 +3009,14 @@ $f-sizes:
                     background-image: url($path-img-ico + 'ico_arrow_select_black.svg');
                 }
             }
+
+            &:disabled {
+                opacity: 1;
+
+                @include mobile {
+                    opacity: .7;
+                }
+            }
         }
     }
 

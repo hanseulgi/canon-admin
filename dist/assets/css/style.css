@@ -6026,6 +6026,14 @@ body {
         background-image: url("../img/ico/ico_arrow_select_black.svg");
     }
 }
+.quicksearch-wrap .select-wrap select:disabled {
+    opacity: 1;
+}
+@media (max-width: 1024px) {
+    .quicksearch-wrap .select-wrap select:disabled {
+        opacity: 0.7;
+    }
+}
 .quicksearch-wrap button {
     width: 11.6%;
     height: 4.6rem;
