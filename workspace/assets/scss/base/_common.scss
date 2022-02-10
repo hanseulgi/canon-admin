@@ -1051,11 +1051,6 @@ $f-sizes:
                         color: $color-ccc;
                         margin: 0 5px;
 
-                        @include mobile {
-                            content: ":";
-                            color: $color-111;
-                            margin: 0 3px;
-                        }
                     }
                 }
             }
