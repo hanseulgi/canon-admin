@@ -31,6 +31,9 @@ body {
 
 //container
 #container {
+    min-height: calc(100vh - 8rem);
+    padding-bottom: 7rem;
+
     .contents {
         width: 120rem;
         margin: 0 auto;

@@ -256,7 +256,7 @@ $f-sizes:
 //margin-bottom
 .mb {
 
-    @for $i from 1 through 50 {
+    @for $i from 0 through 50 {
 
         @if($i%5==0) {
 
