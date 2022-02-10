@@ -2905,10 +2905,6 @@ $f-sizes:
                 font-weight:$fw-r;
             }
 
-            &:focus + .auto-complete-wrap {
-                display: block;
-                
-            }
         }
 
         .srch-btn{
@@ -2937,7 +2933,6 @@ $f-sizes:
     }
 
     .auto-complete-wrap {
-        display: none;
         @include position(0, 100%);
         background: $bg-fff;
         width:100%;

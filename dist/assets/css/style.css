@@ -5916,9 +5916,6 @@ body {
         font-weight: 400;
     }
 }
-.integrate-search-wrap .inner input[type=text]:focus + .auto-complete-wrap {
-    display: block;
-}
 .integrate-search-wrap .inner .srch-btn {
     position: absolute;
     right: 0;
@@ -5946,7 +5943,6 @@ body {
     border: 0;
 }
 .integrate-search-wrap .auto-complete-wrap {
-    display: none;
     position: absolute;
     left: 0;
     top: 100%;
