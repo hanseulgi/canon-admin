@@ -5948,6 +5948,7 @@ body {
     margin-top: 5rem;
 }
 .quicksearch-wrap .btn-close {
+    display: none;
     position: absolute;
     right: -4.8rem;
     top: 4.1rem;
