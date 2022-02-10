@@ -50,9 +50,11 @@
         justify-content: start;
         align-items: end;
         position: relative;
+        left: -8rem;
         width: 136.2rem;
         height: 100%;
-        margin-left: 19.8rem;
+        margin: 0 auto;
+        // margin-left: 19.8rem;
         padding: 1.5rem 0;
 
         @include mobile {
