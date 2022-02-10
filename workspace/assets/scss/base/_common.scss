@@ -905,11 +905,11 @@ $f-sizes:
                     }
 
                     &[class*='-bottom2'] {
-                        left: 4.6rem;
+
                     }
 
                     &[class*='-bottom3'] {
-                        left: 11.9rem;
+
                     }
 
                     &[class*='-right'] {
@@ -2905,6 +2905,10 @@ $f-sizes:
                 font-weight:$fw-r;
             }
 
+            &:focus + .auto-complete-wrap {
+                display: block;
+                
+            }
         }
 
         .srch-btn{

@@ -3940,12 +3940,6 @@ body {
     .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom1] {
         left: 0;
     }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom2] {
-        left: 4.6rem;
-    }
-    .table-wrap [class$=-list] .tr [class*=show-][class*=-bottom3] {
-        left: 11.9rem;
-    }
     .table-wrap [class$=-list] .tr [class*=show-][class*=-right] {
         display: flex;
         justify-content: space-between;
@@ -5915,6 +5909,9 @@ body {
         border: 1px solid #eee;
         font-weight: 400;
     }
+}
+.integrate-search-wrap .inner input[type=text]:focus + .auto-complete-wrap {
+    display: block;
 }
 .integrate-search-wrap .inner .srch-btn {
     position: absolute;
