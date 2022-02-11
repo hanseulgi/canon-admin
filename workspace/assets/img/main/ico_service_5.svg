@@ -1,41 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
     <g data-name="그룹 7634">
-        <g data-name="사각형 5714" transform="translate(29 31.001)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
-            <rect width="35" height="35" rx="3" style="stroke:none"/>
-            <rect x=".75" y=".75" width="33.5" height="33.5" rx="2.25" style="fill:none"/>
+        <g data-name="사각형 5714" transform="translate(42 39)" style="stroke-width:1.5px;stroke:#000;fill:#e5e5e5">
+            <rect width="22" height="22" rx="3" style="stroke:none"/>
+            <rect x=".75" y=".75" width="20.5" height="20.5" rx="2.25" style="fill:none"/>
         </g>
-        <g data-name="사각형 5715" transform="translate(38.037 40.002)" style="fill:#e5e5e5;stroke-width:1.5px;stroke:#000">
-            <rect width="17" height="17" rx="3" style="stroke:none"/>
-            <rect x=".75" y=".75" width="15.5" height="15.5" rx="2.25" style="fill:none"/>
+        <g data-name="사각형 5715" transform="translate(47 44)" style="stroke-width:1.5px;stroke:#000;fill:#fff">
+            <rect width="12" height="12" rx="3" style="stroke:none"/>
+            <rect x=".75" y=".75" width="10.5" height="10.5" rx="2.25" style="fill:none"/>
         </g>
         <g data-name="그룹 7567">
-            <g data-name="그룹 7632" transform="rotate(180 28.992 14.346)">
-                <rect data-name="사각형 5870" width="1.5" height="8.691" rx=".75"/>
-                <rect data-name="사각형 5868" width="1.5" height="8.691" rx=".75" transform="translate(10.242)"/>
-                <rect data-name="사각형 5866" width="1.5" height="8.691" rx=".75" transform="translate(20.483)"/>
+            <g data-name="그룹 7632" transform="rotate(180 29.123 20.577)">
+                <rect data-name="사각형 5870" width="1.5" height="4" rx=".75" transform="translate(0 1.154)"/>
+                <rect data-name="사각형 5868" width="1.5" height="7" rx=".75" transform="translate(4.746 1.155)"/>
+                <rect data-name="사각형 5866" width="1.5" height="4" rx=".75" transform="translate(9.747 1.271)"/>
             </g>
-            <g data-name="그룹 7643" transform="rotate(90 -5.654 32.346)">
-                <rect data-name="사각형 5870" width="1.5" height="8.691" rx=".75"/>
-                <rect data-name="사각형 5868" width="1.5" height="8.691" rx=".75" transform="translate(10.242)"/>
-                <rect data-name="사각형 5866" width="1.5" height="8.691" rx=".75" transform="translate(20.483)"/>
+            <g data-name="그룹 7643" transform="rotate(90 -1.161 43.83)">
+                <rect data-name="사각형 5870" width="1.5" height="5" rx=".75" transform="translate(0 -.771)"/>
+                <rect data-name="사각형 5868" width="1.5" height="6" rx=".75" transform="translate(4.873 -.883)"/>
+                <rect data-name="사각형 5866" width="1.5" height="4" rx=".75" transform="translate(9.746 -.884)"/>
             </g>
-            <g data-name="그룹 7644" transform="rotate(90 18.247 56.246)">
-                <rect data-name="사각형 5870" width="1.5" height="8.691" rx=".75"/>
-                <rect data-name="사각형 5868" width="1.5" height="8.691" rx=".75" transform="translate(10.242)"/>
-                <rect data-name="사각형 5866" width="1.5" height="8.691" rx=".75" transform="translate(20.483)"/>
-            </g>
-            <g data-name="그룹 7642" transform="rotate(180 28.992 38.247)">
-                <rect data-name="사각형 5870" width="1.5" height="8.691" rx=".75"/>
-                <rect data-name="사각형 5868" width="1.5" height="8.691" rx=".75" transform="translate(10.242)"/>
-                <rect data-name="사각형 5866" width="1.5" height="8.691" rx=".75" transform="translate(20.483)"/>
+            <g data-name="그룹 7644" transform="rotate(90 11.6 56.591)">
+                <rect data-name="사각형 5870" width="1.5" height="5" rx=".75" transform="translate(0 .107)"/>
+                <rect data-name="사각형 5868" width="1.5" height="7" rx=".75" transform="translate(4.872 -2)"/>
+                <rect data-name="사각형 5866" width="1.5" height="4" rx=".75" transform="translate(9.744 1.107)"/>
             </g>
         </g>
     </g>
     <g data-name="352272_cloud_icon">
-        <g data-name="패스 3961" style="fill:#fff">
-            <path d="M37.837 39.113H11.949a11.126 11.126 0 0 1-7.92-3.28A11.126 11.126 0 0 1 .75 27.915a11.17 11.17 0 0 1 2.89-7.505 11.181 11.181 0 0 1 7.095-3.628l.398-.043.185-.355c2.468-4.708 7.288-7.633 12.579-7.633 3.303 0 6.518 1.16 9.055 3.267a14.211 14.211 0 0 1 4.856 8.147l.111.562.572.04a9.22 9.22 0 0 1 6.067 2.877 9.094 9.094 0 0 1 2.486 6.263c0 5.076-4.13 9.207-9.207 9.207z" style="stroke:none" transform="translate(55.017 59.804)"/>
-            <path d="M23.897 9.5c-5.012 0-9.577 2.771-11.914 7.232l-.372.709-.796.086a10.432 10.432 0 0 0-6.62 3.385A10.42 10.42 0 0 0 1.5 27.914a10.38 10.38 0 0 0 3.06 7.39 10.38 10.38 0 0 0 7.389 3.059h25.888c4.663 0 8.457-3.794 8.457-8.457 0-2.146-.81-4.188-2.282-5.748a8.472 8.472 0 0 0-5.575-2.644l-1.142-.081-.223-1.124a13.46 13.46 0 0 0-4.6-7.715A13.447 13.447 0 0 0 23.898 9.5m0-1.5c7.249 0 13.293 5.168 14.647 12.018 5.158.369 9.25 4.63 9.25 9.888 0 5.496-4.46 9.957-9.957 9.957H11.949C5.347 39.863 0 34.516 0 27.914c0-6.163 4.67-11.231 10.654-11.879C13.154 11.265 18.142 8 23.897 8z" style="fill:#dc000c;stroke:none" transform="translate(55.017 59.804)"/>
+        <g data-name="패스 3961" style="fill:none">
+            <path d="M56.452 25.351A21.97 21.97 0 0 0 15.6 19.6 17.24 17.24 0 0 0 17.5 54h37.917a14.337 14.337 0 0 0 1.035-28.649z" style="stroke:none" transform="translate(18.78 14.541)"/>
+            <path d="M35 9.5a20.516 20.516 0 0 0-10.704 2.998 20.367 20.367 0 0 0-7.367 7.807l-.374.703-.792.084c-3.898.416-7.5 2.23-10.142 5.11A15.572 15.572 0 0 0 1.5 36.75c0 4.205 1.661 8.158 4.677 11.13C9.2 50.86 13.22 52.5 17.5 52.5h37.917c7.214 0 13.083-5.776 13.083-12.875 0-3.265-1.252-6.37-3.525-8.747a13.189 13.189 0 0 0-8.628-4.031l-1.14-.08-.226-1.121c-.9-4.486-3.374-8.576-6.968-11.519a20.374 20.374 0 0 0-5.973-3.397A20.58 20.58 0 0 0 35 9.5M35 8c10.617 0 19.469 7.46 21.452 17.35C64.006 25.884 70 32.036 70 39.626 70 47.56 63.467 54 55.417 54H17.5C7.831 54 0 46.28 0 36.75c0-8.898 6.84-16.215 15.604-17.15A21.934 21.934 0 0 1 35 8z" style="fill:#000;stroke:none" transform="translate(18.78 14.541)"/>
         </g>
-        <path data-name="합치기 2" d="M4.185 16.8V9.735H0L7.67 0l7.671 9.735h-4.185V16.8z" transform="translate(71.243 75.335)" style="stroke:#dc000c;stroke-linejoin:round;fill:none;stroke-width:1.5px"/>
+        <g data-name="사각형 6116" transform="translate(66.001 53)" style="stroke:#dc000c;stroke-width:1.5px;fill:#fff">
+            <rect width="30" height="30" rx="15" style="stroke:none"/>
+            <rect x=".75" y=".75" width="28.5" height="28.5" rx="14.25" style="fill:none"/>
+        </g>
+        <path data-name="합치기 2" d="M3.273 13V7.532H0L6 0l6 7.532H8.727V13z" transform="rotate(180 43.576 37.678)" style="stroke-linejoin:round;stroke:#dc000c;fill:none;stroke-width:1.5px"/>
     </g>
 </svg>

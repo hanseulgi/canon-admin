@@ -8622,23 +8622,29 @@ main .menu-wrap .inner .tab .content .icon-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     align-items: baseline;
     margin-top: 4rem;
 }
 @media (max-width: 1024px) {
     main .menu-wrap .inner .tab .content .icon-list {
+        justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
         margin-top: 0.5rem;
     }
 }
 main .menu-wrap .inner .tab .content .icon-list .icon-item {
-    flex: 1 1 auto;
+    margin-right: 3rem;
 }
 @media (max-width: 1024px) {
     main .menu-wrap .inner .tab .content .icon-list .icon-item {
-        flex: 0 0 33.33%;
+        flex: 0 0 25%;
+        margin-right: 0;
     }
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item:last-of-type {
+    margin-right: 0;
 }
 main .menu-wrap .inner .tab .content .icon-list .icon-item a {
     display: block;
@@ -8672,9 +8678,9 @@ main .menu-wrap .inner .tab .content .icon-list .icon-item a img:nth-child(2) {
 }
 main .menu-wrap .inner .tab .content .icon-list .icon-item a span {
     display: block;
-    font-size: 2rem;
-    line-height: 1.75;
-    letter-spacing: -0.2px;
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.18px;
 }
 @media (max-width: 1024px) {
     main .menu-wrap .inner .tab .content .icon-list .icon-item a span {
@@ -8682,6 +8688,14 @@ main .menu-wrap .inner .tab .content .icon-list .icon-item a span {
         font-size: 1.4rem;
         line-height: 1.43;
         letter-spacing: -0.14px;
+    }
+}
+main .menu-wrap .inner .tab .content .icon-list .icon-item a br {
+    display: none;
+}
+@media (max-width: 1024px) {
+    main .menu-wrap .inner .tab .content .icon-list .icon-item a br {
+        display: block;
     }
 }
 main .menu-wrap .inner::after {

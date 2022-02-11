@@ -394,20 +394,28 @@ main {
 
                     .icon-list {
                         @include flex-flow;
+                        justify-content: flex-start;
                         align-items: baseline;
                         margin-top: 4rem;
 
                         @include mobile{
+                            justify-content: flex-start;
                             align-items: center;
                             flex-wrap: wrap;
                             margin-top: .5rem;
                         }
 
                         .icon-item {
-                            flex: 1 1 auto;
+                            // flex: 1 1 auto;
+                            margin-right: 3rem;
 
                             @include mobile {
-                                flex: 0 0 33.33%;
+                                flex: 0 0 25%;
+                                margin-right: 0;
+                            }
+
+                            &:last-of-type {
+                                margin-right: 0;
                             }
 
                             a {
@@ -442,11 +450,19 @@ main {
                                 }
                                 span {
                                     display: block;
-                                    @include fs($fs20);
+                                    @include fs($fs18);
 
                                     @include mobile {
                                         margin-top: 1rem;
                                         @include fs($fs14);
+                                    }
+                                }
+
+                                br {
+                                    display: none;
+
+                                    @include mobile {
+                                        display: block;
                                     }
                                 }
                             }

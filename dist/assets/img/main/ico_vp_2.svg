@@ -2,8 +2,8 @@
     <g data-name="그룹 7620">
         <g transform="translate(25.954 26.252)">
             <g data-name="패스 3942" style="stroke-linecap:round;stroke-linejoin:round;fill:#e5e5e5">
-                <path d="M37.71 49.174H1.417c-.368 0-.668-.33-.668-.736V.75h36.96c.368 0 .667.33.667.736v46.952c0 .406-.3.736-.668.736z" style="stroke:none" transform="translate(9.873 7.076)"/>
-                <path d="M1.5 1.5v46.924h36.127V1.5H1.5M0 0h37.71c.782 0 1.417.665 1.417 1.486v46.952c0 .82-.635 1.486-1.418 1.486H1.418C.635 49.924 0 49.258 0 48.438V0z" style="fill:#222;stroke:none" transform="translate(9.873 7.076)"/>
+                <path d="M38.55 49.25H1.45c-.386 0-.7-.331-.7-.738V.75h37.8c.386 0 .7.331.7.738v47.024c0 .407-.314.738-.7.738z" style="stroke:none" transform="translate(9.873 7.076)"/>
+                <path d="M1.5 1.5v47h37v-47h-37M0 0h38.55C39.352 0 40 .666 40 1.488v47.024c0 .822-.649 1.488-1.45 1.488H1.45C.648 50 0 49.334 0 48.512V0z" style="fill:#222;stroke:none" transform="translate(9.873 7.076)"/>
             </g>
             <g data-name="빼기 1" style="fill:#fff">
                 <path d="M39.514 49.25H1.487a.739.739 0 0 1-.737-.74V8.72L8.758.75h30.756c.406 0 .736.331.736.738v47.023c0 .407-.33.739-.736.739z" style="stroke:none" transform="translate(-.953 -.252)"/>
@@ -17,7 +17,7 @@
             <rect data-name="사각형 6096" width="1.5" height="1.5" rx=".75" transform="translate(9.048 21.747)"/>
             <rect data-name="사각형 6098" width="1.5" height="1.5" rx=".75" transform="translate(9.048 27.747)"/>
             <rect data-name="사각형 6100" width="1.5" height="1.5" rx=".75" transform="translate(9.048 33.747)"/>
-            <path data-name="패스 3941" d="M3793.859-9056.077h8v-8" transform="translate(-3792.813 9064.826)" style="stroke-width:1.5px;stroke:#000;fill:none;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 3941" d="M3793.859-9055.842h8.235v-8.236" transform="translate(-3793.812 9064.59)" style="stroke-width:1.5px;stroke:#000;fill:none;stroke-linecap:round;stroke-linejoin:round"/>
         </g>
         <g data-name="그룹 7636">
             <g data-name="다각형 8" style="fill:#fff">
