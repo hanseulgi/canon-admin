@@ -78,26 +78,24 @@ UI.tableM = function () {
         $('.show-top2').css('width','70%');
     }
 
-
     $('.table-list .tr').each(function() {
+        $(window).resize(function () {
 
-        var winW = $(window).width();
-        if ( winW < 1024 ) {    //모바일 ver일때만
+            var winW = $(window).width();
 
+            if ( winW < 1024 ) {    //모바일 ver일때만
+                const $width1 = $(this).find('.show-bottom1').width() + 12;
+                const $width2 = $(this).find('.show-bottom2').width() + 13;
 
-            const $width1 = $(this).find('.show-bottom1').width() + 12;
-            const $width2 = $(this).find('.show-bottom2').width() + 13;
-
-            if ( $(this).find('.td').hasClass('show-bottom2') ) {
-                $(this).find('.show-bottom2').css('left',$width1);
+                if ( $(this).find('.td').hasClass('show-bottom2') ) {
+                    $(this).find('.show-bottom2').css('left',$width1);
+                }
+                if ( $(this).find('.td').hasClass('show-bottom3') ) {
+                    $(this).find('.show-bottom3').css('left',$width1 + $width2);
+                }
             }
-            if ( $(this).find('.td').hasClass('show-bottom3') ) {
-                $(this).find('.show-bottom3').css('left',$width1 + $width2);
-            }
-        }
-
+        });
     });
-
 };
 
 
